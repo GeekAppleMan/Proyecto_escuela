@@ -16,7 +16,6 @@ namespace Proyecto_escuela
     public partial class Frm_registrar_tutores : Form
     {
         private string path = @"C:\Users\Jaime\Desktop\Proyecto_escuela\Imagenes\";
-        private bool haydispositivos;
         private FilterInfoCollection misdispositivos;
         private VideoCaptureDevice miwebcam;
         public Frm_registrar_tutores()
@@ -31,10 +30,10 @@ namespace Proyecto_escuela
 
         private void cargar_dispositivo()
         {
+            combo_dispositivos.Items.Clear();
             misdispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             if (misdispositivos.Count > 0)
             {
-                haydispositivos = true;
                 for (int i = 0; i < misdispositivos.Count; i++)
                 {
                     combo_dispositivos.Items.Add(misdispositivos[i].Name.ToString());
@@ -43,7 +42,7 @@ namespace Proyecto_escuela
             }
             else
             {
-                haydispositivos = false;
+                MessageBox.Show("No hay dispositivos de video disponibles");
             }
         }
 
@@ -81,6 +80,11 @@ namespace Proyecto_escuela
                 miwebcam.NewFrame += new NewFrameEventHandler(capturando);
                 miwebcam.Start();
             }  
+        }
+
+        private void Miwebcam_NewFrame(object sender, NewFrameEventArgs eventArgs)
+        {
+            throw new NotImplementedException();
         }
 
         private void btn_capturar_foto_Click(object sender, EventArgs e)

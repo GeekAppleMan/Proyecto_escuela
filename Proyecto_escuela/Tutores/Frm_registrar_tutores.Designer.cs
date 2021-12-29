@@ -52,15 +52,15 @@ namespace Proyecto_escuela
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.btn_enceder = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.combo_dispositivos = new System.Windows.Forms.ComboBox();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_registrar = new System.Windows.Forms.Button();
             this.btn_capturar_foto = new System.Windows.Forms.Button();
             this.picture_captura = new System.Windows.Forms.PictureBox();
             this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
-            this.combo_dispositivos = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.btn_enceder = new System.Windows.Forms.Button();
             this.gb_datos.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
@@ -338,6 +338,52 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
             // 
+            // btn_enceder
+            // 
+            this.btn_enceder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_enceder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_enceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enceder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_enceder.ForeColor = System.Drawing.Color.Black;
+            this.btn_enceder.Location = new System.Drawing.Point(339, 56);
+            this.btn_enceder.Name = "btn_enceder";
+            this.btn_enceder.Size = new System.Drawing.Size(278, 34);
+            this.btn_enceder.TabIndex = 85;
+            this.btn_enceder.Text = "Encender webcam";
+            this.btn_enceder.UseVisualStyleBackColor = false;
+            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(42, 90);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 1);
+            this.panel7.TabIndex = 84;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 23);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Seleccionar webcam";
+            // 
+            // combo_dispositivos
+            // 
+            this.combo_dispositivos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_dispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combo_dispositivos.FormattingEnabled = true;
+            this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
+            this.combo_dispositivos.Name = "combo_dispositivos";
+            this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
+            this.combo_dispositivos.TabIndex = 55;
+            // 
             // btn_cancelar
             // 
             this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -408,52 +454,6 @@ namespace Proyecto_escuela
             this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture_tiempo_real.TabIndex = 0;
             this.picture_tiempo_real.TabStop = false;
-            // 
-            // combo_dispositivos
-            // 
-            this.combo_dispositivos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.combo_dispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combo_dispositivos.FormattingEnabled = true;
-            this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
-            this.combo_dispositivos.Name = "combo_dispositivos";
-            this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 55;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 23);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "Seleccionar webcam";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(42, 90);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(278, 1);
-            this.panel7.TabIndex = 84;
-            // 
-            // btn_enceder
-            // 
-            this.btn_enceder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_enceder.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_enceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enceder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_enceder.ForeColor = System.Drawing.Color.Black;
-            this.btn_enceder.Location = new System.Drawing.Point(339, 56);
-            this.btn_enceder.Name = "btn_enceder";
-            this.btn_enceder.Size = new System.Drawing.Size(278, 34);
-            this.btn_enceder.TabIndex = 85;
-            this.btn_enceder.Text = "Encender webcam";
-            this.btn_enceder.UseVisualStyleBackColor = false;
-            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
             // 
             // Frm_registrar_tutores
             // 

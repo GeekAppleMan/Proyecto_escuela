@@ -15,11 +15,15 @@ namespace Proyecto_escuela
         public Frm_main()
         {
             InitializeComponent();
+            timer_fecha_hora.Enabled = true;
+            timer_fecha_hora.Start();
             panel_barra_izquierda.Width = 150;
         }
 
         private void Frm_main_FormClosed(object sender, FormClosedEventArgs e)
         {
+            timer_fecha_hora.Stop();
+            timer_fecha_hora.Enabled = false;
             Frm_login obj_login = new Frm_login();
             obj_login.Show();
         }
@@ -85,6 +89,12 @@ namespace Proyecto_escuela
         {
             abrir_form(new Frm_tutores());
             lbltitulo.Text = "Tutores";
+        }
+
+        private void timer_fecha_hora_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToString("d");
+            lbl_hora.Text = DateTime.Now.ToString("t");
         }
     }
 }
