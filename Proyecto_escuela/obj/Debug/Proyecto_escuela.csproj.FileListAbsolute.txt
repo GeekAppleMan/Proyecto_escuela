@@ -39,3 +39,6 @@ C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
+C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
+C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
+C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources

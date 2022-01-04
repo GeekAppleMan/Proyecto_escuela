@@ -96,5 +96,11 @@ namespace Proyecto_escuela
             lbl_fecha.Text = DateTime.Now.ToString("d");
             lbl_hora.Text = DateTime.Now.ToString("t");
         }
+
+        private void btn_alumnos_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_Alumnos());
+            lbltitulo.Text = "Alumnos";
+        }
     }
 }

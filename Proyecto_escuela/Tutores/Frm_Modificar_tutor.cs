@@ -26,6 +26,7 @@ namespace Proyecto_escuela
         private void Frm_Modificar_tutor_Load(object sender, EventArgs e)
         {
             cargar_dispositivo();
+            Cls_tutores.conservar_modificar_imagen = true;
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
