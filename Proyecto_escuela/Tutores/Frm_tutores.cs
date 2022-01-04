@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,6 +13,9 @@ namespace Proyecto_escuela
 {
     public partial class Frm_tutores : Form
     {
+        Cls_tutores obj_tutores = new Cls_tutores();
+        Frm_credencial_tutor obj_credencial = new Frm_credencial_tutor();
+        Frm_Modificar_tutor obj_modificar = new Frm_Modificar_tutor();
         public Frm_tutores()
         {
             InitializeComponent();
@@ -21,6 +25,91 @@ namespace Proyecto_escuela
         {
             Frm_registrar_tutores obj_registrar = new Frm_registrar_tutores();
             obj_registrar.ShowDialog();
+            cargar_tutores();
+        }
+
+        private void Frm_tutores_Load(object sender, EventArgs e)
+        {
+            cargar_tutores();
+        }
+
+        private void cargar_tutores()
+        {
+            obj_tutores.cargar_tutores(txt_tutor.Text,dgv_tutor);
+        }
+
+        private void txt_tutor_TextChanged(object sender, EventArgs e)
+        {
+            cargar_tutores();
+        }
+
+        private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+
+            }
+            else
+            {
+                if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
+                {
+                    obj_credencial.lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_apellidos_tutor.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_direccion_tutor.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_telefono_tutor.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_correo_tutor.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_fecha_tutor.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_parentesco_tutor.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_estatus_tutor.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
+                    string path = Cls_tutores.tabla_id.Rows[e.RowIndex]["imagen"].ToString();
+                    if (path == "")
+                    {
+                        obj_credencial.picture_imagen_perfil.Image = null;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            var request = WebRequest.Create(path);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                obj_credencial.picture_imagen_perfil.Image = Bitmap.FromStream(stream);
+                                System.Drawing.Image img = obj_credencial.picture_imagen_perfil.Image;
+                                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                                obj_credencial.picture_imagen_perfil.Image = img;
+                            }
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                    }
+                    obj_credencial.ShowDialog();
+                    cargar_tutores();
+                }
+                if (e.ColumnIndex == 8)
+                {
+                    Cls_tutores.index = e.RowIndex;
+                    obj_modificar.txt_nombres.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_apellidos.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_direccion.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_telefono.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_correo.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
+                    obj_modificar.dtp_fecha_nacimiento.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_parentesco.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_estatus.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
+                    obj_modificar.ShowDialog();
+                    cargar_tutores();
+                }
+                if (e.ColumnIndex == 9)
+                {
+                    Cls_tutores.index = e.RowIndex;
+                    obj_tutores.eliminar_tutor();
+                    cargar_tutores();
+                }
+            }
+           
         }
     }
 }

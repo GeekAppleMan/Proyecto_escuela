@@ -30,12 +30,14 @@ namespace Proyecto_escuela
         private void InitializeComponent()
         {
             this.panel_busqueda = new System.Windows.Forms.Panel();
+            this.btn_registrar_tutor = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_tutor = new System.Windows.Forms.TextBox();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_tutor = new System.Windows.Forms.DataGridView();
-            this.btn_registrar_tutor = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +45,7 @@ namespace Proyecto_escuela
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_busqueda.SuspendLayout();
@@ -63,6 +66,25 @@ namespace Proyecto_escuela
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 5;
             // 
+            // btn_registrar_tutor
+            // 
+            this.btn_registrar_tutor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar_tutor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
+            this.btn_registrar_tutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_tutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registrar_tutor.Location = new System.Drawing.Point(3, 3);
+            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
+            this.btn_registrar_tutor.Size = new System.Drawing.Size(246, 41);
+            this.btn_registrar_tutor.TabIndex = 18;
+            this.btn_registrar_tutor.Text = "Registrar tutor";
+            this.btn_registrar_tutor.UseVisualStyleBackColor = true;
+            this.btn_registrar_tutor.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -82,6 +104,7 @@ namespace Proyecto_escuela
             this.txt_tutor.Name = "txt_tutor";
             this.txt_tutor.Size = new System.Drawing.Size(318, 21);
             this.txt_tutor.TabIndex = 0;
+            this.txt_tutor.TextChanged += new System.EventHandler(this.txt_tutor_TextChanged);
             // 
             // lbl_tutor
             // 
@@ -120,6 +143,7 @@ namespace Proyecto_escuela
             this.Correo,
             this.Fecha_nacimiento,
             this.Parentesco,
+            this.Estatus,
             this.Modificar,
             this.Eliminar});
             this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -130,25 +154,25 @@ namespace Proyecto_escuela
             this.dgv_tutor.RowTemplate.Height = 24;
             this.dgv_tutor.Size = new System.Drawing.Size(1178, 503);
             this.dgv_tutor.TabIndex = 5;
+            this.dgv_tutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tutor_CellClick);
             // 
-            // btn_registrar_tutor
+            // dataGridViewImageColumn1
             // 
-            this.btn_registrar_tutor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar_tutor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
-            this.btn_registrar_tutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_tutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registrar_tutor.Location = new System.Drawing.Point(3, 3);
-            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
-            this.btn_registrar_tutor.Size = new System.Drawing.Size(246, 41);
-            this.btn_registrar_tutor.TabIndex = 18;
-            this.btn_registrar_tutor.Text = "Registrar tutor";
-            this.btn_registrar_tutor.UseVisualStyleBackColor = true;
-            this.btn_registrar_tutor.Click += new System.EventHandler(this.button1_Click);
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 131;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 131;
             // 
             // Nombres
             // 
@@ -192,6 +216,12 @@ namespace Proyecto_escuela
             this.Parentesco.MinimumWidth = 6;
             this.Parentesco.Name = "Parentesco";
             // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            // 
             // Modificar
             // 
             this.Modificar.HeaderText = "Modificar";
@@ -218,6 +248,7 @@ namespace Proyecto_escuela
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_tutores";
             this.Text = "Tutores";
+            this.Load += new System.EventHandler(this.Frm_tutores_Load);
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();
             this.panel_grid.ResumeLayout(false);
@@ -235,6 +266,8 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Panel panel_grid;
         private System.Windows.Forms.DataGridView dgv_tutor;
         private System.Windows.Forms.Button btn_registrar_tutor;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
@@ -242,6 +275,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }

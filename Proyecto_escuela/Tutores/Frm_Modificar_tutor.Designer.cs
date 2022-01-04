@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_escuela
 {
-    partial class Frm_registrar_tutores
+    partial class Frm_Modificar_tutor
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,20 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
+            this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.btn_enceder = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.combo_dispositivos = new System.Windows.Forms.ComboBox();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_capturar_foto = new System.Windows.Forms.Button();
+            this.picture_captura = new System.Windows.Forms.PictureBox();
+            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
             this.gb_datos = new System.Windows.Forms.GroupBox();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.combo_estatus = new System.Windows.Forms.ComboBox();
+            this.lbl_estatus = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.combo_parentesco = new System.Windows.Forms.ComboBox();
             this.lbl_parentesco = new System.Windows.Forms.Label();
@@ -51,24 +64,165 @@ namespace Proyecto_escuela
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
-            this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
-            this.btn_enceder = new System.Windows.Forms.Button();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.combo_dispositivos = new System.Windows.Forms.ComboBox();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_registrar = new System.Windows.Forms.Button();
-            this.btn_capturar_foto = new System.Windows.Forms.Button();
-            this.picture_captura = new System.Windows.Forms.PictureBox();
-            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
-            this.gb_datos.SuspendLayout();
+            this.rdb_modificar = new System.Windows.Forms.RadioButton();
+            this.rdb_conservar = new System.Windows.Forms.RadioButton();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
+            this.gb_datos.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // gb_foto_perfil
+            // 
+            this.gb_foto_perfil.Controls.Add(this.rdb_conservar);
+            this.gb_foto_perfil.Controls.Add(this.rdb_modificar);
+            this.gb_foto_perfil.Controls.Add(this.btn_enceder);
+            this.gb_foto_perfil.Controls.Add(this.panel7);
+            this.gb_foto_perfil.Controls.Add(this.label1);
+            this.gb_foto_perfil.Controls.Add(this.combo_dispositivos);
+            this.gb_foto_perfil.Controls.Add(this.btn_cancelar);
+            this.gb_foto_perfil.Controls.Add(this.btn_modificar);
+            this.gb_foto_perfil.Controls.Add(this.btn_capturar_foto);
+            this.gb_foto_perfil.Controls.Add(this.picture_captura);
+            this.gb_foto_perfil.Controls.Add(this.picture_tiempo_real);
+            this.gb_foto_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 9F);
+            this.gb_foto_perfil.Location = new System.Drawing.Point(287, 0);
+            this.gb_foto_perfil.Name = "gb_foto_perfil";
+            this.gb_foto_perfil.Size = new System.Drawing.Size(655, 748);
+            this.gb_foto_perfil.TabIndex = 83;
+            this.gb_foto_perfil.TabStop = false;
+            this.gb_foto_perfil.Text = "Capturar foto de perfil";
+            // 
+            // btn_enceder
+            // 
+            this.btn_enceder.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_enceder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_enceder.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_enceder.Enabled = false;
+            this.btn_enceder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_enceder.ForeColor = System.Drawing.Color.Black;
+            this.btn_enceder.Location = new System.Drawing.Point(339, 90);
+            this.btn_enceder.Name = "btn_enceder";
+            this.btn_enceder.Size = new System.Drawing.Size(278, 34);
+            this.btn_enceder.TabIndex = 1;
+            this.btn_enceder.Text = "Encender webcam";
+            this.btn_enceder.UseVisualStyleBackColor = false;
+            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(42, 128);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 1);
+            this.panel7.TabIndex = 84;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(38, 60);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(222, 23);
+            this.label1.TabIndex = 83;
+            this.label1.Text = "Seleccionar webcam";
+            // 
+            // combo_dispositivos
+            // 
+            this.combo_dispositivos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_dispositivos.Enabled = false;
+            this.combo_dispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combo_dispositivos.FormattingEnabled = true;
+            this.combo_dispositivos.Location = new System.Drawing.Point(42, 94);
+            this.combo_dispositivos.Name = "combo_dispositivos";
+            this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
+            this.combo_dispositivos.TabIndex = 0;
+            this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
+            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover_1);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
+            this.btn_cancelar.Location = new System.Drawing.Point(42, 661);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
+            this.btn_cancelar.TabIndex = 4;
+            this.btn_cancelar.Text = "Cancelar modificacion";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_modificar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.ForeColor = System.Drawing.Color.Black;
+            this.btn_modificar.Location = new System.Drawing.Point(42, 612);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(575, 42);
+            this.btn_modificar.TabIndex = 3;
+            this.btn_modificar.Text = "Modificar tutor";
+            this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
+            // btn_capturar_foto
+            // 
+            this.btn_capturar_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_capturar_foto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_capturar_foto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_capturar_foto.Enabled = false;
+            this.btn_capturar_foto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_capturar_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_capturar_foto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_capturar_foto.ForeColor = System.Drawing.Color.Black;
+            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 462);
+            this.btn_capturar_foto.Name = "btn_capturar_foto";
+            this.btn_capturar_foto.Size = new System.Drawing.Size(575, 42);
+            this.btn_capturar_foto.TabIndex = 2;
+            this.btn_capturar_foto.Text = "Capturar foto de perfil";
+            this.btn_capturar_foto.UseVisualStyleBackColor = false;
+            this.btn_capturar_foto.Click += new System.EventHandler(this.btn_capturar_foto_Click);
+            // 
+            // picture_captura
+            // 
+            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_captura.Enabled = false;
+            this.picture_captura.Location = new System.Drawing.Point(339, 140);
+            this.picture_captura.Name = "picture_captura";
+            this.picture_captura.Size = new System.Drawing.Size(278, 270);
+            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_captura.TabIndex = 1;
+            this.picture_captura.TabStop = false;
+            // 
+            // picture_tiempo_real
+            // 
+            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_tiempo_real.Enabled = false;
+            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 140);
+            this.picture_tiempo_real.Name = "picture_tiempo_real";
+            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
+            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_tiempo_real.TabIndex = 0;
+            this.picture_tiempo_real.TabStop = false;
             // 
             // gb_datos
             // 
+            this.gb_datos.Controls.Add(this.panel8);
+            this.gb_datos.Controls.Add(this.combo_estatus);
+            this.gb_datos.Controls.Add(this.lbl_estatus);
             this.gb_datos.Controls.Add(this.panel6);
             this.gb_datos.Controls.Add(this.combo_parentesco);
             this.gb_datos.Controls.Add(this.lbl_parentesco);
@@ -94,10 +248,45 @@ namespace Proyecto_escuela
             this.gb_datos.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.gb_datos.Location = new System.Drawing.Point(0, 0);
             this.gb_datos.Name = "gb_datos";
-            this.gb_datos.Size = new System.Drawing.Size(287, 694);
-            this.gb_datos.TabIndex = 80;
+            this.gb_datos.Size = new System.Drawing.Size(287, 748);
+            this.gb_datos.TabIndex = 82;
             this.gb_datos.TabStop = false;
             this.gb_datos.Text = "Datos del tutor";
+            // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.Gray;
+            this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel8.Location = new System.Drawing.Point(20, 734);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(238, 1);
+            this.panel8.TabIndex = 103;
+            // 
+            // combo_estatus
+            // 
+            this.combo_estatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.combo_estatus.FormattingEnabled = true;
+            this.combo_estatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.combo_estatus.Location = new System.Drawing.Point(20, 697);
+            this.combo_estatus.Name = "combo_estatus";
+            this.combo_estatus.Size = new System.Drawing.Size(234, 31);
+            this.combo_estatus.TabIndex = 101;
+            this.combo_estatus.Text = "Activo";
+            this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_estatus_KeyPress);
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(16, 669);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
+            this.lbl_estatus.TabIndex = 102;
+            this.lbl_estatus.Text = "Estatus";
             // 
             // panel6
             // 
@@ -188,7 +377,7 @@ namespace Proyecto_escuela
             this.txt_correo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_correo.ForeColor = System.Drawing.Color.Gray;
+            this.txt_correo.ForeColor = System.Drawing.Color.Black;
             this.txt_correo.Location = new System.Drawing.Point(20, 442);
             this.txt_correo.Name = "txt_correo";
             this.txt_correo.Size = new System.Drawing.Size(238, 25);
@@ -221,7 +410,7 @@ namespace Proyecto_escuela
             this.txt_telefono.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_telefono.ForeColor = System.Drawing.Color.Gray;
+            this.txt_telefono.ForeColor = System.Drawing.Color.Black;
             this.txt_telefono.Location = new System.Drawing.Point(20, 347);
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(238, 25);
@@ -255,7 +444,7 @@ namespace Proyecto_escuela
             this.txt_direccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_direccion.ForeColor = System.Drawing.Color.Gray;
+            this.txt_direccion.ForeColor = System.Drawing.Color.Black;
             this.txt_direccion.Location = new System.Drawing.Point(20, 255);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(238, 25);
@@ -288,7 +477,7 @@ namespace Proyecto_escuela
             this.txt_apellidos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellidos.ForeColor = System.Drawing.Color.Gray;
+            this.txt_apellidos.ForeColor = System.Drawing.Color.Black;
             this.txt_apellidos.Location = new System.Drawing.Point(20, 165);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
@@ -321,7 +510,7 @@ namespace Proyecto_escuela
             this.txt_nombres.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_nombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombres.ForeColor = System.Drawing.Color.Gray;
+            this.txt_nombres.ForeColor = System.Drawing.Color.Black;
             this.txt_nombres.Location = new System.Drawing.Point(16, 69);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(238, 25);
@@ -330,206 +519,94 @@ namespace Proyecto_escuela
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
-            // gb_foto_perfil
+            // rdb_modificar
             // 
-            this.gb_foto_perfil.Controls.Add(this.btn_enceder);
-            this.gb_foto_perfil.Controls.Add(this.panel7);
-            this.gb_foto_perfil.Controls.Add(this.label1);
-            this.gb_foto_perfil.Controls.Add(this.combo_dispositivos);
-            this.gb_foto_perfil.Controls.Add(this.btn_cancelar);
-            this.gb_foto_perfil.Controls.Add(this.btn_registrar);
-            this.gb_foto_perfil.Controls.Add(this.btn_capturar_foto);
-            this.gb_foto_perfil.Controls.Add(this.picture_captura);
-            this.gb_foto_perfil.Controls.Add(this.picture_tiempo_real);
-            this.gb_foto_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 9F);
-            this.gb_foto_perfil.Location = new System.Drawing.Point(287, 0);
-            this.gb_foto_perfil.Name = "gb_foto_perfil";
-            this.gb_foto_perfil.Size = new System.Drawing.Size(655, 694);
-            this.gb_foto_perfil.TabIndex = 81;
-            this.gb_foto_perfil.TabStop = false;
-            this.gb_foto_perfil.Text = "Capturar foto de perfil";
+            this.rdb_modificar.AutoSize = true;
+            this.rdb_modificar.Location = new System.Drawing.Point(42, 29);
+            this.rdb_modificar.Name = "rdb_modificar";
+            this.rdb_modificar.Size = new System.Drawing.Size(160, 24);
+            this.rdb_modificar.TabIndex = 85;
+            this.rdb_modificar.Text = "Modificar imagen";
+            this.rdb_modificar.UseVisualStyleBackColor = true;
+            this.rdb_modificar.Click += new System.EventHandler(this.rdb_modificar_Click);
             // 
-            // btn_enceder
+            // rdb_conservar
             // 
-            this.btn_enceder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_enceder.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_enceder.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_enceder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_enceder.ForeColor = System.Drawing.Color.Black;
-            this.btn_enceder.Location = new System.Drawing.Point(339, 56);
-            this.btn_enceder.Name = "btn_enceder";
-            this.btn_enceder.Size = new System.Drawing.Size(278, 34);
-            this.btn_enceder.TabIndex = 1;
-            this.btn_enceder.Text = "Encender webcam";
-            this.btn_enceder.UseVisualStyleBackColor = false;
-            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
+            this.rdb_conservar.AutoSize = true;
+            this.rdb_conservar.Checked = true;
+            this.rdb_conservar.Location = new System.Drawing.Point(233, 29);
+            this.rdb_conservar.Name = "rdb_conservar";
+            this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
+            this.rdb_conservar.TabIndex = 86;
+            this.rdb_conservar.TabStop = true;
+            this.rdb_conservar.Text = "Conservar imagen";
+            this.rdb_conservar.UseVisualStyleBackColor = true;
+            this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
             // 
-            // panel7
+            // Frm_Modificar_tutor
             // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(42, 90);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(278, 1);
-            this.panel7.TabIndex = 84;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(38, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 23);
-            this.label1.TabIndex = 83;
-            this.label1.Text = "Seleccionar webcam";
-            // 
-            // combo_dispositivos
-            // 
-            this.combo_dispositivos.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.combo_dispositivos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combo_dispositivos.FormattingEnabled = true;
-            this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
-            this.combo_dispositivos.Name = "combo_dispositivos";
-            this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 0;
-            this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
-            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(42, 634);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
-            this.btn_cancelar.TabIndex = 4;
-            this.btn_cancelar.Text = "Cancelar registro";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_registrar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar.Enabled = false;
-            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_registrar.Location = new System.Drawing.Point(42, 585);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(575, 42);
-            this.btn_registrar.TabIndex = 3;
-            this.btn_registrar.Text = "Registrar tutor";
-            this.btn_registrar.UseVisualStyleBackColor = false;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
-            // 
-            // btn_capturar_foto
-            // 
-            this.btn_capturar_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_capturar_foto.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_capturar_foto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_capturar_foto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_capturar_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_capturar_foto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_capturar_foto.ForeColor = System.Drawing.Color.Black;
-            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 397);
-            this.btn_capturar_foto.Name = "btn_capturar_foto";
-            this.btn_capturar_foto.Size = new System.Drawing.Size(575, 42);
-            this.btn_capturar_foto.TabIndex = 2;
-            this.btn_capturar_foto.Text = "Capturar foto de perfil";
-            this.btn_capturar_foto.UseVisualStyleBackColor = false;
-            this.btn_capturar_foto.Click += new System.EventHandler(this.btn_capturar_foto_Click);
-            // 
-            // picture_captura
-            // 
-            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_captura.Location = new System.Drawing.Point(339, 102);
-            this.picture_captura.Name = "picture_captura";
-            this.picture_captura.Size = new System.Drawing.Size(278, 270);
-            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_captura.TabIndex = 1;
-            this.picture_captura.TabStop = false;
-            // 
-            // picture_tiempo_real
-            // 
-            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 102);
-            this.picture_tiempo_real.Name = "picture_tiempo_real";
-            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
-            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_tiempo_real.TabIndex = 0;
-            this.picture_tiempo_real.TabStop = false;
-            // 
-            // Frm_registrar_tutores
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(942, 694);
+            this.ClientSize = new System.Drawing.Size(942, 748);
             this.Controls.Add(this.gb_foto_perfil);
             this.Controls.Add(this.gb_datos);
-            this.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_registrar_tutores";
+            this.Name = "Frm_Modificar_tutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro de tutores";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_registrar_tutores_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_registrar_tutores_Load);
-            this.gb_datos.ResumeLayout(false);
-            this.gb_datos.PerformLayout();
+            this.Text = "Modificar tutores";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Modificar_tutor_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_Modificar_tutor_Load);
             this.gb_foto_perfil.ResumeLayout(false);
             this.gb_foto_perfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).EndInit();
+            this.gb_datos.ResumeLayout(false);
+            this.gb_datos.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox gb_foto_perfil;
+        private System.Windows.Forms.Button btn_enceder;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox combo_dispositivos;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_capturar_foto;
+        private System.Windows.Forms.PictureBox picture_tiempo_real;
         private System.Windows.Forms.GroupBox gb_datos;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ComboBox combo_parentesco;
         private System.Windows.Forms.Label lbl_parentesco;
-        private System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento;
         private System.Windows.Forms.Label lbl_fecha_nacimiento;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbl_correo;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label lbl_direccion;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label lbl_apellidos;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox txt_apellidos;
         private System.Windows.Forms.Label lbl_tutor;
         private System.Windows.Forms.Panel line1;
-        private System.Windows.Forms.TextBox txt_nombres;
-        private System.Windows.Forms.GroupBox gb_foto_perfil;
-        private System.Windows.Forms.PictureBox picture_captura;
-        private System.Windows.Forms.PictureBox picture_tiempo_real;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_registrar;
-        private System.Windows.Forms.Button btn_capturar_foto;
-        private System.Windows.Forms.ComboBox combo_dispositivos;
-        private System.Windows.Forms.Button btn_enceder;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label lbl_estatus;
+        public System.Windows.Forms.PictureBox picture_captura;
+        public System.Windows.Forms.ComboBox combo_parentesco;
+        public System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento;
+        public System.Windows.Forms.TextBox txt_correo;
+        public System.Windows.Forms.TextBox txt_telefono;
+        public System.Windows.Forms.TextBox txt_direccion;
+        public System.Windows.Forms.TextBox txt_apellidos;
+        public System.Windows.Forms.TextBox txt_nombres;
+        public System.Windows.Forms.ComboBox combo_estatus;
+        private System.Windows.Forms.RadioButton rdb_conservar;
+        private System.Windows.Forms.RadioButton rdb_modificar;
     }
 }

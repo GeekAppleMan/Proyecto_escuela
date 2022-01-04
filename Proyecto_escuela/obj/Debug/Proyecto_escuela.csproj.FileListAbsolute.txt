@@ -37,4 +37,5 @@ C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xm
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CopyComplete
+C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
+C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
