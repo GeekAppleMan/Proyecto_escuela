@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Proyecto_escuela.Login;
 
 namespace Proyecto_escuela
 {
     public partial class Frm_login : Form
     {
         Frm_main obj_main = new Frm_main();
+        
         public Frm_login()
         {
             InitializeComponent();
@@ -32,6 +34,13 @@ namespace Proyecto_escuela
         private void picmin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void linkLabelcontraseña_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Frm_Reestablecercontraseña objreestablecer = new Frm_Reestablecercontraseña();
+            objreestablecer.Show();
+            this.Hide();
         }
     }
 }
