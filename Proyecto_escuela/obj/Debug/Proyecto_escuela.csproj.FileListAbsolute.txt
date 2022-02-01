@@ -88,3 +88,4 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Reestablecercontraseña.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Registro.resources

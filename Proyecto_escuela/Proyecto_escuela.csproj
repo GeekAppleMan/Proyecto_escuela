@@ -122,6 +122,12 @@
     <Compile Include="Login\Frm_Reestablecercontraseña.Designer.cs">
       <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\Frm_Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Registro.Designer.cs">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\Frm_Modificar_tutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Reestablecercontraseña.resx">
       <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Registro.resx">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>

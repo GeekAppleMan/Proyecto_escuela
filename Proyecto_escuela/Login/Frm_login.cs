@@ -42,5 +42,12 @@ namespace Proyecto_escuela
             objreestablecer.Show();
             this.Hide();
         }
+
+        private void linkLabelregistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Frm_Registro objregistrar = new Frm_Registro();
+            objregistrar.Show();
+            this.Hide();
+        }
     }
 }

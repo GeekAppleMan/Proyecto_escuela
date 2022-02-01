@@ -30,14 +30,14 @@ namespace Proyecto_escuela.Login
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
-            this.lbltitulo = new System.Windows.Forms.Label();
-            this.piccerrar = new System.Windows.Forms.PictureBox();
-            this.picmin = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
-            this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
+            this.piccerrar = new System.Windows.Forms.PictureBox();
+            this.picmin = new System.Windows.Forms.PictureBox();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -54,6 +54,17 @@ namespace Proyecto_escuela.Login
             this.panel1.Size = new System.Drawing.Size(214, 327);
             this.panel1.TabIndex = 0;
             // 
+            // lbljane
+            // 
+            this.lbljane.AutoSize = true;
+            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbljane.Location = new System.Drawing.Point(24, 152);
+            this.lbljane.Name = "lbljane";
+            this.lbljane.Size = new System.Drawing.Size(167, 23);
+            this.lbljane.TabIndex = 3;
+            this.lbljane.Text = "JANE SOFTWARE";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -69,28 +80,45 @@ namespace Proyecto_escuela.Login
             this.panel2.Size = new System.Drawing.Size(576, 327);
             this.panel2.TabIndex = 1;
             // 
-            // lbljane
+            // linkLabelRegresar
             // 
-            this.lbljane.AutoSize = true;
-            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbljane.Location = new System.Drawing.Point(24, 152);
-            this.lbljane.Name = "lbljane";
-            this.lbljane.Size = new System.Drawing.Size(167, 23);
-            this.lbljane.TabIndex = 3;
-            this.lbljane.Text = "JANE SOFTWARE";
+            this.linkLabelRegresar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.linkLabelRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.linkLabelRegresar.AutoSize = true;
+            this.linkLabelRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.linkLabelRegresar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabelRegresar.ForeColor = System.Drawing.Color.Black;
+            this.linkLabelRegresar.LinkColor = System.Drawing.Color.DimGray;
+            this.linkLabelRegresar.Location = new System.Drawing.Point(482, 297);
+            this.linkLabelRegresar.Name = "linkLabelRegresar";
+            this.linkLabelRegresar.Size = new System.Drawing.Size(82, 21);
+            this.linkLabelRegresar.TabIndex = 59;
+            this.linkLabelRegresar.TabStop = true;
+            this.linkLabelRegresar.Text = "Regresar";
+            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
             // 
-            // lbltitulo
+            // line1
             // 
-            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(160, 72);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(259, 23);
-            this.lbltitulo.TabIndex = 51;
-            this.lbltitulo.Text = "Reestablecer contraseña";
+            this.line1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.line1.BackColor = System.Drawing.Color.Gray;
+            this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.line1.Location = new System.Drawing.Point(63, 163);
+            this.line1.Name = "line1";
+            this.line1.Size = new System.Drawing.Size(451, 1);
+            this.line1.TabIndex = 58;
+            // 
+            // txtusuario
+            // 
+            this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtusuario.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtusuario.ForeColor = System.Drawing.Color.Gray;
+            this.txtusuario.Location = new System.Drawing.Point(63, 132);
+            this.txtusuario.Name = "txtusuario";
+            this.txtusuario.Size = new System.Drawing.Size(451, 25);
+            this.txtusuario.TabIndex = 57;
+            this.txtusuario.Text = "Correo de usuario";
             // 
             // piccerrar
             // 
@@ -116,45 +144,17 @@ namespace Proyecto_escuela.Login
             this.picmin.TabStop = false;
             this.picmin.Click += new System.EventHandler(this.picmin_Click);
             // 
-            // line1
+            // lbltitulo
             // 
-            this.line1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.line1.BackColor = System.Drawing.Color.Gray;
-            this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line1.Location = new System.Drawing.Point(63, 163);
-            this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(451, 1);
-            this.line1.TabIndex = 58;
-            // 
-            // txtusuario
-            // 
-            this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtusuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtusuario.Location = new System.Drawing.Point(63, 132);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(451, 25);
-            this.txtusuario.TabIndex = 57;
-            this.txtusuario.Text = "Correo de usuario";
-            // 
-            // linkLabelRegresar
-            // 
-            this.linkLabelRegresar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.linkLabelRegresar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabelRegresar.AutoSize = true;
-            this.linkLabelRegresar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.linkLabelRegresar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelRegresar.ForeColor = System.Drawing.Color.Black;
-            this.linkLabelRegresar.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabelRegresar.Location = new System.Drawing.Point(482, 297);
-            this.linkLabelRegresar.Name = "linkLabelRegresar";
-            this.linkLabelRegresar.Size = new System.Drawing.Size(82, 21);
-            this.linkLabelRegresar.TabIndex = 59;
-            this.linkLabelRegresar.TabStop = true;
-            this.linkLabelRegresar.Text = "Regresar";
-            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
+            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
+            this.lbltitulo.Location = new System.Drawing.Point(160, 72);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(259, 23);
+            this.lbltitulo.TabIndex = 51;
+            this.lbltitulo.Text = "Reestablecer contraseña";
             // 
             // Frm_Reestablecercontraseña
             // 
@@ -166,7 +166,7 @@ namespace Proyecto_escuela.Login
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Reestablecercontraseña";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Reestablecercontraseña";
+            this.Text = "Reestablecer contraseña";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
