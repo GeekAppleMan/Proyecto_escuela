@@ -46,14 +46,13 @@ namespace Proyecto_escuela
             {
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
-                    obj_credencial.lbl_nombres_tutor.Text = dgv_alumno[0, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_apellidos_tutor.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_direccion_tutor.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_telefono_tutor.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_correo_tutor.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_fecha_tutor.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_parentesco_tutor.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_estatus_tutor.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_matricula_alumno.Text = dgv_alumno[0, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_nombres_alumno.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_apellidos_alumno.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_fecha_alumno.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_direccion_alumno.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_grupo_alumno.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_estatus_alumno.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
                     string path = dgv_alumno[9, e.RowIndex].Value.ToString();
                     if (path == "")
                     {
@@ -86,7 +85,7 @@ namespace Proyecto_escuela
                     Cls_Alumnos.index = e.RowIndex;
                     obj_modificar.txt_matricula.Text = dgv_alumno[0, e.RowIndex].Value.ToString();
                     obj_modificar.txt_nombres.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_apellidos.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_apellidos.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
                     obj_modificar.dtp_fecha_nacimiento.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
                     obj_modificar.txt_direccion.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
                     obj_modificar.combo_grupo.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
