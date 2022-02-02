@@ -16,5 +16,10 @@ namespace Proyecto_escuela
         {
             InitializeComponent();
         }
+
+        private void Frm_credencial_alumno_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

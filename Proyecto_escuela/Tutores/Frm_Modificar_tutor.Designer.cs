@@ -97,10 +97,12 @@ namespace Proyecto_escuela
             // rdb_conservar
             // 
             this.rdb_conservar.AutoSize = true;
+            this.rdb_conservar.Checked = true;
             this.rdb_conservar.Location = new System.Drawing.Point(233, 29);
             this.rdb_conservar.Name = "rdb_conservar";
             this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
             this.rdb_conservar.TabIndex = 86;
+            this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
             this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
