@@ -30,6 +30,9 @@ namespace Proyecto_escuela.Login
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btniniciarsesion = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.linkLabelregistrar = new System.Windows.Forms.LinkLabel();
@@ -51,6 +54,9 @@ namespace Proyecto_escuela.Login
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btniniciarsesion);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.linkLabelregistrar);
@@ -69,12 +75,55 @@ namespace Proyecto_escuela.Login
             this.panel1.TabIndex = 0;
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
+            this.btniniciarsesion.Location = new System.Drawing.Point(275, 230);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
+            this.btniniciarsesion.TabIndex = 67;
+            this.btniniciarsesion.Text = "Registrar";
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel4.BackColor = System.Drawing.Color.Gray;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Location = new System.Drawing.Point(275, 102);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(451, 1);
+            this.panel4.TabIndex = 66;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox2.ForeColor = System.Drawing.Color.Gray;
+            this.textBox2.Location = new System.Drawing.Point(275, 71);
+            this.textBox2.MaxLength = 200;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(451, 25);
+            this.textBox2.TabIndex = 65;
+            this.textBox2.Text = "Correo";
+            this.textBox2.Click += new System.EventHandler(this.textBox2_Click);
+            this.textBox2.Leave += new System.EventHandler(this.textBox2_Leave);
+            // 
             // panel3
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(279, 248);
+            this.panel3.Location = new System.Drawing.Point(275, 223);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(451, 1);
             this.panel3.TabIndex = 64;
@@ -86,7 +135,7 @@ namespace Proyecto_escuela.Login
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(279, 217);
+            this.textBox1.Location = new System.Drawing.Point(275, 192);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(451, 25);
             this.textBox1.TabIndex = 63;
@@ -117,7 +166,7 @@ namespace Proyecto_escuela.Login
             this.line2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line2.BackColor = System.Drawing.Color.Gray;
             this.line2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line2.Location = new System.Drawing.Point(279, 205);
+            this.line2.Location = new System.Drawing.Point(275, 180);
             this.line2.Name = "line2";
             this.line2.Size = new System.Drawing.Size(451, 1);
             this.line2.TabIndex = 61;
@@ -127,7 +176,7 @@ namespace Proyecto_escuela.Login
             this.line1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line1.BackColor = System.Drawing.Color.Gray;
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line1.Location = new System.Drawing.Point(279, 113);
+            this.line1.Location = new System.Drawing.Point(275, 137);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(451, 1);
             this.line1.TabIndex = 60;
@@ -139,7 +188,7 @@ namespace Proyecto_escuela.Login
             this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtcontraseña.Location = new System.Drawing.Point(279, 174);
+            this.txtcontraseña.Location = new System.Drawing.Point(275, 149);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(451, 25);
             this.txtcontraseña.TabIndex = 59;
@@ -155,12 +204,12 @@ namespace Proyecto_escuela.Login
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtusuario.Location = new System.Drawing.Point(279, 82);
+            this.txtusuario.Location = new System.Drawing.Point(275, 106);
             this.txtusuario.MaxLength = 10;
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(451, 25);
             this.txtusuario.TabIndex = 58;
-            this.txtusuario.Text = "Usuario";
+            this.txtusuario.Text = "Numero de télefono";
             this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
             this.txtusuario.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtusuario_KeyPress);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
@@ -258,5 +307,8 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.LinkLabel linkLabelregistrar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Button btniniciarsesion;
     }
 }

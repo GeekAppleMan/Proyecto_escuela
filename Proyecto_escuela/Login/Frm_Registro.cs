@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Proyecto_escuela.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,7 @@ namespace Proyecto_escuela.Login
         {
             InitializeComponent();
         }
+        Cls_registro obj_registro = new Cls_registro();
 
         private void piccerrar_Click(object sender, EventArgs e)
         {
@@ -65,7 +67,7 @@ namespace Proyecto_escuela.Login
         {
             if (txtusuario.TextLength==0)
             {
-                txtusuario.Text = "Usuario";
+                txtusuario.Text = "Numero de télefono";
             }
         }
 
@@ -101,6 +103,41 @@ namespace Proyecto_escuela.Login
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
 
+        }
+
+        private void textBox2_Click(object sender, EventArgs e)
+        {
+            textBox2.SelectAll();
+        }
+
+        private void textBox2_Leave(object sender, EventArgs e)
+        {
+            if (textBox2.Text.Length == 0)
+            {
+                textBox2.UseSystemPasswordChar = false;
+                textBox2.Text = "Correo";
+            }
+        }
+
+        private void btniniciarsesion_Click(object sender, EventArgs e)
+        {
+            if (txtcontraseña.Text!=textBox1.Text)
+            {
+                MessageBox.Show("Las contraseñas no coinciden");
+            }
+            else if (textBox2.Text.Length==0)
+            {
+                MessageBox.Show("Introduzca un correo valido");
+            }
+            else if (txtusuario.Text.Length<10)
+            {
+                MessageBox.Show("Introduzca un numero de telefono valido");
+            }
+            else
+            {
+                obj_registro.registrarUsuarios(textBox2.Text,Convert.ToInt64(txtusuario.Text), txtcontraseña.Text);
+                MessageBox.Show("Registrado exitosamente");
+            }
         }
     }
 }
