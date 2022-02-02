@@ -295,6 +295,7 @@ namespace Proyecto_escuela
             this.txt_apellidos.TabIndex = 2;
             this.txt_apellidos.Text = "Apellidos";
             this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
+            this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
             this.txt_apellidos.Leave += new System.EventHandler(this.txt_apellidos_Leave);
             // 
             // lbl_tutor
@@ -328,6 +329,7 @@ namespace Proyecto_escuela
             this.txt_nombres.TabIndex = 1;
             this.txt_nombres.Text = "Nombres";
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
+            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
             // gb_foto_perfil
