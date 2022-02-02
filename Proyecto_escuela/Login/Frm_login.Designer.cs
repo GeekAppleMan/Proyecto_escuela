@@ -39,14 +39,14 @@ namespace Proyecto_escuela
             this.btniniciarsesion = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.lblerror = new System.Windows.Forms.Label();
-            this.lbljane = new System.Windows.Forms.Label();
-            this.panel_logo = new System.Windows.Forms.Panel();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
+            this.lbljane = new System.Windows.Forms.Label();
+            this.panel_logo = new System.Windows.Forms.Panel();
             this.panel_contenedor.SuspendLayout();
-            this.panel_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
+            this.panel_logo.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -102,6 +102,8 @@ namespace Proyecto_escuela
             this.txtcontraseña.Size = new System.Drawing.Size(451, 25);
             this.txtcontraseña.TabIndex = 55;
             this.txtcontraseña.Text = "Contraseña";
+            this.txtcontraseña.Click += new System.EventHandler(this.txtcontraseña_Click);
+            this.txtcontraseña.Leave += new System.EventHandler(this.txtcontraseña_Leave);
             // 
             // txtusuario
             // 
@@ -115,6 +117,8 @@ namespace Proyecto_escuela
             this.txtusuario.Size = new System.Drawing.Size(451, 25);
             this.txtusuario.TabIndex = 54;
             this.txtusuario.Text = "Usuario";
+            this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
+            this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
             // linkLabelregistrar
             // 
@@ -142,7 +146,7 @@ namespace Proyecto_escuela
             this.linkLabelcontraseña.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelcontraseña.ForeColor = System.Drawing.Color.Black;
             this.linkLabelcontraseña.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabelcontraseña.Location = new System.Drawing.Point(169, 324);
+            this.linkLabelcontraseña.Location = new System.Drawing.Point(169, 323);
             this.linkLabelcontraseña.Name = "linkLabelcontraseña";
             this.linkLabelcontraseña.Size = new System.Drawing.Size(262, 21);
             this.linkLabelcontraseña.TabIndex = 52;
@@ -190,28 +194,6 @@ namespace Proyecto_escuela
             this.lblerror.Size = new System.Drawing.Size(0, 20);
             this.lblerror.TabIndex = 45;
             // 
-            // lbljane
-            // 
-            this.lbljane.AutoSize = true;
-            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbljane.Location = new System.Drawing.Point(14, 164);
-            this.lbljane.Name = "lbljane";
-            this.lbljane.Size = new System.Drawing.Size(167, 23);
-            this.lbljane.TabIndex = 2;
-            this.lbljane.Text = "JANE SOFTWARE";
-            // 
-            // panel_logo
-            // 
-            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel_logo.Controls.Add(this.lbljane);
-            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_logo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.panel_logo.Location = new System.Drawing.Point(0, 0);
-            this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(214, 374);
-            this.panel_logo.TabIndex = 27;
-            // 
             // piccerrar
             // 
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -236,6 +218,28 @@ namespace Proyecto_escuela
             this.picmin.TabStop = false;
             this.picmin.Click += new System.EventHandler(this.picmin_Click);
             // 
+            // lbljane
+            // 
+            this.lbljane.AutoSize = true;
+            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbljane.Location = new System.Drawing.Point(14, 164);
+            this.lbljane.Name = "lbljane";
+            this.lbljane.Size = new System.Drawing.Size(167, 23);
+            this.lbljane.TabIndex = 2;
+            this.lbljane.Text = "JANE SOFTWARE";
+            // 
+            // panel_logo
+            // 
+            this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel_logo.Controls.Add(this.lbljane);
+            this.panel_logo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel_logo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Name = "panel_logo";
+            this.panel_logo.Size = new System.Drawing.Size(214, 374);
+            this.panel_logo.TabIndex = 27;
+            // 
             // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -250,10 +254,10 @@ namespace Proyecto_escuela
             this.Text = "Inicio de sesión";
             this.panel_contenedor.ResumeLayout(false);
             this.panel_contenedor.PerformLayout();
-            this.panel_logo.ResumeLayout(false);
-            this.panel_logo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).EndInit();
+            this.panel_logo.ResumeLayout(false);
+            this.panel_logo.PerformLayout();
             this.ResumeLayout(false);
 
         }

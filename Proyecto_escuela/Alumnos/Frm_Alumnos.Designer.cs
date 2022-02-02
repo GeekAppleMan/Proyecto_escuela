@@ -93,7 +93,6 @@ namespace Proyecto_escuela
             this.dgv_alumno.Size = new System.Drawing.Size(1178, 503);
             this.dgv_alumno.TabIndex = 5;
             this.dgv_alumno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumno_CellClick);
-            this.dgv_alumno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumno_CellContentClick);
             // 
             // panel_busqueda
             // 

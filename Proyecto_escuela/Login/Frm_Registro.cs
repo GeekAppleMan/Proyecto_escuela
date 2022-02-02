@@ -135,7 +135,7 @@ namespace Proyecto_escuela.Login
             }
             else
             {
-                obj_registro.registrarUsuarios(textBox2.Text,Convert.ToInt64(txtusuario.Text), txtcontraseña.Text);
+                obj_registro.registrarUsuarios(textBox2.Text,txtusuario.Text, txtcontraseña.Text);
                 MessageBox.Show("Registrado exitosamente");
             }
         }

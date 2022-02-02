@@ -10,7 +10,7 @@ namespace Proyecto_escuela.Clases
 {
     class Cls_registro : Cls_conexion
     {
-        public void registrarUsuarios(string correo, long telefono, string contraseña)
+        public void registrarUsuarios(string correo, string telefono, string contraseña)
         {
             string query = "INSERT INTO `tb_registro`(`idUsuario`, `Correo`, `Telefono`, `Contraseña`) VALUES ('" + "" + "'," + "'" + correo + "'" + "," + "'" + telefono + "'" + "," + "'" + contraseña + "')";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
