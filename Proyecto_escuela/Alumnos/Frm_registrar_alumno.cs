@@ -97,14 +97,14 @@ namespace Proyecto_escuela
 
         private void btn_registrar_Click_1(object sender, EventArgs e)
         {
-            //if (string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(txt_correo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || string.IsNullOrEmpty(combo_parentesco.Text) || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_correo.Text == "Correo" || txt_telefono.Text == "Telefono")
-            //{
-            //    MessageBox.Show("Complete todos los campos");
-            //}
-            //else
-            //{
-            //    //obj_alumnos.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
-            //}
+            if (string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(combo_grupo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Text == "Matricula" || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion")
+            {
+                MessageBox.Show("Complete todos los campos");
+            }
+            else
+            {
+                obj_alumnos.registrar_alumnos(txt_matricula.Text,txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text,dtp_fecha_nacimiento.Value.ToString("d"),combo_grupo.Text, picture_captura, this);
+            }
         }
 
         private void Frm_registrar_alumno_FormClosed(object sender, FormClosedEventArgs e)

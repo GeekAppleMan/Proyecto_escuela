@@ -39,6 +39,8 @@ namespace Proyecto_escuela
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_capturar_foto = new System.Windows.Forms.Button();
+            this.picture_captura = new System.Windows.Forms.PictureBox();
+            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
             this.gb_datos = new System.Windows.Forms.GroupBox();
             this.panel9 = new System.Windows.Forms.Panel();
             this.combo_estatus = new System.Windows.Forms.ComboBox();
@@ -61,12 +63,10 @@ namespace Proyecto_escuela
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
-            this.picture_captura = new System.Windows.Forms.PictureBox();
-            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
             this.gb_foto_perfil.SuspendLayout();
-            this.gb_datos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
+            this.gb_datos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_foto_perfil
@@ -94,12 +94,15 @@ namespace Proyecto_escuela
             // rdb_conservar
             // 
             this.rdb_conservar.AutoSize = true;
+            this.rdb_conservar.Checked = true;
             this.rdb_conservar.Location = new System.Drawing.Point(231, 23);
             this.rdb_conservar.Name = "rdb_conservar";
             this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
             this.rdb_conservar.TabIndex = 88;
+            this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
+            this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
             // 
             // rdb_cambiar
             // 
@@ -110,6 +113,7 @@ namespace Proyecto_escuela
             this.rdb_cambiar.TabIndex = 87;
             this.rdb_cambiar.Text = "Cambiar imagen";
             this.rdb_cambiar.UseVisualStyleBackColor = true;
+            this.rdb_cambiar.Click += new System.EventHandler(this.rdb_cambiar_Click);
             // 
             // btn_enceder
             // 
@@ -127,6 +131,7 @@ namespace Proyecto_escuela
             this.btn_enceder.TabIndex = 1;
             this.btn_enceder.Text = "Encender webcam";
             this.btn_enceder.UseVisualStyleBackColor = false;
+            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
             // 
             // panel7
             // 
@@ -157,6 +162,8 @@ namespace Proyecto_escuela
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
             this.combo_dispositivos.TabIndex = 0;
+            this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
+            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover_1);
             // 
             // btn_cancelar
             // 
@@ -167,29 +174,30 @@ namespace Proyecto_escuela
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(42, 626);
+            this.btn_cancelar.Location = new System.Drawing.Point(40, 607);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
             this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_modificar
             // 
             this.btn_modificar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_modificar.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_modificar.Enabled = false;
             this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modificar.ForeColor = System.Drawing.Color.Black;
-            this.btn_modificar.Location = new System.Drawing.Point(42, 577);
+            this.btn_modificar.Location = new System.Drawing.Point(40, 558);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(575, 42);
             this.btn_modificar.TabIndex = 3;
             this.btn_modificar.Text = "Modificar alumno";
             this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // btn_capturar_foto
             // 
@@ -207,6 +215,29 @@ namespace Proyecto_escuela
             this.btn_capturar_foto.TabIndex = 2;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
+            this.btn_capturar_foto.Click += new System.EventHandler(this.btn_capturar_foto_Click);
+            // 
+            // picture_captura
+            // 
+            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_captura.Enabled = false;
+            this.picture_captura.Location = new System.Drawing.Point(339, 152);
+            this.picture_captura.Name = "picture_captura";
+            this.picture_captura.Size = new System.Drawing.Size(278, 270);
+            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_captura.TabIndex = 1;
+            this.picture_captura.TabStop = false;
+            // 
+            // picture_tiempo_real
+            // 
+            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_tiempo_real.Enabled = false;
+            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 152);
+            this.picture_tiempo_real.Name = "picture_tiempo_real";
+            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
+            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_tiempo_real.TabIndex = 0;
+            this.picture_tiempo_real.TabStop = false;
             // 
             // gb_datos
             // 
@@ -263,6 +294,7 @@ namespace Proyecto_escuela
             this.combo_estatus.Size = new System.Drawing.Size(234, 31);
             this.combo_estatus.TabIndex = 113;
             this.combo_estatus.Text = "Activo";
+            this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
             // lbl_estatus
             // 
@@ -298,13 +330,15 @@ namespace Proyecto_escuela
             this.txt_matricula.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_matricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_matricula.ForeColor = System.Drawing.Color.Gray;
+            this.txt_matricula.ForeColor = System.Drawing.Color.Black;
             this.txt_matricula.Location = new System.Drawing.Point(12, 63);
             this.txt_matricula.Name = "txt_matricula";
             this.txt_matricula.Size = new System.Drawing.Size(238, 25);
             this.txt_matricula.TabIndex = 2;
             this.txt_matricula.Text = "Matricula";
+            this.txt_matricula.Enter += new System.EventHandler(this.txt_matricula_Enter);
             this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
+            this.txt_matricula.Leave += new System.EventHandler(this.txt_matricula_Leave);
             // 
             // panel6
             // 
@@ -333,6 +367,7 @@ namespace Proyecto_escuela
             this.combo_grupo.Size = new System.Drawing.Size(234, 31);
             this.combo_grupo.TabIndex = 7;
             this.combo_grupo.Text = "1:A";
+            this.combo_grupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
             // lbl_grupo
             // 
@@ -397,12 +432,14 @@ namespace Proyecto_escuela
             this.txt_direccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_direccion.ForeColor = System.Drawing.Color.Gray;
+            this.txt_direccion.ForeColor = System.Drawing.Color.Black;
             this.txt_direccion.Location = new System.Drawing.Point(16, 329);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(238, 25);
             this.txt_direccion.TabIndex = 5;
             this.txt_direccion.Text = "Direccion";
+            this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_Enter);
+            this.txt_direccion.Leave += new System.EventHandler(this.txt_direccion_Leave);
             // 
             // lbl_apellidos
             // 
@@ -428,13 +465,15 @@ namespace Proyecto_escuela
             this.txt_apellidos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_apellidos.ForeColor = System.Drawing.Color.Gray;
+            this.txt_apellidos.ForeColor = System.Drawing.Color.Black;
             this.txt_apellidos.Location = new System.Drawing.Point(16, 237);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
             this.txt_apellidos.TabIndex = 4;
             this.txt_apellidos.Text = "Apellidos";
+            this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
             this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
+            this.txt_apellidos.Leave += new System.EventHandler(this.txt_apellidos_Leave);
             // 
             // lbl_alumno
             // 
@@ -460,35 +499,15 @@ namespace Proyecto_escuela
             this.txt_nombres.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_nombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_nombres.ForeColor = System.Drawing.Color.Gray;
+            this.txt_nombres.ForeColor = System.Drawing.Color.Black;
             this.txt_nombres.Location = new System.Drawing.Point(12, 147);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(238, 25);
             this.txt_nombres.TabIndex = 3;
             this.txt_nombres.Text = "Nombres";
+            this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
-            // 
-            // picture_captura
-            // 
-            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_captura.Enabled = false;
-            this.picture_captura.Location = new System.Drawing.Point(339, 152);
-            this.picture_captura.Name = "picture_captura";
-            this.picture_captura.Size = new System.Drawing.Size(278, 270);
-            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_captura.TabIndex = 1;
-            this.picture_captura.TabStop = false;
-            // 
-            // picture_tiempo_real
-            // 
-            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_tiempo_real.Enabled = false;
-            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 152);
-            this.picture_tiempo_real.Name = "picture_tiempo_real";
-            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
-            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_tiempo_real.TabIndex = 0;
-            this.picture_tiempo_real.TabStop = false;
+            this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
             // Frm_modificar_alumno
             // 
@@ -504,12 +523,14 @@ namespace Proyecto_escuela
             this.Name = "Frm_modificar_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Alumno";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_modificar_alumno_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_modificar_alumno_Load);
             this.gb_foto_perfil.ResumeLayout(false);
             this.gb_foto_perfil.PerformLayout();
-            this.gb_datos.ResumeLayout(false);
-            this.gb_datos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).EndInit();
+            this.gb_datos.ResumeLayout(false);
+            this.gb_datos.PerformLayout();
             this.ResumeLayout(false);
 
         }

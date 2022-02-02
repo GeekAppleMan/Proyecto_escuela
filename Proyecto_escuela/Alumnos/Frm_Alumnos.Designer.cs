@@ -38,6 +38,7 @@ namespace Proyecto_escuela
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,8 +46,6 @@ namespace Proyecto_escuela
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
@@ -74,6 +73,7 @@ namespace Proyecto_escuela
             this.dgv_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_alumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_alumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_alumno,
             this.Matricula,
             this.Nombres,
             this.Apellidos,
@@ -81,8 +81,6 @@ namespace Proyecto_escuela
             this.Direccion,
             this.Grupo,
             this.Estatus,
-            this.Tutor,
-            this.Id_tutor,
             this.Imagen,
             this.Modificar,
             this.Eliminar});
@@ -95,6 +93,7 @@ namespace Proyecto_escuela
             this.dgv_alumno.Size = new System.Drawing.Size(1178, 503);
             this.dgv_alumno.TabIndex = 5;
             this.dgv_alumno.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumno_CellClick);
+            this.dgv_alumno.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_alumno_CellContentClick);
             // 
             // panel_busqueda
             // 
@@ -179,6 +178,13 @@ namespace Proyecto_escuela
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 118;
             // 
+            // id_alumno
+            // 
+            this.id_alumno.HeaderText = "Id_alumno";
+            this.id_alumno.MinimumWidth = 6;
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.Visible = false;
+            // 
             // Matricula
             // 
             this.Matricula.HeaderText = "Matricula";
@@ -220,18 +226,6 @@ namespace Proyecto_escuela
             this.Estatus.HeaderText = "Estatus";
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
-            // 
-            // Tutor
-            // 
-            this.Tutor.HeaderText = "Tutor";
-            this.Tutor.MinimumWidth = 6;
-            this.Tutor.Name = "Tutor";
-            // 
-            // Id_tutor
-            // 
-            this.Id_tutor.HeaderText = "Id_tutor";
-            this.Id_tutor.MinimumWidth = 6;
-            this.Id_tutor.Name = "Id_tutor";
             // 
             // Imagen
             // 
@@ -285,6 +279,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_alumno;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
@@ -292,8 +287,6 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tutor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_tutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
