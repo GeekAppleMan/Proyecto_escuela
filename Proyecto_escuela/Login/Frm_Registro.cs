@@ -93,21 +93,6 @@ namespace Proyecto_escuela.Login
             }
         }
 
-        private void btnRegistrar_Click(object sender, EventArgs e)
-        {
-            
-        }
-        public void boton()
-        {
-            if (txtusuario.TextLength!=10 ||textBox1.Text!= txtcontraseña.Text)
-            {
-                btnRegistrar.Enabled = false;
-            }
-            else
-            {
-                btnRegistrar.Enabled = true;
-            }
-        }
         private void Frm_Registro_Load(object sender, EventArgs e)
         {
 
@@ -115,7 +100,7 @@ namespace Proyecto_escuela.Login
 
         private void panel1_MouseMove(object sender, MouseEventArgs e)
         {
-            boton();
+
         }
     }
 }

@@ -42,7 +42,6 @@ namespace Proyecto_escuela.Login
             this.lbltitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
-            this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
@@ -52,7 +51,6 @@ namespace Proyecto_escuela.Login
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.linkLabelregistrar);
@@ -76,7 +74,7 @@ namespace Proyecto_escuela.Login
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BackColor = System.Drawing.Color.Gray;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(279, 194);
+            this.panel3.Location = new System.Drawing.Point(279, 248);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(451, 1);
             this.panel3.TabIndex = 64;
@@ -88,7 +86,7 @@ namespace Proyecto_escuela.Login
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.Gray;
-            this.textBox1.Location = new System.Drawing.Point(279, 163);
+            this.textBox1.Location = new System.Drawing.Point(279, 217);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(451, 25);
             this.textBox1.TabIndex = 63;
@@ -119,7 +117,7 @@ namespace Proyecto_escuela.Login
             this.line2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line2.BackColor = System.Drawing.Color.Gray;
             this.line2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line2.Location = new System.Drawing.Point(279, 151);
+            this.line2.Location = new System.Drawing.Point(279, 205);
             this.line2.Name = "line2";
             this.line2.Size = new System.Drawing.Size(451, 1);
             this.line2.TabIndex = 61;
@@ -141,7 +139,7 @@ namespace Proyecto_escuela.Login
             this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtcontraseña.Location = new System.Drawing.Point(279, 120);
+            this.txtcontraseña.Location = new System.Drawing.Point(279, 174);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.Size = new System.Drawing.Size(451, 25);
             this.txtcontraseña.TabIndex = 59;
@@ -224,23 +222,6 @@ namespace Proyecto_escuela.Login
             this.lbljane.TabIndex = 3;
             this.lbljane.Text = "JANE SOFTWARE";
             // 
-            // btnRegistrar
-            // 
-            this.btnRegistrar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnRegistrar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegistrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.Black;
-            this.btnRegistrar.Location = new System.Drawing.Point(279, 211);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(451, 40);
-            this.btnRegistrar.TabIndex = 65;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
-            // 
             // Frm_Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -277,6 +258,5 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.LinkLabel linkLabelregistrar;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnRegistrar;
     }
 }
