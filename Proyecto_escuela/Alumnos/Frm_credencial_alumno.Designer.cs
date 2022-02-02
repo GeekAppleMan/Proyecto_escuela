@@ -271,6 +271,7 @@ namespace Proyecto_escuela
             this.Controls.Add(this.gb_foto_perfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Frm_credencial_alumno";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credencial Alumno";
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();

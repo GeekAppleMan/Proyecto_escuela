@@ -51,10 +51,7 @@ namespace Proyecto_escuela
 
         private void txt_apellidos_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
-            {
-                e.Handled = true;
-            }
+
         }
     }
 }
