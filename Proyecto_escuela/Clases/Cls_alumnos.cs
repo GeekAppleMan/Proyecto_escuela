@@ -11,8 +11,7 @@ namespace Proyecto_escuela
 {
     class Cls_Alumnos : Cls_conexion
     {
-        private string path = @"C:\Users\Jaime\Desktop\Proyecto_escuela\Imagenes\";
-        public static DataTable tabla_id = new DataTable();
+        private string path = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/";
         public static bool conservar_modificar_imagen { get; set; }
         private Random objrandom = new Random();
         private char letrarandom;
@@ -22,12 +21,6 @@ namespace Proyecto_escuela
             string estatus = "";
             if (matricula == "")
             {
-                if (tabla_id.Columns.Count == 0)
-                {
-                    tabla_id.Columns.Add("id_tutor");
-                    tabla_id.Columns.Add("imagen");
-                }
-                tabla_id.Rows.Clear();
                 grid.Rows.Clear();
                 string query = "SELECT * FROM tb_alumnos WHERE estatus = '1'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -50,8 +43,7 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), estatus, reader.GetString(8));
-                        tabla_id.Rows.Add(reader.GetString(0), reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), estatus, reader.GetString(8), reader.GetString(0), reader.GetString(9));
                     }
                 }
                 else
@@ -63,7 +55,6 @@ namespace Proyecto_escuela
             }
             else
             {
-                tabla_id.Rows.Clear();
                 grid.Rows.Clear();
                 string query = "SELECT * FROM tb_alumnos WHERE matricula LIKE " + "'%" + matricula + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -86,8 +77,7 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), estatus, reader.GetString(8));
-                        tabla_id.Rows.Add(reader.GetString(0), reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), estatus, reader.GetString(8), reader.GetString(0), reader.GetString(9));
                     }
                 }
                 else
@@ -97,6 +87,10 @@ namespace Proyecto_escuela
 
                 databaseConnection.Close();
             }
+
+        }
+        public void eliminar_alumno()
+        {
 
         }
     }

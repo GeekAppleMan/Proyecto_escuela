@@ -36,6 +36,8 @@ namespace Proyecto_escuela
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_tutor = new System.Windows.Forms.DataGridView();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,10 +46,10 @@ namespace Proyecto_escuela
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_busqueda.SuspendLayout();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).BeginInit();
@@ -145,6 +147,8 @@ namespace Proyecto_escuela
             this.Fecha_nacimiento,
             this.Parentesco,
             this.Estatus,
+            this.id_tutor,
+            this.imagen,
             this.Modificar,
             this.Eliminar});
             this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -156,6 +160,24 @@ namespace Proyecto_escuela
             this.dgv_tutor.Size = new System.Drawing.Size(1178, 503);
             this.dgv_tutor.TabIndex = 5;
             this.dgv_tutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tutor_CellClick);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 131;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 131;
             // 
             // Nombres
             // 
@@ -205,6 +227,18 @@ namespace Proyecto_escuela
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
             // 
+            // id_tutor
+            // 
+            this.id_tutor.HeaderText = "id_tutor";
+            this.id_tutor.MinimumWidth = 6;
+            this.id_tutor.Name = "id_tutor";
+            // 
+            // imagen
+            // 
+            this.imagen.HeaderText = "imagen";
+            this.imagen.MinimumWidth = 6;
+            this.imagen.Name = "imagen";
+            // 
             // Modificar
             // 
             this.Modificar.HeaderText = "Modificar";
@@ -220,24 +254,6 @@ namespace Proyecto_escuela
             this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Modificar";
-            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 131;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
-            this.dataGridViewImageColumn2.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 131;
             // 
             // Frm_tutores
             // 
@@ -277,6 +293,8 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_tutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }

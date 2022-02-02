@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -13,6 +14,8 @@ namespace Proyecto_escuela
     public partial class Frm_Alumnos : Form
     {
         Cls_Alumnos obj_alumnos = new Cls_Alumnos();
+        Frm_modificar_alumno obj_modificar = new Frm_modificar_alumno();
+        Frm_credencial_alumno obj_credencial = new Frm_credencial_alumno();
         public Frm_Alumnos()
         {
             InitializeComponent();
@@ -35,12 +38,77 @@ namespace Proyecto_escuela
 
         private void dgv_alumno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 8)
+            if (e.RowIndex == -1)
+            {
+
+            }
+            else
+            {
+                if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
+                {
+                    obj_credencial.lbl_nombres_tutor.Text = dgv_alumno[0, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_apellidos_tutor.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_direccion_tutor.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_telefono_tutor.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_correo_tutor.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_fecha_tutor.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_parentesco_tutor.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_estatus_tutor.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                    string path = dgv_alumno[9, e.RowIndex].Value.ToString();
+                    if (path == "")
+                    {
+                        obj_credencial.picture_imagen_perfil.Image = null;
+                    }
+                    else
+                    {
+                        try
+                        {
+                            var request = WebRequest.Create(path);
+                            using (var response = request.GetResponse())
+                            using (var stream = response.GetResponseStream())
+                            {
+                                obj_credencial.picture_imagen_perfil.Image = Bitmap.FromStream(stream);
+                                System.Drawing.Image img = obj_credencial.picture_imagen_perfil.Image;
+                                //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                                obj_credencial.picture_imagen_perfil.Image = img;
+                            }
+                        }
+                        catch (Exception)
+                        {
+
+                        }
+                    }
+                    obj_credencial.ShowDialog();
+                    cargar_alumno();
+                }
+                if (e.ColumnIndex == 10)
+                {
+                    Cls_Alumnos.index = e.RowIndex;
+                    obj_modificar.txt_nombres.Text = dgv_alumno[0, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_apellidos.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_direccion.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_telefono.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
+                    obj_modificar.txt_correo.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
+                    obj_modificar.dtp_fecha_nacimiento.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_parentesco.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
+                    obj_modificar.combo_estatus.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                    obj_modificar.ShowDialog();
+                    cargar_alumno();
+                }
+                if (e.ColumnIndex == 11)
+                {
+                    Cls_Alumnos.index = e.RowIndex;
+                    obj_alumnos.eliminar_alumno();
+                    cargar_alumno();
+                }
+            }
+
+            if (e.ColumnIndex == 10)
             {
                 Frm_modificar_alumno obj_modificar = new Frm_modificar_alumno();
                 obj_modificar.ShowDialog();
             }
-            if (e.ColumnIndex == 9)
+            if (e.ColumnIndex == 11)
             {
                 MessageBox.Show("eliminar");
             }

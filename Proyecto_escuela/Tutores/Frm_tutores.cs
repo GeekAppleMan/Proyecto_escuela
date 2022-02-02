@@ -61,7 +61,7 @@ namespace Proyecto_escuela
                     obj_credencial.lbl_fecha_tutor.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_parentesco_tutor.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_estatus_tutor.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
-                    string path = Cls_tutores.tabla_id.Rows[e.RowIndex]["imagen"].ToString();
+                    string path = dgv_tutor[9, e.RowIndex].Value.ToString();
                     if (path == "")
                     {
                         obj_credencial.picture_imagen_perfil.Image = null;
@@ -88,7 +88,7 @@ namespace Proyecto_escuela
                     obj_credencial.ShowDialog();
                     cargar_tutores();
                 }
-                if (e.ColumnIndex == 8)
+                if (e.ColumnIndex == 10)
                 {
                     Cls_tutores.index = e.RowIndex;
                     obj_modificar.txt_nombres.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
@@ -102,7 +102,7 @@ namespace Proyecto_escuela
                     obj_modificar.ShowDialog();
                     cargar_tutores();
                 }
-                if (e.ColumnIndex == 9)
+                if (e.ColumnIndex == 11)
                 {
                     Cls_tutores.index = e.RowIndex;
                     obj_tutores.eliminar_tutor();

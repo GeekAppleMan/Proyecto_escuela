@@ -13,9 +13,9 @@ namespace Proyecto_escuela
 {
     class Cls_tutores : Cls_conexion
     {
-        private string path = @"C:\Users\Jaime\Desktop\Proyecto_escuela\Imagenes\";
-        public static DataTable tabla_id = new DataTable();
+        private string path = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/";
         public static bool conservar_modificar_imagen { get; set; }
+        public static DataGridView tutores;
         private Random objrandom = new Random();
         private char letrarandom;
         public static int index { get; set; }
@@ -25,12 +25,6 @@ namespace Proyecto_escuela
             string estatus = "";
             if (nombre == "")
             {
-                if (tabla_id.Columns.Count == 0)
-                {
-                    tabla_id.Columns.Add("id_tutor");
-                    tabla_id.Columns.Add("imagen");
-                }
-                tabla_id.Rows.Clear();
                 grid.Rows.Clear();
                 string query = "SELECT * FROM tb_padres WHERE estatus = '1'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -65,8 +59,8 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),reader.GetString(5),reader.GetString(6),tutor,estatus);
-                        tabla_id.Rows.Add(reader.GetString(0),reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),reader.GetString(5),reader.GetString(6),tutor,estatus, reader.GetString(0), reader.GetString(9));
+                        tutores = grid;
                     }
                 }
                 else
@@ -78,7 +72,6 @@ namespace Proyecto_escuela
             }
             else
             {
-                tabla_id.Rows.Clear();
                 grid.Rows.Clear();
                 string query = "SELECT * FROM tb_padres WHERE nombres LIKE " + "'%" + nombre + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -113,8 +106,8 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus);
-                        tabla_id.Rows.Add(reader.GetString(0), reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus, reader.GetString(0), reader.GetString(9));
+                        tutores = grid;
                     }
                 }
                 else
@@ -161,7 +154,7 @@ namespace Proyecto_escuela
                         default:
                             break;
                     }
-                    string imagen_bd = "C:/Users/Jaime/Desktop/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                    string imagen_bd = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
                     string path_save = path + codigo_imagen + ".jpg";
                     string query = "INSERT INTO `tb_padres`(`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus` ,`foto_perfil`) VALUES ('" + "" + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + direcciones + "'" + "," + "'" + telefono + "'" + "," + "'" + correo + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + resul_parentesco + "'" + "," + "'1'" + "," + "'" + imagen_bd + "')";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -195,7 +188,7 @@ namespace Proyecto_escuela
             {
                 string resul_parentesco = "";
                 string resul_estatus = "";
-                string id_tutor = tabla_id.Rows[index]["id_tutor"].ToString();
+                string id_tutor = tutores[8,index].Value.ToString();
                 if (conservar_modificar_imagen == true)
                 {
                     switch (parentesco)
@@ -255,7 +248,7 @@ namespace Proyecto_escuela
                         }
                         else if (verificar_codigo == false)
                         {
-                            string imagen_bd = "C:/Users/Jaime/Desktop/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                            string imagen_bd = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
                             string path_save = path + codigo_imagen + ".jpg";
                             switch (parentesco)
                             {
@@ -288,7 +281,7 @@ namespace Proyecto_escuela
                             reader = commandDatabase.ExecuteReader();
                             try
                             {
-                                File.Delete(tabla_id.Rows[index]["imagen"].ToString());
+                                File.Delete(tutores[9, index].Value.ToString());
                                 pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
                                 MessageBox.Show("Se modifico al tutor correctamente");
                             }
@@ -311,7 +304,7 @@ namespace Proyecto_escuela
         {
             try
             {
-                string query = "UPDATE `tb_padres` SET `estatus` = '2' WHERE id_tutor = " + "'" + tabla_id.Rows[index]["id_tutor"].ToString() + "'";
+                string query = "UPDATE `tb_padres` SET `estatus` = '2' WHERE id_tutor = " + "'" + tutores[8, index].Value.ToString() + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

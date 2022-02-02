@@ -30,6 +30,8 @@ namespace Proyecto_escuela
         private void InitializeComponent()
         {
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.rdb_conservar = new System.Windows.Forms.RadioButton();
+            this.rdb_cambiar = new System.Windows.Forms.RadioButton();
             this.btn_enceder = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -37,7 +39,12 @@ namespace Proyecto_escuela
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_capturar_foto = new System.Windows.Forms.Button();
+            this.picture_captura = new System.Windows.Forms.PictureBox();
+            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
             this.gb_datos = new System.Windows.Forms.GroupBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.combo_estatus = new System.Windows.Forms.ComboBox();
+            this.lbl_estatus = new System.Windows.Forms.Label();
             this.lbl_apellidos_tutor = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txt_apellidos_tutor = new System.Windows.Forms.TextBox();
@@ -62,17 +69,10 @@ namespace Proyecto_escuela
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
-            this.picture_captura = new System.Windows.Forms.PictureBox();
-            this.picture_tiempo_real = new System.Windows.Forms.PictureBox();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.combo_estatus = new System.Windows.Forms.ComboBox();
-            this.lbl_estatus = new System.Windows.Forms.Label();
-            this.rdb_conservar = new System.Windows.Forms.RadioButton();
-            this.rdb_cambiar = new System.Windows.Forms.RadioButton();
             this.gb_foto_perfil.SuspendLayout();
-            this.gb_datos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
+            this.gb_datos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_foto_perfil
@@ -96,6 +96,26 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.TabIndex = 85;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
+            // 
+            // rdb_conservar
+            // 
+            this.rdb_conservar.AutoSize = true;
+            this.rdb_conservar.Location = new System.Drawing.Point(231, 23);
+            this.rdb_conservar.Name = "rdb_conservar";
+            this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
+            this.rdb_conservar.TabIndex = 88;
+            this.rdb_conservar.Text = "Conservar imagen";
+            this.rdb_conservar.UseVisualStyleBackColor = true;
+            // 
+            // rdb_cambiar
+            // 
+            this.rdb_cambiar.AutoSize = true;
+            this.rdb_cambiar.Location = new System.Drawing.Point(40, 23);
+            this.rdb_cambiar.Name = "rdb_cambiar";
+            this.rdb_cambiar.Size = new System.Drawing.Size(152, 24);
+            this.rdb_cambiar.TabIndex = 87;
+            this.rdb_cambiar.Text = "Cambiar imagen";
+            this.rdb_cambiar.UseVisualStyleBackColor = true;
             // 
             // btn_enceder
             // 
@@ -194,6 +214,28 @@ namespace Proyecto_escuela
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
             // 
+            // picture_captura
+            // 
+            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_captura.Enabled = false;
+            this.picture_captura.Location = new System.Drawing.Point(339, 152);
+            this.picture_captura.Name = "picture_captura";
+            this.picture_captura.Size = new System.Drawing.Size(278, 270);
+            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_captura.TabIndex = 1;
+            this.picture_captura.TabStop = false;
+            // 
+            // picture_tiempo_real
+            // 
+            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picture_tiempo_real.Enabled = false;
+            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 152);
+            this.picture_tiempo_real.Name = "picture_tiempo_real";
+            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
+            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_tiempo_real.TabIndex = 0;
+            this.picture_tiempo_real.TabStop = false;
+            // 
             // gb_datos
             // 
             this.gb_datos.Controls.Add(this.panel9);
@@ -232,6 +274,40 @@ namespace Proyecto_escuela
             this.gb_datos.TabStop = false;
             this.gb_datos.Text = "Datos del alumno";
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Gray;
+            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel9.Location = new System.Drawing.Point(20, 812);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(238, 1);
+            this.panel9.TabIndex = 115;
+            // 
+            // combo_estatus
+            // 
+            this.combo_estatus.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 12F);
+            this.combo_estatus.FormattingEnabled = true;
+            this.combo_estatus.Items.AddRange(new object[] {
+            "Activo",
+            "Inactivo"});
+            this.combo_estatus.Location = new System.Drawing.Point(20, 775);
+            this.combo_estatus.Name = "combo_estatus";
+            this.combo_estatus.Size = new System.Drawing.Size(234, 31);
+            this.combo_estatus.TabIndex = 113;
+            this.combo_estatus.Text = "Activo";
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(16, 736);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
+            this.lbl_estatus.TabIndex = 114;
+            this.lbl_estatus.Text = "Estatus";
+            // 
             // lbl_apellidos_tutor
             // 
             this.lbl_apellidos_tutor.AutoSize = true;
@@ -262,6 +338,7 @@ namespace Proyecto_escuela
             this.txt_apellidos_tutor.Size = new System.Drawing.Size(238, 25);
             this.txt_apellidos_tutor.TabIndex = 1;
             this.txt_apellidos_tutor.Text = "Apellidos";
+            this.txt_apellidos_tutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_tutor_KeyPress);
             // 
             // lbl_tutor
             // 
@@ -293,6 +370,7 @@ namespace Proyecto_escuela
             this.txt_nombres_tutor.Size = new System.Drawing.Size(238, 25);
             this.txt_nombres_tutor.TabIndex = 0;
             this.txt_nombres_tutor.Text = "Nombres";
+            this.txt_nombres_tutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_tutor_KeyPress);
             // 
             // panel8
             // 
@@ -324,6 +402,7 @@ namespace Proyecto_escuela
             this.txt_matricula.Size = new System.Drawing.Size(238, 25);
             this.txt_matricula.TabIndex = 2;
             this.txt_matricula.Text = "Matricula";
+            this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
             // 
             // panel6
             // 
@@ -453,6 +532,7 @@ namespace Proyecto_escuela
             this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
             this.txt_apellidos.TabIndex = 4;
             this.txt_apellidos.Text = "Apellidos";
+            this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
             // 
             // lbl_alumno
             // 
@@ -484,82 +564,7 @@ namespace Proyecto_escuela
             this.txt_nombres.Size = new System.Drawing.Size(238, 25);
             this.txt_nombres.TabIndex = 3;
             this.txt_nombres.Text = "Nombres";
-            // 
-            // picture_captura
-            // 
-            this.picture_captura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_captura.Enabled = false;
-            this.picture_captura.Location = new System.Drawing.Point(339, 152);
-            this.picture_captura.Name = "picture_captura";
-            this.picture_captura.Size = new System.Drawing.Size(278, 270);
-            this.picture_captura.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_captura.TabIndex = 1;
-            this.picture_captura.TabStop = false;
-            // 
-            // picture_tiempo_real
-            // 
-            this.picture_tiempo_real.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.picture_tiempo_real.Enabled = false;
-            this.picture_tiempo_real.Location = new System.Drawing.Point(42, 152);
-            this.picture_tiempo_real.Name = "picture_tiempo_real";
-            this.picture_tiempo_real.Size = new System.Drawing.Size(278, 270);
-            this.picture_tiempo_real.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_tiempo_real.TabIndex = 0;
-            this.picture_tiempo_real.TabStop = false;
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.Gray;
-            this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Location = new System.Drawing.Point(20, 812);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(238, 1);
-            this.panel9.TabIndex = 115;
-            // 
-            // combo_estatus
-            // 
-            this.combo_estatus.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.combo_estatus.FormattingEnabled = true;
-            this.combo_estatus.Items.AddRange(new object[] {
-            "Activo",
-            "Inactivo"});
-            this.combo_estatus.Location = new System.Drawing.Point(20, 775);
-            this.combo_estatus.Name = "combo_estatus";
-            this.combo_estatus.Size = new System.Drawing.Size(234, 31);
-            this.combo_estatus.TabIndex = 113;
-            this.combo_estatus.Text = "Activo";
-            // 
-            // lbl_estatus
-            // 
-            this.lbl_estatus.AutoSize = true;
-            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(16, 736);
-            this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
-            this.lbl_estatus.TabIndex = 114;
-            this.lbl_estatus.Text = "Estatus";
-            // 
-            // rdb_conservar
-            // 
-            this.rdb_conservar.AutoSize = true;
-            this.rdb_conservar.Location = new System.Drawing.Point(231, 23);
-            this.rdb_conservar.Name = "rdb_conservar";
-            this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
-            this.rdb_conservar.TabIndex = 88;
-            this.rdb_conservar.Text = "Conservar imagen";
-            this.rdb_conservar.UseVisualStyleBackColor = true;
-            // 
-            // rdb_cambiar
-            // 
-            this.rdb_cambiar.AutoSize = true;
-            this.rdb_cambiar.Location = new System.Drawing.Point(40, 23);
-            this.rdb_cambiar.Name = "rdb_cambiar";
-            this.rdb_cambiar.Size = new System.Drawing.Size(152, 24);
-            this.rdb_cambiar.TabIndex = 87;
-            this.rdb_cambiar.Text = "Cambiar imagen";
-            this.rdb_cambiar.UseVisualStyleBackColor = true;
+            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             // 
             // Frm_modificar_alumno
             // 
@@ -577,10 +582,10 @@ namespace Proyecto_escuela
             this.Text = "Modificar Alumno";
             this.gb_foto_perfil.ResumeLayout(false);
             this.gb_foto_perfil.PerformLayout();
-            this.gb_datos.ResumeLayout(false);
-            this.gb_datos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).EndInit();
+            this.gb_datos.ResumeLayout(false);
+            this.gb_datos.PerformLayout();
             this.ResumeLayout(false);
 
         }

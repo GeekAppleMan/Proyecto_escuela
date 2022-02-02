@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_escuela
 {
-    partial class Frm_credencial_tutor
+    partial class Frm_credencial_alumno
     {
         /// <summary>
         /// Required designer variable.
@@ -29,8 +29,6 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
-            this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
-            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_datos_tutor = new System.Windows.Forms.GroupBox();
             this.lbl_estatus_tutor = new System.Windows.Forms.Label();
             this.lbl_estatus = new System.Windows.Forms.Label();
@@ -48,32 +46,12 @@ namespace Proyecto_escuela
             this.lbl_direccion = new System.Windows.Forms.Label();
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
+            this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
+            this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
-            this.gb_datos_tutor.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // gb_foto_perfil
-            // 
-            this.gb_foto_perfil.Controls.Add(this.picture_imagen_perfil);
-            this.gb_foto_perfil.Dock = System.Windows.Forms.DockStyle.Left;
-            this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_foto_perfil.Location = new System.Drawing.Point(0, 0);
-            this.gb_foto_perfil.Name = "gb_foto_perfil";
-            this.gb_foto_perfil.Size = new System.Drawing.Size(394, 393);
-            this.gb_foto_perfil.TabIndex = 0;
-            this.gb_foto_perfil.TabStop = false;
-            this.gb_foto_perfil.Text = "Foto de perfil";
-            // 
-            // picture_imagen_perfil
-            // 
-            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
-            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
-            this.picture_imagen_perfil.Size = new System.Drawing.Size(388, 371);
-            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_imagen_perfil.TabIndex = 0;
-            this.picture_imagen_perfil.TabStop = false;
             // 
             // gb_datos_tutor
             // 
@@ -97,10 +75,10 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_datos_tutor.Location = new System.Drawing.Point(394, 0);
             this.gb_datos_tutor.Name = "gb_datos_tutor";
-            this.gb_datos_tutor.Size = new System.Drawing.Size(538, 393);
-            this.gb_datos_tutor.TabIndex = 1;
+            this.gb_datos_tutor.Size = new System.Drawing.Size(406, 450);
+            this.gb_datos_tutor.TabIndex = 3;
             this.gb_datos_tutor.TabStop = false;
-            this.gb_datos_tutor.Text = "Datos del tutor";
+            this.gb_datos_tutor.Text = "Datos del alumno";
             // 
             // lbl_estatus_tutor
             // 
@@ -262,33 +240,50 @@ namespace Proyecto_escuela
             this.lbl_tutor.TabIndex = 99;
             this.lbl_tutor.Text = "Nombres:";
             // 
-            // Frm_credencial_tutor
+            // gb_foto_perfil
+            // 
+            this.gb_foto_perfil.Controls.Add(this.picture_imagen_perfil);
+            this.gb_foto_perfil.Dock = System.Windows.Forms.DockStyle.Left;
+            this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gb_foto_perfil.Location = new System.Drawing.Point(0, 0);
+            this.gb_foto_perfil.Name = "gb_foto_perfil";
+            this.gb_foto_perfil.Size = new System.Drawing.Size(394, 450);
+            this.gb_foto_perfil.TabIndex = 2;
+            this.gb_foto_perfil.TabStop = false;
+            this.gb_foto_perfil.Text = "Foto de perfil";
+            // 
+            // picture_imagen_perfil
+            // 
+            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
+            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
+            this.picture_imagen_perfil.Size = new System.Drawing.Size(388, 428);
+            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_imagen_perfil.TabIndex = 0;
+            this.picture_imagen_perfil.TabStop = false;
+            // 
+            // Frm_credencial_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(932, 393);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gb_datos_tutor);
             this.Controls.Add(this.gb_foto_perfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
-            this.Name = "Frm_credencial_tutor";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_credencial_tutor_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_credencial_tutor_Load);
-            this.gb_foto_perfil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
+            this.Name = "Frm_credencial_alumno";
+            this.Text = "Credencial Alumno";
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();
+            this.gb_foto_perfil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox gb_foto_perfil;
         private System.Windows.Forms.GroupBox gb_datos_tutor;
+        private System.Windows.Forms.Label lbl_estatus;
         private System.Windows.Forms.Label lbl_parentesco;
         private System.Windows.Forms.Label lbl_fecha_nacimiento;
         private System.Windows.Forms.Label lbl_correo;
@@ -296,7 +291,8 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_direccion;
         private System.Windows.Forms.Label lbl_apellidos;
         private System.Windows.Forms.Label lbl_tutor;
-        public System.Windows.Forms.PictureBox picture_imagen_perfil;
+        private System.Windows.Forms.GroupBox gb_foto_perfil;
+        public System.Windows.Forms.Label lbl_estatus_tutor;
         public System.Windows.Forms.Label lbl_parentesco_tutor;
         public System.Windows.Forms.Label lbl_fecha_tutor;
         public System.Windows.Forms.Label lbl_correo_tutor;
@@ -304,7 +300,6 @@ namespace Proyecto_escuela
         public System.Windows.Forms.Label lbl_direccion_tutor;
         public System.Windows.Forms.Label lbl_apellidos_tutor;
         public System.Windows.Forms.Label lbl_nombres_tutor;
-        public System.Windows.Forms.Label lbl_estatus_tutor;
-        private System.Windows.Forms.Label lbl_estatus;
+        public System.Windows.Forms.PictureBox picture_imagen_perfil;
     }
 }
