@@ -13,7 +13,7 @@ namespace Proyecto_escuela
 {
     class Cls_tutores : Cls_conexion
     {
-        private string path = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/";
+        private string path = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/";
         public static bool conservar_modificar_imagen { get; set; }
         public static DataGridView tutores;
         private Random objrandom = new Random();
@@ -154,7 +154,7 @@ namespace Proyecto_escuela
                         default:
                             break;
                     }
-                    string imagen_bd = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                    string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
                     string path_save = path + codigo_imagen + ".jpg";
                     string query = "INSERT INTO `tb_padres`(`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus` ,`foto_perfil`) VALUES ('" + "" + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + direcciones + "'" + "," + "'" + telefono + "'" + "," + "'" + correo + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + resul_parentesco + "'" + "," + "'1'" + "," + "'" + imagen_bd + "')";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
@@ -248,7 +248,7 @@ namespace Proyecto_escuela
                         }
                         else if (verificar_codigo == false)
                         {
-                            string imagen_bd = @"C:/Users/Jaime/Desktop/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                            string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
                             string path_save = path + codigo_imagen + ".jpg";
                             switch (parentesco)
                             {
