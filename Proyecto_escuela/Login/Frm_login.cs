@@ -23,11 +23,13 @@ namespace Proyecto_escuela
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            obj_Login.comparar_login(txtusuario.Text,txtusuario.Text, txtcontraseña.Text);
-            if (obj_Login.a==1)
-            {
-                this.Hide();
-            }
+            this.Hide();
+            new Frm_main().Show();
+            //obj_Login.comparar_login(txtusuario.Text,txtusuario.Text, txtcontraseña.Text);
+            //if (obj_Login.a==1)
+            //{
+            //    this.Hide();
+            //}
         }
 
         private void piccerrar_Click(object sender, EventArgs e)
