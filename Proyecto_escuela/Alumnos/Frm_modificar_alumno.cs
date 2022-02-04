@@ -14,7 +14,7 @@ namespace Proyecto_escuela
 {
     public partial class Frm_modificar_alumno : Form
     {
-        Cls_tutores obj_tutores = new Cls_tutores();
+        Cls_Alumnos obj_alumnos = new Cls_Alumnos();
         private FilterInfoCollection misdispositivos;
         private VideoCaptureDevice miwebcam;
         private bool captura = false;
@@ -205,7 +205,7 @@ namespace Proyecto_escuela
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            //obj_tutores.modificar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, combo_estatus.Text, picture_captura, this, captura);
+            obj_alumnos.modificar_alumno(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_grupo.Text, combo_estatus.Text, picture_captura, this);
         }
 
         private void Frm_modificar_alumno_FormClosed(object sender, FormClosedEventArgs e)

@@ -30,6 +30,10 @@ namespace Proyecto_escuela
         private void InitializeComponent()
         {
             this.gb_datos_tutor = new System.Windows.Forms.GroupBox();
+            this.lbl_matricula_alumno = new System.Windows.Forms.Label();
+            this.lbl_matricula = new System.Windows.Forms.Label();
+            this.lbl_estatus_alumno = new System.Windows.Forms.Label();
+            this.lbl_estatus = new System.Windows.Forms.Label();
             this.lbl_grupo_alumno = new System.Windows.Forms.Label();
             this.lbl_direccion_alumno = new System.Windows.Forms.Label();
             this.lbl_fecha_alumno = new System.Windows.Forms.Label();
@@ -42,10 +46,6 @@ namespace Proyecto_escuela
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
-            this.lbl_estatus_alumno = new System.Windows.Forms.Label();
-            this.lbl_estatus = new System.Windows.Forms.Label();
-            this.lbl_matricula_alumno = new System.Windows.Forms.Label();
-            this.lbl_matricula = new System.Windows.Forms.Label();
             this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
@@ -75,6 +75,46 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.TabIndex = 3;
             this.gb_datos_tutor.TabStop = false;
             this.gb_datos_tutor.Text = "Datos del alumno";
+            // 
+            // lbl_matricula_alumno
+            // 
+            this.lbl_matricula_alumno.AutoSize = true;
+            this.lbl_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matricula_alumno.Location = new System.Drawing.Point(115, 31);
+            this.lbl_matricula_alumno.Name = "lbl_matricula_alumno";
+            this.lbl_matricula_alumno.Size = new System.Drawing.Size(101, 23);
+            this.lbl_matricula_alumno.TabIndex = 118;
+            this.lbl_matricula_alumno.Text = "Matricula";
+            // 
+            // lbl_matricula
+            // 
+            this.lbl_matricula.AutoSize = true;
+            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matricula.Location = new System.Drawing.Point(6, 31);
+            this.lbl_matricula.Name = "lbl_matricula";
+            this.lbl_matricula.Size = new System.Drawing.Size(106, 23);
+            this.lbl_matricula.TabIndex = 117;
+            this.lbl_matricula.Text = "Matricula:";
+            // 
+            // lbl_estatus_alumno
+            // 
+            this.lbl_estatus_alumno.AutoSize = true;
+            this.lbl_estatus_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus_alumno.Location = new System.Drawing.Point(95, 346);
+            this.lbl_estatus_alumno.Name = "lbl_estatus_alumno";
+            this.lbl_estatus_alumno.Size = new System.Drawing.Size(74, 23);
+            this.lbl_estatus_alumno.TabIndex = 116;
+            this.lbl_estatus_alumno.Text = "Activo";
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(6, 346);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
+            this.lbl_estatus.TabIndex = 115;
+            this.lbl_estatus.Text = "Estatus:";
             // 
             // lbl_grupo_alumno
             // 
@@ -198,46 +238,6 @@ namespace Proyecto_escuela
             this.picture_imagen_perfil.TabIndex = 0;
             this.picture_imagen_perfil.TabStop = false;
             // 
-            // lbl_estatus_alumno
-            // 
-            this.lbl_estatus_alumno.AutoSize = true;
-            this.lbl_estatus_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus_alumno.Location = new System.Drawing.Point(95, 346);
-            this.lbl_estatus_alumno.Name = "lbl_estatus_alumno";
-            this.lbl_estatus_alumno.Size = new System.Drawing.Size(74, 23);
-            this.lbl_estatus_alumno.TabIndex = 116;
-            this.lbl_estatus_alumno.Text = "Activo";
-            // 
-            // lbl_estatus
-            // 
-            this.lbl_estatus.AutoSize = true;
-            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(6, 346);
-            this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
-            this.lbl_estatus.TabIndex = 115;
-            this.lbl_estatus.Text = "Estatus:";
-            // 
-            // lbl_matricula_alumno
-            // 
-            this.lbl_matricula_alumno.AutoSize = true;
-            this.lbl_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula_alumno.Location = new System.Drawing.Point(115, 31);
-            this.lbl_matricula_alumno.Name = "lbl_matricula_alumno";
-            this.lbl_matricula_alumno.Size = new System.Drawing.Size(101, 23);
-            this.lbl_matricula_alumno.TabIndex = 118;
-            this.lbl_matricula_alumno.Text = "Matricula";
-            // 
-            // lbl_matricula
-            // 
-            this.lbl_matricula.AutoSize = true;
-            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula.Location = new System.Drawing.Point(6, 31);
-            this.lbl_matricula.Name = "lbl_matricula";
-            this.lbl_matricula.Size = new System.Drawing.Size(106, 23);
-            this.lbl_matricula.TabIndex = 117;
-            this.lbl_matricula.Text = "Matricula:";
-            // 
             // Frm_credencial_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -249,6 +249,7 @@ namespace Proyecto_escuela
             this.Name = "Frm_credencial_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Credencial Alumno";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_credencial_alumno_FormClosed);
             this.Load += new System.EventHandler(this.Frm_credencial_alumno_Load);
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();

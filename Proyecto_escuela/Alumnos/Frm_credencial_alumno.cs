@@ -21,5 +21,10 @@ namespace Proyecto_escuela
         {
 
         }
+
+        private void Frm_credencial_alumno_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            picture_imagen_perfil.Image = null;
+        }
     }
 }
