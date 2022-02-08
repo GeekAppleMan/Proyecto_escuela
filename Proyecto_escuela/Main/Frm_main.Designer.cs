@@ -327,6 +327,7 @@ namespace Proyecto_escuela
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_usuarios.UseVisualStyleBackColor = false;
+            this.btn_usuarios.Click += new System.EventHandler(this.btn_usuarios_Click);
             // 
             // btn_alumnos
             // 

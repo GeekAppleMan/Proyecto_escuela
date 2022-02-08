@@ -38,6 +38,7 @@ namespace Proyecto_escuela.Login
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
             this.lbltitulo = new System.Windows.Forms.Label();
+            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -68,6 +69,7 @@ namespace Proyecto_escuela.Login
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel2.Controls.Add(this.btniniciarsesion);
             this.panel2.Controls.Add(this.linkLabelRegresar);
             this.panel2.Controls.Add(this.line1);
             this.panel2.Controls.Add(this.txtusuario);
@@ -156,6 +158,22 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.TabIndex = 51;
             this.lbltitulo.Text = "Reestablecer contraseña";
             // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
+            this.btniniciarsesion.Location = new System.Drawing.Point(63, 254);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
+            this.btniniciarsesion.TabIndex = 60;
+            this.btniniciarsesion.Text = "Reestablecer contraseña";
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            // 
             // Frm_Reestablecercontraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -188,5 +206,6 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.Panel line1;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.LinkLabel linkLabelRegresar;
+        private System.Windows.Forms.Button btniniciarsesion;
     }
 }

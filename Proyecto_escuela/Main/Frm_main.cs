@@ -102,5 +102,11 @@ namespace Proyecto_escuela
             abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
         }
+
+        private void btn_usuarios_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_usuarios());
+            lbltitulo.Text = "Usuarios";
+        }
     }
 }
