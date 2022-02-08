@@ -82,6 +82,7 @@ namespace Proyecto_escuela.Usuarios
             this.btn_registrar_usuario.Text = "Registrar usuario";
             this.btn_registrar_usuario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_registrar_usuario.UseVisualStyleBackColor = true;
+            this.btn_registrar_usuario.Click += new System.EventHandler(this.btn_registrar_usuario_Click);
             // 
             // panel3
             // 
@@ -108,7 +109,7 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(258, 16);
+            this.lbl_usuario.Location = new System.Drawing.Point(255, 16);
             this.lbl_usuario.Name = "lbl_usuario";
             this.lbl_usuario.Size = new System.Drawing.Size(197, 23);
             this.lbl_usuario.TabIndex = 15;
@@ -221,7 +222,7 @@ namespace Proyecto_escuela.Usuarios
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             // 
-            // Cls_usuarios
+            // Frm_usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -229,7 +230,7 @@ namespace Proyecto_escuela.Usuarios
             this.Controls.Add(this.dgv_usuario);
             this.Controls.Add(this.panel_busqueda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Cls_usuarios";
+            this.Name = "Frm_usuarios";
             this.Text = "Usuarios";
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();

@@ -1,7 +1,7 @@
 ﻿
-namespace Proyecto_escuela
+namespace Proyecto_escuela.Usuarios
 {
-    partial class Frm_registrar_tutores
+    partial class Frm_registrar_usuarios
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@ namespace Proyecto_escuela
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_apellidos = new System.Windows.Forms.TextBox();
-            this.lbl_tutor = new System.Windows.Forms.Label();
+            this.lbl_usuario = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
@@ -69,6 +69,7 @@ namespace Proyecto_escuela
             // 
             // gb_datos
             // 
+            this.gb_datos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gb_datos.Controls.Add(this.panel6);
             this.gb_datos.Controls.Add(this.combo_parentesco);
             this.gb_datos.Controls.Add(this.lbl_parentesco);
@@ -87,7 +88,7 @@ namespace Proyecto_escuela
             this.gb_datos.Controls.Add(this.lbl_apellidos);
             this.gb_datos.Controls.Add(this.panel1);
             this.gb_datos.Controls.Add(this.txt_apellidos);
-            this.gb_datos.Controls.Add(this.lbl_tutor);
+            this.gb_datos.Controls.Add(this.lbl_usuario);
             this.gb_datos.Controls.Add(this.line1);
             this.gb_datos.Controls.Add(this.txt_nombres);
             this.gb_datos.Dock = System.Windows.Forms.DockStyle.Left;
@@ -95,9 +96,9 @@ namespace Proyecto_escuela
             this.gb_datos.Location = new System.Drawing.Point(0, 0);
             this.gb_datos.Name = "gb_datos";
             this.gb_datos.Size = new System.Drawing.Size(287, 694);
-            this.gb_datos.TabIndex = 80;
+            this.gb_datos.TabIndex = 81;
             this.gb_datos.TabStop = false;
-            this.gb_datos.Text = "Datos del tutor";
+            this.gb_datos.Text = "Datos del usuario";
             // 
             // panel6
             // 
@@ -123,7 +124,6 @@ namespace Proyecto_escuela
             this.combo_parentesco.Size = new System.Drawing.Size(234, 31);
             this.combo_parentesco.TabIndex = 7;
             this.combo_parentesco.Text = "Padre";
-            this.combo_parentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_parentesco_KeyPress);
             // 
             // lbl_parentesco
             // 
@@ -194,8 +194,6 @@ namespace Proyecto_escuela
             this.txt_correo.Size = new System.Drawing.Size(238, 25);
             this.txt_correo.TabIndex = 5;
             this.txt_correo.Text = "Correo";
-            this.txt_correo.Enter += new System.EventHandler(this.txt_correo_Enter);
-            this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
             // lbl_telefono
             // 
@@ -227,9 +225,6 @@ namespace Proyecto_escuela
             this.txt_telefono.Size = new System.Drawing.Size(238, 25);
             this.txt_telefono.TabIndex = 4;
             this.txt_telefono.Text = "Telefono";
-            this.txt_telefono.Enter += new System.EventHandler(this.txt_telefono_Enter);
-            this.txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_KeyPress);
-            this.txt_telefono.Leave += new System.EventHandler(this.txt_telefono_Leave);
             // 
             // lbl_direccion
             // 
@@ -261,8 +256,6 @@ namespace Proyecto_escuela
             this.txt_direccion.Size = new System.Drawing.Size(238, 25);
             this.txt_direccion.TabIndex = 3;
             this.txt_direccion.Text = "Direccion";
-            this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_Enter);
-            this.txt_direccion.Leave += new System.EventHandler(this.txt_direccion_Leave);
             // 
             // lbl_apellidos
             // 
@@ -270,9 +263,9 @@ namespace Proyecto_escuela
             this.lbl_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_apellidos.Location = new System.Drawing.Point(16, 117);
             this.lbl_apellidos.Name = "lbl_apellidos";
-            this.lbl_apellidos.Size = new System.Drawing.Size(189, 23);
+            this.lbl_apellidos.Size = new System.Drawing.Size(212, 23);
             this.lbl_apellidos.TabIndex = 85;
-            this.lbl_apellidos.Text = "Apellidos del tutor";
+            this.lbl_apellidos.Text = "Apellidos del usuario";
             // 
             // panel1
             // 
@@ -294,19 +287,16 @@ namespace Proyecto_escuela
             this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
             this.txt_apellidos.TabIndex = 2;
             this.txt_apellidos.Text = "Apellidos";
-            this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
-            this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
-            this.txt_apellidos.Leave += new System.EventHandler(this.txt_apellidos_Leave);
             // 
-            // lbl_tutor
+            // lbl_usuario
             // 
-            this.lbl_tutor.AutoSize = true;
-            this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tutor.Location = new System.Drawing.Point(12, 22);
-            this.lbl_tutor.Name = "lbl_tutor";
-            this.lbl_tutor.Size = new System.Drawing.Size(187, 23);
-            this.lbl_tutor.TabIndex = 82;
-            this.lbl_tutor.Text = "Nombres del tutor";
+            this.lbl_usuario.AutoSize = true;
+            this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_usuario.Location = new System.Drawing.Point(12, 22);
+            this.lbl_usuario.Name = "lbl_usuario";
+            this.lbl_usuario.Size = new System.Drawing.Size(210, 23);
+            this.lbl_usuario.TabIndex = 82;
+            this.lbl_usuario.Text = "Nombres del usuario";
             // 
             // line1
             // 
@@ -328,12 +318,10 @@ namespace Proyecto_escuela
             this.txt_nombres.Size = new System.Drawing.Size(238, 25);
             this.txt_nombres.TabIndex = 1;
             this.txt_nombres.Text = "Nombres";
-            this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
-            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
-            this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
             // gb_foto_perfil
             // 
+            this.gb_foto_perfil.BackColor = System.Drawing.Color.WhiteSmoke;
             this.gb_foto_perfil.Controls.Add(this.btn_enceder);
             this.gb_foto_perfil.Controls.Add(this.panel7);
             this.gb_foto_perfil.Controls.Add(this.label1);
@@ -348,7 +336,7 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.Location = new System.Drawing.Point(287, 0);
             this.gb_foto_perfil.Name = "gb_foto_perfil";
             this.gb_foto_perfil.Size = new System.Drawing.Size(655, 694);
-            this.gb_foto_perfil.TabIndex = 81;
+            this.gb_foto_perfil.TabIndex = 80;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
             // 
@@ -367,7 +355,7 @@ namespace Proyecto_escuela
             this.btn_enceder.TabIndex = 1;
             this.btn_enceder.Text = "Encender webcam";
             this.btn_enceder.UseVisualStyleBackColor = false;
-            this.btn_enceder.Click += new System.EventHandler(this.Frm_registrar_tutores_Load);
+            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click_1);
             // 
             // panel7
             // 
@@ -397,8 +385,6 @@ namespace Proyecto_escuela
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
             this.combo_dispositivos.TabIndex = 0;
-            this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
-            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
             // btn_cancelar
             // 
@@ -415,7 +401,6 @@ namespace Proyecto_escuela
             this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_registrar
             // 
@@ -431,9 +416,8 @@ namespace Proyecto_escuela
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(575, 42);
             this.btn_registrar.TabIndex = 3;
-            this.btn_registrar.Text = "Registrar tutor";
+            this.btn_registrar.Text = "Registrar usuario";
             this.btn_registrar.UseVisualStyleBackColor = false;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
             // 
             // btn_capturar_foto
             // 
@@ -450,7 +434,6 @@ namespace Proyecto_escuela
             this.btn_capturar_foto.TabIndex = 2;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
-            this.btn_capturar_foto.Click += new System.EventHandler(this.btn_capturar_foto_Click);
             // 
             // picture_captura
             // 
@@ -472,23 +455,19 @@ namespace Proyecto_escuela
             this.picture_tiempo_real.TabIndex = 0;
             this.picture_tiempo_real.TabStop = false;
             // 
-            // Frm_registrar_tutores
+            // Frm_registrar_usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(942, 694);
             this.Controls.Add(this.gb_foto_perfil);
             this.Controls.Add(this.gb_datos);
-            this.Font = new System.Drawing.Font("Century Gothic", 7.8F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_registrar_tutores";
+            this.Name = "Frm_registrar_usuarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Registro de tutores";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_registrar_tutores_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_registrar_tutores_Load);
+            this.Text = "Registro de usuarios";
             this.gb_datos.ResumeLayout(false);
             this.gb_datos.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
@@ -520,18 +499,18 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_apellidos;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txt_apellidos;
-        private System.Windows.Forms.Label lbl_tutor;
+        private System.Windows.Forms.Label lbl_usuario;
         private System.Windows.Forms.Panel line1;
         private System.Windows.Forms.TextBox txt_nombres;
         private System.Windows.Forms.GroupBox gb_foto_perfil;
-        private System.Windows.Forms.PictureBox picture_captura;
-        private System.Windows.Forms.PictureBox picture_tiempo_real;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_registrar;
-        private System.Windows.Forms.Button btn_capturar_foto;
-        private System.Windows.Forms.ComboBox combo_dispositivos;
         private System.Windows.Forms.Button btn_enceder;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox combo_dispositivos;
+        private System.Windows.Forms.Button btn_cancelar;
+        private System.Windows.Forms.Button btn_registrar;
+        private System.Windows.Forms.Button btn_capturar_foto;
+        private System.Windows.Forms.PictureBox picture_captura;
+        private System.Windows.Forms.PictureBox picture_tiempo_real;
     }
 }

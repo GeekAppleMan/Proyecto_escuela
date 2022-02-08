@@ -1,5 +1,6 @@
 ﻿using AForge.Video;
 using AForge.Video.DirectShow;
+using Proyecto_escuela.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,21 +12,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_escuela
+namespace Proyecto_escuela.Usuarios
 {
-    public partial class Frm_registrar_tutores : Form
+    public partial class Frm_registrar_usuarios : Form
     {
-        Cls_tutores obj_tutores = new Cls_tutores();
+        Cls_Usuarios obj_Usuarios = new Cls_Usuarios();
         private FilterInfoCollection misdispositivos;
         private VideoCaptureDevice miwebcam;
-        public Frm_registrar_tutores()
+        public Frm_registrar_usuarios()
         {
             InitializeComponent();
-        }
-
-        private void Frm_registrar_tutores_Load(object sender, EventArgs e)
-        {
-            cargar_dispositivo();
         }
 
         private void cargar_dispositivo()
@@ -38,7 +34,7 @@ namespace Proyecto_escuela
                 {
                     combo_dispositivos.Items.Add(misdispositivos[i].Name.ToString());
                     combo_dispositivos.Text = misdispositivos[0].Name.ToString();
-                }  
+                }
             }
             else
             {
@@ -48,27 +44,45 @@ namespace Proyecto_escuela
 
         private void cerrar_webcam()
         {
-            if (miwebcam!=null && miwebcam.IsRunning)
+            if (miwebcam != null && miwebcam.IsRunning)
             {
                 miwebcam.SignalToStop();
                 miwebcam = null;
             }
         }
 
-        private void capturando (object sender, NewFrameEventArgs eventArgs)
+        private void capturando(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
             picture_tiempo_real.Image = imagen;
         }
 
-        private void Frm_registrar_tutores_FormClosed(object sender, FormClosedEventArgs e)
+        private void Frm_registrar_usuarios_FormClosed(object sender, FormClosedEventArgs e)
         {
             cerrar_webcam();
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
         {
+            if (miwebcam != null && miwebcam.IsRunning)
+            {
 
+            }
+            else
+            {
+                try
+                {
+                    int i = combo_dispositivos.SelectedIndex;
+                    string nombrevideo = misdispositivos[i].MonikerString;
+                    miwebcam = new VideoCaptureDevice(nombrevideo);
+                    miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                    miwebcam.Start();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                }
+            }
         }
 
         private void btn_capturar_foto_Click(object sender, EventArgs e)
@@ -93,9 +107,9 @@ namespace Proyecto_escuela
             }
             else
             {
-                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura,this);
+                obj_Usuarios.registrar_Usuarios(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
             }
-           
+
         }
 
         private void txt_nombres_Leave(object sender, EventArgs e)
@@ -225,6 +239,11 @@ namespace Proyecto_escuela
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_enceder_Click_1(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
         }
     }
 }
