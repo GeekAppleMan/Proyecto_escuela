@@ -55,7 +55,7 @@
             this.panel_barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_barra.Location = new System.Drawing.Point(0, 0);
             this.panel_barra.Name = "panel_barra";
-            this.panel_barra.Size = new System.Drawing.Size(926, 57);
+            this.panel_barra.Size = new System.Drawing.Size(962, 57);
             this.panel_barra.TabIndex = 0;
             // 
             // panel_grid
@@ -64,7 +64,7 @@
             this.panel_grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_grid.Location = new System.Drawing.Point(0, 57);
             this.panel_grid.Name = "panel_grid";
-            this.panel_grid.Size = new System.Drawing.Size(926, 474);
+            this.panel_grid.Size = new System.Drawing.Size(962, 494);
             this.panel_grid.TabIndex = 1;
             // 
             // btn_asignar_alumno
@@ -90,7 +90,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(495, 45);
+            this.panel3.Location = new System.Drawing.Point(525, 45);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(325, 1);
             this.panel3.TabIndex = 21;
@@ -101,7 +101,7 @@
             this.txt_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_alumno.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txt_alumno.Location = new System.Drawing.Point(498, 20);
+            this.txt_alumno.Location = new System.Drawing.Point(528, 20);
             this.txt_alumno.Name = "txt_alumno";
             this.txt_alumno.Size = new System.Drawing.Size(318, 25);
             this.txt_alumno.TabIndex = 19;
@@ -111,7 +111,7 @@
             this.lbl_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_alumno.AutoSize = true;
             this.lbl_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_alumno.Location = new System.Drawing.Point(272, 22);
+            this.lbl_alumno.Location = new System.Drawing.Point(285, 23);
             this.lbl_alumno.Name = "lbl_alumno";
             this.lbl_alumno.Size = new System.Drawing.Size(220, 23);
             this.lbl_alumno.TabIndex = 20;
@@ -139,7 +139,7 @@
             this.dgv_asignacion_alumno.RowHeadersVisible = false;
             this.dgv_asignacion_alumno.RowHeadersWidth = 51;
             this.dgv_asignacion_alumno.RowTemplate.Height = 24;
-            this.dgv_asignacion_alumno.Size = new System.Drawing.Size(926, 474);
+            this.dgv_asignacion_alumno.Size = new System.Drawing.Size(962, 494);
             this.dgv_asignacion_alumno.TabIndex = 6;
             // 
             // id_tutor
@@ -187,7 +187,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(926, 531);
+            this.ClientSize = new System.Drawing.Size(962, 551);
             this.Controls.Add(this.panel_grid);
             this.Controls.Add(this.panel_barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
