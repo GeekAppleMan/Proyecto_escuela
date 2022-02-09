@@ -68,7 +68,25 @@ namespace Proyecto_escuela
 
         private void btn_enceder_Click(object sender, EventArgs e)
         {
+            if (miwebcam != null && miwebcam.IsRunning)
+            {
 
+            }
+            else
+            {
+                try
+                {
+                    int i = combo_dispositivos.SelectedIndex;
+                    string nombrevideo = misdispositivos[i].MonikerString;
+                    miwebcam = new VideoCaptureDevice(nombrevideo);
+                    miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                    miwebcam.Start();
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                }
+            }
         }
 
         private void btn_capturar_foto_Click(object sender, EventArgs e)
@@ -94,6 +112,7 @@ namespace Proyecto_escuela
             else
             {
                 obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura,this);
+                new Frm_Asignacion_de_alumnos().ShowDialog();
             }
            
         }

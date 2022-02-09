@@ -367,7 +367,7 @@ namespace Proyecto_escuela
             this.btn_enceder.TabIndex = 1;
             this.btn_enceder.Text = "Encender webcam";
             this.btn_enceder.UseVisualStyleBackColor = false;
-            this.btn_enceder.Click += new System.EventHandler(this.Frm_registrar_tutores_Load);
+            this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
             // 
             // panel7
             // 

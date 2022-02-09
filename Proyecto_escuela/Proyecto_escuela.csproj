@@ -124,6 +124,18 @@
     <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tutores\Frm_Asignacion_de_alumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\Frm_Asignacion_de_alumnos.Designer.cs">
+      <DependentUpon>Frm_Asignacion_de_alumnos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Frm_Reestablecercontraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +205,9 @@
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tutores\Frm_Asignacion_de_alumnos.resx">
+      <DependentUpon>Frm_Asignacion_de_alumnos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -220,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_tutores.resx">
       <DependentUpon>Frm_tutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_usuarios.resx">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
