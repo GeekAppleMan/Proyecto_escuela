@@ -97,10 +97,12 @@ namespace Proyecto_escuela
             // rdb_conservar
             // 
             this.rdb_conservar.AutoSize = true;
+            this.rdb_conservar.Checked = true;
             this.rdb_conservar.Location = new System.Drawing.Point(233, 29);
             this.rdb_conservar.Name = "rdb_conservar";
             this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
             this.rdb_conservar.TabIndex = 86;
+            this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
             this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
@@ -506,6 +508,7 @@ namespace Proyecto_escuela
             this.txt_apellidos.TabIndex = 2;
             this.txt_apellidos.Text = "Apellidos";
             this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
+            this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
             this.txt_apellidos.Leave += new System.EventHandler(this.txt_apellidos_Leave);
             // 
             // lbl_tutor
@@ -539,6 +542,7 @@ namespace Proyecto_escuela
             this.txt_nombres.TabIndex = 1;
             this.txt_nombres.Text = "Nombres";
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
+            this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
             // Frm_Modificar_tutor

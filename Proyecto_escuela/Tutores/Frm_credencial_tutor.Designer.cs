@@ -32,6 +32,8 @@ namespace Proyecto_escuela
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_datos_tutor = new System.Windows.Forms.GroupBox();
+            this.lbl_estatus_tutor = new System.Windows.Forms.Label();
+            this.lbl_estatus = new System.Windows.Forms.Label();
             this.lbl_parentesco_tutor = new System.Windows.Forms.Label();
             this.lbl_fecha_tutor = new System.Windows.Forms.Label();
             this.lbl_correo_tutor = new System.Windows.Forms.Label();
@@ -46,8 +48,6 @@ namespace Proyecto_escuela
             this.lbl_direccion = new System.Windows.Forms.Label();
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
-            this.lbl_estatus_tutor = new System.Windows.Forms.Label();
-            this.lbl_estatus = new System.Windows.Forms.Label();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.gb_datos_tutor.SuspendLayout();
@@ -101,6 +101,26 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.TabIndex = 1;
             this.gb_datos_tutor.TabStop = false;
             this.gb_datos_tutor.Text = "Datos del tutor";
+            // 
+            // lbl_estatus_tutor
+            // 
+            this.lbl_estatus_tutor.AutoSize = true;
+            this.lbl_estatus_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus_tutor.Location = new System.Drawing.Point(100, 353);
+            this.lbl_estatus_tutor.Name = "lbl_estatus_tutor";
+            this.lbl_estatus_tutor.Size = new System.Drawing.Size(74, 23);
+            this.lbl_estatus_tutor.TabIndex = 114;
+            this.lbl_estatus_tutor.Text = "Activo";
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(11, 353);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
+            this.lbl_estatus.TabIndex = 113;
+            this.lbl_estatus.Text = "Estatus:";
             // 
             // lbl_parentesco_tutor
             // 
@@ -242,26 +262,6 @@ namespace Proyecto_escuela
             this.lbl_tutor.TabIndex = 99;
             this.lbl_tutor.Text = "Nombres:";
             // 
-            // lbl_estatus_tutor
-            // 
-            this.lbl_estatus_tutor.AutoSize = true;
-            this.lbl_estatus_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus_tutor.Location = new System.Drawing.Point(100, 353);
-            this.lbl_estatus_tutor.Name = "lbl_estatus_tutor";
-            this.lbl_estatus_tutor.Size = new System.Drawing.Size(74, 23);
-            this.lbl_estatus_tutor.TabIndex = 114;
-            this.lbl_estatus_tutor.Text = "Activo";
-            // 
-            // lbl_estatus
-            // 
-            this.lbl_estatus.AutoSize = true;
-            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(11, 353);
-            this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
-            this.lbl_estatus.TabIndex = 113;
-            this.lbl_estatus.Text = "Estatus:";
-            // 
             // Frm_credencial_tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -275,6 +275,8 @@ namespace Proyecto_escuela
             this.MinimizeBox = false;
             this.Name = "Frm_credencial_tutor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_credencial_tutor_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_credencial_tutor_Load);
             this.gb_foto_perfil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.gb_datos_tutor.ResumeLayout(false);

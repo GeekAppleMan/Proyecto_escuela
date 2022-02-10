@@ -44,6 +44,8 @@ namespace Proyecto_escuela
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Parentesco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -145,6 +147,8 @@ namespace Proyecto_escuela
             this.Fecha_nacimiento,
             this.Parentesco,
             this.Estatus,
+            this.id_tutor,
+            this.imagen,
             this.Modificar,
             this.Eliminar});
             this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -204,6 +208,18 @@ namespace Proyecto_escuela
             this.Estatus.HeaderText = "Estatus";
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
+            // 
+            // id_tutor
+            // 
+            this.id_tutor.HeaderText = "id_tutor";
+            this.id_tutor.MinimumWidth = 6;
+            this.id_tutor.Name = "id_tutor";
+            // 
+            // imagen
+            // 
+            this.imagen.HeaderText = "imagen";
+            this.imagen.MinimumWidth = 6;
+            this.imagen.Name = "imagen";
             // 
             // Modificar
             // 
@@ -277,6 +293,8 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Parentesco;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_tutor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
         private System.Windows.Forms.DataGridViewImageColumn Modificar;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }

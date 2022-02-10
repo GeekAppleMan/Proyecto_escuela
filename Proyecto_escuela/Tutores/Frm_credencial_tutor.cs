@@ -16,5 +16,15 @@ namespace Proyecto_escuela
         {
             InitializeComponent();
         }
+
+        private void Frm_credencial_tutor_Load(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void Frm_credencial_tutor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            picture_imagen_perfil.Image = null;
+        }
     }
 }

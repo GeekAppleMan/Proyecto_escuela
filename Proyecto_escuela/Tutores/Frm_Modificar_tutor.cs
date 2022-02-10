@@ -113,6 +113,15 @@ namespace Proyecto_escuela
         private void Frm_Modificar_tutor_FormClosed(object sender, FormClosedEventArgs e)
         {
             cerrar_webcam();
+            rdb_conservar.Checked = true;
+            rdb_cambiar.Checked = false;
+            cerrar_webcam();
+            picture_tiempo_real.Enabled = false;
+            combo_dispositivos.Enabled = false;
+            btn_enceder.Enabled = false;
+            picture_captura.Enabled = false;
+            btn_capturar_foto.Enabled = false;
+            Cls_Alumnos.conservar_modificar_imagen = true;
         }
 
         private void txt_nombres_Leave(object sender, EventArgs e)
@@ -252,6 +261,22 @@ namespace Proyecto_escuela
             btn_enceder.Enabled = true;
             btn_capturar_foto.Enabled = true;
             picture_captura.Enabled = true;
+        }
+
+        private void txt_nombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_apellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

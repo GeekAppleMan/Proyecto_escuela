@@ -42,48 +42,153 @@ C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escu
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
 C:\Users\Jaime\Desktop\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.config
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.pdb
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\BouncyCastle.Crypto.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Ubiety.Dns.Core.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\ZstdNet.dll
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.pdb
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csprojAssemblyReference.cache
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_login.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CoreCompileInputs.cache
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CopyComplete
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.config
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\ZstdNet.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.AssemblyReference.cache
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_login.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CoreCompileInputs.cache
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CopyComplete
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Reestablecercontraseña.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Registro.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.config
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.pdb
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\ZstdNet.dll
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.pdb
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.AssemblyReference.cache
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Reestablecercontraseña.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Registro.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_login.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CoreCompileInputs.cache
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_alumno.resources
+C:\Users\Jaime\Desktop\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.config
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.pdb
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\ZstdNet.dll
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.pdb
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\Google.Protobuf.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.AssemblyReference.cache
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_modificar_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Reestablecercontraseña.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_Registro.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_tutor.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_login.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CoreCompileInputs.cache
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_usuarios.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_credencial_usuario.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_Modificar_usuarios.resources
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_registrar_usuarios.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.SuggestedBindingRedirects.cache
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CopyComplete
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_usuarios.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Asignacion_de_alumnos.resources

@@ -95,6 +95,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cls_Login.cs" />
+    <Compile Include="Clases\Cls_registro.cs" />
     <Compile Include="Clases\Cls_tutores.cs" />
     <Compile Include="Clases\Cls_conexion.cs" />
     <Compile Include="Alumnos\Frm_Alumnos.cs">
@@ -115,6 +117,25 @@
     </Compile>
     <Compile Include="Alumnos\Frm_registrar_alumno.Designer.cs">
       <DependentUpon>Frm_registrar_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos\Frm_credencial_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
+      <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Cls_usuarios.cs" />
+    <Compile Include="Login\Frm_Reestablecercontraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Reestablecercontraseña.Designer.cs">
+      <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Frm_Registro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_Registro.Designer.cs">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
     </Compile>
     <Compile Include="Tutores\Frm_Modificar_tutor.cs">
       <SubType>Form</SubType>
@@ -155,14 +176,47 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutores\NewFrameEvetArgs.cs" />
+    <Compile Include="Usuarios\Frm_credencial_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_credencial_usuario.Designer.cs">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_Modificar_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_Modificar_usuarios.Designer.cs">
+      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_registrar_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_registrar_usuarios.Designer.cs">
+      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_credencial_alumno.resx">
+      <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_modificar_alumno.resx">
       <DependentUpon>Frm_modificar_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_registrar_alumno.resx">
       <DependentUpon>Frm_registrar_alumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Reestablecercontraseña.resx">
+      <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_Registro.resx">
+      <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>
@@ -191,6 +245,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_tutores.resx">
       <DependentUpon>Frm_tutores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_credencial_usuario.resx">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_Modificar_usuarios.resx">
+      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_registrar_usuarios.resx">
+      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_usuarios.resx">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

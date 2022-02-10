@@ -68,7 +68,7 @@ namespace Proyecto_escuela
 
         private void btn_enceder_Click(object sender, EventArgs e)
         {
-            if (miwebcam!= null && miwebcam.IsRunning)
+            if (miwebcam != null && miwebcam.IsRunning)
             {
 
             }
@@ -86,7 +86,7 @@ namespace Proyecto_escuela
                 {
                     MessageBox.Show("Verifique que la camara este conectada y seleccionada");
                 }
-            }  
+            }
         }
 
         private void btn_capturar_foto_Click(object sender, EventArgs e)
@@ -112,6 +112,7 @@ namespace Proyecto_escuela
             else
             {
                 obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura,this);
+                new Frm_Asignacion_de_alumnos().ShowDialog();
             }
            
         }
@@ -227,6 +228,22 @@ namespace Proyecto_escuela
         private void combo_dispositivos_MouseHover(object sender, EventArgs e)
         {
             cargar_dispositivo();
+        }
+
+        private void txt_nombres_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txt_apellidos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
