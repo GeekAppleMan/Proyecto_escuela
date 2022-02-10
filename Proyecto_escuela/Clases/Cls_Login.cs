@@ -27,7 +27,6 @@ namespace Proyecto_escuela.Clases
             {
                 MessageBox.Show("Login exitoso");
                 Frm_main objm = new Frm_main();
-                Frm_login objlog = new Frm_login();
                 a = 1;
                 objm.Show();
             }

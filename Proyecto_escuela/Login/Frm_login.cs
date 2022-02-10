@@ -25,8 +25,8 @@ namespace Proyecto_escuela
         {
             this.Hide();
             new Frm_main().Show();
-            //obj_Login.comparar_login(txtusuario.Text,txtusuario.Text, txtcontraseña.Text);
-            //if (obj_Login.a==1)
+            //obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
+            //if (obj_Login.a == 1)
             //{
             //    this.Hide();
             //}
