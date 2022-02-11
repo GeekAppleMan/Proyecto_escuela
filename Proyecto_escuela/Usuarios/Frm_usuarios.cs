@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_escuela
+namespace Proyecto_escuela.Usuarios
 {
     public partial class Frm_usuarios : Form
     {

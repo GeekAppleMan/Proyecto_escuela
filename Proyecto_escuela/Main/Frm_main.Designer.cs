@@ -90,7 +90,7 @@ namespace Proyecto_escuela
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(554, 14);
+            this.lbltitulo.Location = new System.Drawing.Point(555, 14);
             this.lbltitulo.Name = "lbltitulo";
             this.lbltitulo.Size = new System.Drawing.Size(59, 23);
             this.lbltitulo.TabIndex = 18;
@@ -101,7 +101,7 @@ namespace Proyecto_escuela
             this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
-            this.pic_fecha.Location = new System.Drawing.Point(993, 5);
+            this.pic_fecha.Location = new System.Drawing.Point(992, 5);
             this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_fecha.Name = "pic_fecha";
             this.pic_fecha.Size = new System.Drawing.Size(40, 39);
@@ -115,7 +115,7 @@ namespace Proyecto_escuela
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(1037, 15);
+            this.lbl_fecha.Location = new System.Drawing.Point(1036, 15);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(62, 21);
             this.lbl_fecha.TabIndex = 16;
@@ -169,6 +169,7 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.Controls.Add(this.btn_alumnos, 0, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 8;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.8322F));
@@ -207,9 +208,10 @@ namespace Proyecto_escuela
             // 
             this.panel2.Controls.Add(this.lbl_jane);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 104);
+            this.panel2.Location = new System.Drawing.Point(3, 103);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 95);
+            this.panel2.Size = new System.Drawing.Size(173, 97);
             this.panel2.TabIndex = 0;
             // 
             // lbl_jane
@@ -229,16 +231,17 @@ namespace Proyecto_escuela
             // 
             this.panel1.Controls.Add(this.pic_menu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 95);
+            this.panel1.Size = new System.Drawing.Size(173, 97);
             this.panel1.TabIndex = 0;
             // 
             // pic_menu
             // 
             this.pic_menu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_menu.Image = global::Proyecto_escuela.Properties.Resources.menu;
-            this.pic_menu.Location = new System.Drawing.Point(4, 3);
+            this.pic_menu.Location = new System.Drawing.Point(4, 2);
             this.pic_menu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_menu.Name = "pic_menu";
             this.pic_menu.Size = new System.Drawing.Size(51, 50);
@@ -366,6 +369,7 @@ namespace Proyecto_escuela
             this.Controls.Add(this.panel_barra_titulo);
             this.Controls.Add(this.panel_barra_izquierda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_main_FormClosed);
