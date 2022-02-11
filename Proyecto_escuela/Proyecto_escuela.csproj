@@ -124,7 +124,18 @@
     <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Clases\Cls_usuarios.cs" />
+    <Compile Include="Alumnos\Frm_asignacion_de_tutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\Frm_asignacion_de_tutor.Designer.cs">
+      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Frm_Reestablecercontraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,30 +187,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutores\NewFrameEvetArgs.cs" />
-    <Compile Include="Usuarios\Frm_credencial_usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_credencial_usuario.Designer.cs">
-      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_Modificar_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_Modificar_usuarios.Designer.cs">
-      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_registrar_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_registrar_usuarios.Designer.cs">
-      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
-      <DependentUpon>Frm_usuarios.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_asignacion_de_tutor.resx">
+      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>
@@ -245,15 +235,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_tutores.resx">
       <DependentUpon>Frm_tutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_credencial_usuario.resx">
-      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_Modificar_usuarios.resx">
-      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_registrar_usuarios.resx">
-      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Frm_usuarios.resx">
       <DependentUpon>Frm_usuarios.cs</DependentUpon>
@@ -299,7 +280,9 @@
   <ItemGroup>
     <None Include="Resources\calendario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario %282%29.png" />
   </ItemGroup>
@@ -308,6 +291,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %283%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
