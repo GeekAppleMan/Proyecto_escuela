@@ -50,7 +50,6 @@ namespace Proyecto_escuela
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.timer_fecha_hora = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
@@ -59,7 +58,6 @@ namespace Proyecto_escuela
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -74,7 +72,6 @@ namespace Proyecto_escuela
             // panel_barra_titulo
             // 
             this.panel_barra_titulo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_barra_titulo.Controls.Add(this.pictureBox1);
             this.panel_barra_titulo.Controls.Add(this.lbltitulo);
             this.panel_barra_titulo.Controls.Add(this.pic_fecha);
             this.panel_barra_titulo.Controls.Add(this.lbl_fecha);
@@ -129,7 +126,7 @@ namespace Proyecto_escuela
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hora.Location = new System.Drawing.Point(211, 18);
+            this.lbl_hora.Location = new System.Drawing.Point(52, 16);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(50, 21);
             this.lbl_hora.TabIndex = 15;
@@ -139,7 +136,7 @@ namespace Proyecto_escuela
             // 
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
-            this.pic_hora.Location = new System.Drawing.Point(165, 9);
+            this.pic_hora.Location = new System.Drawing.Point(6, 7);
             this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_hora.Name = "pic_hora";
             this.pic_hora.Size = new System.Drawing.Size(40, 39);
@@ -362,18 +359,6 @@ namespace Proyecto_escuela
             this.timer_fecha_hora.Interval = 10;
             this.timer_fecha_hora.Tick += new System.EventHandler(this.timer_fecha_hora_Tick);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.casa_de_perro;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(51, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 19;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,7 +383,6 @@ namespace Proyecto_escuela
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,6 +409,5 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Button btn_tutores;
         private System.Windows.Forms.Timer timer_fecha_hora;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
