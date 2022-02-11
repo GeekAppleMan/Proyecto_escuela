@@ -29,15 +29,17 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_alumno = new System.Windows.Forms.DataGridView();
             this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.btn_registrar_alumno = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_alumno = new System.Windows.Forms.TextBox();
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_registrar_alumno = new System.Windows.Forms.Button();
             this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,8 +49,6 @@ namespace Proyecto_escuela
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_alumno)).BeginInit();
             this.panel_busqueda.SuspendLayout();
@@ -70,7 +70,17 @@ namespace Proyecto_escuela
             this.dgv_alumno.AllowUserToResizeColumns = false;
             this.dgv_alumno.AllowUserToResizeRows = false;
             this.dgv_alumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_alumno.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_alumno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_alumno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_alumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_alumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_alumno,
@@ -81,10 +91,18 @@ namespace Proyecto_escuela
             this.Direccion,
             this.Grupo,
             this.Estatus,
-            this.Imagen,
-            this.Modificar,
-            this.Eliminar});
+            this.Imagen});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_alumno.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_alumno.EnableHeadersVisualStyles = false;
+            this.dgv_alumno.GridColor = System.Drawing.Color.LightGray;
             this.dgv_alumno.Location = new System.Drawing.Point(0, 0);
             this.dgv_alumno.Name = "dgv_alumno";
             this.dgv_alumno.RowHeadersVisible = false;
@@ -106,26 +124,6 @@ namespace Proyecto_escuela
             this.panel_busqueda.Name = "panel_busqueda";
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 9;
-            // 
-            // btn_registrar_alumno
-            // 
-            this.btn_registrar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar_alumno.FlatAppearance.BorderSize = 0;
-            this.btn_registrar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registrar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registrar_alumno.Location = new System.Drawing.Point(3, 3);
-            this.btn_registrar_alumno.Name = "btn_registrar_alumno";
-            this.btn_registrar_alumno.Size = new System.Drawing.Size(246, 41);
-            this.btn_registrar_alumno.TabIndex = 18;
-            this.btn_registrar_alumno.Text = "Registrar alumno";
-            this.btn_registrar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_registrar_alumno.UseVisualStyleBackColor = true;
-            this.btn_registrar_alumno.Click += new System.EventHandler(this.btn_registrar_alumno_Click);
             // 
             // panel3
             // 
@@ -176,6 +174,26 @@ namespace Proyecto_escuela
             this.dataGridViewImageColumn2.MinimumWidth = 6;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 118;
+            // 
+            // btn_registrar_alumno
+            // 
+            this.btn_registrar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_registrar_alumno.FlatAppearance.BorderSize = 0;
+            this.btn_registrar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registrar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registrar_alumno.Location = new System.Drawing.Point(3, 3);
+            this.btn_registrar_alumno.Name = "btn_registrar_alumno";
+            this.btn_registrar_alumno.Size = new System.Drawing.Size(246, 41);
+            this.btn_registrar_alumno.TabIndex = 18;
+            this.btn_registrar_alumno.Text = "Registrar alumno";
+            this.btn_registrar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_registrar_alumno.UseVisualStyleBackColor = true;
+            this.btn_registrar_alumno.Click += new System.EventHandler(this.btn_registrar_alumno_Click);
             // 
             // id_alumno
             // 
@@ -231,22 +249,7 @@ namespace Proyecto_escuela
             this.Imagen.HeaderText = "Imagen";
             this.Imagen.MinimumWidth = 6;
             this.Imagen.Name = "Imagen";
-            // 
-            // Modificar
-            // 
-            this.Modificar.HeaderText = "Modificar";
-            this.Modificar.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
-            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Modificar.MinimumWidth = 6;
-            this.Modificar.Name = "Modificar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
+            this.Imagen.Visible = false;
             // 
             // Frm_Alumnos
             // 
@@ -270,7 +273,6 @@ namespace Proyecto_escuela
         #endregion
 
         private System.Windows.Forms.Panel panel_grid;
-        private System.Windows.Forms.DataGridView dgv_alumno;
         private System.Windows.Forms.Panel panel_busqueda;
         private System.Windows.Forms.Button btn_registrar_alumno;
         private System.Windows.Forms.Panel panel3;
@@ -287,7 +289,6 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.DataGridViewImageColumn Modificar;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        public System.Windows.Forms.DataGridView dgv_alumno;
     }
 }
