@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Proyecto_escuela
+namespace Proyecto_escuela.Usuarios
 {
-    public partial class Frm_Asignacion_de_alumnos : Form
+    public partial class Frm_credencial_usuario : Form
     {
-        public Frm_Asignacion_de_alumnos()
+        public Frm_credencial_usuario()
         {
             InitializeComponent();
         }
