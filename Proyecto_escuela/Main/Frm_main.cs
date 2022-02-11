@@ -109,5 +109,11 @@ namespace Proyecto_escuela
             abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_main());
+            lbltitulo.Text = "Inicio";
+        }
     }
 }
