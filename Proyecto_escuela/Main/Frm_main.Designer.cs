@@ -50,6 +50,7 @@ namespace Proyecto_escuela
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.timer_fecha_hora = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
@@ -229,6 +230,7 @@ namespace Proyecto_escuela
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.pic_menu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 2);
@@ -359,6 +361,15 @@ namespace Proyecto_escuela
             this.timer_fecha_hora.Interval = 10;
             this.timer_fecha_hora.Tick += new System.EventHandler(this.timer_fecha_hora_Tick);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(78, 20);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -409,5 +420,6 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Button btn_tutores;
         private System.Windows.Forms.Timer timer_fecha_hora;
+        private System.Windows.Forms.Button button1;
     }
 }

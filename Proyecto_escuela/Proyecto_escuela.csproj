@@ -304,5 +304,8 @@
   <ItemGroup>
     <None Include="Resources\usuario %283%291.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\casa.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
