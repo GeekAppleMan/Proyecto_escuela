@@ -109,5 +109,28 @@ namespace Proyecto_escuela
             abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
         }
+
+        private void tutoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_tutores());
+            lbltitulo.Text = "Tutores";
+        }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_Alumnos());
+            lbltitulo.Text = "Alumnos";
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_usuarios());
+            lbltitulo.Text = "Usuarios";
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

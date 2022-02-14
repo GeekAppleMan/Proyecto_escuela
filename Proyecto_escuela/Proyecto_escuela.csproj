@@ -124,11 +124,11 @@
     <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alumnos\Frm_asignacion_de_tutor.cs">
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alumnos\Frm_asignacion_de_tutor.Designer.cs">
-      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.Designer.cs">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\Frm_usuarios.cs">
       <SubType>Form</SubType>
@@ -205,8 +205,8 @@
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alumnos\Frm_asignacion_de_tutor.resx">
-      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
+    <EmbeddedResource Include="Tutores\Frm_asignacion_de_alumno.resx">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>

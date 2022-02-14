@@ -50,6 +50,13 @@ namespace Proyecto_escuela
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
             this.timer_fecha_hora = new System.Windows.Forms.Timer(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.tutoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alumnosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
@@ -58,6 +65,7 @@ namespace Proyecto_escuela
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -359,6 +367,76 @@ namespace Proyecto_escuela
             this.timer_fecha_hora.Interval = 10;
             this.timer_fecha_hora.Tick += new System.EventHandler(this.timer_fecha_hora_Tick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tutoresToolStripMenuItem,
+            this.alumnosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
+            this.salidasToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1357, 29);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
+            // 
+            // tutoresToolStripMenuItem
+            // 
+            this.tutoresToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tutoresToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tutoresToolStripMenuItem.Name = "tutoresToolStripMenuItem";
+            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.tutoresToolStripMenuItem.Text = "Tutores";
+            this.tutoresToolStripMenuItem.Click += new System.EventHandler(this.tutoresToolStripMenuItem_Click);
+            // 
+            // alumnosToolStripMenuItem
+            // 
+            this.alumnosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alumnosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
+            this.alumnosToolStripMenuItem.Text = "Alumnos";
+            this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(116, 25);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            // 
+            // salidasToolStripMenuItem
+            // 
+            this.salidasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salidasToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
+            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(81, 25);
+            this.salidasToolStripMenuItem.Text = "Salidas";
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,7 +446,10 @@ namespace Proyecto_escuela
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel_barra_titulo);
             this.Controls.Add(this.panel_barra_izquierda);
+            this.Controls.Add(this.menuStrip1);
+            this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -383,7 +464,10 @@ namespace Proyecto_escuela
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -409,5 +493,12 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Button btn_tutores;
         private System.Windows.Forms.Timer timer_fecha_hora;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem tutoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem alumnosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salidasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesionToolStripMenuItem;
     }
 }
