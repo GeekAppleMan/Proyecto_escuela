@@ -45,17 +45,17 @@ namespace Proyecto_escuela
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
-            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.grbopciones = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_baja = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.btn_tutor = new System.Windows.Forms.Button();
+            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.grbopciones.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_datos_tutor
@@ -237,16 +237,6 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Foto de perfil";
             // 
-            // picture_imagen_perfil
-            // 
-            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
-            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
-            this.picture_imagen_perfil.Size = new System.Drawing.Size(439, 374);
-            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_imagen_perfil.TabIndex = 0;
-            this.picture_imagen_perfil.TabStop = false;
-            // 
             // grbopciones
             // 
             this.grbopciones.Controls.Add(this.tableLayoutPanel1);
@@ -286,7 +276,7 @@ namespace Proyecto_escuela
             this.btn_baja.Name = "btn_baja";
             this.btn_baja.Size = new System.Drawing.Size(304, 63);
             this.btn_baja.TabIndex = 3;
-            this.btn_baja.Text = "Baja alumno";
+            this.btn_baja.Text = "Baja";
             this.btn_baja.UseVisualStyleBackColor = false;
             this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
             // 
@@ -301,7 +291,7 @@ namespace Proyecto_escuela
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(302, 63);
             this.btn_modificar.TabIndex = 2;
-            this.btn_modificar.Text = "Modificar alumno";
+            this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
@@ -320,6 +310,16 @@ namespace Proyecto_escuela
             this.btn_tutor.UseVisualStyleBackColor = false;
             this.btn_tutor.Click += new System.EventHandler(this.btn_Asignar_tutor_Click);
             // 
+            // picture_imagen_perfil
+            // 
+            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
+            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
+            this.picture_imagen_perfil.Size = new System.Drawing.Size(439, 374);
+            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_imagen_perfil.TabIndex = 0;
+            this.picture_imagen_perfil.TabStop = false;
+            // 
             // Frm_credencial_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -337,9 +337,9 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.grbopciones.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.ResumeLayout(false);
 
         }

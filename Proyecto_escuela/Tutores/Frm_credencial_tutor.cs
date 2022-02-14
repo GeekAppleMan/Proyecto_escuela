@@ -33,7 +33,7 @@ namespace Proyecto_escuela
 
         private void btn_Asignar_alumno_Click(object sender, EventArgs e)
         {
-            new Frm_Asignacion_de_tutor().ShowDialog();
+            new Frm_Asignacion_de_alumno().ShowDialog();
         }
 
         private void btn_modificar_Click(object sender, EventArgs e)
