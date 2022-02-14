@@ -134,7 +134,7 @@ namespace Proyecto_escuela
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
-            this.lbl_hora.Location = new System.Drawing.Point(57, 15);
+            this.lbl_hora.Location = new System.Drawing.Point(52, 16);
             this.lbl_hora.Name = "lbl_hora";
             this.lbl_hora.Size = new System.Drawing.Size(50, 21);
             this.lbl_hora.TabIndex = 15;
@@ -144,7 +144,7 @@ namespace Proyecto_escuela
             // 
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
-            this.pic_hora.Location = new System.Drawing.Point(13, 6);
+            this.pic_hora.Location = new System.Drawing.Point(6, 7);
             this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_hora.Name = "pic_hora";
             this.pic_hora.Size = new System.Drawing.Size(40, 39);
@@ -267,7 +267,7 @@ namespace Proyecto_escuela
             this.btn_cerrar_sesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cerrar_sesion.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cerrar_sesion.Image = global::Proyecto_escuela.Properties.Resources.entrar;
+            this.btn_cerrar_sesion.Image = global::Proyecto_escuela.Properties.Resources.salida;
             this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrar_sesion.Location = new System.Drawing.Point(3, 534);
             this.btn_cerrar_sesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
