@@ -191,3 +191,4 @@ C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Asignacion_de_tutor.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores_asignados.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Asignacion_de_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_inicio.resources

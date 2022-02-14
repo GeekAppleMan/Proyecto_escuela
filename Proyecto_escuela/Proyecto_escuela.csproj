@@ -130,6 +130,12 @@
     <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inicio\Frm_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Frm_inicio.Designer.cs">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\Frm_asignacion_de_alumno.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_tutores_asignados.resx">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Frm_inicio.resx">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Reestablecercontraseña.resx">
       <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
