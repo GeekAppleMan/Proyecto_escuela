@@ -130,6 +130,7 @@
     <Compile Include="Alumnos\Frm_asignacion_de_tutor.Designer.cs">
       <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\Cls_usuarios.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
