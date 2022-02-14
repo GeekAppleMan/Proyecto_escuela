@@ -55,7 +55,7 @@ namespace Proyecto_escuela
 
         private void btn_Asignar_tutor_Click(object sender, EventArgs e)
         {
-            new Frm_Asignacion_de_tutor().ShowDialog();
+            new Frm_tutores_asignados().ShowDialog();
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    public partial class Frm_Asignacion_de_tutor : Form
+    public partial class Frm_inicio : Form
     {
-        public Frm_Asignacion_de_tutor()
+        public Frm_inicio()
         {
             InitializeComponent();
         }

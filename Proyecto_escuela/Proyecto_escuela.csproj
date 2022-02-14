@@ -124,11 +124,23 @@
     <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="Alumnos\Frm_asignacion_de_tutor.cs">
+    <Compile Include="Alumnos\Frm_tutores_asignados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Alumnos\Frm_asignacion_de_tutor.Designer.cs">
-      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
+    <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
+      <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Frm_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Frm_inicio.Designer.cs">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.Designer.cs">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\Cls_usuarios.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -205,14 +217,20 @@
     <EmbeddedResource Include="Alumnos\Frm_registrar_alumno.resx">
       <DependentUpon>Frm_registrar_alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_tutores_asignados.resx">
+      <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Frm_inicio.resx">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Reestablecercontraseña.resx">
       <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Alumnos\Frm_asignacion_de_tutor.resx">
-      <DependentUpon>Frm_asignacion_de_tutor.cs</DependentUpon>
+    <EmbeddedResource Include="Tutores\Frm_asignacion_de_alumno.resx">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>
@@ -313,6 +331,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\casa-de-perro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -97,7 +97,11 @@ namespace Proyecto_escuela
             lbl_fecha.Text = DateTime.Now.ToString("d");
             lbl_hora.Text = DateTime.Now.ToString("t");
         }
-
+        private void Frm_main_Load(object sender, EventArgs e)
+        {
+            //abrir_form(new Frm_inicio());
+            //lbltitulo.Text = "Inicio";
+        }
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_Alumnos());
@@ -110,10 +114,28 @@ namespace Proyecto_escuela
             lbltitulo.Text = "Usuarios";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void tutoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            abrir_form(new Frm_main());
-            lbltitulo.Text = "Inicio";
+            abrir_form(new Frm_tutores());
+            lbltitulo.Text = "Tutores";
         }
+
+        private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_Alumnos());
+            lbltitulo.Text = "Alumnos";
+        }
+
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_usuarios());
+            lbltitulo.Text = "Usuarios";
+        }
+
+        private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }
