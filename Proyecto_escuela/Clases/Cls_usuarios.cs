@@ -23,7 +23,7 @@ namespace Proyecto_escuela.Clases
             if (telefono == "" || correo == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT Correo, Telefono from tb_registro";
+                string query = "SELECT IdUsuario, Correo, Telefono from tb_registro";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -36,7 +36,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1),reader.GetString(2));
                         usuarios = grid;
                     }
                 }
@@ -50,7 +50,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT Correo, Telefono FROM tb_registro WHERE telefono LIKE " + "'%" + telefono + "%' OR Correo LIKE " + "'%" + correo + "%'" ; 
+                string query = "SELECT IdUsuario, Correo, Telefono FROM tb_registro WHERE telefono LIKE " + "'%" + telefono + "%' OR Correo LIKE " + "'%" + correo + "%'" ; 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -63,7 +63,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1),reader.GetString(2));
                         usuarios = grid;
                     }
                 }

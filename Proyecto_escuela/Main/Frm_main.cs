@@ -1,4 +1,5 @@
-﻿using Proyecto_escuela.Usuarios;
+﻿using Proyecto_escuela.Empleados;
+using Proyecto_escuela.Usuarios;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -137,5 +138,10 @@ namespace Proyecto_escuela
             this.Close();
         }
 
+        private void btn_Empleados_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_Empleados());
+            lbltitulo.Text = "Empleados";
+        }
     }
 }

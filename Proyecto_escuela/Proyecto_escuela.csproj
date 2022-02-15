@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cls_empleados.cs" />
     <Compile Include="Clases\Cls_Login.cs" />
     <Compile Include="Clases\Cls_registro.cs" />
     <Compile Include="Clases\Cls_tutores.cs" />
@@ -129,6 +130,12 @@
     </Compile>
     <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\Frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\Frm_Empleados.Designer.cs">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Inicio\Frm_inicio.cs">
       <SubType>Form</SubType>
@@ -219,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_tutores_asignados.resx">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\Frm_Empleados.resx">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_inicio.resx">
       <DependentUpon>Frm_inicio.cs</DependentUpon>
@@ -335,5 +345,6 @@
   <ItemGroup>
     <None Include="Resources\eliminar.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

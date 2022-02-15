@@ -36,6 +36,7 @@ namespace Proyecto_escuela.Usuarios
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.dgv_usuario = new System.Windows.Forms.DataGridView();
+            this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda.SuspendLayout();
@@ -80,11 +81,11 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(261, 16);
+            this.lbl_usuario.Location = new System.Drawing.Point(177, 21);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(202, 23);
+            this.lbl_usuario.Size = new System.Drawing.Size(294, 23);
             this.lbl_usuario.TabIndex = 15;
-            this.lbl_usuario.Text = "Nombre del usuario";
+            this.lbl_usuario.Text = "Telefono o correo del usuario";
             // 
             // dgv_usuario
             // 
@@ -106,6 +107,7 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.IdUsuario,
             this.Direccion,
             this.Grupo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -126,6 +128,12 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.RowTemplate.Height = 24;
             this.dgv_usuario.Size = new System.Drawing.Size(1178, 503);
             this.dgv_usuario.TabIndex = 7;
+            // 
+            // IdUsuario
+            // 
+            this.IdUsuario.HeaderText = "Id_Usuario";
+            this.IdUsuario.MinimumWidth = 6;
+            this.IdUsuario.Name = "IdUsuario";
             // 
             // Direccion
             // 
@@ -164,6 +172,7 @@ namespace Proyecto_escuela.Usuarios
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label lbl_usuario;
         public System.Windows.Forms.DataGridView dgv_usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
     }
