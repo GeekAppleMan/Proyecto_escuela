@@ -17,6 +17,7 @@ namespace Proyecto_escuela.Usuarios
         {
             InitializeComponent();
         }
+
         Cls_usuarios objusuario = new Cls_usuarios();
         private void cargar_usuario()
         {

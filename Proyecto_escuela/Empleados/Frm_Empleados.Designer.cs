@@ -102,6 +102,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_empleado.Name = "txt_empleado";
             this.txt_empleado.Size = new System.Drawing.Size(318, 21);
             this.txt_empleado.TabIndex = 0;
+            this.txt_empleado.TextChanged += new System.EventHandler(this.txt_empleado_TextChanged);
             // 
             // lbl_alumno
             // 
