@@ -23,7 +23,7 @@ namespace Proyecto_escuela.Clases
             if (nombre == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT Nombres, Apellidos,  FechaNacimiento, Direccion, Estatus, Correo, Telefono from tb_empleados";
+                string query = "SELECT Nombres,Apellidos,FechaNacimiento,Direccion,Estatus,Correo,Telefono FROM `tb_empleados`";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -36,7 +36,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                        grid.Rows.Add(reader.GetString(0),reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
                         empleados = grid;
                     }
                 }

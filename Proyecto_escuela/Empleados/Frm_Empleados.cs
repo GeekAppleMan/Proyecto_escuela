@@ -19,19 +19,19 @@ namespace Proyecto_escuela.Empleados
         }
 
         Cls_empleados objusuario = new Cls_empleados();
-        private void cargar_usuario()
+        private void cargar_empleado()
         {
             objusuario.cargar_usuarios(txt_empleado.Text, dgv_empleado);
         }
 
-        private void Frm_usuarios_Load(object sender, EventArgs e)
-        {
-            cargar_usuario();
-        }
-
         private void txt_empleado_TextChanged(object sender, EventArgs e)
         {
-            cargar_usuario();
+            cargar_empleado();
+        }
+
+        private void Frm_Empleados_Load(object sender, EventArgs e)
+        {
+            cargar_empleado();
         }
     }
 }

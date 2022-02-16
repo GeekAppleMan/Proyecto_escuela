@@ -37,7 +37,6 @@ namespace Proyecto_escuela.Empleados
             this.txt_empleado = new System.Windows.Forms.TextBox();
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.dgv_empleado = new System.Windows.Forms.DataGridView();
-            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +46,7 @@ namespace Proyecto_escuela.Empleados
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Id_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).BeginInit();
             this.SuspendLayout();
@@ -135,7 +135,6 @@ namespace Proyecto_escuela.Empleados
             this.dgv_empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_empleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_alumno,
             this.Nombres,
             this.Apellidos,
             this.Fecha_nacimiento,
@@ -144,7 +143,8 @@ namespace Proyecto_escuela.Empleados
             this.Correo,
             this.Telefono,
             this.Imagen,
-            this.Id_Usuario});
+            this.Id_Usuario,
+            this.id_alumno});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -163,13 +163,6 @@ namespace Proyecto_escuela.Empleados
             this.dgv_empleado.RowTemplate.Height = 24;
             this.dgv_empleado.Size = new System.Drawing.Size(1178, 503);
             this.dgv_empleado.TabIndex = 11;
-            // 
-            // id_alumno
-            // 
-            this.id_alumno.HeaderText = "Id_Empleado";
-            this.id_alumno.MinimumWidth = 6;
-            this.id_alumno.Name = "id_alumno";
-            this.id_alumno.Visible = false;
             // 
             // Nombres
             // 
@@ -227,6 +220,13 @@ namespace Proyecto_escuela.Empleados
             this.Id_Usuario.Name = "Id_Usuario";
             this.Id_Usuario.Visible = false;
             // 
+            // id_alumno
+            // 
+            this.id_alumno.HeaderText = "Id_Empleado";
+            this.id_alumno.MinimumWidth = 6;
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.Visible = false;
+            // 
             // Frm_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -237,6 +237,7 @@ namespace Proyecto_escuela.Empleados
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Empleados";
             this.Text = "Empleados";
+            this.Load += new System.EventHandler(this.Frm_Empleados_Load);
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).EndInit();
@@ -252,7 +253,6 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.TextBox txt_empleado;
         private System.Windows.Forms.Label lbl_alumno;
         public System.Windows.Forms.DataGridView dgv_empleado;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
@@ -262,5 +262,6 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Usuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
     }
 }
