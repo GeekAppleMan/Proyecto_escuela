@@ -46,6 +46,7 @@ namespace Proyecto_escuela
         private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Frm_credencial_tutor.dgv = dgv_tutor;
+            Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
             if (e.RowIndex == -1)
             {
 

@@ -28,19 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_barra = new System.Windows.Forms.Panel();
+            this.btn_asignar_alumno = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_matricula = new System.Windows.Forms.TextBox();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
+            this.dgv_tutor = new System.Windows.Forms.DataGridView();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_cancelar = new System.Windows.Forms.Button();
             this.btn_aceptar = new System.Windows.Forms.Button();
-            this.dgv_tutor = new System.Windows.Forms.DataGridView();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_asignar_alumno = new System.Windows.Forms.Button();
             this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,8 +48,8 @@
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_barra.SuspendLayout();
             this.panel_grid.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).BeginInit();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_barra
@@ -63,6 +63,26 @@
             this.panel_barra.Name = "panel_barra";
             this.panel_barra.Size = new System.Drawing.Size(1111, 57);
             this.panel_barra.TabIndex = 0;
+            // 
+            // btn_asignar_alumno
+            // 
+            this.btn_asignar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_asignar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_asignar_alumno.FlatAppearance.BorderSize = 0;
+            this.btn_asignar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_asignar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_asignar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_asignar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_asignar_alumno.Location = new System.Drawing.Point(12, 10);
+            this.btn_asignar_alumno.Name = "btn_asignar_alumno";
+            this.btn_asignar_alumno.Size = new System.Drawing.Size(232, 41);
+            this.btn_asignar_alumno.TabIndex = 22;
+            this.btn_asignar_alumno.Text = "Agregar alumno";
+            this.btn_asignar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_asignar_alumno.UseVisualStyleBackColor = true;
+            this.btn_asignar_alumno.Click += new System.EventHandler(this.btn_asignar_alumno_Click);
             // 
             // panel3
             // 
@@ -104,6 +124,51 @@
             this.panel_grid.Name = "panel_grid";
             this.panel_grid.Size = new System.Drawing.Size(1111, 534);
             this.panel_grid.TabIndex = 1;
+            // 
+            // dgv_tutor
+            // 
+            this.dgv_tutor.AllowUserToAddRows = false;
+            this.dgv_tutor.AllowUserToDeleteRows = false;
+            this.dgv_tutor.AllowUserToResizeColumns = false;
+            this.dgv_tutor.AllowUserToResizeRows = false;
+            this.dgv_tutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_tutor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.dgv_tutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_tutor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_tutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_tutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_alumno,
+            this.id_tutor,
+            this.Nombres,
+            this.Apellidos,
+            this.Eliminar});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_tutor.EnableHeadersVisualStyles = false;
+            this.dgv_tutor.GridColor = System.Drawing.Color.LightGray;
+            this.dgv_tutor.Location = new System.Drawing.Point(0, 0);
+            this.dgv_tutor.Name = "dgv_tutor";
+            this.dgv_tutor.RowHeadersVisible = false;
+            this.dgv_tutor.RowHeadersWidth = 51;
+            this.dgv_tutor.RowTemplate.Height = 24;
+            this.dgv_tutor.Size = new System.Drawing.Size(1111, 483);
+            this.dgv_tutor.TabIndex = 6;
+            this.dgv_tutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tutor_CellClick);
             // 
             // tableLayoutPanel1
             // 
@@ -154,50 +219,7 @@
             this.btn_aceptar.TabIndex = 23;
             this.btn_aceptar.Text = "Aceptar";
             this.btn_aceptar.UseVisualStyleBackColor = true;
-            // 
-            // dgv_tutor
-            // 
-            this.dgv_tutor.AllowUserToAddRows = false;
-            this.dgv_tutor.AllowUserToDeleteRows = false;
-            this.dgv_tutor.AllowUserToResizeColumns = false;
-            this.dgv_tutor.AllowUserToResizeRows = false;
-            this.dgv_tutor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_tutor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.dgv_tutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgv_tutor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgv_tutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_tutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id_alumno,
-            this.id_tutor,
-            this.Nombres,
-            this.Apellidos,
-            this.Eliminar});
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle4;
-            this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_tutor.EnableHeadersVisualStyles = false;
-            this.dgv_tutor.GridColor = System.Drawing.Color.LightGray;
-            this.dgv_tutor.Location = new System.Drawing.Point(0, 0);
-            this.dgv_tutor.Name = "dgv_tutor";
-            this.dgv_tutor.RowHeadersVisible = false;
-            this.dgv_tutor.RowHeadersWidth = 51;
-            this.dgv_tutor.RowTemplate.Height = 24;
-            this.dgv_tutor.Size = new System.Drawing.Size(1111, 483);
-            this.dgv_tutor.TabIndex = 6;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -208,36 +230,19 @@
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 192;
             // 
-            // btn_asignar_alumno
-            // 
-            this.btn_asignar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_asignar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_asignar_alumno.FlatAppearance.BorderSize = 0;
-            this.btn_asignar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_asignar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_asignar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_asignar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_asignar_alumno.Location = new System.Drawing.Point(12, 10);
-            this.btn_asignar_alumno.Name = "btn_asignar_alumno";
-            this.btn_asignar_alumno.Size = new System.Drawing.Size(232, 41);
-            this.btn_asignar_alumno.TabIndex = 22;
-            this.btn_asignar_alumno.Text = "Agregar alumno";
-            this.btn_asignar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_asignar_alumno.UseVisualStyleBackColor = true;
-            // 
             // id_alumno
             // 
             this.id_alumno.HeaderText = "id_alumno";
             this.id_alumno.MinimumWidth = 6;
             this.id_alumno.Name = "id_alumno";
+            this.id_alumno.Visible = false;
             // 
             // id_tutor
             // 
             this.id_tutor.HeaderText = "id_tutor";
             this.id_tutor.MinimumWidth = 6;
             this.id_tutor.Name = "id_tutor";
+            this.id_tutor.Visible = false;
             // 
             // Nombres
             // 
@@ -255,7 +260,7 @@
             // 
             this.Eliminar.HeaderText = "Eliminar";
             this.Eliminar.Image = global::Proyecto_escuela.Properties.Resources.eliminar;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             // 
@@ -273,11 +278,12 @@
             this.Name = "Frm_Asignacion_de_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Asignar alumno";
+            this.Load += new System.EventHandler(this.Frm_Asignacion_de_alumno_Load);
             this.panel_barra.ResumeLayout(false);
             this.panel_barra.PerformLayout();
             this.panel_grid.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).EndInit();
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -294,11 +300,11 @@
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.DataGridView dgv_tutor;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_tutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
-        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
     }
 }

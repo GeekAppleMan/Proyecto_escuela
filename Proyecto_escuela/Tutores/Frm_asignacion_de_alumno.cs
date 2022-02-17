@@ -12,6 +12,8 @@ namespace Proyecto_escuela
 {
     public partial class Frm_Asignacion_de_alumno : Form
     {
+        public static string Id_tutor { get; set; }
+
         public Frm_Asignacion_de_alumno()
         {
             InitializeComponent();
@@ -20,6 +22,30 @@ namespace Proyecto_escuela
         private void btn_cancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void Frm_Asignacion_de_alumno_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btn_asignar_alumno_Click(object sender, EventArgs e)
+        {
+            new Cls_tutores().asignar_alumno(txt_matricula.Text, dgv_tutor,txt_matricula);
+        }
+
+        private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 4)
+            {
+                dgv_tutor.Rows.RemoveAt(e.RowIndex);
+            }
+           
+        }
+
+        private void btn_aceptar_Click(object sender, EventArgs e)
+        {
+            new Cls_tutores().registrar_asignacion_alumno(dgv_tutor);
         }
     }
 }

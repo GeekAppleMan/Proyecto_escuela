@@ -185,7 +185,6 @@ C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_usuarios.resources
-C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.SuggestedBindingRedirects.cache
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CopyComplete
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_usuarios.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores_asignados.resources
@@ -195,3 +194,4 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Empleados.Frm_Empleados.resources
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_inicio.resources
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Asignacion_de_alumno.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Empleados.Frm_Empleados.resources
