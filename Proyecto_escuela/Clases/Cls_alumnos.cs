@@ -273,14 +273,89 @@ namespace Proyecto_escuela
             return verificar;
         }
 
-        public void tutores_asignados()
+        private static DataTable ids_tutores = new DataTable();
+        public void tutores_asignados(string alumno)
         {
-            string query = "SELECT * FROM tb_padres WHERE estatus = '1'";
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-            databaseConnection.Open();               
+            try
+            {
+                if (ids_tutores.Columns.Count == 0)
+                {
+                    ids_tutores.Columns.Add("id_tutor");
+                }
+                ids_tutores.Rows.Clear();
+                string query = "SELECT * FROM tb_relacion_tutor_alumno WHERE Alumno = " + "'" + alumno + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ids_tutores.Rows.Add(reader.GetString(1));
+                    }
+                }
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+                          
+        }
+
+        public void cargar_tutores_asignados(DataGridView tutores)
+        {
+            try
+            {
+                string tutor = "";
+                string estatus = "";
+                for (int i = 0; i < ids_tutores.Rows.Count; i++)
+                {
+                    string query = "SELECT * FROM tb_padres WHERE id_tutor = " + "'" + ids_tutores.Rows[i]["id_tutor"].ToString() + "'";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(7) == "1")
+                            {
+                                tutor = "Padre";
+                            }
+                            if (reader.GetString(7) == "2")
+                            {
+                                tutor = "Madre";
+                            }
+                            if (reader.GetString(7) == "3")
+                            {
+                                tutor = "Tutor";
+                            }
+                            if (reader.GetString(8) == "1")
+                            {
+                                estatus = "Activo";
+                            }
+                            if (reader.GetString(8) == "2")
+                            {
+                                estatus = "Inactivo";
+                            }
+                            tutores.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus);
+                        }
+                    }
+                    databaseConnection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+            
         }
     }
 }

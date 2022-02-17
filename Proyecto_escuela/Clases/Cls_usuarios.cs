@@ -16,7 +16,6 @@ namespace Proyecto_escuela.Clases
         private char letrarandom;
         public static int index { get; set; }
         public static DataGridView usuarios;
-
         public void cargar_usuarios(string telefono, string correo, DataGridView grid)
         {
             string estatus = "";

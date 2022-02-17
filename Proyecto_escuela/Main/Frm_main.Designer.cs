@@ -33,13 +33,23 @@ namespace Proyecto_escuela
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_barra_titulo = new System.Windows.Forms.Panel();
             this.lbltitulo = new System.Windows.Forms.Label();
+            this.pic_fecha = new System.Windows.Forms.PictureBox();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
+            this.pic_hora = new System.Windows.Forms.PictureBox();
             this.panel_barra_izquierda = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_top = new System.Windows.Forms.Button();
+            this.btn_tutores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbl_jane = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pic_menu = new System.Windows.Forms.PictureBox();
+            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
+            this.btn_salidas = new System.Windows.Forms.Button();
+            this.btn_Empleados = new System.Windows.Forms.Button();
+            this.btn_usuarios = new System.Windows.Forms.Button();
+            this.btn_alumnos = new System.Windows.Forms.Button();
             this.timer_fecha_hora = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tutoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,25 +59,15 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pic_fecha = new System.Windows.Forms.PictureBox();
-            this.pic_hora = new System.Windows.Forms.PictureBox();
-            this.btn_top = new System.Windows.Forms.Button();
-            this.btn_tutores = new System.Windows.Forms.Button();
-            this.pic_menu = new System.Windows.Forms.PictureBox();
-            this.btn_cerrar_sesion = new System.Windows.Forms.Button();
-            this.btn_salidas = new System.Windows.Forms.Button();
-            this.btn_Empleados = new System.Windows.Forms.Button();
-            this.btn_usuarios = new System.Windows.Forms.Button();
-            this.btn_alumnos = new System.Windows.Forms.Button();
             this.panel_barra_titulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             this.panel_barra_izquierda.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -106,6 +106,19 @@ namespace Proyecto_escuela
             this.lbltitulo.TabIndex = 18;
             this.lbltitulo.Text = "Inicio";
             // 
+            // pic_fecha
+            // 
+            this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
+            this.pic_fecha.Location = new System.Drawing.Point(992, 5);
+            this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_fecha.Name = "pic_fecha";
+            this.pic_fecha.Size = new System.Drawing.Size(40, 39);
+            this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_fecha.TabIndex = 17;
+            this.pic_fecha.TabStop = false;
+            // 
             // lbl_fecha
             // 
             this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -128,6 +141,18 @@ namespace Proyecto_escuela
             this.lbl_hora.Size = new System.Drawing.Size(50, 21);
             this.lbl_hora.TabIndex = 15;
             this.lbl_hora.Text = "Hora";
+            // 
+            // pic_hora
+            // 
+            this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
+            this.pic_hora.Location = new System.Drawing.Point(6, 7);
+            this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_hora.Name = "pic_hora";
+            this.pic_hora.Size = new System.Drawing.Size(40, 39);
+            this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_hora.TabIndex = 14;
+            this.pic_hora.TabStop = false;
             // 
             // panel_barra_izquierda
             // 
@@ -169,153 +194,6 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.95858F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(179, 603);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.lbl_jane);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 93);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(173, 87);
-            this.panel2.TabIndex = 0;
-            // 
-            // lbl_jane
-            // 
-            this.lbl_jane.AutoSize = true;
-            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_jane.Location = new System.Drawing.Point(0, 0);
-            this.lbl_jane.Name = "lbl_jane";
-            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
-            this.lbl_jane.TabIndex = 1;
-            this.lbl_jane.Text = "Jane Software";
-            this.lbl_jane.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.pic_menu);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(173, 87);
-            this.panel1.TabIndex = 0;
-            // 
-            // timer_fecha_hora
-            // 
-            this.timer_fecha_hora.Enabled = true;
-            this.timer_fecha_hora.Interval = 10;
-            this.timer_fecha_hora.Tick += new System.EventHandler(this.timer_fecha_hora_Tick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tutoresToolStripMenuItem,
-            this.alumnosToolStripMenuItem,
-            this.usuariosToolStripMenuItem,
-            this.empleadosToolStripMenuItem,
-            this.salidasToolStripMenuItem,
-            this.cerrarSesionToolStripMenuItem,
-            this.izquierdaToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1357, 29);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
-            // 
-            // tutoresToolStripMenuItem
-            // 
-            this.tutoresToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tutoresToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.tutoresToolStripMenuItem.Name = "tutoresToolStripMenuItem";
-            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
-            this.tutoresToolStripMenuItem.Text = "Tutores";
-            this.tutoresToolStripMenuItem.Click += new System.EventHandler(this.tutoresToolStripMenuItem_Click);
-            // 
-            // alumnosToolStripMenuItem
-            // 
-            this.alumnosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.alumnosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
-            this.alumnosToolStripMenuItem.Text = "Alumnos";
-            this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
-            // 
-            // usuariosToolStripMenuItem
-            // 
-            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
-            this.usuariosToolStripMenuItem.Text = "Usuarios";
-            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // empleadosToolStripMenuItem
-            // 
-            this.empleadosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(116, 25);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
-            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
-            // 
-            // salidasToolStripMenuItem
-            // 
-            this.salidasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.salidasToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
-            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(81, 25);
-            this.salidasToolStripMenuItem.Text = "Salidas";
-            this.salidasToolStripMenuItem.Click += new System.EventHandler(this.salidasToolStripMenuItem_Click);
-            // 
-            // cerrarSesionToolStripMenuItem
-            // 
-            this.cerrarSesionToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cerrarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
-            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
-            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
-            // 
-            // izquierdaToolStripMenuItem
-            // 
-            this.izquierdaToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.izquierdaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.izquierdaToolStripMenuItem.Name = "izquierdaToolStripMenuItem";
-            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(57, 25);
-            this.izquierdaToolStripMenuItem.Text = "Left";
-            this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
-            // 
-            // pic_fecha
-            // 
-            this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
-            this.pic_fecha.Location = new System.Drawing.Point(992, 5);
-            this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_fecha.Name = "pic_fecha";
-            this.pic_fecha.Size = new System.Drawing.Size(40, 39);
-            this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_fecha.TabIndex = 17;
-            this.pic_fecha.TabStop = false;
-            // 
-            // pic_hora
-            // 
-            this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
-            this.pic_hora.Location = new System.Drawing.Point(6, 7);
-            this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.pic_hora.Name = "pic_hora";
-            this.pic_hora.Size = new System.Drawing.Size(40, 39);
-            this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_hora.TabIndex = 14;
-            this.pic_hora.TabStop = false;
             // 
             // btn_top
             // 
@@ -359,6 +237,39 @@ namespace Proyecto_escuela
             this.btn_tutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_tutores.UseVisualStyleBackColor = false;
             this.btn_tutores.Click += new System.EventHandler(this.btn_tutores_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.lbl_jane);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(3, 93);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(173, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // lbl_jane
+            // 
+            this.lbl_jane.AutoSize = true;
+            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_jane.Location = new System.Drawing.Point(0, 0);
+            this.lbl_jane.Name = "lbl_jane";
+            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
+            this.lbl_jane.TabIndex = 1;
+            this.lbl_jane.Text = "Jane Software";
+            this.lbl_jane.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.pic_menu);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(173, 87);
+            this.panel1.TabIndex = 0;
             // 
             // pic_menu
             // 
@@ -478,6 +389,95 @@ namespace Proyecto_escuela
             this.btn_alumnos.UseVisualStyleBackColor = false;
             this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
             // 
+            // timer_fecha_hora
+            // 
+            this.timer_fecha_hora.Enabled = true;
+            this.timer_fecha_hora.Interval = 10;
+            this.timer_fecha_hora.Tick += new System.EventHandler(this.timer_fecha_hora_Tick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tutoresToolStripMenuItem,
+            this.alumnosToolStripMenuItem,
+            this.usuariosToolStripMenuItem,
+            this.empleadosToolStripMenuItem,
+            this.salidasToolStripMenuItem,
+            this.cerrarSesionToolStripMenuItem,
+            this.izquierdaToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1357, 29);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // tutoresToolStripMenuItem
+            // 
+            this.tutoresToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tutoresToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.tutoresToolStripMenuItem.Name = "tutoresToolStripMenuItem";
+            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(83, 25);
+            this.tutoresToolStripMenuItem.Text = "Tutores";
+            this.tutoresToolStripMenuItem.Click += new System.EventHandler(this.tutoresToolStripMenuItem_Click);
+            // 
+            // alumnosToolStripMenuItem
+            // 
+            this.alumnosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alumnosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(93, 25);
+            this.alumnosToolStripMenuItem.Text = "Alumnos";
+            this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
+            // 
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(91, 25);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // empleadosToolStripMenuItem
+            // 
+            this.empleadosToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(116, 25);
+            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
+            // 
+            // salidasToolStripMenuItem
+            // 
+            this.salidasToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.salidasToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
+            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(81, 25);
+            this.salidasToolStripMenuItem.Text = "Salidas";
+            this.salidasToolStripMenuItem.Click += new System.EventHandler(this.salidasToolStripMenuItem_Click);
+            // 
+            // cerrarSesionToolStripMenuItem
+            // 
+            this.cerrarSesionToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cerrarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(130, 25);
+            this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
+            // 
+            // izquierdaToolStripMenuItem
+            // 
+            this.izquierdaToolStripMenuItem.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.izquierdaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.izquierdaToolStripMenuItem.Name = "izquierdaToolStripMenuItem";
+            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(57, 25);
+            this.izquierdaToolStripMenuItem.Text = "Left";
+            this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -498,16 +498,16 @@ namespace Proyecto_escuela
             this.Load += new System.EventHandler(this.Frm_main_Load);
             this.panel_barra_titulo.ResumeLayout(false);
             this.panel_barra_titulo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
             this.panel_barra_izquierda.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
