@@ -46,13 +46,13 @@ namespace Proyecto_escuela
         private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Frm_credencial_tutor.dgv = dgv_tutor;
-            Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
             if (e.RowIndex == -1)
             {
 
             }
             else
             {
+                Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
                     obj_credencial.lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
