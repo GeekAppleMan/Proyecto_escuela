@@ -47,6 +47,7 @@ namespace Proyecto_escuela
                 btn_Empleados.Text = "";
                 btn_salidas.Text = "";
                 btn_cerrar_sesion.Text = "";
+                btn_top.Text = "";
                 lbl_jane.Text = " JS";
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
             }
@@ -60,6 +61,7 @@ namespace Proyecto_escuela
                 btn_salidas.Text = "Salidas";
                 btn_cerrar_sesion.Text = "Cerrar sesion";
                 lbl_jane.Text = "Jane Software";
+                btn_top.Text = "Top";
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
             }
         }
@@ -142,6 +144,39 @@ namespace Proyecto_escuela
         {
             abrir_form(new Frm_Empleados());
             lbltitulo.Text = "Empleados";
+        }
+
+        private void izquierdaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            menuStrip1.Visible = false;
+            panel_barra_izquierda.Visible = true;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            menuStrip1.Visible = true;
+            panel_barra_izquierda.Visible = false;
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void empleadosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            abrir_form(new Frm_Empleados());
+            lbltitulo.Text = "Empleados";
+        }
+
+        private void btn_salidas_Click(object sender, EventArgs e)
+        {
+            lbltitulo.Text = "Salidas";
+        }
+
+        private void salidasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            lbltitulo.Text = "Salidas";
         }
     }
 }
