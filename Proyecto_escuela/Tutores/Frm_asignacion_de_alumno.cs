@@ -31,7 +31,14 @@ namespace Proyecto_escuela
 
         private void btn_asignar_alumno_Click(object sender, EventArgs e)
         {
-            new Cls_tutores().asignar_alumno(txt_matricula.Text, dgv_tutor,txt_matricula);
+            if (string.IsNullOrEmpty(txt_matricula.Text))
+            {
+                MessageBox.Show("Debe ingresar la matricula antes de continuar");
+            }
+            else
+            {
+                new Cls_tutores().asignar_alumno(txt_matricula.Text, dgv_tutor, txt_matricula);
+            }
         }
 
         private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -40,7 +47,6 @@ namespace Proyecto_escuela
             {
                 dgv_tutor.Rows.RemoveAt(e.RowIndex);
             }
-           
         }
 
         private void btn_aceptar_Click(object sender, EventArgs e)

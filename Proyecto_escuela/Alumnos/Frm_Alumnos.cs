@@ -38,6 +38,7 @@ namespace Proyecto_escuela
 
         private void dgv_alumno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Frm_tutores_asignados.id_alumno = dgv_alumno[0, e.RowIndex].Value.ToString();
             if (e.RowIndex == -1)
             {
 

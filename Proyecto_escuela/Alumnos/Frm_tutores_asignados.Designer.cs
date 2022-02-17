@@ -166,6 +166,7 @@
             this.Name = "Frm_tutores_asignados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tutores";
+            this.Load += new System.EventHandler(this.Frm_tutores_asignados_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).EndInit();
             this.ResumeLayout(false);
 

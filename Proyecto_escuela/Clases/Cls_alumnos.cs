@@ -272,5 +272,15 @@ namespace Proyecto_escuela
 
             return verificar;
         }
+
+        public void tutores_asignados()
+        {
+            string query = "SELECT * FROM tb_padres WHERE estatus = '1'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();               
+        }
     }
 }
