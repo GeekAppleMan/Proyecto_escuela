@@ -51,7 +51,14 @@ namespace Proyecto_escuela
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            new Cls_tutores().registrar_asignacion_alumno(dgv_tutor);
+            if (dgv_tutor.Rows.Count == 0)
+            {
+                MessageBox.Show("debe agregar alumnos antes de continuar");
+            }
+            else
+            {
+                new Cls_tutores().registrar_asignacion_alumno(dgv_tutor);
+            }
         }
     }
 }
