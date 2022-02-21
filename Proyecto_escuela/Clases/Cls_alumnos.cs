@@ -345,7 +345,7 @@ namespace Proyecto_escuela
                             {
                                 estatus = "Inactivo";
                             }
-                            tutores.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus);
+                            tutores.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus, ids_tutores.Rows[i]["id_tutor"].ToString(), reader.GetString(9));
                         }
                     }
                     databaseConnection.Close();

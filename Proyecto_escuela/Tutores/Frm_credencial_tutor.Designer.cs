@@ -49,15 +49,16 @@ namespace Proyecto_escuela
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.grbopciones = new System.Windows.Forms.GroupBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_alumnos = new System.Windows.Forms.Button();
+            this.btn_Asignar_alumno = new System.Windows.Forms.Button();
             this.btn_baja = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_Asignar_alumno = new System.Windows.Forms.Button();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.gb_datos_tutor.SuspendLayout();
             this.grbopciones.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.tableLayoutPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_foto_perfil
@@ -269,31 +270,63 @@ namespace Proyecto_escuela
             // 
             // grbopciones
             // 
-            this.grbopciones.Controls.Add(this.tableLayoutPanel1);
+            this.grbopciones.Controls.Add(this.tableLayoutPanel2);
             this.grbopciones.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.grbopciones.Location = new System.Drawing.Point(0, 399);
             this.grbopciones.Name = "grbopciones";
-            this.grbopciones.Size = new System.Drawing.Size(932, 90);
+            this.grbopciones.Size = new System.Drawing.Size(939, 90);
             this.grbopciones.TabIndex = 6;
             this.grbopciones.TabStop = false;
             this.grbopciones.Text = "Opciones";
             // 
-            // tableLayoutPanel1
+            // tableLayoutPanel2
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_baja, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_modificar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_Asignar_alumno, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(926, 69);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.tableLayoutPanel2.ColumnCount = 4;
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel2.Controls.Add(this.btn_modificar, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_baja, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_Asignar_alumno, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_alumnos, 0, 0);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
+            this.tableLayoutPanel2.RowCount = 1;
+            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(933, 69);
+            this.tableLayoutPanel2.TabIndex = 115;
+            // 
+            // btn_alumnos
+            // 
+            this.btn_alumnos.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_alumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_alumnos.FlatAppearance.BorderSize = 0;
+            this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_alumnos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alumnos.Location = new System.Drawing.Point(236, 3);
+            this.btn_alumnos.Name = "btn_alumnos";
+            this.btn_alumnos.Size = new System.Drawing.Size(227, 63);
+            this.btn_alumnos.TabIndex = 5;
+            this.btn_alumnos.Text = "Alumnos asignados";
+            this.btn_alumnos.UseVisualStyleBackColor = false;
+            this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
+            // 
+            // btn_Asignar_alumno
+            // 
+            this.btn_Asignar_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_Asignar_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Asignar_alumno.FlatAppearance.BorderSize = 0;
+            this.btn_Asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_Asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Asignar_alumno.Location = new System.Drawing.Point(3, 3);
+            this.btn_Asignar_alumno.Name = "btn_Asignar_alumno";
+            this.btn_Asignar_alumno.Size = new System.Drawing.Size(227, 63);
+            this.btn_Asignar_alumno.TabIndex = 6;
+            this.btn_Asignar_alumno.Text = "Asignar alumno";
+            this.btn_Asignar_alumno.UseVisualStyleBackColor = false;
+            this.btn_Asignar_alumno.Click += new System.EventHandler(this.btn_Asignar_alumno_Click);
             // 
             // btn_baja
             // 
@@ -302,10 +335,10 @@ namespace Proyecto_escuela
             this.btn_baja.FlatAppearance.BorderSize = 0;
             this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_baja.Location = new System.Drawing.Point(619, 3);
+            this.btn_baja.Location = new System.Drawing.Point(702, 3);
             this.btn_baja.Name = "btn_baja";
-            this.btn_baja.Size = new System.Drawing.Size(304, 63);
-            this.btn_baja.TabIndex = 3;
+            this.btn_baja.Size = new System.Drawing.Size(228, 63);
+            this.btn_baja.TabIndex = 7;
             this.btn_baja.Text = "Baja";
             this.btn_baja.UseVisualStyleBackColor = false;
             this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
@@ -317,35 +350,20 @@ namespace Proyecto_escuela
             this.btn_modificar.FlatAppearance.BorderSize = 0;
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.Location = new System.Drawing.Point(311, 3);
+            this.btn_modificar.Location = new System.Drawing.Point(469, 3);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(302, 63);
-            this.btn_modificar.TabIndex = 2;
+            this.btn_modificar.Size = new System.Drawing.Size(227, 63);
+            this.btn_modificar.TabIndex = 8;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
-            // 
-            // btn_Asignar_alumno
-            // 
-            this.btn_Asignar_alumno.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Asignar_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Asignar_alumno.FlatAppearance.BorderSize = 0;
-            this.btn_Asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Asignar_alumno.Location = new System.Drawing.Point(3, 3);
-            this.btn_Asignar_alumno.Name = "btn_Asignar_alumno";
-            this.btn_Asignar_alumno.Size = new System.Drawing.Size(302, 63);
-            this.btn_Asignar_alumno.TabIndex = 1;
-            this.btn_Asignar_alumno.Text = "Asignar alumno";
-            this.btn_Asignar_alumno.UseVisualStyleBackColor = false;
-            this.btn_Asignar_alumno.Click += new System.EventHandler(this.btn_Asignar_alumno_Click);
             // 
             // Frm_credencial_tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(932, 489);
+            this.ClientSize = new System.Drawing.Size(939, 489);
             this.Controls.Add(this.grbopciones);
             this.Controls.Add(this.gb_datos_tutor);
             this.Controls.Add(this.gb_foto_perfil);
@@ -361,7 +379,7 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();
             this.grbopciones.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -388,9 +406,10 @@ namespace Proyecto_escuela
         public System.Windows.Forms.Label lbl_estatus_tutor;
         private System.Windows.Forms.Label lbl_estatus;
         private System.Windows.Forms.GroupBox grbopciones;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btn_baja;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_baja;
         private System.Windows.Forms.Button btn_Asignar_alumno;
+        private System.Windows.Forms.Button btn_alumnos;
     }
 }

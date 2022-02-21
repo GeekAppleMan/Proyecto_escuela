@@ -11,22 +11,21 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    public partial class Frm_tutores_asignados : Form
+    public partial class Frm_alumnos_asignados : Form
     {
-        Cls_Alumnos obj_alumnos = new Cls_Alumnos();
-        public static string id_alumno { get; set; } 
-        public Frm_tutores_asignados()
+        Cls_tutores obj_tutores = new Cls_tutores();
+        public Frm_alumnos_asignados()
         {
             InitializeComponent();
         }
 
-        private void Frm_tutores_asignados_Load(object sender, EventArgs e)
+        private void Frm_alumnos_asignados_Load(object sender, EventArgs e)
         {
-            obj_alumnos.tutores_asignados(id_alumno);
-            obj_alumnos.cargar_tutores_asignados(dgv_tutor);
+            obj_tutores.alumnos_asignados(Frm_credencial_tutor.id_tutor);
+            obj_tutores.cargar_alumnos_asignados(dgv_alumno);
         }
 
-        private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgv_alumno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex == -1)
             {
@@ -34,15 +33,14 @@ namespace Proyecto_escuela
             }
             else
             {
-                lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
-                lbl_apellidos_tutor.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
-                lbl_direccion_tutor.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
-                lbl_telefono_tutor.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
-                lbl_correo_tutor.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
-                lbl_fecha_tutor.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
-                lbl_parentesco_tutor.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
-                lbl_estatus_tutor.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
-                string path = dgv_tutor[9, e.RowIndex].Value.ToString();
+                lbl_matricula_alumno.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                lbl_nombres_alumno.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
+                lbl_apellidos_alumno.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
+                lbl_fecha_alumno.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
+                lbl_direccion_alumno.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
+                lbl_grupo_alumno.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
+                lbl_estatus_alumno.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                string path = dgv_alumno[8, e.RowIndex].Value.ToString();
                 if (path == "")
                 {
                     picture_imagen_perfil.Image = null;
