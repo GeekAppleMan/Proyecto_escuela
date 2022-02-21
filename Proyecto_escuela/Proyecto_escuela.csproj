@@ -137,6 +137,12 @@
     <Compile Include="Empleados\Frm_Empleados.Designer.cs">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tutores\Frm_alumnos_asignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\Frm_alumnos_asignados.Designer.cs">
+      <DependentUpon>Frm_alumnos_asignados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio\Frm_inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutores\Frm_alumnos_asignados.resx">
+      <DependentUpon>Frm_alumnos_asignados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_asignacion_de_alumno.resx">
       <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>

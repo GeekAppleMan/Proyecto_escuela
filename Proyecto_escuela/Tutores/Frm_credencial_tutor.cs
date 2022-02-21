@@ -14,6 +14,7 @@ namespace Proyecto_escuela
     {
         Cls_tutores obj_tutores = new Cls_tutores();
         Frm_Modificar_tutor obj_modificar = new Frm_Modificar_tutor();
+        public static string id_tutor { get; set; }
         public static int rowindex { get; set; }
         public static DataGridView dgv { get; set; }
         public Frm_credencial_tutor()
@@ -55,6 +56,11 @@ namespace Proyecto_escuela
             Cls_tutores.index = rowindex;
             obj_tutores.eliminar_tutor();
             this.Close();
+        }
+
+        private void btn_alumnos_Click(object sender, EventArgs e)
+        {
+            new Frm_alumnos_asignados().ShowDialog();
         }
     }
 }
