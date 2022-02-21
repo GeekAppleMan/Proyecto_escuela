@@ -137,6 +137,12 @@
     <Compile Include="Empleados\Frm_Empleados.Designer.cs">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumnos\Frm_crear_usuario_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\Frm_crear_usuario_alumno.Designer.cs">
+      <DependentUpon>Frm_crear_usuario_alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\Frm_alumnos_asignados.cs">
       <SubType>Form</SubType>
     </Compile>
