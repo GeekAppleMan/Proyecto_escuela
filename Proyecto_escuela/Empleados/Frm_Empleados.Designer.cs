@@ -32,7 +32,7 @@ namespace Proyecto_escuela.Empleados
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.btn_registrar_alumno = new System.Windows.Forms.Button();
+            this.btn_registar_empleado = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_empleado = new System.Windows.Forms.TextBox();
             this.lbl_alumno = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@ namespace Proyecto_escuela.Empleados
             // panel_busqueda
             // 
             this.panel_busqueda.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_busqueda.Controls.Add(this.btn_registrar_alumno);
+            this.panel_busqueda.Controls.Add(this.btn_registar_empleado);
             this.panel_busqueda.Controls.Add(this.panel3);
             this.panel_busqueda.Controls.Add(this.txt_empleado);
             this.panel_busqueda.Controls.Add(this.lbl_alumno);
@@ -64,24 +64,25 @@ namespace Proyecto_escuela.Empleados
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 10;
             // 
-            // btn_registrar_alumno
+            // btn_registar_empleado
             // 
-            this.btn_registrar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar_alumno.FlatAppearance.BorderSize = 0;
-            this.btn_registrar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registrar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registrar_alumno.Location = new System.Drawing.Point(3, 3);
-            this.btn_registrar_alumno.Name = "btn_registrar_alumno";
-            this.btn_registrar_alumno.Size = new System.Drawing.Size(246, 41);
-            this.btn_registrar_alumno.TabIndex = 18;
-            this.btn_registrar_alumno.Text = "Registrar empleado";
-            this.btn_registrar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_registrar_alumno.UseVisualStyleBackColor = true;
+            this.btn_registar_empleado.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registar_empleado.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_registar_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_registar_empleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_registar_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_registar_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registar_empleado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registar_empleado.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registar_empleado.Location = new System.Drawing.Point(3, 3);
+            this.btn_registar_empleado.Name = "btn_registar_empleado";
+            this.btn_registar_empleado.Size = new System.Drawing.Size(246, 41);
+            this.btn_registar_empleado.TabIndex = 18;
+            this.btn_registar_empleado.Text = "Registrar empleado";
+            this.btn_registar_empleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_registar_empleado.UseVisualStyleBackColor = true;
+            this.btn_registar_empleado.Click += new System.EventHandler(this.btn_registar_empleado_Click);
             // 
             // panel3
             // 
@@ -248,7 +249,7 @@ namespace Proyecto_escuela.Empleados
         #endregion
 
         private System.Windows.Forms.Panel panel_busqueda;
-        private System.Windows.Forms.Button btn_registrar_alumno;
+        private System.Windows.Forms.Button btn_registar_empleado;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_empleado;
         private System.Windows.Forms.Label lbl_alumno;

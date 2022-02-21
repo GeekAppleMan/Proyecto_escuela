@@ -17,7 +17,7 @@ namespace Proyecto_escuela.Clases
         public static int index { get; set; }
         public static DataGridView empleados;
 
-        public void cargar_usuarios(string nombre, DataGridView grid)
+        public void cargar_empleados(string nombre, DataGridView grid)
         {
             string estatus = "";
             if (nombre == "")

@@ -21,7 +21,7 @@ namespace Proyecto_escuela.Empleados
         Cls_empleados objusuario = new Cls_empleados();
         private void cargar_empleado()
         {
-            objusuario.cargar_usuarios(txt_empleado.Text, dgv_empleado);
+            objusuario.cargar_empleados(txt_empleado.Text, dgv_empleado);
         }
 
         private void txt_empleado_TextChanged(object sender, EventArgs e)
@@ -31,6 +31,13 @@ namespace Proyecto_escuela.Empleados
 
         private void Frm_Empleados_Load(object sender, EventArgs e)
         {
+            cargar_empleado();
+        }
+
+        private void btn_registar_empleado_Click(object sender, EventArgs e)
+        {
+            Frm_registrar_empleado obj_registrar = new Frm_registrar_empleado();
+            obj_registrar.ShowDialog();
             cargar_empleado();
         }
     }
