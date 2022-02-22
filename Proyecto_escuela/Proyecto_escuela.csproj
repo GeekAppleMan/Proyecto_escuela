@@ -233,6 +233,9 @@
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_crear_usuario_alumno.resx">
+      <DependentUpon>Frm_crear_usuario_alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_credencial_alumno.resx">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </EmbeddedResource>
