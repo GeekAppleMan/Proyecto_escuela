@@ -30,6 +30,8 @@ namespace Proyecto_escuela
         private void InitializeComponent()
         {
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_registrar = new System.Windows.Forms.Button();
             this.btn_enceder = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@ namespace Proyecto_escuela
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_registrar = new System.Windows.Forms.Button();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
@@ -83,6 +83,39 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.TabIndex = 83;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
+            this.btn_cancelar.Location = new System.Drawing.Point(42, 527);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
+            this.btn_cancelar.TabIndex = 86;
+            this.btn_cancelar.Text = "Cancelar registro";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
+            // 
+            // btn_registrar
+            // 
+            this.btn_registrar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar.Enabled = false;
+            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar.ForeColor = System.Drawing.Color.Black;
+            this.btn_registrar.Location = new System.Drawing.Point(42, 478);
+            this.btn_registrar.Name = "btn_registrar";
+            this.btn_registrar.Size = new System.Drawing.Size(575, 42);
+            this.btn_registrar.TabIndex = 85;
+            this.btn_registrar.Text = "Registrar alumno";
+            this.btn_registrar.UseVisualStyleBackColor = false;
+            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click_1);
             // 
             // btn_enceder
             // 
@@ -398,39 +431,6 @@ namespace Proyecto_escuela
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(42, 527);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
-            this.btn_cancelar.TabIndex = 86;
-            this.btn_cancelar.Text = "Cancelar registro";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click_1);
-            // 
-            // btn_registrar
-            // 
-            this.btn_registrar.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar.Enabled = false;
-            this.btn_registrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_registrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_registrar.Location = new System.Drawing.Point(42, 478);
-            this.btn_registrar.Name = "btn_registrar";
-            this.btn_registrar.Size = new System.Drawing.Size(575, 42);
-            this.btn_registrar.TabIndex = 85;
-            this.btn_registrar.Text = "Registrar alumno";
-            this.btn_registrar.UseVisualStyleBackColor = false;
-            this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click_1);
             // 
             // Frm_registrar_alumno
             // 
