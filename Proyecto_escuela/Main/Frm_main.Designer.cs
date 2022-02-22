@@ -495,6 +495,7 @@ namespace Proyecto_escuela
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_main_FormClosed);
             this.Load += new System.EventHandler(this.Frm_main_Load);
             this.panel_barra_titulo.ResumeLayout(false);
