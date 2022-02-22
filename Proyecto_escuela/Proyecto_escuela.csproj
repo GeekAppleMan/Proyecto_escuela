@@ -375,5 +375,8 @@
   <ItemGroup>
     <None Include="Resources\flecha-hacia-arriba.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-instituto-tecnologico-de-nogales.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

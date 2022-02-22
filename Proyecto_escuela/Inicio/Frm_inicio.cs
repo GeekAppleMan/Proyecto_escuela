@@ -16,5 +16,11 @@ namespace Proyecto_escuela
         {
             InitializeComponent();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_fecha.Text = DateTime.Now.ToString("d");
+            lbl_hora.Text = DateTime.Now.ToString("t");
+        }
     }
 }
