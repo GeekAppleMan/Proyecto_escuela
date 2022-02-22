@@ -212,5 +212,41 @@ namespace Proyecto_escuela.Empleados
                 e.Handled = true;
             }
         }
+
+        private void txt_Correo_Leave(object sender, EventArgs e)
+        {
+            if (txt_Correo.Text == "")
+            {
+                txt_Correo.Text = "Correo";
+                txt_Correo.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_Correo_Enter(object sender, EventArgs e)
+        {
+            if (txt_Correo.Text == "Correo")
+            {
+                txt_Correo.Text = "";
+                txt_Correo.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_telefono_Leave(object sender, EventArgs e)
+        {
+            if (txt_telefono.Text == "")
+            {
+                txt_telefono.Text = "Telefono";
+                txt_telefono.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_telefono_Enter(object sender, EventArgs e)
+        {
+            if (txt_telefono.Text == "Telefono")
+            {
+                txt_telefono.Text = "";
+                txt_telefono.ForeColor = Color.Black;
+            }
+        }
     }
 }

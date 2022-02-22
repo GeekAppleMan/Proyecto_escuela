@@ -285,10 +285,13 @@ namespace Proyecto_escuela.Empleados
             this.txt_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.Gray;
             this.txt_telefono.Location = new System.Drawing.Point(16, 592);
+            this.txt_telefono.MaxLength = 10;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(238, 25);
             this.txt_telefono.TabIndex = 110;
             this.txt_telefono.Text = "Telefono";
+            this.txt_telefono.Enter += new System.EventHandler(this.txt_telefono_Enter);
+            this.txt_telefono.Leave += new System.EventHandler(this.txt_telefono_Leave);
             // 
             // label2
             // 
@@ -373,6 +376,8 @@ namespace Proyecto_escuela.Empleados
             this.txt_Correo.Size = new System.Drawing.Size(238, 25);
             this.txt_Correo.TabIndex = 101;
             this.txt_Correo.Text = "Correo";
+            this.txt_Correo.Enter += new System.EventHandler(this.txt_Correo_Enter);
+            this.txt_Correo.Leave += new System.EventHandler(this.txt_Correo_Leave);
             // 
             // dtp_fecha_nacimiento
             // 
