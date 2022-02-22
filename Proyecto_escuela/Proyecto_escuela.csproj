@@ -233,6 +233,9 @@
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_crear_usuario_alumno.resx">
+      <DependentUpon>Frm_crear_usuario_alumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_credencial_alumno.resx">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </EmbeddedResource>
@@ -371,6 +374,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flecha-hacia-arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-instituto-tecnologico-de-nogales.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -93,6 +93,7 @@ namespace Proyecto_escuela
         {
             abrir_form(new Frm_tutores());
             lbltitulo.Text = "Tutores";
+            mostrar();
         }
 
         private void timer_fecha_hora_Tick(object sender, EventArgs e)
@@ -102,37 +103,53 @@ namespace Proyecto_escuela
         }
         private void Frm_main_Load(object sender, EventArgs e)
         {
-            //abrir_form(new Frm_inicio());
-            //lbltitulo.Text = "Inicio";
+            abrir_form(new Frm_inicio());
+            lbltitulo.Text = "Inicio";
+            lbl_fecha.Visible = false;
+            lbl_hora.Visible = false;
+            pic_fecha.Visible = false;
+            pic_hora.Visible = false;
+        }
+        private void mostrar()
+        {
+            lbl_fecha.Visible = true;
+            lbl_hora.Visible = true;
+            pic_fecha.Visible = true;
+            pic_hora.Visible = true;
         }
         private void btn_alumnos_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
+            mostrar();
         }
 
         private void btn_usuarios_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
+            mostrar();
         }
 
         private void tutoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_tutores());
             lbltitulo.Text = "Tutores";
+            mostrar();
         }
 
         private void alumnosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_Alumnos());
             lbltitulo.Text = "Alumnos";
+            mostrar();
         }
 
         private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_usuarios());
             lbltitulo.Text = "Usuarios";
+            mostrar();
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -144,6 +161,7 @@ namespace Proyecto_escuela
         {
             abrir_form(new Frm_Empleados());
             lbltitulo.Text = "Empleados";
+            mostrar();
         }
 
         private void izquierdaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -167,16 +185,19 @@ namespace Proyecto_escuela
         {
             abrir_form(new Frm_Empleados());
             lbltitulo.Text = "Empleados";
+            mostrar();
         }
 
         private void btn_salidas_Click(object sender, EventArgs e)
         {
             lbltitulo.Text = "Salidas";
+            mostrar();
         }
 
         private void salidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             lbltitulo.Text = "Salidas";
+            mostrar();
         }
     }
 }

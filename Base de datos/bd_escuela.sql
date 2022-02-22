@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-02-2022 a las 20:55:44
+-- Tiempo de generación: 22-02-2022 a las 19:34:10
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -49,7 +49,12 @@ INSERT INTO `tb_alumnos` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `fec
 (3, '123123', 'jnasdjsajd', 'kjsadjnds', '28/12/2021', 'jasjkdnas', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/6F0G7B13F11G16F.jpg'),
 (4, '18347322', 'Diego Fernando C', 'Macias Diaz', '04/04/2000', 'Nuevo Nogales', '3:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/9E4C6A3F9I1B.jpg'),
 (5, '123', 'as', 'asd', '28/12/2021', 'asd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/4E1C12A12I19H18G.jpg'),
-(6, '123123asd', 'hellouda', 'ajsdjasd', '28/12/2021', 'jasjdajsd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/4C19F18E17A15E17G.jpg');
+(6, '123123asd', 'hellouda', 'ajsdjasd', '28/12/2021', 'jasjdajsd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/4C19F18E17A15E17G.jpg'),
+(7, '12345', 'kjnaskdj', 'kajsdnj', '28/12/2021', 'kajnsdkjasd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/7D12G11F15G16D10F.jpg'),
+(8, '123556', 'askmd', 'kasdk', '28/12/2021', 'kmasdk', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/13H12D0A16B7A7E.jpg'),
+(9, '1234', 'asd', 'asd', '28/12/2021', 'asdasd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/8C11H3D18G7F3C.jpg'),
+(10, '123124', 'asdasd', 'asdasd', '28/12/2021', 'asdasd', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/13D0G2E11D17A18B.jpg'),
+(11, '1234212323', 'sadasdqwdas', 'asdasdwad', '28/12/2021', 'asdasdawds', '1:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/0I8A13E19G15B17C.jpg');
 
 -- --------------------------------------------------------
 
@@ -103,6 +108,27 @@ INSERT INTO `tb_parentesco` (`padre`, `madre`, `tutor`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `tb_relacion_alumno_usuario`
+--
+
+CREATE TABLE `tb_relacion_alumno_usuario` (
+  `id_relacion` int(11) NOT NULL,
+  `id_alumno` varchar(35) NOT NULL,
+  `id_usuario_alumno` varchar(35) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_relacion_alumno_usuario`
+--
+
+INSERT INTO `tb_relacion_alumno_usuario` (`id_relacion`, `id_alumno`, `id_usuario_alumno`) VALUES
+(1, '8', '5'),
+(2, '9', '8'),
+(3, '11', '9');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `tb_relacion_tutor_alumno`
 --
 
@@ -121,6 +147,28 @@ INSERT INTO `tb_relacion_tutor_alumno` (`id_relacion`, `Tutor`, `Alumno`) VALUES
 (4, '16', '5'),
 (5, '22', '5'),
 (6, '22', '1');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tb_usuarios_alumnos`
+--
+
+CREATE TABLE `tb_usuarios_alumnos` (
+  `id_usuario` int(11) NOT NULL,
+  `matricula` varchar(255) NOT NULL,
+  `correo` varchar(255) NOT NULL,
+  `contraseña` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_usuarios_alumnos`
+--
+
+INSERT INTO `tb_usuarios_alumnos` (`id_usuario`, `matricula`, `correo`, `contraseña`) VALUES
+(4, '123556', 'Correo', 'Contraseña'),
+(8, '1234', 'asd', 'asdasd'),
+(9, '1234212323', 'asdwqdsad', 'asdasdasd');
 
 --
 -- Índices para tablas volcadas
@@ -141,10 +189,24 @@ ALTER TABLE `tb_padres`
   ADD UNIQUE KEY `telefono` (`telefono`);
 
 --
+-- Indices de la tabla `tb_relacion_alumno_usuario`
+--
+ALTER TABLE `tb_relacion_alumno_usuario`
+  ADD PRIMARY KEY (`id_relacion`),
+  ADD UNIQUE KEY `id_alumno` (`id_alumno`);
+
+--
 -- Indices de la tabla `tb_relacion_tutor_alumno`
 --
 ALTER TABLE `tb_relacion_tutor_alumno`
   ADD PRIMARY KEY (`id_relacion`);
+
+--
+-- Indices de la tabla `tb_usuarios_alumnos`
+--
+ALTER TABLE `tb_usuarios_alumnos`
+  ADD PRIMARY KEY (`id_usuario`),
+  ADD UNIQUE KEY `matricula` (`matricula`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -154,7 +216,7 @@ ALTER TABLE `tb_relacion_tutor_alumno`
 -- AUTO_INCREMENT de la tabla `tb_alumnos`
 --
 ALTER TABLE `tb_alumnos`
-  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_padres`
@@ -163,10 +225,22 @@ ALTER TABLE `tb_padres`
   MODIFY `id_tutor` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
+-- AUTO_INCREMENT de la tabla `tb_relacion_alumno_usuario`
+--
+ALTER TABLE `tb_relacion_alumno_usuario`
+  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT de la tabla `tb_relacion_tutor_alumno`
 --
 ALTER TABLE `tb_relacion_tutor_alumno`
   MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT de la tabla `tb_usuarios_alumnos`
+--
+ALTER TABLE `tb_usuarios_alumnos`
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
