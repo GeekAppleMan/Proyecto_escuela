@@ -75,5 +75,10 @@ namespace Proyecto_escuela.Clases
                 databaseConnection.Close();
             }
         }
+
+        public void registrar_empleados(string matricula, string nombres, string apellidos, string fecha_nacimiento, string direccion, string correo, string telefono, PictureBox pic_captura, Form principal,string rol)
+        {
+
+        }
     }
 }
