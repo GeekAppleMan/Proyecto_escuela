@@ -12,6 +12,7 @@ namespace Proyecto_escuela
 {
     public partial class Frm_inicio : Form
     {
+        public static Label lbl_empleado { get; set; }
         public Frm_inicio()
         {
             InitializeComponent();
@@ -21,6 +22,11 @@ namespace Proyecto_escuela
         {
             lbl_fecha.Text = DateTime.Now.ToString("d");
             lbl_hora.Text = DateTime.Now.ToString("t");
+        }
+
+        private void Frm_inicio_Load(object sender, EventArgs e)
+        {
+            lbl_empleado = lbl_nombre_usuario;
         }
     }
 }

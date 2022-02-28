@@ -103,6 +103,7 @@ namespace Proyecto_escuela
             this.txtcontraseña.TabIndex = 55;
             this.txtcontraseña.Text = "Contraseña";
             this.txtcontraseña.Click += new System.EventHandler(this.txtcontraseña_Click);
+            this.txtcontraseña.Enter += new System.EventHandler(this.txtcontraseña_Enter);
             this.txtcontraseña.Leave += new System.EventHandler(this.txtcontraseña_Leave);
             // 
             // txtusuario
@@ -118,6 +119,7 @@ namespace Proyecto_escuela
             this.txtusuario.TabIndex = 54;
             this.txtusuario.Text = "Usuario";
             this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
+            this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
             this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
             // linkLabelregistrar

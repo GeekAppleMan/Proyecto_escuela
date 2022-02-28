@@ -81,9 +81,9 @@
             this.lbl_nombre_usuario.Font = new System.Drawing.Font("Century Gothic", 18F);
             this.lbl_nombre_usuario.Location = new System.Drawing.Point(345, 477);
             this.lbl_nombre_usuario.Name = "lbl_nombre_usuario";
-            this.lbl_nombre_usuario.Size = new System.Drawing.Size(481, 37);
+            this.lbl_nombre_usuario.Size = new System.Drawing.Size(167, 37);
             this.lbl_nombre_usuario.TabIndex = 4;
-            this.lbl_nombre_usuario.Text = "Jaime Alberto Sanchez Martinez";
+            this.lbl_nombre_usuario.Text = "Empleado";
             // 
             // picture_logo
             // 
@@ -141,6 +141,7 @@
             this.Controls.Add(this.lbl_bienvenida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_inicio";
+            this.Load += new System.EventHandler(this.Frm_inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).EndInit();
@@ -155,9 +156,9 @@
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.PictureBox picture_logo;
-        private System.Windows.Forms.Label lbl_nombre_usuario;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.PictureBox pic_hora;
         private System.Windows.Forms.PictureBox pic_fecha;
+        public System.Windows.Forms.Label lbl_nombre_usuario;
     }
 }

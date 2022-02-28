@@ -13,12 +13,14 @@ namespace Proyecto_escuela.Login
 {
     public partial class Frm_Registro : Form
     {
+        Cls_registro obj_registro = new Cls_registro();
+        public static Frm_Registro frm_registro { get; set; }
         public Frm_Registro()
         {
             InitializeComponent();
+            frm_registro = this;
         }
-        Cls_registro obj_registro = new Cls_registro();
-
+    
         private void piccerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -31,68 +33,7 @@ namespace Proyecto_escuela.Login
 
         private void linkLabelregistrar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Frm_login objlogin = new Frm_login();
-            objlogin.Show();
-            this.Hide();
-        }
-        private void txtcontraseña_Click(object sender, EventArgs e)
-        {
-            txtcontraseña.SelectAll();
-        }
-
-        private void txtcontraseña_Leave(object sender, EventArgs e)
-        {
-            if (txtcontraseña.Text.Length==0)
-            {
-                txtcontraseña.UseSystemPasswordChar = false;
-                txtcontraseña.Text = "Contraseña";
-            }
-        }
-
-        private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            txtcontraseña.UseSystemPasswordChar = true;
-        }
-
-        private void txtusuario_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
-                (e.KeyChar != '.'))
-            {
-                e.Handled = true;
-            }
-        }
-
-        private void txtusuario_Leave(object sender, EventArgs e)
-        {
-            if (txtusuario.TextLength==0)
-            {
-                txtusuario.Text = "Numero de télefono";
-            }
-        }
-
-        private void txtusuario_Click(object sender, EventArgs e)
-        {
-            txtusuario.SelectAll();
-        }
-
-        private void textBox1_Click(object sender, EventArgs e)
-        {
-            textBox1.SelectAll();
-        }
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            textBox1.UseSystemPasswordChar = true;
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-            if (textBox1.Text.Length == 0)
-            {
-                textBox1.UseSystemPasswordChar = false;
-                textBox1.Text = "Confirmar contraseña";
-            }
+            this.Close();
         }
 
         private void Frm_Registro_Load(object sender, EventArgs e)
@@ -100,43 +41,118 @@ namespace Proyecto_escuela.Login
 
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void textBox2_Click(object sender, EventArgs e)
-        {
-            textBox2.SelectAll();
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-            if (textBox2.Text.Length == 0)
-            {
-                textBox2.UseSystemPasswordChar = false;
-                textBox2.Text = "Correo";
-            }
-        }
-
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            if (txtcontraseña.Text!=textBox1.Text)
+            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txtcorreo.Text) || string.IsNullOrEmpty(txttelefono.Text) || string.IsNullOrEmpty(txtcontraseña.Text))
             {
-                MessageBox.Show("Las contraseñas no coinciden");
-            }
-            else if (textBox2.Text.Length==0)
-            {
-                MessageBox.Show("Introduzca un correo valido");
-            }
-            else if (txtusuario.Text.Length<10)
-            {
-                MessageBox.Show("Introduzca un numero de telefono valido");
+                MessageBox.Show("Debe ingresar todos los datos correctamente");
             }
             else
             {
-                obj_registro.registrarUsuarios(textBox2.Text,txtusuario.Text, txtcontraseña.Text);
-                MessageBox.Show("Registrado exitosamente");
+                if (txtcontraseña.Text != txt_confirmar_contraseña.Text)
+                {
+                    MessageBox.Show("Las contraseñas no coinciden por favor verifique que esten correctas");
+                }
+                else
+                {
+                    obj_registro.buscar_empleado(txt_matricula.Text, txtcorreo.Text, txttelefono.Text, txtcontraseña.Text);
+                }
+            }
+        }
+
+        private void Frm_Registro_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Frm_login.frm_login.Show();
+        }
+
+        private void txt_matricula_Leave(object sender, EventArgs e)
+        {
+            if (txt_matricula.Text == "")
+            {
+                txt_matricula.Text = "Matricula";
+                txt_matricula.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_matricula_Enter(object sender, EventArgs e)
+        {
+            if (txt_matricula.Text == "Matricula")
+            {
+                txt_matricula.Text = "";
+                txt_matricula.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtcorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtcorreo.Text == "")
+            {
+                txtcorreo.Text = "Correo";
+                txtcorreo.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtcorreo_Enter(object sender, EventArgs e)
+        {
+            if (txtcorreo.Text == "Correo")
+            {
+                txtcorreo.Text = "";
+                txtcorreo.ForeColor = Color.Black;
+            }
+        }
+
+        private void txttelefono_Leave(object sender, EventArgs e)
+        {
+            if (txttelefono.Text == "")
+            {
+                txttelefono.Text = "Numero de télefono";
+                txttelefono.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txttelefono_Enter(object sender, EventArgs e)
+        {
+            if (txttelefono.Text == "Numero de télefono")
+            {
+                txttelefono.Text = "";
+                txttelefono.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtcontraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtcontraseña.Text == "")
+            {
+                txtcontraseña.Text = "Contraseña";
+                txtcontraseña.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtcontraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtcontraseña.Text == "Contraseña")
+            {
+                txtcontraseña.Text = "";
+                txtcontraseña.ForeColor = Color.Black;
+            }
+        }
+
+        private void txt_confirmar_contraseña_Leave(object sender, EventArgs e)
+        {
+
+            if (txt_confirmar_contraseña.Text == "")
+            {
+                txt_confirmar_contraseña.Text = "Confirmar contraseña";
+                txt_confirmar_contraseña.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txt_confirmar_contraseña_Enter(object sender, EventArgs e)
+        {
+            if (txt_confirmar_contraseña.Text == "Confirmar contraseña")
+            {
+                txt_confirmar_contraseña.Text = "";
+                txt_confirmar_contraseña.ForeColor = Color.Black;
             }
         }
     }
