@@ -14,22 +14,17 @@ namespace Proyecto_escuela
 {
     public partial class Frm_login : Form
     {
-        Frm_main obj_main = new Frm_main();
+        public static Form frm_login { get; set; }
         Cls_Login obj_Login = new Cls_Login();
         public Frm_login()
         {
             InitializeComponent();
+            frm_login = this;
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Frm_main().Show();
-            //obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
-            //if (obj_Login.a == 1)
-            //{
-            //    this.Hide();
-            //}
+            obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
         }
 
         private void piccerrar_Click(object sender, EventArgs e)

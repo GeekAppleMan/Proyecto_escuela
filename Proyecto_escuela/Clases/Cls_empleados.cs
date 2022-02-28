@@ -23,7 +23,7 @@ namespace Proyecto_escuela.Clases
             if (nombre == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT Nombres,Apellidos,FechaNacimiento,Direccion,Estatus,Correo,Telefono FROM `tb_empleados`";
+                string query = "SELECT Nombres,Apellidos,FechaNacimiento,Direccion,Rol,Correo,Telefono FROM `tb_empleados`";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -50,7 +50,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT Nombres, Apellidos,  FechaNacimiento, Direccion, Estatus, Correo, Telefono from tb_empleados WHERE Nombres LIKE " + "'%" + nombre + "%'";
+                string query = "SELECT Nombres, Apellidos,  FechaNacimiento, Direccion, Rol, Correo, Telefono from tb_empleados WHERE Nombres LIKE " + "'%" + nombre + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
