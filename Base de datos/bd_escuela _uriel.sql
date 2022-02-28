@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-02-2022 a las 21:35:53
+-- Tiempo de generación: 25-02-2022 a las 00:31:09
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.2
 
@@ -46,6 +46,35 @@ CREATE TABLE `tb_alumnos` (
 
 INSERT INTO `tb_alumnos` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`, `tutor`, `foto_perfil`) VALUES
 (1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', '6:A', 1, 1, '');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tb_empleados`
+--
+
+CREATE TABLE `tb_empleados` (
+  `IdEmpleado` int(255) NOT NULL,
+  `Nombres` varchar(255) NOT NULL,
+  `Apellidos` varchar(255) NOT NULL,
+  `FechaNacimiento` varchar(255) NOT NULL,
+  `Direccion` varchar(255) NOT NULL,
+  `Correo` varchar(255) NOT NULL,
+  `Telefono` varchar(10) NOT NULL,
+  `Foto_perfil` varchar(255) NOT NULL,
+  `Rol` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tb_empleados_usuarios`
+--
+
+CREATE TABLE `tb_empleados_usuarios` (
+  `IdUsuario` int(255) NOT NULL,
+  `IdEmpleado` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -126,6 +155,18 @@ ALTER TABLE `tb_alumnos`
   ADD UNIQUE KEY `matricula` (`matricula`);
 
 --
+-- Indices de la tabla `tb_empleados`
+--
+ALTER TABLE `tb_empleados`
+  ADD PRIMARY KEY (`IdEmpleado`);
+
+--
+-- Indices de la tabla `tb_empleados_usuarios`
+--
+ALTER TABLE `tb_empleados_usuarios`
+  ADD PRIMARY KEY (`IdUsuario`);
+
+--
 -- Indices de la tabla `tb_padres`
 --
 ALTER TABLE `tb_padres`
@@ -147,6 +188,18 @@ ALTER TABLE `tb_registro`
 --
 ALTER TABLE `tb_alumnos`
   MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `tb_empleados`
+--
+ALTER TABLE `tb_empleados`
+  MODIFY `IdEmpleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `tb_empleados_usuarios`
+--
+ALTER TABLE `tb_empleados_usuarios`
+  MODIFY `IdUsuario` int(255) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_padres`
