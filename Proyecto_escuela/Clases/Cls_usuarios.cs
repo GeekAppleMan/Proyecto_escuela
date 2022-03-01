@@ -22,7 +22,7 @@ namespace Proyecto_escuela.Clases
             if (telefono == "" || correo == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT IdUsuario, Correo, Telefono from tb_registro";
+                string query = "SELECT id_usuario, correo, telefono from tb_registro";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

@@ -17,13 +17,13 @@ namespace Proyecto_escuela.Clases
         public static int index { get; set; }
         public static DataGridView empleados;
 
-        public void cargar_empleados(string nombre, DataGridView grid)
+        public void cargar_empleados(string matricula, DataGridView grid)
         {
             string estatus = "";
-            if (nombre == "")
+            if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT Nombres,Apellidos,FechaNacimiento,Direccion,Rol,Correo,Telefono FROM `tb_empleados`";
+                string query = "Select * From tb_empleados";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -36,7 +36,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0),reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(9), reader.GetString(10), reader.GetString(8));
                         empleados = grid;
                     }
                 }
@@ -50,7 +50,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT Nombres, Apellidos,  FechaNacimiento, Direccion, Rol, Correo, Telefono from tb_empleados WHERE Nombres LIKE " + "'%" + nombre + "%'";
+                string query = "Select * From tb_empleados Where matricula LIKE " + "'%" + matricula + "%'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -63,13 +63,13 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), reader.GetString(9), reader.GetString(10), reader.GetString(8));
                         empleados = grid;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No se encontro el Usuario");
+                    Console.WriteLine("No se encontro al empleado");
                 }
 
                 databaseConnection.Close();

@@ -17,7 +17,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "SELECT * from tb_registro Where Correo = " + "'" + usuario + "'" + "AND Contraseña = " + "'" + contraseña + "'";
+                string query = "SELECT * from tb_registro Where correo = " + "'" + usuario + "'" + "AND contraseña = " + "'" + contraseña + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 //commandDatabase.Parameters.AddWithValue("@Correo", usuario);
@@ -55,7 +55,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "SELECT * from tb_empleados_usuarios Where IdUsuario = " + "'" + id_usuario + "'";
+                string query = "SELECT * from tb_empleados_usuarios Where id_usuario = " + "'" + id_usuario + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -80,7 +80,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "SELECT * from tb_empleados Where IdEmpleado = " + "'" + id_empleado + "'";
+                string query = "SELECT * from tb_empleados Where id_empleado = " + "'" + id_empleado + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
