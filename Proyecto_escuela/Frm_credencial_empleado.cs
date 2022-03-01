@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    public partial class Frm_Asignacion_de_alumnos : Form
+    public partial class Frm_credencial_empleado : Form
     {
-        public Frm_Asignacion_de_alumnos()
+        public static int rowindex { get; set; }
+        public static DataGridView dgv { get; set; }
+        public Frm_credencial_empleado()
         {
             InitializeComponent();
+        }
+
+        private void Frm_credencial_empleado_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

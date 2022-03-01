@@ -46,13 +46,22 @@ namespace Proyecto_escuela
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
+            this.grbopciones = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_baja = new System.Windows.Forms.Button();
+            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_tutor = new System.Windows.Forms.Button();
             this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
+            this.grbopciones.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_datos_tutor
             // 
+            this.gb_datos_tutor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gb_datos_tutor.Controls.Add(this.lbl_matricula_alumno);
             this.gb_datos_tutor.Controls.Add(this.lbl_matricula);
             this.gb_datos_tutor.Controls.Add(this.lbl_estatus_alumno);
@@ -67,11 +76,10 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.Controls.Add(this.lbl_direccion);
             this.gb_datos_tutor.Controls.Add(this.lbl_apellidos);
             this.gb_datos_tutor.Controls.Add(this.lbl_tutor);
-            this.gb_datos_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gb_datos_tutor.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gb_datos_tutor.Location = new System.Drawing.Point(394, 0);
+            this.gb_datos_tutor.Location = new System.Drawing.Point(451, 0);
             this.gb_datos_tutor.Name = "gb_datos_tutor";
-            this.gb_datos_tutor.Size = new System.Drawing.Size(406, 439);
+            this.gb_datos_tutor.Size = new System.Drawing.Size(481, 396);
             this.gb_datos_tutor.TabIndex = 3;
             this.gb_datos_tutor.TabStop = false;
             this.gb_datos_tutor.Text = "Datos del alumno";
@@ -218,12 +226,13 @@ namespace Proyecto_escuela
             // 
             // gb_foto_perfil
             // 
+            this.gb_foto_perfil.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.gb_foto_perfil.Controls.Add(this.picture_imagen_perfil);
-            this.gb_foto_perfil.Dock = System.Windows.Forms.DockStyle.Left;
             this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gb_foto_perfil.Location = new System.Drawing.Point(0, 0);
             this.gb_foto_perfil.Name = "gb_foto_perfil";
-            this.gb_foto_perfil.Size = new System.Drawing.Size(394, 439);
+            this.gb_foto_perfil.Size = new System.Drawing.Size(445, 396);
             this.gb_foto_perfil.TabIndex = 2;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Foto de perfil";
@@ -233,16 +242,93 @@ namespace Proyecto_escuela
             this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
             this.picture_imagen_perfil.Name = "picture_imagen_perfil";
-            this.picture_imagen_perfil.Size = new System.Drawing.Size(388, 417);
+            this.picture_imagen_perfil.Size = new System.Drawing.Size(439, 374);
             this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picture_imagen_perfil.TabIndex = 0;
             this.picture_imagen_perfil.TabStop = false;
+            // 
+            // grbopciones
+            // 
+            this.grbopciones.Controls.Add(this.tableLayoutPanel1);
+            this.grbopciones.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.grbopciones.Location = new System.Drawing.Point(0, 399);
+            this.grbopciones.Name = "grbopciones";
+            this.grbopciones.Size = new System.Drawing.Size(932, 90);
+            this.grbopciones.TabIndex = 5;
+            this.grbopciones.TabStop = false;
+            this.grbopciones.Text = "Opciones";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_baja, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_modificar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_tutor, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(926, 69);
+            this.tableLayoutPanel1.TabIndex = 0;
+            // 
+            // btn_baja
+            // 
+            this.btn_baja.BackColor = System.Drawing.Color.Red;
+            this.btn_baja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_baja.FlatAppearance.BorderSize = 0;
+            this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baja.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_baja.Location = new System.Drawing.Point(619, 3);
+            this.btn_baja.Name = "btn_baja";
+            this.btn_baja.Size = new System.Drawing.Size(304, 63);
+            this.btn_baja.TabIndex = 3;
+            this.btn_baja.Text = "Baja";
+            this.btn_baja.UseVisualStyleBackColor = false;
+            this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_modificar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_modificar.FlatAppearance.BorderSize = 0;
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_modificar.Location = new System.Drawing.Point(311, 3);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(302, 63);
+            this.btn_modificar.TabIndex = 2;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
+            // 
+            // btn_tutor
+            // 
+            this.btn_tutor.BackColor = System.Drawing.Color.Green;
+            this.btn_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_tutor.FlatAppearance.BorderSize = 0;
+            this.btn_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tutor.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_tutor.Location = new System.Drawing.Point(3, 3);
+            this.btn_tutor.Name = "btn_tutor";
+            this.btn_tutor.Size = new System.Drawing.Size(302, 63);
+            this.btn_tutor.TabIndex = 1;
+            this.btn_tutor.Text = "Tutores";
+            this.btn_tutor.UseVisualStyleBackColor = false;
+            this.btn_tutor.Click += new System.EventHandler(this.btn_Asignar_tutor_Click);
             // 
             // Frm_credencial_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 439);
+            this.ClientSize = new System.Drawing.Size(932, 489);
+            this.Controls.Add(this.grbopciones);
             this.Controls.Add(this.gb_datos_tutor);
             this.Controls.Add(this.gb_foto_perfil);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -255,6 +341,8 @@ namespace Proyecto_escuela
             this.gb_datos_tutor.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
+            this.grbopciones.ResumeLayout(false);
+            this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -278,5 +366,10 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_matricula;
         public System.Windows.Forms.Label lbl_estatus_alumno;
         private System.Windows.Forms.Label lbl_estatus;
+        private System.Windows.Forms.GroupBox grbopciones;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Button btn_baja;
+        private System.Windows.Forms.Button btn_modificar;
+        private System.Windows.Forms.Button btn_tutor;
     }
 }

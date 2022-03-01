@@ -14,22 +14,24 @@ namespace Proyecto_escuela
 {
     public partial class Frm_login : Form
     {
-        Frm_main obj_main = new Frm_main();
+        public static Form frm_login { get; set; }
         Cls_Login obj_Login = new Cls_Login();
         public Frm_login()
         {
             InitializeComponent();
+            frm_login = this;
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            new Frm_main().Show();
-            //obj_Login.comparar_login(txtusuario.Text,txtusuario.Text, txtcontraseña.Text);
-            //if (obj_Login.a==1)
-            //{
-            //    this.Hide();
-            //}
+            if (string.IsNullOrEmpty(txtusuario.Text) || string.IsNullOrEmpty(txtcontraseña.Text) || txtusuario.Text == "Usuario" || txtcontraseña.Text == "Contraseña")
+            {
+                MessageBox.Show("Ingrese todos los datos");
+            }
+            else
+            {
+                obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
+            }
         }
 
         private void piccerrar_Click(object sender, EventArgs e)
@@ -68,17 +70,37 @@ namespace Proyecto_escuela
 
         private void txtcontraseña_Leave(object sender, EventArgs e)
         {
-            if (txtcontraseña.TextLength==0)
+            if (txtcontraseña.Text == "")
             {
                 txtcontraseña.Text = "Contraseña";
+                txtcontraseña.ForeColor = Color.Gray;
             }
         }
 
         private void txtusuario_Leave(object sender, EventArgs e)
         {
-            if (txtusuario.TextLength==0)
+            if (txtusuario.Text == "")
             {
                 txtusuario.Text = "Usuario";
+                txtusuario.ForeColor = Color.Gray;
+            }
+        }
+
+        private void txtusuario_Enter(object sender, EventArgs e)
+        {
+            if (txtusuario.Text == "Usuario")
+            {
+                txtusuario.Text = "";
+                txtusuario.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtcontraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtcontraseña.Text == "Contraseña")
+            {
+                txtcontraseña.Text = "";
+                txtcontraseña.ForeColor = Color.Black;
             }
         }
     }

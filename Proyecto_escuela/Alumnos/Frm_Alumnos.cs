@@ -38,6 +38,7 @@ namespace Proyecto_escuela
 
         private void dgv_alumno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Frm_tutores_asignados.id_alumno = dgv_alumno[0, e.RowIndex].Value.ToString();
             if (e.RowIndex == -1)
             {
 
@@ -53,6 +54,8 @@ namespace Proyecto_escuela
                     obj_credencial.lbl_direccion_alumno.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_grupo_alumno.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_estatus_alumno.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                    Frm_credencial_alumno.rowindex = e.RowIndex;
+                    Frm_credencial_alumno.dgv = dgv_alumno;
                     string path = dgv_alumno[8, e.RowIndex].Value.ToString();
                     if (path == "")
                     {
@@ -80,25 +83,25 @@ namespace Proyecto_escuela
                     obj_credencial.ShowDialog();
                     cargar_alumno();
                 }
-                if (e.ColumnIndex == 9)
-                {
-                    Cls_Alumnos.index = e.RowIndex;
-                    obj_modificar.txt_matricula.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_nombres.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_apellidos.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
-                    obj_modificar.dtp_fecha_nacimiento.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_direccion.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
-                    obj_modificar.combo_grupo.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
-                    obj_modificar.combo_estatus.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
-                    obj_modificar.ShowDialog();
-                    cargar_alumno();
-                }
-                if (e.ColumnIndex == 10)
-                {
-                    Cls_Alumnos.index = e.RowIndex;
-                    obj_alumnos.eliminar_alumno();
-                    cargar_alumno();
-                }
+                //if (e.ColumnIndex == 9)
+                //{
+                //    Cls_Alumnos.index = e.RowIndex;
+                //    obj_modificar.txt_matricula.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_nombres.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_apellidos.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
+                //    obj_modificar.dtp_fecha_nacimiento.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_direccion.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
+                //    obj_modificar.combo_grupo.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
+                //    obj_modificar.combo_estatus.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                //    obj_modificar.ShowDialog();
+                //    cargar_alumno();
+                //}
+                //if (e.ColumnIndex == 10)
+                //{
+                //    Cls_Alumnos.index = e.RowIndex;
+                //    obj_alumnos.eliminar_alumno();
+                //    cargar_alumno();
+                //}
             }
         }
 

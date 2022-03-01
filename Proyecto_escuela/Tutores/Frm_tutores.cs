@@ -45,12 +45,15 @@ namespace Proyecto_escuela
 
         private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            Frm_credencial_tutor.dgv = dgv_tutor;
             if (e.RowIndex == -1)
             {
 
             }
             else
             {
+                Frm_credencial_tutor.id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
+                Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
                     obj_credencial.lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
@@ -88,26 +91,26 @@ namespace Proyecto_escuela
                     obj_credencial.ShowDialog();
                     cargar_tutores();
                 }
-                if (e.ColumnIndex == 10)
-                {
-                    Cls_tutores.index = e.RowIndex;
-                    obj_modificar.txt_nombres.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_apellidos.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_direccion.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_telefono.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
-                    obj_modificar.txt_correo.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
-                    obj_modificar.dtp_fecha_nacimiento.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
-                    obj_modificar.combo_parentesco.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
-                    obj_modificar.combo_estatus.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
-                    obj_modificar.ShowDialog();
-                    cargar_tutores();
-                }
-                if (e.ColumnIndex == 11)
-                {
-                    Cls_tutores.index = e.RowIndex;
-                    obj_tutores.eliminar_tutor();
-                    cargar_tutores();
-                }
+                //if (e.ColumnIndex == 10)
+                //{
+                //    Cls_tutores.index = e.RowIndex;
+                //    obj_modificar.txt_nombres.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_apellidos.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_direccion.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_telefono.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
+                //    obj_modificar.txt_correo.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
+                //    obj_modificar.dtp_fecha_nacimiento.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
+                //    obj_modificar.combo_parentesco.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
+                //    obj_modificar.combo_estatus.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
+                //    obj_modificar.ShowDialog();
+                //    cargar_tutores();
+                //}
+                //if (e.ColumnIndex == 11)
+                //{
+                //    Cls_tutores.index = e.RowIndex;
+                //    obj_tutores.eliminar_tutor();
+                //    cargar_tutores();
+                //}
             }
            
         }

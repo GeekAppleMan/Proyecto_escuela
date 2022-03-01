@@ -1,34 +1,28 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
 using System.Windows.Forms;
-using System.Data;
-using System.Drawing.Imaging;
-using System.IO;
 
 namespace Proyecto_escuela.Clases
 {
-    class Cls_usuarios : Cls_conexion
+    class Cls_usuarios :Cls_conexion
     {
         private string path = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/";
         public static bool conservar_modificar_imagen { get; set; }
-        public static DataGridView tutores;
         private Random objrandom = new Random();
         private char letrarandom;
         public static int index { get; set; }
-
-        //Cargar usuarios en el DataGridView
-        public void cargar_usuarios(string nombre, DataGridView grid)
+        public static DataGridView usuarios;
+        public void cargar_usuarios(string matricula, DataGridView grid)
         {
-            string usuario = "";
             string estatus = "";
-            if (nombre == "")
+            if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT * FROM tb_padres WHERE estatus = '1'";
+                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.id_empleado = tb_empleados_usuarios.id_empleado";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -41,33 +35,13 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        if (reader.GetString(7) == "1")
-                        {
-                            usuario = "Padre";
-                        }
-                        if (reader.GetString(7) == "2")
-                        {
-                            usuario = "Madre";
-                        }
-                        if (reader.GetString(7) == "3")
-                        {
-                            usuario = "Tutor";
-                        }
-                        if (reader.GetString(8) == "1")
-                        {
-                            usuario = "Activo";
-                        }
-                        if (reader.GetString(8) == "2")
-                        {
-                            usuario = "Inactivo";
-                        }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), usuario, estatus, reader.GetString(0), reader.GetString(9));
-                        tutores = grid;
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        usuarios = grid;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No se encontro al tutor");
+                    Console.WriteLine("No se encontro al usuario");
                 }
 
                 databaseConnection.Close();
@@ -75,7 +49,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT * FROM tb_padres WHERE nombres LIKE " + "'%" + nombre + "%'";
+                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.Matricula LIKE " + "'%" + matricula + "%'" ; 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -88,267 +62,17 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        if (reader.GetString(7) == "1")
-                        {
-                            usuario = "Padre";
-                        }
-                        if (reader.GetString(7) == "2")
-                        {
-                            usuario = "Madre";
-                        }
-                        if (reader.GetString(7) == "3")
-                        {
-                            usuario = "Tutor";
-                        }
-                        if (reader.GetString(8) == "1")
-                        {
-                            estatus = "Activo";
-                        }
-                        if (reader.GetString(8) == "2")
-                        {
-                            estatus = "Inactivo";
-                        }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), usuario, estatus, reader.GetString(0), reader.GetString(9));
-                        tutores = grid;
+                        grid.Rows.Add(reader.GetString(0),reader.GetString(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        usuarios = grid;
                     }
                 }
                 else
                 {
-                    Console.WriteLine("No se encontro el alumno");
+                    Console.WriteLine("No se encontro el Usuario");
                 }
 
                 databaseConnection.Close();
             }
-
-        }
-
-        //Modificar usuarios
-        public void registrar_tutores(string nombres, string apellidos, string direcciones, string telefono, string correo, string fecha_nacimiento, string parentesco, PictureBox pic_captura, Form principal)
-        {
-            string codigo_imagen = "";
-            letrarandom = ' ';
-            int num = 0;
-            try
-            {
-                for (int i = 0; i < 6; i++)
-                {
-                    num = objrandom.Next(20);
-                    letrarandom = (char)(((int)'A') + objrandom.Next(9));
-                    codigo_imagen += num.ToString() + letrarandom.ToString();
-                }
-                bool verificar = verificar_codigo_imagen(codigo_imagen);
-                if (verificar == true)
-                {
-                    registrar_tutores(nombres, apellidos, direcciones, telefono, correo, fecha_nacimiento, parentesco, pic_captura, principal);
-                }
-                else if (verificar == false)
-                {
-                    string resul_parentesco = "";
-                    switch (parentesco)
-                    {
-                        case "Padre":
-                            resul_parentesco = "1";
-                            break;
-                        case "Madre":
-                            resul_parentesco = "2";
-                            break;
-                        case "Tutor":
-                            resul_parentesco = "3";
-                            break;
-                        default:
-                            break;
-                    }
-                    string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
-                    string path_save = path + codigo_imagen + ".jpg";
-                    string query = "INSERT INTO `tb_padres`(`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus` ,`foto_perfil`) VALUES ('" + "" + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + direcciones + "'" + "," + "'" + telefono + "'" + "," + "'" + correo + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + resul_parentesco + "'" + "," + "'1'" + "," + "'" + imagen_bd + "')";
-                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                    commandDatabase.CommandTimeout = 60;
-                    MySqlDataReader reader;
-                    databaseConnection.Open();
-                    reader = commandDatabase.ExecuteReader();
-                    try
-                    {
-                        pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
-                        MessageBox.Show("Se registro al tutor correctamente");
-                    }
-                    catch (Exception)
-                    {
-
-                        MessageBox.Show("se registro al tutor pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
-                    }
-                    principal.Close();
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-
-        }
-
-        //Modificar usuarios
-        public void modificar_usuarios(string nombres, string apellidos, string direcciones, string telefono, string correo, string fecha_nacimiento, string parentesco, string estatus, PictureBox pic_captura, Form principal, bool verificar)
-        {
-            try
-            {
-                string resul_parentesco = "";
-                string resul_estatus = "";
-                string id_tutor = tutores[8, index].Value.ToString();
-                if (conservar_modificar_imagen == true)
-                {
-                    switch (parentesco)
-                    {
-                        case "Padre":
-                            resul_parentesco = "1";
-                            break;
-                        case "Madre":
-                            resul_parentesco = "2";
-                            break;
-                        case "Tutor":
-                            resul_parentesco = "3";
-                            break;
-                        default:
-                            break;
-                    }
-                    if (estatus == "Activo")
-                    {
-                        resul_estatus = "1";
-                    }
-                    if (estatus == "Inactivo")
-                    {
-                        resul_estatus = "2";
-                    }
-                    string query = "UPDATE `tb_padres` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`parentesco`= " + "'" + resul_parentesco + "'," + "`estatus`= " + "'" + resul_estatus + "'" + "WHERE id_tutor = " + "'" + id_tutor + "'";
-                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                    commandDatabase.CommandTimeout = 60;
-                    MySqlDataReader reader;
-                    databaseConnection.Open();
-                    reader = commandDatabase.ExecuteReader();
-                    MessageBox.Show("Se modifico al tutor correctamente");
-                    principal.Close();
-
-                }
-                else if (conservar_modificar_imagen == false)
-                {
-                    if (pic_captura.Image == null)
-                    {
-                        MessageBox.Show("No se a tomado la nueva foto, tome la nueva foto para poder continuar. \nsi quiere conservar la imagen que tiene el tutor, seleccione conservar imagen.");
-                    }
-                    else
-                    {
-                        string codigo_imagen = "";
-                        letrarandom = ' ';
-                        int num = 0;
-                        for (int i = 0; i < 6; i++)
-                        {
-                            num = objrandom.Next(20);
-                            letrarandom = (char)(((int)'A') + objrandom.Next(9));
-                            codigo_imagen += num.ToString() + letrarandom.ToString();
-                        }
-                        bool verificar_codigo = verificar_codigo_imagen(codigo_imagen);
-                        if (verificar_codigo == true)
-                        {
-                            modificar_usuarios(nombres, apellidos, direcciones, telefono, correo, fecha_nacimiento, parentesco, estatus, pic_captura, principal, verificar);
-                        }
-                        else if (verificar_codigo == false)
-                        {
-                            string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
-                            string path_save = path + codigo_imagen + ".jpg";
-                            switch (parentesco)
-                            {
-                                case "Padre":
-                                    resul_parentesco = "1";
-                                    break;
-                                case "Madre":
-                                    resul_parentesco = "2";
-                                    break;
-                                case "Tutor":
-                                    resul_parentesco = "3";
-                                    break;
-                                default:
-                                    break;
-                            }
-                            if (estatus == "Activo")
-                            {
-                                resul_estatus = "1";
-                            }
-                            if (estatus == "Inactivo")
-                            {
-                                resul_estatus = "2";
-                            }
-                            string query = "UPDATE `tb_padres` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`parentesco`= " + "'" + resul_parentesco + "'," + "`estatus`= " + "'" + resul_estatus + "'," + "`foto_perfil`= " + "'" + imagen_bd + "'" + "WHERE id_tutor = " + "'" + id_tutor + "'";
-                            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                            commandDatabase.CommandTimeout = 60;
-                            MySqlDataReader reader;
-                            databaseConnection.Open();
-                            reader = commandDatabase.ExecuteReader();
-                            try
-                            {
-                                File.Delete(tutores[9, index].Value.ToString());
-                                pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
-                                MessageBox.Show("Se modifico al tutor correctamente");
-                            }
-                            catch (Exception)
-                            {
-
-                                MessageBox.Show("se modifico al tutor pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
-                            }
-                            principal.Close();
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-        }
-
-        //Eliminar usuarios
-        public void eliminar_usuario()
-        {
-            try
-            {
-                string query = "UPDATE `tb_padres` SET `estatus` = '2' WHERE id_tutor = " + "'" + tutores[8, index].Value.ToString() + "'";
-                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                commandDatabase.CommandTimeout = 60;
-                MySqlDataReader reader;
-                databaseConnection.Open();
-                reader = commandDatabase.ExecuteReader();
-                MessageBox.Show("Se elimino al tutor");
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
-            }
-
-        }
-
-        private bool verificar_codigo_imagen(string codigo)
-        {
-            bool verificar = false;
-            string query = "SELECT * FROM tb_padres WHERE foto_perfil =" + "'" + codigo + "'";
-            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
-            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-            commandDatabase.CommandTimeout = 60;
-            MySqlDataReader reader;
-            databaseConnection.Open();
-
-            reader = commandDatabase.ExecuteReader();
-
-            if (reader.HasRows)
-            {
-                while (reader.Read())
-                {
-                    verificar = true;
-                }
-            }
-
-            return verificar;
         }
     }
 }

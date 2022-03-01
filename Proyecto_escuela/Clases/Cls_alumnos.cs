@@ -19,6 +19,8 @@ namespace Proyecto_escuela
         private char letrarandom;
         public static int index { get; set; }
         public static DataGridView alumnos;
+        private static string id_alumno { get; set; }
+        private static string id_usuario_alumno { get; set; }
         public void cargar_alumnos(string matricula, DataGridView grid)
         {
             string estatus = "";
@@ -126,13 +128,18 @@ namespace Proyecto_escuela
                     try
                     {
                         pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
-                        MessageBox.Show("Se registro al alumno correctamente");
+                        MessageBox.Show("Se registro al alumno correctamente, a continuacion se registrara el usuario del alumno");
+                        Frm_crear_usuario_alumno obj_usuario = new Frm_crear_usuario_alumno();
+                        obj_usuario.txt_matricula.Text = matricula;
+                        obj_usuario.ShowDialog();
+                        
                     }
                     catch (Exception)
                     {
                         MessageBox.Show("se registro al alumno pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
                     }
                     principal.Close();
+                    databaseConnection.Close();
                 }
             }
             catch (Exception)
@@ -271,6 +278,186 @@ namespace Proyecto_escuela
             }
 
             return verificar;
+        }
+
+        private static DataTable ids_tutores = new DataTable();
+        public void tutores_asignados(string alumno)
+        {
+            try
+            {
+                if (ids_tutores.Columns.Count == 0)
+                {
+                    ids_tutores.Columns.Add("id_tutor");
+                }
+                ids_tutores.Rows.Clear();
+                string query = "SELECT * FROM tb_relacion_tutor_alumno WHERE Alumno = " + "'" + alumno + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ids_tutores.Rows.Add(reader.GetString(1));
+                    }
+                }
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+                          
+        }
+
+        public void cargar_tutores_asignados(DataGridView tutores)
+        {
+            try
+            {
+                string tutor = "";
+                string estatus = "";
+                for (int i = 0; i < ids_tutores.Rows.Count; i++)
+                {
+                    string query = "SELECT * FROM tb_padres WHERE id_tutor = " + "'" + ids_tutores.Rows[i]["id_tutor"].ToString() + "'";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(7) == "1")
+                            {
+                                tutor = "Padre";
+                            }
+                            if (reader.GetString(7) == "2")
+                            {
+                                tutor = "Madre";
+                            }
+                            if (reader.GetString(7) == "3")
+                            {
+                                tutor = "Tutor";
+                            }
+                            if (reader.GetString(8) == "1")
+                            {
+                                estatus = "Activo";
+                            }
+                            if (reader.GetString(8) == "2")
+                            {
+                                estatus = "Inactivo";
+                            }
+                            tutores.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus, ids_tutores.Rows[i]["id_tutor"].ToString(), reader.GetString(9));
+                        }
+                    }
+                    databaseConnection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+            
+        }
+
+        public void registrar_usuario_alumno(string matricula,string correo,string contraseña)
+        {
+            try
+            {
+                string query = "INSERT INTO `tb_usuarios_alumnos`(`matricula`, `correo`, `contraseña`) VALUES ('" + matricula + "'," + "'" + correo + "'" + "," + "'" + contraseña + "')";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                MessageBox.Show("Usuario registrado correctamente");
+                buscar_id_alumno(matricula);
+                buscar_id_usuario(matricula);
+                registrar_relacion_usuario_alumno();
+                
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con el equipo de sistemas");
+            }
+            
+        }
+        public void buscar_id_alumno(string matricula)
+        {
+            string query = "SELECT id_alumno FROM tb_alumnos WHERE matricula = " + "'" + matricula + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+
+            reader = commandDatabase.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id_alumno = reader.GetString(0);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No se encontro el alumno");
+            }
+
+            databaseConnection.Close();
+        }
+
+        public void buscar_id_usuario(string matricula)
+        {
+            string query = "SELECT id_usuario FROM tb_usuarios_alumnos WHERE matricula = " + "'" + matricula + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+
+            reader = commandDatabase.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    id_usuario_alumno = reader.GetString(0);
+                }
+            }
+            else
+            {
+                Console.WriteLine("No se encontro el alumno");
+            }
+
+            databaseConnection.Close();
+        }
+        public void registrar_relacion_usuario_alumno()
+        {
+            try
+            {
+                string query = "INSERT INTO `tb_relacion_alumno_usuario`(`id_alumno`, `id_usuario_alumno`) VALUES ('" + id_alumno + "'," + "'" + id_usuario_alumno + "'" +  ")";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                databaseConnection.Close();
+                MessageBox.Show("Relacion creada correctamente");
+            }
+            catch (Exception ex )
+            {
+                MessageBox.Show("Ocurrio un problema comuniquese con el equipo de sistemas" + ex);
+            }
         }
     }
 }

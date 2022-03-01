@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cls_empleados.cs" />
     <Compile Include="Clases\Cls_Login.cs" />
     <Compile Include="Clases\Cls_registro.cs" />
     <Compile Include="Clases\Cls_tutores.cs" />
@@ -124,7 +125,72 @@
     <Compile Include="Alumnos\Frm_credencial_alumno.Designer.cs">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alumnos\Frm_tutores_asignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
+      <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\Frm_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\Frm_Empleados.Designer.cs">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Alumnos\Frm_crear_usuario_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alumnos\Frm_crear_usuario_alumno.Designer.cs">
+      <DependentUpon>Frm_crear_usuario_alumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\Frm_registrar_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\Frm_registrar_empleado.Designer.cs">
+      <DependentUpon>Frm_registrar_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajustes\Frm_Ajustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajustes\Frm_Ajustes.Designer.cs">
+      <DependentUpon>Frm_Ajustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_credencial_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_credencial_empleado.Designer.cs">
+      <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutores\Frm_alumnos_asignados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\Frm_alumnos_asignados.Designer.cs">
+      <DependentUpon>Frm_alumnos_asignados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inicio\Frm_inicio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inicio\Frm_inicio.Designer.cs">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\Frm_asignacion_de_alumno.Designer.cs">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="Clases\Cls_usuarios.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
+      <DependentUpon>Frm_usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login\Frm_Reestablecercontraseña.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,32 +242,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutores\NewFrameEvetArgs.cs" />
-    <Compile Include="Usuarios\Frm_credencial_usuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_credencial_usuario.Designer.cs">
-      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_Modificar_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_Modificar_usuarios.Designer.cs">
-      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_registrar_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_registrar_usuarios.Designer.cs">
-      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Usuarios\Frm_usuarios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Usuarios\Frm_usuarios.Designer.cs">
-      <DependentUpon>Frm_usuarios.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="Ajustes\Frm_Ajustes.resx">
+      <DependentUpon>Frm_Ajustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_crear_usuario_alumno.resx">
+      <DependentUpon>Frm_crear_usuario_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_credencial_alumno.resx">
       <DependentUpon>Frm_credencial_alumno.cs</DependentUpon>
@@ -212,11 +260,32 @@
     <EmbeddedResource Include="Alumnos\Frm_registrar_alumno.resx">
       <DependentUpon>Frm_registrar_alumno.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Alumnos\Frm_tutores_asignados.resx">
+      <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\Frm_Empleados.resx">
+      <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\Frm_registrar_empleado.resx">
+      <DependentUpon>Frm_registrar_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_credencial_empleado.resx">
+      <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inicio\Frm_inicio.resx">
+      <DependentUpon>Frm_inicio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Reestablecercontraseña.resx">
       <DependentUpon>Frm_Reestablecercontraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\Frm_Registro.resx">
       <DependentUpon>Frm_Registro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutores\Frm_alumnos_asignados.resx">
+      <DependentUpon>Frm_alumnos_asignados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tutores\Frm_asignacion_de_alumno.resx">
+      <DependentUpon>Frm_asignacion_de_alumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_Modificar_tutor.resx">
       <DependentUpon>Frm_Modificar_tutor.cs</DependentUpon>
@@ -229,14 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Tutores\Frm_credencial_tutor.resx">
       <DependentUpon>Frm_credencial_tutor.cs</DependentUpon>
     </EmbeddedResource>
@@ -245,15 +309,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_tutores.resx">
       <DependentUpon>Frm_tutores.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_credencial_usuario.resx">
-      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_Modificar_usuarios.resx">
-      <DependentUpon>Frm_Modificar_usuarios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Usuarios\Frm_registrar_usuarios.resx">
-      <DependentUpon>Frm_registrar_usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Frm_usuarios.resx">
       <DependentUpon>Frm_usuarios.cs</DependentUpon>
@@ -299,7 +354,9 @@
   <ItemGroup>
     <None Include="Resources\calendario.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\usuario1.png" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario %282%29.png" />
   </ItemGroup>
@@ -308,6 +365,81 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\usuario %284%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %282%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %281%292.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\usuario %283%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa-de-perro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flecha-hacia-arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-instituto-tecnologico-de-nogales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerta-de-salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_izquierda.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_arriba.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_izquierda1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu %281%291.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

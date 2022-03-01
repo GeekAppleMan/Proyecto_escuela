@@ -29,6 +29,8 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_alumno = new System.Windows.Forms.DataGridView();
             this.panel_busqueda = new System.Windows.Forms.Panel();
@@ -47,8 +49,6 @@ namespace Proyecto_escuela
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Modificar = new System.Windows.Forms.DataGridViewImageColumn();
-            this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_alumno)).BeginInit();
             this.panel_busqueda.SuspendLayout();
@@ -70,7 +70,17 @@ namespace Proyecto_escuela
             this.dgv_alumno.AllowUserToResizeColumns = false;
             this.dgv_alumno.AllowUserToResizeRows = false;
             this.dgv_alumno.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_alumno.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgv_alumno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_alumno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_alumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_alumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_alumno,
@@ -81,10 +91,18 @@ namespace Proyecto_escuela
             this.Direccion,
             this.Grupo,
             this.Estatus,
-            this.Imagen,
-            this.Modificar,
-            this.Eliminar});
+            this.Imagen});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_alumno.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_alumno.EnableHeadersVisualStyles = false;
+            this.dgv_alumno.GridColor = System.Drawing.Color.LightGray;
             this.dgv_alumno.Location = new System.Drawing.Point(0, 0);
             this.dgv_alumno.Name = "dgv_alumno";
             this.dgv_alumno.RowHeadersVisible = false;
@@ -189,64 +207,56 @@ namespace Proyecto_escuela
             this.Matricula.HeaderText = "Matricula";
             this.Matricula.MinimumWidth = 6;
             this.Matricula.Name = "Matricula";
+            this.Matricula.ReadOnly = true;
             // 
             // Nombres
             // 
             this.Nombres.HeaderText = "Nombres";
             this.Nombres.MinimumWidth = 6;
             this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
             // 
             // Apellidos
             // 
             this.Apellidos.HeaderText = "Apellidos";
             this.Apellidos.MinimumWidth = 6;
             this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
             // 
             // Fecha_nacimiento
             // 
             this.Fecha_nacimiento.HeaderText = "Fecha de nacimiento";
             this.Fecha_nacimiento.MinimumWidth = 6;
             this.Fecha_nacimiento.Name = "Fecha_nacimiento";
+            this.Fecha_nacimiento.ReadOnly = true;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.MinimumWidth = 6;
             this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
             // 
             // Grupo
             // 
             this.Grupo.HeaderText = "Grupo";
             this.Grupo.MinimumWidth = 6;
             this.Grupo.Name = "Grupo";
+            this.Grupo.ReadOnly = true;
             // 
             // Estatus
             // 
             this.Estatus.HeaderText = "Estatus";
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
             // 
             // Imagen
             // 
             this.Imagen.HeaderText = "Imagen";
             this.Imagen.MinimumWidth = 6;
             this.Imagen.Name = "Imagen";
-            // 
-            // Modificar
-            // 
-            this.Modificar.HeaderText = "Modificar";
-            this.Modificar.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
-            this.Modificar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Modificar.MinimumWidth = 6;
-            this.Modificar.Name = "Modificar";
-            // 
-            // Eliminar
-            // 
-            this.Eliminar.HeaderText = "Eliminar";
-            this.Eliminar.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
-            this.Eliminar.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.Eliminar.MinimumWidth = 6;
-            this.Eliminar.Name = "Eliminar";
+            this.Imagen.Visible = false;
             // 
             // Frm_Alumnos
             // 
@@ -270,7 +280,6 @@ namespace Proyecto_escuela
         #endregion
 
         private System.Windows.Forms.Panel panel_grid;
-        private System.Windows.Forms.DataGridView dgv_alumno;
         private System.Windows.Forms.Panel panel_busqueda;
         private System.Windows.Forms.Button btn_registrar_alumno;
         private System.Windows.Forms.Panel panel3;
@@ -278,6 +287,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbl_alumno;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
+        public System.Windows.Forms.DataGridView dgv_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
@@ -287,7 +297,5 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.DataGridViewImageColumn Modificar;
-        private System.Windows.Forms.DataGridViewImageColumn Eliminar;
     }
 }

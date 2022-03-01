@@ -322,15 +322,95 @@ namespace Proyecto_escuela
         private bool verificar_codigo_imagen(string codigo)
         {
             bool verificar = false;
-            string query = "SELECT * FROM tb_padres WHERE foto_perfil =" + "'" + codigo + "'";
+            try
+            {
+                string query = "SELECT * FROM tb_padres WHERE foto_perfil =" + "'" + codigo + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+
+                reader = commandDatabase.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        verificar = true;
+                    }
+                } 
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+            return verificar;
+        }
+        public void asignar_alumno(string matricula,DataGridView asignacion,TextBox matricula2)
+        {
+            try
+            {
+                string query = "SELECT * FROM tb_alumnos WHERE matricula = " + "'" + matricula + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+
+                reader = commandDatabase.ExecuteReader();
+                bool verificar_alumno_grid = false;
+                bool verificar_alumno_bd = false;
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        verificar_alumno_bd = verificar_asignacion_alumno(reader.GetString(0));
+                        for (int i = 0; i < asignacion.Rows.Count; i++)
+                        {
+                            if (reader.GetString(0) == asignacion[0, i].Value.ToString())
+                            {
+                                verificar_alumno_grid = true;
+                            }
+                        }
+                        if (verificar_alumno_grid == true)
+                        {
+                            MessageBox.Show("Ya agrego a su lista al alumno");
+                        }
+                        if (verificar_alumno_bd == true)
+                        {
+                            MessageBox.Show("Ya tiene asignado a este alumno");
+                        }
+                        else if(verificar_alumno_grid != true && verificar_alumno_bd != true)
+                        {
+                            asignacion.Rows.Add(reader.GetString(0), Frm_Asignacion_de_alumno.Id_tutor, reader.GetString(2), reader.GetString(3));
+                        }
+                    }
+                    matricula2.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("No se encontro al alumno verifica la matricula");
+                }
+
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+           
+        }
+        public bool verificar_asignacion_alumno(string id_alumno)
+        {
+            bool verificar = false;
+            string query = "SELECT * FROM tb_relacion_tutor_alumno WHERE Tutor = " + "'" + Frm_Asignacion_de_alumno.Id_tutor + "'" + " AND Alumno = " + "'" + id_alumno + "'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
             MySqlDataReader reader;
             databaseConnection.Open();
-
             reader = commandDatabase.ExecuteReader();
-
             if (reader.HasRows)
             {
                 while (reader.Read())
@@ -338,8 +418,104 @@ namespace Proyecto_escuela
                     verificar = true;
                 }
             }
-
+            databaseConnection.Close();
             return verificar;
         }
+        public void registrar_asignacion_alumno(DataGridView alumnos)
+        {
+            try
+            {
+                for (int i = 0; i < alumnos.Rows.Count; i++)
+                {
+                    string query = "INSERT INTO `tb_relacion_tutor_alumno`(`Tutor`, `Alumno`) VALUES (" + "'" + alumnos[1, i].Value.ToString() + "'" + ',' + "'" + alumnos[0, i].Value.ToString() + "')";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    databaseConnection.Close();
+                }
+                MessageBox.Show("Se asignaron a los alumnos");
+                alumnos.Rows.Clear();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+        }
+
+        private static DataTable ids_alumnos = new DataTable();
+        public void alumnos_asignados(string tutor)
+        {
+            try
+            {
+                if (ids_alumnos.Columns.Count == 0)
+                {
+                    ids_alumnos.Columns.Add("id_alumno");
+                }
+                ids_alumnos.Rows.Clear();
+                string query = "SELECT * FROM tb_relacion_tutor_alumno WHERE Tutor = " + "'" + tutor + "'";
+                MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                commandDatabase.CommandTimeout = 60;
+                MySqlDataReader reader;
+                databaseConnection.Open();
+                reader = commandDatabase.ExecuteReader();
+                if (reader.HasRows)
+                {
+                    while (reader.Read())
+                    {
+                        ids_alumnos.Rows.Add(reader.GetString(2));
+                    }
+                }
+                databaseConnection.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+
+        }
+
+        public void cargar_alumnos_asignados(DataGridView alumnos)
+        {
+            try
+            {
+                string estatus = "";
+                for (int i = 0; i < ids_alumnos.Rows.Count; i++)
+                {
+                    string query = "SELECT * FROM tb_alumnos WHERE id_alumno = " + "'" + ids_alumnos.Rows[i]["id_alumno"].ToString() + "'";
+                    MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+                    MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+                    commandDatabase.CommandTimeout = 60;
+                    MySqlDataReader reader;
+                    databaseConnection.Open();
+                    reader = commandDatabase.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            if (reader.GetString(7) == "1")
+                            {
+                                estatus = "Activo";
+                            }
+                            if (reader.GetString(7) == "2")
+                            {
+                                estatus = "Inactivo";
+                            }
+                            alumnos.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), estatus, reader.GetString(8));
+                        }
+                    }
+                    databaseConnection.Close();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+            }
+
+        }
     }
+
 }
