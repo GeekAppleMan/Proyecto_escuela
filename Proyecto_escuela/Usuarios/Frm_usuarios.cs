@@ -21,7 +21,7 @@ namespace Proyecto_escuela.Usuarios
         Cls_usuarios objusuario = new Cls_usuarios();
         private void cargar_usuario()
         {
-            objusuario.cargar_usuarios(txt_usuario.Text,txt_usuario.Text, dgv_usuario);
+            objusuario.cargar_usuarios(txt_usuario.Text, dgv_usuario);
         }
         private void txt_tutor_TextChanged(object sender, EventArgs e)
         {

@@ -16,7 +16,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "SELECT * from tb_empleados Where Matricula = " + "'" + matricula+ "'";
+                string query = "SELECT * from tb_empleados Where matricula = " + "'" + matricula+ "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -59,7 +59,7 @@ namespace Proyecto_escuela.Clases
             bool encontrado = false;
             try
             {
-                string query = "SELECT * from tb_empleados_usuarios Where IdEmpleado = " + "'" + id + "'";
+                string query = "SELECT * from tb_empleados_usuarios Where id_empleado = " + "'" + id + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -88,7 +88,7 @@ namespace Proyecto_escuela.Clases
             bool encontrado = false;
             try
             {
-                string query = "SELECT * from tb_registro Where Correo = " + "'" + correo + "'" + "OR Telefono = " + "'" + telefono + "'" ;
+                string query = "SELECT * from tb_registro Where correo = " + "'" + correo + "'" + "OR telefono = " + "'" + telefono + "'" ;
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -116,7 +116,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "INSERT INTO `tb_registro`(`idUsuario`, `Correo`, `Telefono`, `Contraseña`) VALUES ('" + "" + "'," + "'" + correo + "'" + "," + "'" + telefono + "'" + "," + "'" + contraseña + "')";
+                string query = "INSERT INTO `tb_registro`(`id_usuario`, `correo`, `telefono`, `contraseña`) VALUES ('" + "" + "'," + "'" + correo + "'" + "," + "'" + telefono + "'" + "," + "'" + contraseña + "')";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -140,7 +140,7 @@ namespace Proyecto_escuela.Clases
         {
             try
             {
-                string query = "INSERT INTO `tb_empleados_usuarios`(`IdUsuario`, `IdEmpleado`) VALUES ('" + id_usuario + "'," + "'" + id_empleado + "')";
+                string query = "INSERT INTO `tb_empleados_usuarios`(`id_usuario`, `id_empleado`) VALUES ('" + id_usuario + "'," + "'" + id_empleado + "')";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

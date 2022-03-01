@@ -16,13 +16,13 @@ namespace Proyecto_escuela.Clases
         private char letrarandom;
         public static int index { get; set; }
         public static DataGridView usuarios;
-        public void cargar_usuarios(string telefono, string correo, DataGridView grid)
+        public void cargar_usuarios(string matricula, DataGridView grid)
         {
             string estatus = "";
-            if (telefono == "" || correo == "")
+            if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT id_usuario, correo, telefono from tb_registro";
+                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.id_empleado = tb_empleados_usuarios.id_empleado";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -35,7 +35,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1),reader.GetString(2));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
                         usuarios = grid;
                     }
                 }
@@ -49,7 +49,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT IdUsuario, Correo, Telefono FROM tb_registro WHERE telefono LIKE " + "'%" + telefono + "%' OR Correo LIKE " + "'%" + correo + "%'" ; 
+                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.Matricula LIKE " + "'%" + matricula + "%'" ; 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -62,7 +62,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1),reader.GetString(2));
+                        grid.Rows.Add(reader.GetString(0),reader.GetString(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
                         usuarios = grid;
                     }
                 }
