@@ -24,6 +24,11 @@ namespace Proyecto_escuela
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
+            iniciar_sesion();
+        }
+
+        private void iniciar_sesion()
+        {
             if (string.IsNullOrEmpty(txtusuario.Text) || string.IsNullOrEmpty(txtcontraseña.Text) || txtusuario.Text == "Usuario" || txtcontraseña.Text == "Contraseña")
             {
                 MessageBox.Show("Ingrese todos los datos");
@@ -33,7 +38,6 @@ namespace Proyecto_escuela
                 obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
             }
         }
-
         private void piccerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -81,14 +85,14 @@ namespace Proyecto_escuela
         {
             if (txtusuario.Text == "")
             {
-                txtusuario.Text = "Usuario";
+                txtusuario.Text = "Correo";
                 txtusuario.ForeColor = Color.Gray;
             }
         }
 
         private void txtusuario_Enter(object sender, EventArgs e)
         {
-            if (txtusuario.Text == "Usuario")
+            if (txtusuario.Text == "Correo")
             {
                 txtusuario.Text = "";
                 txtusuario.ForeColor = Color.Black;
@@ -101,6 +105,14 @@ namespace Proyecto_escuela
             {
                 txtcontraseña.Text = "";
                 txtcontraseña.ForeColor = Color.Black;
+            }
+        }
+
+        private void txtcontraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                iniciar_sesion();
             }
         }
     }
