@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.gb_datos_tutor = new System.Windows.Forms.GroupBox();
+            this.lbl_estatus_empleado = new System.Windows.Forms.Label();
+            this.lbl_estatus = new System.Windows.Forms.Label();
+            this.lbl_rol_empleado = new System.Windows.Forms.Label();
+            this.lbl_rol = new System.Windows.Forms.Label();
             this.lbl_matricula_empleado = new System.Windows.Forms.Label();
             this.lbl_matricula = new System.Windows.Forms.Label();
             this.lbl_telefono_empleado = new System.Windows.Forms.Label();
@@ -44,21 +48,16 @@
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_baja = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_tutor = new System.Windows.Forms.Button();
             this.grbopciones = new System.Windows.Forms.GroupBox();
-            this.lbl_estatus_empleado = new System.Windows.Forms.Label();
-            this.lbl_estatus = new System.Windows.Forms.Label();
-            this.lbl_rol_empleado = new System.Windows.Forms.Label();
-            this.lbl_rol = new System.Windows.Forms.Label();
-            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.grbopciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_datos_tutor
@@ -90,6 +89,46 @@
             this.gb_datos_tutor.TabIndex = 7;
             this.gb_datos_tutor.TabStop = false;
             this.gb_datos_tutor.Text = "Datos del empleado";
+            // 
+            // lbl_estatus_empleado
+            // 
+            this.lbl_estatus_empleado.AutoSize = true;
+            this.lbl_estatus_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus_empleado.Location = new System.Drawing.Point(94, 452);
+            this.lbl_estatus_empleado.Name = "lbl_estatus_empleado";
+            this.lbl_estatus_empleado.Size = new System.Drawing.Size(77, 23);
+            this.lbl_estatus_empleado.TabIndex = 122;
+            this.lbl_estatus_empleado.Text = "Estatus";
+            // 
+            // lbl_estatus
+            // 
+            this.lbl_estatus.AutoSize = true;
+            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus.Location = new System.Drawing.Point(6, 452);
+            this.lbl_estatus.Name = "lbl_estatus";
+            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
+            this.lbl_estatus.TabIndex = 121;
+            this.lbl_estatus.Text = "Estatus:";
+            // 
+            // lbl_rol_empleado
+            // 
+            this.lbl_rol_empleado.AutoSize = true;
+            this.lbl_rol_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rol_empleado.Location = new System.Drawing.Point(57, 398);
+            this.lbl_rol_empleado.Name = "lbl_rol_empleado";
+            this.lbl_rol_empleado.Size = new System.Drawing.Size(40, 23);
+            this.lbl_rol_empleado.TabIndex = 120;
+            this.lbl_rol_empleado.Text = "Rol";
+            // 
+            // lbl_rol
+            // 
+            this.lbl_rol.AutoSize = true;
+            this.lbl_rol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rol.Location = new System.Drawing.Point(6, 398);
+            this.lbl_rol.Name = "lbl_rol";
+            this.lbl_rol.Size = new System.Drawing.Size(45, 23);
+            this.lbl_rol.TabIndex = 119;
+            this.lbl_rol.Text = "Rol:";
             // 
             // lbl_matricula_empleado
             // 
@@ -244,15 +283,24 @@
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Foto de perfil";
             // 
+            // picture_imagen_perfil
+            // 
+            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
+            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
+            this.picture_imagen_perfil.Size = new System.Drawing.Size(445, 475);
+            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_imagen_perfil.TabIndex = 0;
+            this.picture_imagen_perfil.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Controls.Add(this.btn_baja, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_modificar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_tutor, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -269,9 +317,9 @@
             this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_baja.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_baja.Location = new System.Drawing.Point(665, 3);
+            this.btn_baja.Location = new System.Drawing.Point(500, 3);
             this.btn_baja.Name = "btn_baja";
-            this.btn_baja.Size = new System.Drawing.Size(327, 63);
+            this.btn_baja.Size = new System.Drawing.Size(492, 63);
             this.btn_baja.TabIndex = 3;
             this.btn_baja.Text = "Baja";
             this.btn_baja.UseVisualStyleBackColor = false;
@@ -284,27 +332,12 @@
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_modificar.Location = new System.Drawing.Point(334, 3);
+            this.btn_modificar.Location = new System.Drawing.Point(3, 3);
             this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(325, 63);
+            this.btn_modificar.Size = new System.Drawing.Size(491, 63);
             this.btn_modificar.TabIndex = 2;
             this.btn_modificar.Text = "Modificar";
             this.btn_modificar.UseVisualStyleBackColor = false;
-            // 
-            // btn_tutor
-            // 
-            this.btn_tutor.BackColor = System.Drawing.Color.Green;
-            this.btn_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_tutor.FlatAppearance.BorderSize = 0;
-            this.btn_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tutor.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_tutor.Location = new System.Drawing.Point(3, 3);
-            this.btn_tutor.Name = "btn_tutor";
-            this.btn_tutor.Size = new System.Drawing.Size(325, 63);
-            this.btn_tutor.TabIndex = 1;
-            this.btn_tutor.Text = "Usuario";
-            this.btn_tutor.UseVisualStyleBackColor = false;
             // 
             // grbopciones
             // 
@@ -316,56 +349,6 @@
             this.grbopciones.TabIndex = 8;
             this.grbopciones.TabStop = false;
             this.grbopciones.Text = "Opciones";
-            // 
-            // lbl_estatus_empleado
-            // 
-            this.lbl_estatus_empleado.AutoSize = true;
-            this.lbl_estatus_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus_empleado.Location = new System.Drawing.Point(94, 452);
-            this.lbl_estatus_empleado.Name = "lbl_estatus_empleado";
-            this.lbl_estatus_empleado.Size = new System.Drawing.Size(77, 23);
-            this.lbl_estatus_empleado.TabIndex = 122;
-            this.lbl_estatus_empleado.Text = "Estatus";
-            // 
-            // lbl_estatus
-            // 
-            this.lbl_estatus.AutoSize = true;
-            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(6, 452);
-            this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(82, 23);
-            this.lbl_estatus.TabIndex = 121;
-            this.lbl_estatus.Text = "Estatus:";
-            // 
-            // lbl_rol_empleado
-            // 
-            this.lbl_rol_empleado.AutoSize = true;
-            this.lbl_rol_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rol_empleado.Location = new System.Drawing.Point(57, 398);
-            this.lbl_rol_empleado.Name = "lbl_rol_empleado";
-            this.lbl_rol_empleado.Size = new System.Drawing.Size(40, 23);
-            this.lbl_rol_empleado.TabIndex = 120;
-            this.lbl_rol_empleado.Text = "Rol";
-            // 
-            // lbl_rol
-            // 
-            this.lbl_rol.AutoSize = true;
-            this.lbl_rol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rol.Location = new System.Drawing.Point(6, 398);
-            this.lbl_rol.Name = "lbl_rol";
-            this.lbl_rol.Size = new System.Drawing.Size(45, 23);
-            this.lbl_rol.TabIndex = 119;
-            this.lbl_rol.Text = "Rol:";
-            // 
-            // picture_imagen_perfil
-            // 
-            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
-            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
-            this.picture_imagen_perfil.Size = new System.Drawing.Size(445, 475);
-            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_imagen_perfil.TabIndex = 0;
-            this.picture_imagen_perfil.TabStop = false;
             // 
             // Frm_credencial_empleado
             // 
@@ -383,9 +366,9 @@
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.grbopciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -412,7 +395,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_baja;
         private System.Windows.Forms.Button btn_modificar;
-        private System.Windows.Forms.Button btn_tutor;
         private System.Windows.Forms.GroupBox grbopciones;
         public System.Windows.Forms.Label lbl_estatus_empleado;
         private System.Windows.Forms.Label lbl_estatus;

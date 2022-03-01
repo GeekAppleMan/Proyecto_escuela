@@ -42,5 +42,17 @@ namespace Proyecto_escuela
                 this.Close();
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            rdb_izquierda.Checked = true;
+            rdb_arriba.Checked = false;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            rdb_izquierda.Checked = false;
+            rdb_arriba.Checked = true;
+        }
     }
 }

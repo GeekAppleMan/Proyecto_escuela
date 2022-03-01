@@ -23,7 +23,7 @@ namespace Proyecto_escuela.Clases
             if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "Select * From tb_empleados";
+                string query = "Select * From tb_empleados WHERE tb_empleados.estatus = 1";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

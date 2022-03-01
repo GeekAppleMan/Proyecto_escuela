@@ -77,13 +77,14 @@
             // lbl_nombre_usuario
             // 
             this.lbl_nombre_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_nombre_usuario.AutoSize = true;
+            this.lbl_nombre_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nombre_usuario.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lbl_nombre_usuario.Location = new System.Drawing.Point(345, 477);
+            this.lbl_nombre_usuario.Location = new System.Drawing.Point(329, 477);
             this.lbl_nombre_usuario.Name = "lbl_nombre_usuario";
-            this.lbl_nombre_usuario.Size = new System.Drawing.Size(167, 37);
+            this.lbl_nombre_usuario.Size = new System.Drawing.Size(532, 37);
             this.lbl_nombre_usuario.TabIndex = 4;
             this.lbl_nombre_usuario.Text = "Empleado";
+            this.lbl_nombre_usuario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // picture_logo
             // 

@@ -22,7 +22,7 @@ namespace Proyecto_escuela.Clases
             if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.id_empleado = tb_empleados_usuarios.id_empleado";
+                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.id_empleado = tb_empleados_usuarios.id_empleado AND tb_empleados.estatus = 1";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
