@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2022 a las 20:29:35
+-- Tiempo de generación: 02-03-2022 a las 20:36:35
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -72,8 +72,11 @@ CREATE TABLE `tb_empleados` (
 --
 
 INSERT INTO `tb_empleados` (`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`) VALUES
-(2, '17340346', 'Jaime Alberto', 'Sánchez Martinez', '08/04/2000', 'Cuba 790', 'Jaimehbo13@hotmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/7I16F8A12E0E8I.jpg', 'Administrador', '1'),
-(3, '17340347', 'Giovanny', 'Siqueiros', '00/00/00', 'NA', 'Giovanny@gmail.com', '6311987211', '', 'Administrador', '1');
+(2, '17340346', 'Jaime Alberto', 'Sánchez Martinez', '08/04/2000', 'Cuba 790', 'Jaime@gmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/7I16F8A12E0E8I.jpg', '1', '1'),
+(3, '17340347', 'Giovanny', 'Siqueiros', '00/00/00', 'NA', 'Giovanny@gmail.com', '6311987211', '', '2', '1'),
+(4, '123123', 'Gabriel', 'Garcia', '28/12/2021', 'Camino viejo cananea', 'Gabriel@gmail.com', '6311032112', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/18B17A5A0A12C3C.jpg', '2', '1'),
+(5, '123', 'asdasd', 'asdasd', '28/12/2021', 'asdasd', 'asdasd', '123123', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/10G16H2D16A18D1B.jpg', '1', '2'),
+(6, 'asdasd123', 'asdasd', 'asdasd', '28/12/2021', 'asdasd', 'asdasd', '23424', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1B4C13H8F8D18B.jpg', '2', '2');
 
 -- --------------------------------------------------------
 
@@ -160,7 +163,7 @@ CREATE TABLE `tb_registro` (
 --
 
 INSERT INTO `tb_registro` (`id_usuario`, `correo`, `telefono`, `contraseña`) VALUES
-(11, 'Jaimehbo13@hotmail.com', '6311987311', 'Jaimehbo13'),
+(11, 'Jaime@gmail.com', '6311987311', '123'),
 (12, 'giovanny@gmail.com', '6311987211', '123');
 
 -- --------------------------------------------------------
@@ -300,7 +303,7 @@ ALTER TABLE `tb_alumnos`
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados_usuarios`
