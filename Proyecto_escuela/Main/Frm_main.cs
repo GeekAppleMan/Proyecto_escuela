@@ -103,8 +103,38 @@ namespace Proyecto_escuela
         }
         public static Panel panel_izquierda { get; set; }
         public static MenuStrip menu_arriba { get; set; }
+        public static Label lbl_jane_2 { get; set; }
+        public static Button btn_tutor { get; set; }
+        public static Button btn_alumno { get; set; }
+        public static Button btn_usuario { get; set; }
+        public static Button btn_empleados { get; set; }
+        public static Button btn_salidas_menu { get; set; }
+        public static Button btn_cerrar { get; set; }
+        public static Button btn_ajustes_menu { get; set; }
+        public static ToolStripMenuItem btn_tutor_strip { get; set; }
+        public static ToolStripMenuItem btn_alumno_strip { get; set; }
+        public static ToolStripMenuItem btn_usuario_strip { get; set; }
+        public static ToolStripMenuItem btn_empleados_strip { get; set; }
+        public static ToolStripMenuItem btn_salidas_menu_strip { get; set; }
+        public static ToolStripMenuItem btn_cerrar_strip { get; set; }
+        public static ToolStripMenuItem btn_ajustes_menu_strip { get; set; }
         private void Frm_main_Load(object sender, EventArgs e)
         {
+            lbl_jane_2 = lbl_jane;
+            btn_tutor = btn_tutores;
+            btn_alumno = btn_alumnos;
+            btn_usuario = btn_usuarios;
+            btn_empleados = btn_Empleados;
+            btn_salidas_menu = btn_salidas;
+            btn_cerrar = btn_cerrar_sesion;
+            btn_ajustes_menu = btn_ajustes;
+            btn_tutor_strip = tutoresToolStripMenuItem;
+            btn_alumno_strip = alumnosToolStripMenuItem;
+            btn_usuario_strip = usuariosToolStripMenuItem;
+            btn_empleados_strip = empleadosToolStripMenuItem;
+            btn_salidas_menu_strip = salidasToolStripMenuItem;
+            btn_cerrar_strip = cerrarSesionToolStripMenuItem;
+            btn_ajustes_menu_strip = izquierdaToolStripMenuItem;
             panel_izquierda = panel_barra_izquierda;
             menu_arriba = menuStrip1;
             abrir_form(new Frm_inicio());

@@ -22,7 +22,7 @@ namespace Proyecto_escuela.Clases
             if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.id_empleado = tb_empleados_usuarios.id_empleado AND tb_empleados.estatus = 1";
+                string query = "SELECT eu.id_usuario,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.estatus = 1;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -49,7 +49,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "select tb_empleados_usuarios.id_usuario,tb_empleados.matricula,tb_empleados.nombres,tb_empleados.apellidos,tb_registro.correo,tb_registro.telefono  from tb_empleados,tb_empleados_usuarios,tb_registro where tb_empleados.Matricula LIKE " + "'%" + matricula + "%'" ; 
+                string query = "SELECT eu.id_usuario,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.matricula LIKE " + "'%" + matricula + "%'" ; 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

@@ -15,7 +15,8 @@ namespace Proyecto_escuela
         Cls_Alumnos obj_alumnos = new Cls_Alumnos();
         Frm_modificar_alumno obj_modificar = new Frm_modificar_alumno();
         public static int rowindex { get; set; }
-        public static DataGridView dgv { get; set; }
+        public static DataGridView dgv { get; set; } 
+        public static Form frm_credencial { get; set; }
 
         public Frm_credencial_alumno()
         {
@@ -24,7 +25,19 @@ namespace Proyecto_escuela
 
         private void Frm_credencial_alumno_Load(object sender, EventArgs e)
         {
-
+            if (Clases.Cls_Login.rol == "1")
+            {
+                btn_baja.Enabled = true;
+                btn_modificar.Enabled = true;
+                btn_tutor.Enabled = true;
+            }
+            if (Clases.Cls_Login.rol == "2")
+            {
+                btn_baja.Enabled = false;
+                btn_modificar.Enabled = false;
+                btn_tutor.Enabled = true;
+            }
+            frm_credencial = this;
         }
 
         private void Frm_credencial_alumno_FormClosed(object sender, FormClosedEventArgs e)

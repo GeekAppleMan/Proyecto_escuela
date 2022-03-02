@@ -175,6 +175,7 @@ namespace Proyecto_escuela
                     reader = commandDatabase.ExecuteReader();
                     MessageBox.Show("Se modifico al alumno correctamente");
                     principal.Close();
+                    Frm_credencial_alumno.frm_credencial.Close();
 
                 }
                 else if (conservar_modificar_imagen == false)
@@ -230,6 +231,7 @@ namespace Proyecto_escuela
                                 MessageBox.Show("se modifico al alumno pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
                             }
                             principal.Close();
+                            Frm_credencial_alumno.frm_credencial.Close();
                         }
                     }
                 }
@@ -251,6 +253,7 @@ namespace Proyecto_escuela
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
                 MessageBox.Show("Se elimino al alumno");
+                Frm_credencial_alumno.frm_credencial.Close();
             }
             catch (Exception)
             {
