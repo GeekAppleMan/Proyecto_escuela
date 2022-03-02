@@ -25,6 +25,20 @@ namespace Proyecto_escuela
 
         private void Frm_credencial_tutor_Load(object sender, EventArgs e)
         {
+            if (Clases.Cls_Login.rol == "1")
+            {
+                btn_baja.Enabled = true;
+                btn_modificar.Enabled = true;
+                btn_alumnos.Enabled = true; 
+                btn_Asignar_alumno.Enabled = true;
+            }
+            if (Clases.Cls_Login.rol == "2")
+            {
+                btn_baja.Enabled = false;
+                btn_modificar.Enabled = false;
+                btn_alumnos.Enabled = true;
+                btn_Asignar_alumno.Enabled=false;
+            }
             frm_credencial = this;
         }
 

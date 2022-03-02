@@ -24,6 +24,17 @@ namespace Proyecto_escuela
 
         private void Frm_credencial_empleado_Load(object sender, EventArgs e)
         {
+            if (Clases.Cls_Login.rol == "1")
+            {
+                btn_baja.Enabled = true;
+                btn_modificar.Enabled = true;
+            }
+            if (Clases.Cls_Login.rol == "2")
+            {
+                btn_baja.Enabled = false;
+                btn_modificar.Enabled = false;
+
+            }
             frm_credencial = this;
         }
 

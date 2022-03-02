@@ -36,6 +36,14 @@ namespace Proyecto_escuela.Empleados
 
         private void Frm_Empleados_Load(object sender, EventArgs e)
         {
+            if (Cls_Login.rol == "1")
+            {
+                btn_registar_empleado.Visible = true;
+            }
+            if (Cls_Login.rol == "2")
+            {
+                btn_registar_empleado.Visible = false;
+            }
             cargar_empleado();
         }
 

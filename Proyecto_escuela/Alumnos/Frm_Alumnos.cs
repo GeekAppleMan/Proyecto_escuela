@@ -23,6 +23,14 @@ namespace Proyecto_escuela
 
         private void Frm_Alumnos_Load(object sender, EventArgs e)
         {
+            if (Clases.Cls_Login.rol == "1")
+            {
+                btn_registrar_alumno.Visible = true;
+            }
+            if (Clases.Cls_Login.rol == "2")
+            {
+                btn_registrar_alumno.Visible = false;
+            }
             cargar_alumno();
         }
 

@@ -12,7 +12,8 @@ namespace Proyecto_escuela.Clases
     {
         private static string id_usuario { get; set; }
         private static string id_empleado { get; set; }
-        private static string nombre_empleado { get; set; } 
+        private static string nombre_empleado { get; set; }
+        public static string rol { get; set; }
         public void comparar_login(string usuario, string telefono,string contraseña)
         {
             try
@@ -90,6 +91,7 @@ namespace Proyecto_escuela.Clases
                 if (reader.Read())
                 {
                     nombre_empleado = reader.GetString(2) + " " + reader.GetString(3);
+                    rol = reader.GetString(9);
                 }
 
                 databaseConnection.Close();
