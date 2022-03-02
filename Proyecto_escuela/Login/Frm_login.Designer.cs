@@ -43,10 +43,12 @@ namespace Proyecto_escuela
             this.picmin = new System.Windows.Forms.PictureBox();
             this.lbljane = new System.Windows.Forms.Label();
             this.panel_logo = new System.Windows.Forms.Panel();
+            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
             this.panel_logo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -64,9 +66,10 @@ namespace Proyecto_escuela
             this.panel_contenedor.Controls.Add(this.piccerrar);
             this.panel_contenedor.Controls.Add(this.picmin);
             this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_contenedor.Location = new System.Drawing.Point(214, 0);
+            this.panel_contenedor.Location = new System.Drawing.Point(160, 0);
+            this.panel_contenedor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(594, 374);
+            this.panel_contenedor.Size = new System.Drawing.Size(446, 304);
             this.panel_contenedor.TabIndex = 39;
             // 
             // line2
@@ -74,9 +77,10 @@ namespace Proyecto_escuela
             this.line2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line2.BackColor = System.Drawing.Color.Gray;
             this.line2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line2.Location = new System.Drawing.Point(76, 185);
+            this.line2.Location = new System.Drawing.Point(57, 150);
+            this.line2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.line2.Name = "line2";
-            this.line2.Size = new System.Drawing.Size(451, 1);
+            this.line2.Size = new System.Drawing.Size(339, 1);
             this.line2.TabIndex = 57;
             // 
             // line1
@@ -84,9 +88,10 @@ namespace Proyecto_escuela
             this.line1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line1.BackColor = System.Drawing.Color.Gray;
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line1.Location = new System.Drawing.Point(76, 137);
+            this.line1.Location = new System.Drawing.Point(57, 111);
+            this.line1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(451, 1);
+            this.line1.Size = new System.Drawing.Size(339, 1);
             this.line1.TabIndex = 56;
             // 
             // txtcontraseña
@@ -96,10 +101,11 @@ namespace Proyecto_escuela
             this.txtcontraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtcontraseña.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtcontraseña.ForeColor = System.Drawing.Color.Gray;
-            this.txtcontraseña.Location = new System.Drawing.Point(76, 154);
+            this.txtcontraseña.Location = new System.Drawing.Point(57, 125);
+            this.txtcontraseña.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '*';
-            this.txtcontraseña.Size = new System.Drawing.Size(451, 25);
+            this.txtcontraseña.Size = new System.Drawing.Size(338, 20);
             this.txtcontraseña.TabIndex = 3;
             this.txtcontraseña.Text = "Contraseña";
             this.txtcontraseña.Click += new System.EventHandler(this.txtcontraseña_Click);
@@ -114,9 +120,10 @@ namespace Proyecto_escuela
             this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtusuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtusuario.Location = new System.Drawing.Point(76, 106);
+            this.txtusuario.Location = new System.Drawing.Point(57, 86);
+            this.txtusuario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(451, 25);
+            this.txtusuario.Size = new System.Drawing.Size(338, 20);
             this.txtusuario.TabIndex = 2;
             this.txtusuario.Text = "Correo";
             this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
@@ -132,9 +139,10 @@ namespace Proyecto_escuela
             this.linkLabelregistrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelregistrar.ForeColor = System.Drawing.Color.Black;
             this.linkLabelregistrar.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabelregistrar.Location = new System.Drawing.Point(169, 292);
+            this.linkLabelregistrar.Location = new System.Drawing.Point(127, 237);
+            this.linkLabelregistrar.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelregistrar.Name = "linkLabelregistrar";
-            this.linkLabelregistrar.Size = new System.Drawing.Size(255, 21);
+            this.linkLabelregistrar.Size = new System.Drawing.Size(208, 19);
             this.linkLabelregistrar.TabIndex = 5;
             this.linkLabelregistrar.TabStop = true;
             this.linkLabelregistrar.Text = "¿No tienes usuario? registrate";
@@ -149,9 +157,10 @@ namespace Proyecto_escuela
             this.linkLabelcontraseña.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabelcontraseña.ForeColor = System.Drawing.Color.Black;
             this.linkLabelcontraseña.LinkColor = System.Drawing.Color.DimGray;
-            this.linkLabelcontraseña.Location = new System.Drawing.Point(169, 323);
+            this.linkLabelcontraseña.Location = new System.Drawing.Point(127, 262);
+            this.linkLabelcontraseña.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.linkLabelcontraseña.Name = "linkLabelcontraseña";
-            this.linkLabelcontraseña.Size = new System.Drawing.Size(262, 21);
+            this.linkLabelcontraseña.Size = new System.Drawing.Size(216, 19);
             this.linkLabelcontraseña.TabIndex = 1;
             this.linkLabelcontraseña.TabStop = true;
             this.linkLabelcontraseña.Text = "¿Has olvidado la contraseña?";
@@ -166,9 +175,10 @@ namespace Proyecto_escuela
             this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(76, 234);
+            this.btniniciarsesion.Location = new System.Drawing.Point(57, 190);
+            this.btniniciarsesion.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
+            this.btniniciarsesion.Size = new System.Drawing.Size(338, 32);
             this.btniniciarsesion.TabIndex = 4;
             this.btniniciarsesion.Text = "Iniciar Sesion";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
@@ -180,9 +190,10 @@ namespace Proyecto_escuela
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(243, 26);
+            this.lbltitulo.Location = new System.Drawing.Point(182, 21);
+            this.lbltitulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(129, 23);
+            this.lbltitulo.Size = new System.Drawing.Size(106, 21);
             this.lbltitulo.TabIndex = 50;
             this.lbltitulo.Text = "Iniciar sesion";
             // 
@@ -192,18 +203,20 @@ namespace Proyecto_escuela
             this.lblerror.AutoSize = true;
             this.lblerror.Font = new System.Drawing.Font("Century Gothic", 8.7F);
             this.lblerror.ForeColor = System.Drawing.Color.Red;
-            this.lblerror.Location = new System.Drawing.Point(78, 148);
+            this.lblerror.Location = new System.Drawing.Point(58, 120);
+            this.lblerror.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblerror.Name = "lblerror";
-            this.lblerror.Size = new System.Drawing.Size(0, 20);
+            this.lblerror.Size = new System.Drawing.Size(0, 17);
             this.lblerror.TabIndex = 45;
             // 
             // piccerrar
             // 
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.piccerrar.Image = global::Proyecto_escuela.Properties.Resources.cerrar;
-            this.piccerrar.Location = new System.Drawing.Point(552, 12);
+            this.piccerrar.Location = new System.Drawing.Point(414, 10);
+            this.piccerrar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(30, 30);
+            this.piccerrar.Size = new System.Drawing.Size(22, 24);
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 44;
             this.piccerrar.TabStop = false;
@@ -213,9 +226,10 @@ namespace Proyecto_escuela
             // 
             this.picmin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.picmin.Image = global::Proyecto_escuela.Properties.Resources.minimizar;
-            this.picmin.Location = new System.Drawing.Point(516, 12);
+            this.picmin.Location = new System.Drawing.Point(387, 10);
+            this.picmin.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picmin.Name = "picmin";
-            this.picmin.Size = new System.Drawing.Size(30, 30);
+            this.picmin.Size = new System.Drawing.Size(22, 24);
             this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picmin.TabIndex = 43;
             this.picmin.TabStop = false;
@@ -224,34 +238,50 @@ namespace Proyecto_escuela
             // lbljane
             // 
             this.lbljane.AutoSize = true;
-            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbljane.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbljane.Location = new System.Drawing.Point(14, 164);
+            this.lbljane.Location = new System.Drawing.Point(35, 284);
+            this.lbljane.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbljane.Name = "lbljane";
-            this.lbljane.Size = new System.Drawing.Size(167, 23);
+            this.lbljane.Size = new System.Drawing.Size(94, 16);
             this.lbljane.TabIndex = 2;
             this.lbljane.Text = "JANE SOFTWARE";
             // 
             // panel_logo
             // 
             this.panel_logo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel_logo.Controls.Add(this.picture_logo);
             this.panel_logo.Controls.Add(this.lbljane);
             this.panel_logo.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel_logo.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel_logo.Location = new System.Drawing.Point(0, 0);
+            this.panel_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel_logo.Name = "panel_logo";
-            this.panel_logo.Size = new System.Drawing.Size(214, 374);
+            this.panel_logo.Size = new System.Drawing.Size(160, 304);
             this.panel_logo.TabIndex = 27;
+            // 
+            // picture_logo
+            // 
+            this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
+            this.picture_logo.Location = new System.Drawing.Point(-7, 64);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(2);
+            this.picture_logo.Name = "picture_logo";
+            this.picture_logo.Size = new System.Drawing.Size(178, 171);
+            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_logo.TabIndex = 4;
+            this.picture_logo.TabStop = false;
             // 
             // Frm_login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(808, 374);
+            this.ClientSize = new System.Drawing.Size(606, 304);
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel_logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inicio de sesión";
@@ -261,6 +291,7 @@ namespace Proyecto_escuela
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).EndInit();
             this.panel_logo.ResumeLayout(false);
             this.panel_logo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -280,6 +311,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.LinkLabel linkLabelcontraseña;
         private System.Windows.Forms.Label lbljane;
         private System.Windows.Forms.Panel panel_logo;
+        private System.Windows.Forms.PictureBox picture_logo;
     }
 }
 

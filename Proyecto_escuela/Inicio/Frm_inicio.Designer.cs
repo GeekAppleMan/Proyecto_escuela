@@ -47,9 +47,10 @@
             this.lbl_bienvenida.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_bienvenida.AutoSize = true;
             this.lbl_bienvenida.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lbl_bienvenida.Location = new System.Drawing.Point(498, 420);
+            this.lbl_bienvenida.Location = new System.Drawing.Point(374, 341);
+            this.lbl_bienvenida.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_bienvenida.Name = "lbl_bienvenida";
-            this.lbl_bienvenida.Size = new System.Drawing.Size(180, 37);
+            this.lbl_bienvenida.Size = new System.Drawing.Size(148, 30);
             this.lbl_bienvenida.TabIndex = 0;
             this.lbl_bienvenida.Text = "Bienvenido";
             // 
@@ -57,9 +58,10 @@
             // 
             this.lbl_hora.AutoSize = true;
             this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lbl_hora.Location = new System.Drawing.Point(88, 27);
+            this.lbl_hora.Location = new System.Drawing.Point(66, 22);
+            this.lbl_hora.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(86, 37);
+            this.lbl_hora.Size = new System.Drawing.Size(68, 30);
             this.lbl_hora.TabIndex = 1;
             this.lbl_hora.Text = "Hora";
             // 
@@ -68,9 +70,10 @@
             this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha.AutoSize = true;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lbl_fecha.Location = new System.Drawing.Point(965, 27);
+            this.lbl_fecha.Location = new System.Drawing.Point(724, 22);
+            this.lbl_fecha.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_fecha.Name = "lbl_fecha";
-            this.lbl_fecha.Size = new System.Drawing.Size(108, 37);
+            this.lbl_fecha.Size = new System.Drawing.Size(88, 30);
             this.lbl_fecha.TabIndex = 2;
             this.lbl_fecha.Text = "Fecha";
             // 
@@ -79,9 +82,10 @@
             this.lbl_nombre_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_nombre_usuario.BackColor = System.Drawing.Color.Transparent;
             this.lbl_nombre_usuario.Font = new System.Drawing.Font("Century Gothic", 18F);
-            this.lbl_nombre_usuario.Location = new System.Drawing.Point(329, 477);
+            this.lbl_nombre_usuario.Location = new System.Drawing.Point(247, 388);
+            this.lbl_nombre_usuario.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbl_nombre_usuario.Name = "lbl_nombre_usuario";
-            this.lbl_nombre_usuario.Size = new System.Drawing.Size(532, 37);
+            this.lbl_nombre_usuario.Size = new System.Drawing.Size(399, 30);
             this.lbl_nombre_usuario.TabIndex = 4;
             this.lbl_nombre_usuario.Text = "Empleado";
             this.lbl_nombre_usuario.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -89,10 +93,11 @@
             // picture_logo
             // 
             this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.logo_instituto_tecnologico_de_nogales;
-            this.picture_logo.Location = new System.Drawing.Point(329, 81);
+            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
+            this.picture_logo.Location = new System.Drawing.Point(247, 66);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(532, 313);
+            this.picture_logo.Size = new System.Drawing.Size(399, 254);
             this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_logo.TabIndex = 3;
             this.picture_logo.TabStop = false;
@@ -106,10 +111,10 @@
             // 
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
-            this.pic_hora.Location = new System.Drawing.Point(28, 20);
-            this.pic_hora.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_hora.Location = new System.Drawing.Point(21, 16);
+            this.pic_hora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_hora.Name = "pic_hora";
-            this.pic_hora.Size = new System.Drawing.Size(54, 57);
+            this.pic_hora.Size = new System.Drawing.Size(40, 46);
             this.pic_hora.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_hora.TabIndex = 15;
             this.pic_hora.TabStop = false;
@@ -119,20 +124,20 @@
             this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
-            this.pic_fecha.Location = new System.Drawing.Point(904, 20);
-            this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pic_fecha.Location = new System.Drawing.Point(678, 16);
+            this.pic_fecha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pic_fecha.Name = "pic_fecha";
-            this.pic_fecha.Size = new System.Drawing.Size(55, 57);
+            this.pic_fecha.Size = new System.Drawing.Size(41, 46);
             this.pic_fecha.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_fecha.TabIndex = 18;
             this.pic_fecha.TabStop = false;
             // 
             // Frm_inicio
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1178, 553);
+            this.ClientSize = new System.Drawing.Size(884, 449);
             this.Controls.Add(this.pic_fecha);
             this.Controls.Add(this.pic_hora);
             this.Controls.Add(this.lbl_nombre_usuario);
@@ -141,6 +146,7 @@
             this.Controls.Add(this.lbl_hora);
             this.Controls.Add(this.lbl_bienvenida);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Frm_inicio";
             this.Load += new System.EventHandler(this.Frm_inicio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
