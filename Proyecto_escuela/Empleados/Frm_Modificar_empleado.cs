@@ -12,21 +12,15 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    public partial class Frm_Modificar_tutor : Form
+    public partial class Frm_Modificar_empleado : Form
     {
-        Cls_tutores obj_tutores = new Cls_tutores();
         private FilterInfoCollection misdispositivos;
         private VideoCaptureDevice miwebcam;
         private bool captura = false;
-        public Frm_Modificar_tutor()
+        Clases.Cls_empleados obj_empleados = new Clases.Cls_empleados();
+        public Frm_Modificar_empleado()
         {
             InitializeComponent();
-        }
-
-        private void Frm_Modificar_tutor_Load(object sender, EventArgs e)
-        {
-            cargar_dispositivo();
-            Clases.Cls_empleados.conservar_modificar_imagen = true;
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
@@ -52,8 +46,14 @@ namespace Proyecto_escuela
             }
         }
 
+        private void combo_dispositivos_MouseHover(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
+        }
+
         private void btn_capturar_foto_Click(object sender, EventArgs e)
         {
+
             if (miwebcam != null && miwebcam.IsRunning)
             {
                 picture_captura.Image = picture_tiempo_real.Image;
@@ -65,6 +65,37 @@ namespace Proyecto_escuela
             }
         }
 
+        private void btn_modificar_Click(object sender, EventArgs e)
+        {
+            obj_empleados.modificar_empleados(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, combo_estatus.Text, picture_captura, this, captura);
+        }
+
+        private void Frm_Modificar_empleado_Load(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
+            Clases.Cls_empleados.conservar_modificar_imagen = true;
+        }
+
+        private void rdb_cambiar_Click(object sender, EventArgs e)
+        {
+            Clases.Cls_empleados.conservar_modificar_imagen = false;
+            picture_tiempo_real.Enabled = true;
+            combo_dispositivos.Enabled = true;
+            btn_enceder.Enabled = true;
+            btn_capturar_foto.Enabled = true;
+            picture_captura.Enabled = true;
+        }
+
+        private void rdb_conservar_Click(object sender, EventArgs e)
+        {
+            cerrar_webcam();
+            picture_tiempo_real.Enabled = false;
+            combo_dispositivos.Enabled = false;
+            btn_enceder.Enabled = false;
+            picture_captura.Enabled = false;
+            btn_capturar_foto.Enabled = false;
+            Clases.Cls_empleados.conservar_modificar_imagen = true;
+        }
         private void cargar_dispositivo()
         {
             combo_dispositivos.Items.Clear();
@@ -100,17 +131,7 @@ namespace Proyecto_escuela
             picture_tiempo_real.Image = imagen;
         }
 
-        private void btn_modificar_Click(object sender, EventArgs e)
-        {  
-            obj_tutores.modificar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, combo_estatus.Text, picture_captura, this,captura);
-        }
-
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Frm_Modificar_tutor_FormClosed(object sender, FormClosedEventArgs e)
+        private void Frm_Modificar_empleado_FormClosed(object sender, FormClosedEventArgs e)
         {
             cerrar_webcam();
             rdb_conservar.Checked = true;
@@ -236,33 +257,6 @@ namespace Proyecto_escuela
         {
             e.Handled = true;
         }
-
-        private void combo_dispositivos_MouseHover_1(object sender, EventArgs e)
-        {
-            cargar_dispositivo();
-        }
-
-        private void rdb_conservar_Click(object sender, EventArgs e)
-        {
-            cerrar_webcam();
-            picture_tiempo_real.Enabled = false;
-            combo_dispositivos.Enabled = false;
-            btn_enceder.Enabled = false;
-            picture_captura.Enabled = false;
-            btn_capturar_foto.Enabled = false;
-            Clases.Cls_empleados.conservar_modificar_imagen = true;
-        }
-
-        private void rdb_modificar_Click(object sender, EventArgs e)
-        {
-            Clases.Cls_empleados.conservar_modificar_imagen = false;
-            picture_tiempo_real.Enabled = true;
-            combo_dispositivos.Enabled = true;
-            btn_enceder.Enabled = true;
-            btn_capturar_foto.Enabled = true;
-            picture_captura.Enabled = true;
-        }
-
         private void txt_nombres_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsSeparator(e.KeyChar))
@@ -278,5 +272,6 @@ namespace Proyecto_escuela
                 e.Handled = true;
             }
         }
+
     }
 }

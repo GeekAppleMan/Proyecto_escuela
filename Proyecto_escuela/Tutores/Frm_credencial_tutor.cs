@@ -17,6 +17,7 @@ namespace Proyecto_escuela
         public static string id_tutor { get; set; }
         public static int rowindex { get; set; }
         public static DataGridView dgv { get; set; }
+        public static Form frm_credencial { get; set; }
         public Frm_credencial_tutor()
         {
             InitializeComponent();
@@ -24,7 +25,7 @@ namespace Proyecto_escuela
 
         private void Frm_credencial_tutor_Load(object sender, EventArgs e)
         {
-          
+            frm_credencial = this;
         }
 
         private void Frm_credencial_tutor_FormClosed(object sender, FormClosedEventArgs e)

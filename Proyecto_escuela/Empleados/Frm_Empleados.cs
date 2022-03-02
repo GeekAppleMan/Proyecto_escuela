@@ -58,6 +58,8 @@ namespace Proyecto_escuela.Empleados
                 //Frm_tutores_asignados.id_alumno = dgv_empleado[0, e.RowIndex].Value.ToString();
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
+                    Cls_empleados.empleados = dgv_empleado;
+                    Cls_empleados.index = e.RowIndex;
                     obj_credencial.lbl_matricula_empleado.Text = dgv_empleado[1, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_nombres_empleado.Text = dgv_empleado[2, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_apellidos_empleado.Text = dgv_empleado[3, e.RowIndex].Value.ToString();

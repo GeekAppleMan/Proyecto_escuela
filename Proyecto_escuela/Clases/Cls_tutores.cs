@@ -222,6 +222,7 @@ namespace Proyecto_escuela
                     reader = commandDatabase.ExecuteReader();
                     MessageBox.Show("Se modifico al tutor correctamente");
                     principal.Close();
+                    Frm_credencial_tutor.frm_credencial.Close();
 
                 }
                 else if (conservar_modificar_imagen == false)
@@ -291,6 +292,7 @@ namespace Proyecto_escuela
                                 MessageBox.Show("se modifico al tutor pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
                             }
                             principal.Close();
+                            Frm_credencial_tutor.frm_credencial.Close();
                         }
                     } 
                 }
@@ -312,6 +314,7 @@ namespace Proyecto_escuela
                 databaseConnection.Open();
                 reader = commandDatabase.ExecuteReader();
                 MessageBox.Show("Se elimino al tutor");
+                Frm_credencial_tutor.frm_credencial.Close();
             }
             catch (Exception)
             {

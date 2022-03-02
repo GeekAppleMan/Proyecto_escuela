@@ -1,7 +1,6 @@
-﻿
-namespace Proyecto_escuela
+﻿namespace Proyecto_escuela
 {
-    partial class Frm_Modificar_tutor
+    partial class Frm_Modificar_empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -89,8 +88,8 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.gb_foto_perfil.Location = new System.Drawing.Point(287, 0);
             this.gb_foto_perfil.Name = "gb_foto_perfil";
-            this.gb_foto_perfil.Size = new System.Drawing.Size(655, 748);
-            this.gb_foto_perfil.TabIndex = 83;
+            this.gb_foto_perfil.Size = new System.Drawing.Size(660, 756);
+            this.gb_foto_perfil.TabIndex = 85;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
             // 
@@ -105,7 +104,6 @@ namespace Proyecto_escuela
             this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
-           
             this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
             // 
             // rdb_cambiar
@@ -117,8 +115,7 @@ namespace Proyecto_escuela
             this.rdb_cambiar.TabIndex = 85;
             this.rdb_cambiar.Text = "Cambiar imagen";
             this.rdb_cambiar.UseVisualStyleBackColor = true;
-        
-            this.rdb_cambiar.Click += new System.EventHandler(this.rdb_modificar_Click);
+            this.rdb_cambiar.Click += new System.EventHandler(this.rdb_cambiar_Click);
             // 
             // btn_enceder
             // 
@@ -130,7 +127,7 @@ namespace Proyecto_escuela
             this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_enceder.ForeColor = System.Drawing.Color.Black;
-            this.btn_enceder.Location = new System.Drawing.Point(339, 90);
+            this.btn_enceder.Location = new System.Drawing.Point(339, 95);
             this.btn_enceder.Name = "btn_enceder";
             this.btn_enceder.Size = new System.Drawing.Size(278, 34);
             this.btn_enceder.TabIndex = 1;
@@ -168,7 +165,7 @@ namespace Proyecto_escuela
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
             this.combo_dispositivos.TabIndex = 0;
             this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
-            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover_1);
+            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
             // btn_cancelar
             // 
@@ -179,13 +176,12 @@ namespace Proyecto_escuela
             this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(42, 661);
+            this.btn_cancelar.Location = new System.Drawing.Point(42, 662);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
             this.btn_cancelar.TabIndex = 4;
             this.btn_cancelar.Text = "Cancelar modificacion";
             this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btn_modificar
             // 
@@ -196,11 +192,11 @@ namespace Proyecto_escuela
             this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_modificar.ForeColor = System.Drawing.Color.Black;
-            this.btn_modificar.Location = new System.Drawing.Point(42, 612);
+            this.btn_modificar.Location = new System.Drawing.Point(42, 613);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(575, 42);
             this.btn_modificar.TabIndex = 3;
-            this.btn_modificar.Text = "Modificar tutor";
+            this.btn_modificar.Text = "Modificar empleado";
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
@@ -214,7 +210,7 @@ namespace Proyecto_escuela
             this.btn_capturar_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_capturar_foto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_capturar_foto.ForeColor = System.Drawing.Color.Black;
-            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 462);
+            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 518);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 42);
             this.btn_capturar_foto.TabIndex = 2;
@@ -274,10 +270,10 @@ namespace Proyecto_escuela
             this.gb_datos.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.gb_datos.Location = new System.Drawing.Point(0, 0);
             this.gb_datos.Name = "gb_datos";
-            this.gb_datos.Size = new System.Drawing.Size(287, 748);
-            this.gb_datos.TabIndex = 82;
+            this.gb_datos.Size = new System.Drawing.Size(287, 756);
+            this.gb_datos.TabIndex = 84;
             this.gb_datos.TabStop = false;
-            this.gb_datos.Text = "Datos del tutor";
+            this.gb_datos.Text = "Datos del empleado";
             // 
             // panel8
             // 
@@ -330,15 +326,14 @@ namespace Proyecto_escuela
             this.combo_parentesco.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.combo_parentesco.FormattingEnabled = true;
             this.combo_parentesco.Items.AddRange(new object[] {
-            "Padre",
-            "Madre",
-            "Tutor"});
+            "Administrador",
+            "Basico"});
             this.combo_parentesco.Location = new System.Drawing.Point(20, 613);
             this.combo_parentesco.Name = "combo_parentesco";
             this.combo_parentesco.Size = new System.Drawing.Size(234, 31);
             this.combo_parentesco.TabIndex = 7;
-            this.combo_parentesco.Text = "Padre";
-            this.combo_parentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_parentesco_KeyPress);
+            this.combo_parentesco.Text = "Basico";
+            this.combo_parentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
             // lbl_parentesco
             // 
@@ -346,9 +341,9 @@ namespace Proyecto_escuela
             this.lbl_parentesco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_parentesco.Location = new System.Drawing.Point(16, 585);
             this.lbl_parentesco.Name = "lbl_parentesco";
-            this.lbl_parentesco.Size = new System.Drawing.Size(123, 23);
+            this.lbl_parentesco.Size = new System.Drawing.Size(40, 23);
             this.lbl_parentesco.TabIndex = 98;
-            this.lbl_parentesco.Text = "parentesco";
+            this.lbl_parentesco.Text = "Rol";
             // 
             // dtp_fecha_nacimiento
             // 
@@ -485,9 +480,9 @@ namespace Proyecto_escuela
             this.lbl_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_apellidos.Location = new System.Drawing.Point(16, 125);
             this.lbl_apellidos.Name = "lbl_apellidos";
-            this.lbl_apellidos.Size = new System.Drawing.Size(189, 23);
+            this.lbl_apellidos.Size = new System.Drawing.Size(249, 23);
             this.lbl_apellidos.TabIndex = 85;
-            this.lbl_apellidos.Text = "Apellidos del tutor";
+            this.lbl_apellidos.Text = "Apellidos del empleado";
             // 
             // panel1
             // 
@@ -519,9 +514,9 @@ namespace Proyecto_escuela
             this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_tutor.Location = new System.Drawing.Point(12, 30);
             this.lbl_tutor.Name = "lbl_tutor";
-            this.lbl_tutor.Size = new System.Drawing.Size(187, 23);
+            this.lbl_tutor.Size = new System.Drawing.Size(247, 23);
             this.lbl_tutor.TabIndex = 82;
-            this.lbl_tutor.Text = "Nombres del tutor";
+            this.lbl_tutor.Text = "Nombres del empleado";
             // 
             // line1
             // 
@@ -547,22 +542,22 @@ namespace Proyecto_escuela
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
             // 
-            // Frm_Modificar_tutor
+            // Frm_Modificar_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(942, 748);
+            this.ClientSize = new System.Drawing.Size(947, 756);
             this.Controls.Add(this.gb_foto_perfil);
             this.Controls.Add(this.gb_datos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Frm_Modificar_tutor";
+            this.Name = "Frm_Modificar_empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Modificar tutores";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Modificar_tutor_FormClosed);
-            this.Load += new System.EventHandler(this.Frm_Modificar_tutor_Load);
+            this.Text = "Modificar empleado";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_Modificar_empleado_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_Modificar_empleado_Load);
             this.gb_foto_perfil.ResumeLayout(false);
             this.gb_foto_perfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();
@@ -576,6 +571,8 @@ namespace Proyecto_escuela
         #endregion
 
         private System.Windows.Forms.GroupBox gb_foto_perfil;
+        private System.Windows.Forms.RadioButton rdb_conservar;
+        private System.Windows.Forms.RadioButton rdb_cambiar;
         private System.Windows.Forms.Button btn_enceder;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label1;
@@ -583,34 +580,32 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Button btn_cancelar;
         private System.Windows.Forms.Button btn_modificar;
         private System.Windows.Forms.Button btn_capturar_foto;
+        public System.Windows.Forms.PictureBox picture_captura;
         private System.Windows.Forms.PictureBox picture_tiempo_real;
         private System.Windows.Forms.GroupBox gb_datos;
+        private System.Windows.Forms.Panel panel8;
+        public System.Windows.Forms.ComboBox combo_estatus;
+        private System.Windows.Forms.Label lbl_estatus;
         private System.Windows.Forms.Panel panel6;
+        public System.Windows.Forms.ComboBox combo_parentesco;
         private System.Windows.Forms.Label lbl_parentesco;
+        public System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento;
         private System.Windows.Forms.Label lbl_fecha_nacimiento;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label lbl_correo;
         private System.Windows.Forms.Panel panel4;
+        public System.Windows.Forms.TextBox txt_correo;
         private System.Windows.Forms.Label lbl_telefono;
         private System.Windows.Forms.Panel panel3;
+        public System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label lbl_direccion;
         private System.Windows.Forms.Panel panel2;
+        public System.Windows.Forms.TextBox txt_direccion;
         private System.Windows.Forms.Label lbl_apellidos;
         private System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.TextBox txt_apellidos;
         private System.Windows.Forms.Label lbl_tutor;
         private System.Windows.Forms.Panel line1;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label lbl_estatus;
-        public System.Windows.Forms.PictureBox picture_captura;
-        public System.Windows.Forms.ComboBox combo_parentesco;
-        public System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento;
-        public System.Windows.Forms.TextBox txt_correo;
-        public System.Windows.Forms.TextBox txt_telefono;
-        public System.Windows.Forms.TextBox txt_direccion;
-        public System.Windows.Forms.TextBox txt_apellidos;
         public System.Windows.Forms.TextBox txt_nombres;
-        public System.Windows.Forms.ComboBox combo_estatus;
-        private System.Windows.Forms.RadioButton rdb_conservar;
-        private System.Windows.Forms.RadioButton rdb_cambiar;
     }
 }
