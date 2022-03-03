@@ -30,14 +30,20 @@ namespace Proyecto_escuela.Clases
                 reader = commandDatabase.ExecuteReader();
                 if (reader.Read())
                 {
-                    MessageBox.Show("Se inicio sesion correctamente");
                     id_usuario = reader.GetString(0);
                     buscar_id_empleado();
-                    buscar_nombre_empleado();
-                    Frm_login.frm_login.Hide();
-                    new Frm_main().Show();
-                    Frm_inicio.lbl_empleado.Text = nombre_empleado;
-                   
+                    if (buscar_nombre_empleado() == true)
+                    {
+                        Frm_login.frm_login.Hide();
+                        MessageBox.Show("Se inicio sesion correctamente");
+                        new Frm_main().Show();
+                        Frm_inicio.lbl_empleado.Text = nombre_empleado;
+                    }
+                    else
+                    {
+                        MessageBox.Show("El usuario esta dado de baja, no podra iniciar sesion");
+                    }
+                    
                 }
                 else
                 {
@@ -69,6 +75,7 @@ namespace Proyecto_escuela.Clases
                 }
 
                 databaseConnection.Close();
+                
             }
             catch (Exception)
             {
@@ -77,11 +84,12 @@ namespace Proyecto_escuela.Clases
            
         }
 
-        public void buscar_nombre_empleado()
+        public bool buscar_nombre_empleado()
         {
+            bool estatus = false;
             try
             {
-                string query = "SELECT * from tb_empleados Where id_empleado = " + "'" + id_empleado + "'";
+                string query = "SELECT * from tb_empleados Where id_empleado = " + "'" + id_empleado + "'" + " AND estatus = '1'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -92,6 +100,11 @@ namespace Proyecto_escuela.Clases
                 {
                     nombre_empleado = reader.GetString(2) + " " + reader.GetString(3);
                     rol = reader.GetString(9);
+                    estatus = true;
+                }
+                else
+                {
+                    estatus = false;
                 }
 
                 databaseConnection.Close();
@@ -100,7 +113,7 @@ namespace Proyecto_escuela.Clases
             {
                 MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
             }
-
+            return estatus;
         }
     }
 }

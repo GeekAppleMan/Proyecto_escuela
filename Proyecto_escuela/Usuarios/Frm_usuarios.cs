@@ -32,5 +32,20 @@ namespace Proyecto_escuela.Usuarios
         {
             cargar_usuario();
         }
+
+        private void dgv_usuario_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex == -1)
+            {
+
+            }
+            else
+            {
+                if(e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6)
+                {
+                    new Cls_usuarios().buscar_empleado(dgv_usuario[1, e.RowIndex].Value.ToString());
+                }
+            }
+        }
     }
 }

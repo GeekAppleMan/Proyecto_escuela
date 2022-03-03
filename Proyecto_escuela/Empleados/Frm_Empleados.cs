@@ -64,7 +64,7 @@ namespace Proyecto_escuela.Empleados
             else
             {
                 //Frm_tutores_asignados.id_alumno = dgv_empleado[0, e.RowIndex].Value.ToString();
-                if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
+                if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7 || e.ColumnIndex == 8 || e.ColumnIndex == 9)
                 {
                     Cls_empleados.empleados = dgv_empleado;
                     Cls_empleados.index = e.RowIndex;

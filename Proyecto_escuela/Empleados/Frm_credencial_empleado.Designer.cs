@@ -48,16 +48,16 @@
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_baja = new System.Windows.Forms.Button();
             this.btn_modificar = new System.Windows.Forms.Button();
             this.grbopciones = new System.Windows.Forms.GroupBox();
-            this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_datos_tutor.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.grbopciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.SuspendLayout();
             // 
             // gb_datos_tutor
@@ -283,6 +283,16 @@
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Foto de perfil";
             // 
+            // picture_imagen_perfil
+            // 
+            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
+            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
+            this.picture_imagen_perfil.Size = new System.Drawing.Size(445, 475);
+            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picture_imagen_perfil.TabIndex = 0;
+            this.picture_imagen_perfil.TabStop = false;
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
@@ -342,16 +352,6 @@
             this.grbopciones.TabStop = false;
             this.grbopciones.Text = "Opciones";
             // 
-            // picture_imagen_perfil
-            // 
-            this.picture_imagen_perfil.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture_imagen_perfil.Location = new System.Drawing.Point(3, 19);
-            this.picture_imagen_perfil.Name = "picture_imagen_perfil";
-            this.picture_imagen_perfil.Size = new System.Drawing.Size(445, 475);
-            this.picture_imagen_perfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picture_imagen_perfil.TabIndex = 0;
-            this.picture_imagen_perfil.TabStop = false;
-            // 
             // Frm_credencial_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -368,9 +368,9 @@
             this.gb_datos_tutor.ResumeLayout(false);
             this.gb_datos_tutor.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.grbopciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -397,10 +397,10 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Button btn_baja;
         private System.Windows.Forms.Button btn_modificar;
-        private System.Windows.Forms.GroupBox grbopciones;
         public System.Windows.Forms.Label lbl_estatus_empleado;
         private System.Windows.Forms.Label lbl_estatus;
         public System.Windows.Forms.Label lbl_rol_empleado;
         private System.Windows.Forms.Label lbl_rol;
+        public System.Windows.Forms.GroupBox grbopciones;
     }
 }

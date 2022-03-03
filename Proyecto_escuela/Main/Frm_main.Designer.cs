@@ -42,6 +42,7 @@ namespace Proyecto_escuela
             this.btn_ajustes = new System.Windows.Forms.Button();
             this.btn_tutores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.lbl_jane = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic_menu = new System.Windows.Forms.PictureBox();
@@ -59,17 +60,16 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             this.panel_barra_izquierda.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -256,6 +256,18 @@ namespace Proyecto_escuela
             this.panel2.Size = new System.Drawing.Size(231, 87);
             this.panel2.TabIndex = 0;
             // 
+            // picture_logo
+            // 
+            this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
+            this.picture_logo.Location = new System.Drawing.Point(71, 30);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picture_logo.Name = "picture_logo";
+            this.picture_logo.Size = new System.Drawing.Size(84, 68);
+            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_logo.TabIndex = 4;
+            this.picture_logo.TabStop = false;
+            // 
             // lbl_jane
             // 
             this.lbl_jane.AutoSize = true;
@@ -441,7 +453,7 @@ namespace Proyecto_escuela
             this.tutoresToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tutoresToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.familia;
             this.tutoresToolStripMenuItem.Name = "tutoresToolStripMenuItem";
-            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(103, 27);
+            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(103, 25);
             this.tutoresToolStripMenuItem.Text = "Tutores";
             this.tutoresToolStripMenuItem.Click += new System.EventHandler(this.tutoresToolStripMenuItem_Click);
             // 
@@ -451,7 +463,7 @@ namespace Proyecto_escuela
             this.alumnosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.alumnosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.leer;
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(113, 27);
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
             this.alumnosToolStripMenuItem.Text = "Alumnos";
             this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
             // 
@@ -461,7 +473,7 @@ namespace Proyecto_escuela
             this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.usuariosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.grupo;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(111, 27);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -471,7 +483,7 @@ namespace Proyecto_escuela
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.empleadosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.empleado;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(136, 27);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(136, 25);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -481,7 +493,7 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.salidasToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.puerta_de_salida;
             this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
-            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(101, 27);
+            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(101, 25);
             this.salidasToolStripMenuItem.Text = "Salidas";
             this.salidasToolStripMenuItem.Click += new System.EventHandler(this.salidasToolStripMenuItem_Click);
             // 
@@ -491,7 +503,7 @@ namespace Proyecto_escuela
             this.cerrarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cerrarSesionToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.cerrar_sesion;
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(150, 27);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -501,21 +513,9 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.izquierdaToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.ajustes;
             this.izquierdaToolStripMenuItem.Name = "izquierdaToolStripMenuItem";
-            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 27);
+            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 25);
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
-            // 
-            // picture_logo
-            // 
-            this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
-            this.picture_logo.Location = new System.Drawing.Point(71, 30);
-            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(84, 68);
-            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture_logo.TabIndex = 4;
-            this.picture_logo.TabStop = false;
             // 
             // Frm_main
             // 
@@ -544,11 +544,11 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

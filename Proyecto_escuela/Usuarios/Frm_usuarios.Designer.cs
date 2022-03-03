@@ -37,6 +37,7 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.dgv_usuario = new System.Windows.Forms.DataGridView();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -111,6 +112,7 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdUsuario,
+            this.id_empleado,
             this.Matricula,
             this.Nombres,
             this.Apellidos,
@@ -134,6 +136,7 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.RowTemplate.Height = 24;
             this.dgv_usuario.Size = new System.Drawing.Size(1178, 503);
             this.dgv_usuario.TabIndex = 7;
+            this.dgv_usuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuario_CellClick);
             // 
             // IdUsuario
             // 
@@ -141,6 +144,13 @@ namespace Proyecto_escuela.Usuarios
             this.IdUsuario.MinimumWidth = 6;
             this.IdUsuario.Name = "IdUsuario";
             this.IdUsuario.Visible = false;
+            // 
+            // id_empleado
+            // 
+            this.id_empleado.HeaderText = "id_empleado";
+            this.id_empleado.MinimumWidth = 6;
+            this.id_empleado.Name = "id_empleado";
+            this.id_empleado.Visible = false;
             // 
             // Matricula
             // 
@@ -198,6 +208,7 @@ namespace Proyecto_escuela.Usuarios
         private System.Windows.Forms.Label lbl_usuario;
         public System.Windows.Forms.DataGridView dgv_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_empleado;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
