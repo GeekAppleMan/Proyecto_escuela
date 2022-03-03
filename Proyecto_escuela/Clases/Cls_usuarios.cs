@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,11 +11,6 @@ namespace Proyecto_escuela.Clases
 {
     class Cls_usuarios :Cls_conexion
     {
-        private string path = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/";
-        public static bool conservar_modificar_imagen { get; set; }
-        private Random objrandom = new Random();
-        private char letrarandom;
-        public static int index { get; set; }
         public static DataGridView usuarios;
         public void cargar_usuarios(string matricula, DataGridView grid)
         {
@@ -22,7 +18,7 @@ namespace Proyecto_escuela.Clases
             if (matricula == "")
             {
                 grid.Rows.Clear();
-                string query = "SELECT eu.id_usuario,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.estatus = 1;";
+                string query = "SELECT eu.id_usuario,e.id_empleado,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.estatus = 1;";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -35,7 +31,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5),reader.GetString(6));
                         usuarios = grid;
                     }
                 }
@@ -49,7 +45,7 @@ namespace Proyecto_escuela.Clases
             else
             {
                 grid.Rows.Clear();
-                string query = "SELECT eu.id_usuario,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.matricula LIKE " + "'%" + matricula + "%'" ; 
+                string query = "SELECT eu.id_usuario,e.id_empleado,e.matricula,e.nombres,e.apellidos,r.correo,r.telefono FROM tb_empleados_usuarios eu INNER JOIN tb_empleados e ON e.id_empleado = eu.id_empleado inner JOIN tb_registro r ON r.id_usuario = eu.id_usuario WHERE e.matricula LIKE " + "'%" + matricula + "%'" ; 
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;
@@ -62,7 +58,7 @@ namespace Proyecto_escuela.Clases
                 {
                     while (reader.Read())
                     {
-                        grid.Rows.Add(reader.GetString(0),reader.GetString(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5));
+                        grid.Rows.Add(reader.GetString(0),reader.GetString(1),reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6));
                         usuarios = grid;
                     }
                 }
@@ -73,6 +69,68 @@ namespace Proyecto_escuela.Clases
 
                 databaseConnection.Close();
             }
+        }
+        public void buscar_empleado(string id_empleado)
+        {
+            string query = "Select * From tb_empleados Where id_empleado = " + "'" + id_empleado + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+
+            reader = commandDatabase.ExecuteReader();
+            string resul_estatus = "";
+            string resul_rol = "";
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+
+                    if (reader.GetString(10) == "1")
+                    {
+                        resul_estatus = "Activo";
+                    }
+                    if (reader.GetString(10) == "2")
+                    {
+                        resul_estatus = "Inactivo";
+                    }
+                    if (reader.GetString(9) == "1")
+                    {
+                        resul_rol = "Administrador";
+                    }
+                    if (reader.GetString(9) == "2")
+                    {
+                        resul_rol = "Basico";
+                    }
+                    Frm_credencial_usuario obj_credencial = new Frm_credencial_usuario();
+                    obj_credencial.lbl_matricula_empleado.Text = reader.GetString(1);
+                    obj_credencial.lbl_nombres_empleado.Text = reader.GetString(2);
+                    obj_credencial.lbl_apellidos_empleado.Text = reader.GetString(3);
+                    obj_credencial.lbl_fecha_empleado.Text = reader.GetString(4);
+                    obj_credencial.lbl_direccion_empleado.Text = reader.GetString(5);
+                    obj_credencial.lbl_correo_empleado.Text = reader.GetString(6);
+                    obj_credencial.lbl_telefono_empleado.Text = reader.GetString(7);
+                    try
+                    {
+                        obj_credencial.picture_imagen_perfil.Image = new Bitmap(reader.GetString(8));
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                    obj_credencial.lbl_rol_empleado.Text = resul_rol;
+                    obj_credencial.lbl_estatus_empleado.Text = resul_estatus;
+                    obj_credencial.ShowDialog();
+
+                }
+            }
+            else
+            {
+                Console.WriteLine("No se encontro al empleado");
+            }
+
+            databaseConnection.Close();
         }
     }
 }

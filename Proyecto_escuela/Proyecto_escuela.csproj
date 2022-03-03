@@ -167,6 +167,12 @@
     <Compile Include="Empleados\Frm_Modificar_empleado.Designer.cs">
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Usuarios\Frm_credencial_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_credencial_usuario.Designer.cs">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\Frm_alumnos_asignados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -280,6 +286,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\Frm_credencial_empleado.resx">
       <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_credencial_usuario.resx">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_inicio.resx">
       <DependentUpon>Frm_inicio.cs</DependentUpon>
