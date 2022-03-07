@@ -37,15 +37,15 @@
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_tutor = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_aceptar = new System.Windows.Forms.Button();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_cancelar = new System.Windows.Forms.Button();
+            this.btn_aceptar = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.panel_barra.SuspendLayout();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).BeginInit();
@@ -61,7 +61,7 @@
             this.panel_barra.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_barra.Location = new System.Drawing.Point(0, 0);
             this.panel_barra.Name = "panel_barra";
-            this.panel_barra.Size = new System.Drawing.Size(1111, 57);
+            this.panel_barra.Size = new System.Drawing.Size(1172, 57);
             this.panel_barra.TabIndex = 0;
             // 
             // btn_asignar_alumno
@@ -88,7 +88,7 @@
             // 
             this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(558, 45);
+            this.panel3.Location = new System.Drawing.Point(589, 45);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(325, 1);
             this.panel3.TabIndex = 21;
@@ -99,7 +99,7 @@
             this.txt_matricula.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_matricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_matricula.Font = new System.Drawing.Font("Century Gothic", 12F);
-            this.txt_matricula.Location = new System.Drawing.Point(561, 20);
+            this.txt_matricula.Location = new System.Drawing.Point(592, 20);
             this.txt_matricula.Name = "txt_matricula";
             this.txt_matricula.Size = new System.Drawing.Size(318, 25);
             this.txt_matricula.TabIndex = 19;
@@ -109,7 +109,7 @@
             this.lbl_tutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tutor.AutoSize = true;
             this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tutor.Location = new System.Drawing.Point(315, 23);
+            this.lbl_tutor.Location = new System.Drawing.Point(346, 23);
             this.lbl_tutor.Name = "lbl_tutor";
             this.lbl_tutor.Size = new System.Drawing.Size(220, 23);
             this.lbl_tutor.TabIndex = 20;
@@ -122,7 +122,7 @@
             this.panel_grid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_grid.Location = new System.Drawing.Point(0, 57);
             this.panel_grid.Name = "panel_grid";
-            this.panel_grid.Size = new System.Drawing.Size(1111, 534);
+            this.panel_grid.Size = new System.Drawing.Size(1172, 546);
             this.panel_grid.TabIndex = 1;
             // 
             // dgv_tutor
@@ -166,69 +166,9 @@
             this.dgv_tutor.RowHeadersVisible = false;
             this.dgv_tutor.RowHeadersWidth = 51;
             this.dgv_tutor.RowTemplate.Height = 24;
-            this.dgv_tutor.Size = new System.Drawing.Size(1111, 483);
+            this.dgv_tutor.Size = new System.Drawing.Size(1172, 495);
             this.dgv_tutor.TabIndex = 6;
             this.dgv_tutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tutor_CellClick);
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_cancelar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btn_aceptar, 0, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 483);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1111, 51);
-            this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_cancelar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancelar.Location = new System.Drawing.Point(558, 3);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(550, 45);
-            this.btn_cancelar.TabIndex = 24;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = true;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_aceptar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_aceptar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_aceptar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_aceptar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_aceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_aceptar.Location = new System.Drawing.Point(3, 3);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(549, 45);
-            this.btn_aceptar.TabIndex = 23;
-            this.btn_aceptar.Text = "Aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = true;
-            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
-            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.eliminar;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 192;
             // 
             // id_alumno
             // 
@@ -264,12 +204,72 @@
             this.Eliminar.MinimumWidth = 6;
             this.Eliminar.Name = "Eliminar";
             // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btn_cancelar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_aceptar, 0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 495);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1172, 51);
+            this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.Red;
+            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_cancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_cancelar.Location = new System.Drawing.Point(589, 3);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(580, 45);
+            this.btn_cancelar.TabIndex = 24;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_aceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_aceptar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_aceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_aceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_aceptar.Location = new System.Drawing.Point(3, 3);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(580, 45);
+            this.btn_aceptar.TabIndex = 23;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.UseVisualStyleBackColor = false;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.eliminar;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 192;
+            // 
             // Frm_Asignacion_de_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1111, 591);
+            this.ClientSize = new System.Drawing.Size(1172, 603);
             this.Controls.Add(this.panel_grid);
             this.Controls.Add(this.panel_barra);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

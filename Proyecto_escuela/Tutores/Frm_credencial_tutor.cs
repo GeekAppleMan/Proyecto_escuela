@@ -70,7 +70,7 @@ namespace Proyecto_escuela
         {
             Cls_tutores.index = rowindex;
             obj_tutores.eliminar_tutor();
-            this.Close();
+            frm_credencial.Close();
         }
 
         private void btn_alumnos_Click(object sender, EventArgs e)
