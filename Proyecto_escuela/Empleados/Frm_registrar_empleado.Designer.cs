@@ -102,7 +102,7 @@ namespace Proyecto_escuela.Empleados
             this.btn_cancelar.Location = new System.Drawing.Point(42, 527);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
-            this.btn_cancelar.TabIndex = 86;
+            this.btn_cancelar.TabIndex = 12;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.UseVisualStyleBackColor = false;
             this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
@@ -119,7 +119,7 @@ namespace Proyecto_escuela.Empleados
             this.btn_registrar.Location = new System.Drawing.Point(42, 478);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(575, 42);
-            this.btn_registrar.TabIndex = 85;
+            this.btn_registrar.TabIndex = 11;
             this.btn_registrar.Text = "Registrar empleado";
             this.btn_registrar.UseVisualStyleBackColor = false;
             this.btn_registrar.Click += new System.EventHandler(this.btn_registrar_Click);
@@ -135,7 +135,7 @@ namespace Proyecto_escuela.Empleados
             this.btn_enceder.Location = new System.Drawing.Point(339, 52);
             this.btn_enceder.Name = "btn_enceder";
             this.btn_enceder.Size = new System.Drawing.Size(278, 34);
-            this.btn_enceder.TabIndex = 1;
+            this.btn_enceder.TabIndex = 9;
             this.btn_enceder.Text = "Encender webcam";
             this.btn_enceder.UseVisualStyleBackColor = false;
             this.btn_enceder.Click += new System.EventHandler(this.btn_enceder_Click);
@@ -167,7 +167,8 @@ namespace Proyecto_escuela.Empleados
             this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 0;
+            this.combo_dispositivos.TabIndex = 8;
+            this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
             // btn_capturar_foto
             // 
@@ -180,7 +181,7 @@ namespace Proyecto_escuela.Empleados
             this.btn_capturar_foto.Location = new System.Drawing.Point(42, 398);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 42);
-            this.btn_capturar_foto.TabIndex = 2;
+            this.btn_capturar_foto.TabIndex = 10;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
             this.btn_capturar_foto.Click += new System.EventHandler(this.btn_capturar_foto_Click);
@@ -249,12 +250,11 @@ namespace Proyecto_escuela.Empleados
             this.combo_rol.FormattingEnabled = true;
             this.combo_rol.Items.AddRange(new object[] {
             "Administrador",
-            "Docente ",
-            "Empleado"});
+            "Basico"});
             this.combo_rol.Location = new System.Drawing.Point(12, 670);
             this.combo_rol.Name = "combo_rol";
             this.combo_rol.Size = new System.Drawing.Size(234, 31);
-            this.combo_rol.TabIndex = 113;
+            this.combo_rol.TabIndex = 7;
             this.combo_rol.Text = "Administrador";
             this.combo_rol.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_rol_KeyPress);
             this.combo_rol.MouseHover += new System.EventHandler(this.combo_rol_MouseHover);
@@ -274,9 +274,9 @@ namespace Proyecto_escuela.Empleados
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(12, 637);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(113, 23);
+            this.label3.Size = new System.Drawing.Size(189, 23);
             this.label3.TabIndex = 111;
-            this.label3.Text = "Empleado";
+            this.label3.Text = "Rol del empleado";
             // 
             // txt_telefono
             // 
@@ -288,9 +288,10 @@ namespace Proyecto_escuela.Empleados
             this.txt_telefono.MaxLength = 10;
             this.txt_telefono.Name = "txt_telefono";
             this.txt_telefono.Size = new System.Drawing.Size(238, 25);
-            this.txt_telefono.TabIndex = 110;
+            this.txt_telefono.TabIndex = 6;
             this.txt_telefono.Text = "Telefono";
             this.txt_telefono.Enter += new System.EventHandler(this.txt_telefono_Enter);
+            this.txt_telefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefono_KeyPress);
             this.txt_telefono.Leave += new System.EventHandler(this.txt_telefono_Leave);
             // 
             // label2
@@ -321,7 +322,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_matricula.Location = new System.Drawing.Point(15, 73);
             this.txt_matricula.Name = "txt_matricula";
             this.txt_matricula.Size = new System.Drawing.Size(238, 25);
-            this.txt_matricula.TabIndex = 107;
+            this.txt_matricula.TabIndex = 0;
             this.txt_matricula.Text = "Matricula";
             this.txt_matricula.Enter += new System.EventHandler(this.txt_matricula_Enter);
             this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
@@ -374,7 +375,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_Correo.Location = new System.Drawing.Point(16, 506);
             this.txt_Correo.Name = "txt_Correo";
             this.txt_Correo.Size = new System.Drawing.Size(238, 25);
-            this.txt_Correo.TabIndex = 101;
+            this.txt_Correo.TabIndex = 5;
             this.txt_Correo.Text = "Correo";
             this.txt_Correo.Enter += new System.EventHandler(this.txt_Correo_Enter);
             this.txt_Correo.Leave += new System.EventHandler(this.txt_Correo_Leave);
@@ -386,7 +387,7 @@ namespace Proyecto_escuela.Empleados
             this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(10, 329);
             this.dtp_fecha_nacimiento.Name = "dtp_fecha_nacimiento";
             this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(234, 32);
-            this.dtp_fecha_nacimiento.TabIndex = 6;
+            this.dtp_fecha_nacimiento.TabIndex = 3;
             this.dtp_fecha_nacimiento.Value = new System.DateTime(2021, 12, 28, 0, 0, 0, 0);
             // 
             // lbl_direccion
@@ -436,7 +437,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_direccion.Location = new System.Drawing.Point(10, 420);
             this.txt_direccion.Name = "txt_direccion";
             this.txt_direccion.Size = new System.Drawing.Size(238, 25);
-            this.txt_direccion.TabIndex = 5;
+            this.txt_direccion.TabIndex = 4;
             this.txt_direccion.Text = "Direccion";
             this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_Enter);
             this.txt_direccion.Leave += new System.EventHandler(this.txt_direccion_Leave);
@@ -469,7 +470,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_apellidos.Location = new System.Drawing.Point(12, 232);
             this.txt_apellidos.Name = "txt_apellidos";
             this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
-            this.txt_apellidos.TabIndex = 4;
+            this.txt_apellidos.TabIndex = 2;
             this.txt_apellidos.Text = "Apellidos";
             this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
             this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
@@ -503,7 +504,7 @@ namespace Proyecto_escuela.Empleados
             this.txt_nombres.Location = new System.Drawing.Point(12, 158);
             this.txt_nombres.Name = "txt_nombres";
             this.txt_nombres.Size = new System.Drawing.Size(238, 25);
-            this.txt_nombres.TabIndex = 3;
+            this.txt_nombres.TabIndex = 1;
             this.txt_nombres.Text = "Nombres";
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
@@ -516,10 +517,14 @@ namespace Proyecto_escuela.Empleados
             this.ClientSize = new System.Drawing.Size(976, 722);
             this.Controls.Add(this.gb_foto_perfil);
             this.Controls.Add(this.gb_datos);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_registrar_empleado";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_registrar_empleado";
+            this.Text = "Registrar empleado";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Frm_registrar_empleado_FormClosed);
+            this.Load += new System.EventHandler(this.Frm_registrar_empleado_Load);
             this.gb_foto_perfil.ResumeLayout(false);
             this.gb_foto_perfil.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();

@@ -100,13 +100,13 @@ namespace Proyecto_escuela.Empleados
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_matricula.Text)||string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_Correo.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Text == "Matricula" || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_Correo.Text == "Correo" || txt_telefono.Text == "Telefono" || string.IsNullOrEmpty(combo_rol.Text))
+            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_Correo.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Text == "Matricula" || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_Correo.Text == "Correo" || txt_telefono.Text == "Telefono" || string.IsNullOrEmpty(combo_rol.Text))
             {
                 MessageBox.Show("Complete todos los campos");
             }
             else
             {
-                //obj_alumnos.registrar_alumnos(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, dtp_fecha_nacimiento.Value.ToString("d"), picture_captura, this);
+                obj_empleados.registrar_empleados(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, dtp_fecha_nacimiento.Value.ToString("d"), txt_direccion.Text, txt_Correo.Text, txt_telefono.Text, combo_rol.Text, picture_captura, this);
             }
         }
 
@@ -247,6 +247,24 @@ namespace Proyecto_escuela.Empleados
                 txt_telefono.Text = "";
                 txt_telefono.ForeColor = Color.Black;
             }
+        }
+
+        private void combo_dispositivos_MouseHover(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
+        }
+
+        private void txt_telefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void Frm_registrar_empleado_Load(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
         }
     }
 }

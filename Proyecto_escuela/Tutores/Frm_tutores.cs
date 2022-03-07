@@ -30,6 +30,14 @@ namespace Proyecto_escuela
 
         private void Frm_tutores_Load(object sender, EventArgs e)
         {
+            if (Clases.Cls_Login.rol == "1")
+            {
+                btn_registrar_tutor.Visible = true;
+            }
+            if (Clases.Cls_Login.rol == "2")
+            {
+                btn_registrar_tutor.Visible = false;
+            }
             cargar_tutores();
         }
 

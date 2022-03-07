@@ -202,48 +202,56 @@ namespace Proyecto_escuela
             this.Nombres.HeaderText = "Nombres";
             this.Nombres.MinimumWidth = 6;
             this.Nombres.Name = "Nombres";
+            this.Nombres.ReadOnly = true;
             // 
             // Apellidos
             // 
             this.Apellidos.HeaderText = "Apellidos";
             this.Apellidos.MinimumWidth = 6;
             this.Apellidos.Name = "Apellidos";
+            this.Apellidos.ReadOnly = true;
             // 
             // Direccion
             // 
             this.Direccion.HeaderText = "Direccion";
             this.Direccion.MinimumWidth = 6;
             this.Direccion.Name = "Direccion";
+            this.Direccion.ReadOnly = true;
             // 
             // Telefono
             // 
             this.Telefono.HeaderText = "Telefono";
             this.Telefono.MinimumWidth = 6;
             this.Telefono.Name = "Telefono";
+            this.Telefono.ReadOnly = true;
             // 
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
             this.Correo.MinimumWidth = 6;
             this.Correo.Name = "Correo";
+            this.Correo.ReadOnly = true;
             // 
             // Fecha_nacimiento
             // 
             this.Fecha_nacimiento.HeaderText = "Fecha de nacimiento";
             this.Fecha_nacimiento.MinimumWidth = 6;
             this.Fecha_nacimiento.Name = "Fecha_nacimiento";
+            this.Fecha_nacimiento.ReadOnly = true;
             // 
             // Parentesco
             // 
             this.Parentesco.HeaderText = "Parentesco";
             this.Parentesco.MinimumWidth = 6;
             this.Parentesco.Name = "Parentesco";
+            this.Parentesco.ReadOnly = true;
             // 
             // Estatus
             // 
             this.Estatus.HeaderText = "Estatus";
             this.Estatus.MinimumWidth = 6;
             this.Estatus.Name = "Estatus";
+            this.Estatus.ReadOnly = true;
             // 
             // id_tutor
             // 

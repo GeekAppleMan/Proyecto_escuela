@@ -37,6 +37,10 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.dgv_usuario = new System.Windows.Forms.DataGridView();
             this.IdUsuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.id_empleado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda.SuspendLayout();
@@ -81,11 +85,11 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(177, 21);
+            this.lbl_usuario.Location = new System.Drawing.Point(215, 21);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(294, 23);
+            this.lbl_usuario.Size = new System.Drawing.Size(250, 23);
             this.lbl_usuario.TabIndex = 15;
-            this.lbl_usuario.Text = "Telefono o correo del usuario";
+            this.lbl_usuario.Text = "Matricula del empleado";
             // 
             // dgv_usuario
             // 
@@ -108,6 +112,10 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_usuario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.IdUsuario,
+            this.id_empleado,
+            this.Matricula,
+            this.Nombres,
+            this.Apellidos,
             this.Direccion,
             this.Grupo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -128,12 +136,39 @@ namespace Proyecto_escuela.Usuarios
             this.dgv_usuario.RowTemplate.Height = 24;
             this.dgv_usuario.Size = new System.Drawing.Size(1178, 503);
             this.dgv_usuario.TabIndex = 7;
+            this.dgv_usuario.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_usuario_CellClick);
             // 
             // IdUsuario
             // 
             this.IdUsuario.HeaderText = "Id_Usuario";
             this.IdUsuario.MinimumWidth = 6;
             this.IdUsuario.Name = "IdUsuario";
+            this.IdUsuario.Visible = false;
+            // 
+            // id_empleado
+            // 
+            this.id_empleado.HeaderText = "id_empleado";
+            this.id_empleado.MinimumWidth = 6;
+            this.id_empleado.Name = "id_empleado";
+            this.id_empleado.Visible = false;
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.MinimumWidth = 6;
+            this.Matricula.Name = "Matricula";
+            // 
+            // Nombres
+            // 
+            this.Nombres.HeaderText = "Nombres";
+            this.Nombres.MinimumWidth = 6;
+            this.Nombres.Name = "Nombres";
+            // 
+            // Apellidos
+            // 
+            this.Apellidos.HeaderText = "Apellidos";
+            this.Apellidos.MinimumWidth = 6;
+            this.Apellidos.Name = "Apellidos";
             // 
             // Direccion
             // 
@@ -173,6 +208,10 @@ namespace Proyecto_escuela.Usuarios
         private System.Windows.Forms.Label lbl_usuario;
         public System.Windows.Forms.DataGridView dgv_usuario;
         private System.Windows.Forms.DataGridViewTextBoxColumn IdUsuario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
     }

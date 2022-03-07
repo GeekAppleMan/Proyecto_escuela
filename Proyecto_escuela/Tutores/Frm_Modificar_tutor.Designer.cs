@@ -105,6 +105,7 @@ namespace Proyecto_escuela
             this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
+           
             this.rdb_conservar.Click += new System.EventHandler(this.rdb_conservar_Click);
             // 
             // rdb_cambiar
@@ -116,6 +117,7 @@ namespace Proyecto_escuela
             this.rdb_cambiar.TabIndex = 85;
             this.rdb_cambiar.Text = "Cambiar imagen";
             this.rdb_cambiar.UseVisualStyleBackColor = true;
+        
             this.rdb_cambiar.Click += new System.EventHandler(this.rdb_modificar_Click);
             // 
             // btn_enceder

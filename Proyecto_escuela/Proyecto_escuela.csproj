@@ -149,6 +149,30 @@
     <Compile Include="Empleados\Frm_registrar_empleado.Designer.cs">
       <DependentUpon>Frm_registrar_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Ajustes\Frm_Ajustes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajustes\Frm_Ajustes.Designer.cs">
+      <DependentUpon>Frm_Ajustes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\Frm_credencial_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\Frm_credencial_empleado.Designer.cs">
+      <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Empleados\Frm_Modificar_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Empleados\Frm_Modificar_empleado.Designer.cs">
+      <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_credencial_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_credencial_usuario.Designer.cs">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\Frm_alumnos_asignados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -230,6 +254,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tutores\NewFrameEvetArgs.cs" />
+    <EmbeddedResource Include="Ajustes\Frm_Ajustes.resx">
+      <DependentUpon>Frm_Ajustes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Alumnos\Frm_Alumnos.resx">
       <DependentUpon>Frm_Alumnos.cs</DependentUpon>
     </EmbeddedResource>
@@ -251,8 +278,17 @@
     <EmbeddedResource Include="Empleados\Frm_Empleados.resx">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\Frm_Modificar_empleado.resx">
+      <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Empleados\Frm_registrar_empleado.resx">
       <DependentUpon>Frm_registrar_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Empleados\Frm_credencial_empleado.resx">
+      <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_credencial_usuario.resx">
+      <DependentUpon>Frm_credencial_usuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio\Frm_inicio.resx">
       <DependentUpon>Frm_inicio.cs</DependentUpon>
@@ -377,6 +413,54 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo-instituto-tecnologico-de-nogales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\leer %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\familia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empleado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\grupo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\puerta-de-salida.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iniciar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar-sesion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ajustes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_izquierda.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_arriba.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_izquierda1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\colegioalfa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

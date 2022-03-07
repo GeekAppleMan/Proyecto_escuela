@@ -35,18 +35,19 @@ namespace Proyecto_escuela.Empleados
             this.btn_registar_empleado = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_empleado = new System.Windows.Forms.TextBox();
-            this.lbl_alumno = new System.Windows.Forms.Label();
+            this.lbl_matricula_empleado = new System.Windows.Forms.Label();
             this.dgv_empleado = new System.Windows.Forms.DataGridView();
+            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Correo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Id_Usuario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@ namespace Proyecto_escuela.Empleados
             this.panel_busqueda.Controls.Add(this.btn_registar_empleado);
             this.panel_busqueda.Controls.Add(this.panel3);
             this.panel_busqueda.Controls.Add(this.txt_empleado);
-            this.panel_busqueda.Controls.Add(this.lbl_alumno);
+            this.panel_busqueda.Controls.Add(this.lbl_matricula_empleado);
             this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_busqueda.Location = new System.Drawing.Point(0, 0);
             this.panel_busqueda.Name = "panel_busqueda";
@@ -77,7 +78,7 @@ namespace Proyecto_escuela.Empleados
             this.btn_registar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_registar_empleado.Location = new System.Drawing.Point(3, 3);
             this.btn_registar_empleado.Name = "btn_registar_empleado";
-            this.btn_registar_empleado.Size = new System.Drawing.Size(246, 41);
+            this.btn_registar_empleado.Size = new System.Drawing.Size(250, 41);
             this.btn_registar_empleado.TabIndex = 18;
             this.btn_registar_empleado.Text = "Registrar empleado";
             this.btn_registar_empleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -105,16 +106,16 @@ namespace Proyecto_escuela.Empleados
             this.txt_empleado.TabIndex = 0;
             this.txt_empleado.TextChanged += new System.EventHandler(this.txt_empleado_TextChanged);
             // 
-            // lbl_alumno
+            // lbl_matricula_empleado
             // 
-            this.lbl_alumno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_alumno.AutoSize = true;
-            this.lbl_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_alumno.Location = new System.Drawing.Point(255, 16);
-            this.lbl_alumno.Name = "lbl_alumno";
-            this.lbl_alumno.Size = new System.Drawing.Size(239, 23);
-            this.lbl_alumno.TabIndex = 15;
-            this.lbl_alumno.Text = "Nombre del empleado";
+            this.lbl_matricula_empleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_matricula_empleado.AutoSize = true;
+            this.lbl_matricula_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matricula_empleado.Location = new System.Drawing.Point(249, 19);
+            this.lbl_matricula_empleado.Name = "lbl_matricula_empleado";
+            this.lbl_matricula_empleado.Size = new System.Drawing.Size(250, 23);
+            this.lbl_matricula_empleado.TabIndex = 15;
+            this.lbl_matricula_empleado.Text = "Matricula del empleado";
             // 
             // dgv_empleado
             // 
@@ -136,16 +137,17 @@ namespace Proyecto_escuela.Empleados
             this.dgv_empleado.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_empleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_empleado.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id_alumno,
+            this.Matricula,
             this.Nombres,
             this.Apellidos,
             this.Fecha_nacimiento,
             this.Direccion,
-            this.Estatus,
             this.Correo,
             this.Telefono,
-            this.Imagen,
-            this.Id_Usuario,
-            this.id_alumno});
+            this.Rol,
+            this.Estatus,
+            this.Imagen});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -164,6 +166,20 @@ namespace Proyecto_escuela.Empleados
             this.dgv_empleado.RowTemplate.Height = 24;
             this.dgv_empleado.Size = new System.Drawing.Size(1178, 503);
             this.dgv_empleado.TabIndex = 11;
+            this.dgv_empleado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_empleado_CellClick);
+            // 
+            // id_alumno
+            // 
+            this.id_alumno.HeaderText = "Id_Empleado";
+            this.id_alumno.MinimumWidth = 6;
+            this.id_alumno.Name = "id_alumno";
+            this.id_alumno.Visible = false;
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.MinimumWidth = 6;
+            this.Matricula.Name = "Matricula";
             // 
             // Nombres
             // 
@@ -189,12 +205,6 @@ namespace Proyecto_escuela.Empleados
             this.Direccion.MinimumWidth = 6;
             this.Direccion.Name = "Direccion";
             // 
-            // Estatus
-            // 
-            this.Estatus.HeaderText = "Estatus";
-            this.Estatus.MinimumWidth = 6;
-            this.Estatus.Name = "Estatus";
-            // 
             // Correo
             // 
             this.Correo.HeaderText = "Correo";
@@ -207,26 +217,24 @@ namespace Proyecto_escuela.Empleados
             this.Telefono.MinimumWidth = 6;
             this.Telefono.Name = "Telefono";
             // 
+            // Rol
+            // 
+            this.Rol.HeaderText = "Rol";
+            this.Rol.MinimumWidth = 6;
+            this.Rol.Name = "Rol";
+            // 
+            // Estatus
+            // 
+            this.Estatus.HeaderText = "Estatus";
+            this.Estatus.MinimumWidth = 6;
+            this.Estatus.Name = "Estatus";
+            // 
             // Imagen
             // 
             this.Imagen.HeaderText = "Imagen";
             this.Imagen.MinimumWidth = 6;
             this.Imagen.Name = "Imagen";
             this.Imagen.Visible = false;
-            // 
-            // Id_Usuario
-            // 
-            this.Id_Usuario.HeaderText = "Id_Usuario";
-            this.Id_Usuario.MinimumWidth = 6;
-            this.Id_Usuario.Name = "Id_Usuario";
-            this.Id_Usuario.Visible = false;
-            // 
-            // id_alumno
-            // 
-            this.id_alumno.HeaderText = "Id_Empleado";
-            this.id_alumno.MinimumWidth = 6;
-            this.id_alumno.Name = "id_alumno";
-            this.id_alumno.Visible = false;
             // 
             // Frm_Empleados
             // 
@@ -252,17 +260,18 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.Button btn_registar_empleado;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_empleado;
-        private System.Windows.Forms.Label lbl_alumno;
+        private System.Windows.Forms.Label lbl_matricula_empleado;
         public System.Windows.Forms.DataGridView dgv_empleado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha_nacimiento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Correo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Telefono;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Usuario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
     }
 }
