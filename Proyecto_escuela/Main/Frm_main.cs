@@ -226,12 +226,14 @@ namespace Proyecto_escuela
 
         private void btn_salidas_Click(object sender, EventArgs e)
         {
+            abrir_form(new Frm_salidas());
             lbltitulo.Text = "Salidas";
             mostrar();
         }
 
         private void salidasToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            abrir_form(new Frm_salidas());
             lbltitulo.Text = "Salidas";
             mostrar();
         }

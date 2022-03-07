@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-03-2022 a las 18:54:05
+-- Tiempo de generación: 07-03-2022 a las 19:09:09
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -74,9 +74,7 @@ CREATE TABLE `tb_empleados` (
 INSERT INTO `tb_empleados` (`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`) VALUES
 (2, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', 'Jaime@gmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1F15C2G4G18C17H.jpg', '1', '1'),
 (3, '17340347', 'Giovanny', 'Siqueiros', '05/09/2000', 'NA', 'Giovanny@gmail.com', '6311987211', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/11G11G8I2H6A16I.jpg', '1', '1'),
-(4, '123123', 'Gabriel', 'Garcia', '28/12/2021', 'Camino viejo cananea', 'Gabriel@gmail.com', '6311032112', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/18B17A5A0A12C3C.jpg', '2', '1'),
-(5, '123', 'asdasd', 'asdasd', '28/12/2021', 'asdasd', 'asdasd', '123123', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/10G16H2D16A18D1B.jpg', '1', '2'),
-(6, 'asdasd123', 'asdasd', 'asdasd', '28/12/2021', 'asdasd', 'asdasd', '23424', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1B4C13H8F8D18B.jpg', '2', '2');
+(7, '18340342', 'Uriel', 'Orozco', '08/02/2000', 'na', 'uriel@gmail.com', '6311987211', '', '1', '1');
 
 -- --------------------------------------------------------
 
@@ -95,7 +93,8 @@ CREATE TABLE `tb_empleados_usuarios` (
 
 INSERT INTO `tb_empleados_usuarios` (`id_usuario`, `id_empleado`) VALUES
 (11, '2'),
-(12, '3');
+(12, '3'),
+(13, '7');
 
 -- --------------------------------------------------------
 
@@ -175,7 +174,8 @@ CREATE TABLE `tb_registro` (
 
 INSERT INTO `tb_registro` (`id_usuario`, `correo`, `telefono`, `contraseña`) VALUES
 (11, 'Jaime@gmail.com', '6311987311', '123'),
-(12, 'Giovanny@gmail.com', '6311987211', '123');
+(12, 'Giovanny@gmail.com', '6311987211', '123'),
+(13, 'uriel@gmail.com', '6311987111', '123');
 
 -- --------------------------------------------------------
 
@@ -362,13 +362,13 @@ ALTER TABLE `tb_alumnos`
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados_usuarios`
 --
 ALTER TABLE `tb_empleados_usuarios`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_estatus_salida`
@@ -386,7 +386,7 @@ ALTER TABLE `tb_padres`
 -- AUTO_INCREMENT de la tabla `tb_registro`
 --
 ALTER TABLE `tb_registro`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_relacion_alumno_usuario`

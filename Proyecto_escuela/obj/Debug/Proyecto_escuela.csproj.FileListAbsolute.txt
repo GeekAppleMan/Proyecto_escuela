@@ -264,3 +264,4 @@ C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.pdb
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Modificar_empleado.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_usuario.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_salidas.resources
