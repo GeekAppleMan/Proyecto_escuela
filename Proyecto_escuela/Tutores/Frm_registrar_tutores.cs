@@ -81,6 +81,7 @@ namespace Proyecto_escuela
                     miwebcam = new VideoCaptureDevice(nombrevideo);
                     miwebcam.NewFrame += new NewFrameEventHandler(capturando);
                     miwebcam.Start();
+                    btn_capturar_foto.Enabled = true;
                 }
                 catch (Exception)
                 {
@@ -112,7 +113,6 @@ namespace Proyecto_escuela
             else
             {
                 obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura,this);
-                new Frm_Asignacion_de_alumno().ShowDialog();
             }
            
         }
@@ -245,5 +245,6 @@ namespace Proyecto_escuela
                 e.Handled = true;
             }
         }
+
     }
 }

@@ -66,5 +66,9 @@ namespace Proyecto_escuela
                 }
             }
         }
+
+        private void Frm_alumnos_asignados_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
     }
 }

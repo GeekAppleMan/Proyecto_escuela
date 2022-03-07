@@ -60,10 +60,11 @@ namespace Proyecto_escuela
             }
             else
             {
-                Frm_credencial_tutor.id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
-                Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
+                    Frm_credencial_tutor.id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
+                    Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
+                    Frm_credencial_tutor.rowindex = e.RowIndex;
                     obj_credencial.lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_apellidos_tutor.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_direccion_tutor.Text = dgv_tutor[2, e.RowIndex].Value.ToString();

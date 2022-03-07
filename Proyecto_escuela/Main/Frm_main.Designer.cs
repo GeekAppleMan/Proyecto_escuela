@@ -32,6 +32,7 @@ namespace Proyecto_escuela
             this.components = new System.ComponentModel.Container();
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_barra_titulo = new System.Windows.Forms.Panel();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.pic_fecha = new System.Windows.Forms.PictureBox();
             this.lbl_fecha = new System.Windows.Forms.Label();
             this.lbl_hora = new System.Windows.Forms.Label();
@@ -59,7 +60,6 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
@@ -75,10 +75,10 @@ namespace Proyecto_escuela
             // panel_contenedor
             // 
             this.panel_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel_contenedor.Location = new System.Drawing.Point(239, 79);
+            this.panel_contenedor.Location = new System.Drawing.Point(239, 50);
             this.panel_contenedor.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel_contenedor.Name = "panel_contenedor";
-            this.panel_contenedor.Size = new System.Drawing.Size(1118, 524);
+            this.panel_contenedor.Size = new System.Drawing.Size(1118, 553);
             this.panel_contenedor.TabIndex = 4;
             // 
             // panel_barra_titulo
@@ -90,15 +90,28 @@ namespace Proyecto_escuela
             this.panel_barra_titulo.Controls.Add(this.lbl_hora);
             this.panel_barra_titulo.Controls.Add(this.pic_hora);
             this.panel_barra_titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_barra_titulo.Location = new System.Drawing.Point(239, 29);
+            this.panel_barra_titulo.Location = new System.Drawing.Point(239, 0);
             this.panel_barra_titulo.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel_barra_titulo.Name = "panel_barra_titulo";
             this.panel_barra_titulo.Size = new System.Drawing.Size(1118, 50);
             this.panel_barra_titulo.TabIndex = 2;
             // 
+            // lbltitulo
+            // 
+            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltitulo.BackColor = System.Drawing.Color.Transparent;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(293, 7);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(532, 37);
+            this.lbltitulo.TabIndex = 18;
+            this.lbltitulo.Text = "Inicio";
+            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // pic_fecha
             // 
             this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_fecha.BackColor = System.Drawing.Color.Transparent;
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
             this.pic_fecha.Location = new System.Drawing.Point(930, 5);
@@ -113,6 +126,7 @@ namespace Proyecto_escuela
             // 
             this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
             this.lbl_fecha.Location = new System.Drawing.Point(974, 15);
@@ -124,6 +138,7 @@ namespace Proyecto_escuela
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
             this.lbl_hora.Location = new System.Drawing.Point(52, 16);
@@ -134,6 +149,7 @@ namespace Proyecto_escuela
             // 
             // pic_hora
             // 
+            this.pic_hora.BackColor = System.Drawing.Color.Transparent;
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
             this.pic_hora.Location = new System.Drawing.Point(5, 7);
@@ -149,10 +165,10 @@ namespace Proyecto_escuela
             this.panel_barra_izquierda.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.panel_barra_izquierda.Controls.Add(this.tableLayoutPanel1);
             this.panel_barra_izquierda.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel_barra_izquierda.Location = new System.Drawing.Point(0, 29);
+            this.panel_barra_izquierda.Location = new System.Drawing.Point(0, 0);
             this.panel_barra_izquierda.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel_barra_izquierda.Name = "panel_barra_izquierda";
-            this.panel_barra_izquierda.Size = new System.Drawing.Size(239, 574);
+            this.panel_barra_izquierda.Size = new System.Drawing.Size(239, 603);
             this.panel_barra_izquierda.TabIndex = 3;
             // 
             // tableLayoutPanel1
@@ -182,7 +198,7 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.954952F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.954952F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.95858F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(239, 574);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(239, 603);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // btn_ajustes
@@ -198,10 +214,10 @@ namespace Proyecto_escuela
             this.btn_ajustes.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_ajustes.Image = global::Proyecto_escuela.Properties.Resources.ajustes;
             this.btn_ajustes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_ajustes.Location = new System.Drawing.Point(4, 516);
+            this.btn_ajustes.Location = new System.Drawing.Point(4, 544);
             this.btn_ajustes.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_ajustes.Name = "btn_ajustes";
-            this.btn_ajustes.Size = new System.Drawing.Size(231, 56);
+            this.btn_ajustes.Size = new System.Drawing.Size(231, 57);
             this.btn_ajustes.TabIndex = 9;
             this.btn_ajustes.Text = "Ajustes";
             this.btn_ajustes.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -222,10 +238,10 @@ namespace Proyecto_escuela
             this.btn_tutores.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_tutores.Image = global::Proyecto_escuela.Properties.Resources.familia;
             this.btn_tutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tutores.Location = new System.Drawing.Point(4, 174);
+            this.btn_tutores.Location = new System.Drawing.Point(4, 184);
             this.btn_tutores.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_tutores.Name = "btn_tutores";
-            this.btn_tutores.Size = new System.Drawing.Size(231, 53);
+            this.btn_tutores.Size = new System.Drawing.Size(231, 56);
             this.btn_tutores.TabIndex = 2;
             this.btn_tutores.Text = "Tutores";
             this.btn_tutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -238,17 +254,17 @@ namespace Proyecto_escuela
             this.panel2.Controls.Add(this.picture_logo);
             this.panel2.Controls.Add(this.lbl_jane);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 88);
+            this.panel2.Location = new System.Drawing.Point(4, 93);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 82);
+            this.panel2.Size = new System.Drawing.Size(231, 87);
             this.panel2.TabIndex = 0;
             // 
             // picture_logo
             // 
             this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
-            this.picture_logo.Location = new System.Drawing.Point(71, 28);
+            this.picture_logo.Location = new System.Drawing.Point(71, 30);
             this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picture_logo.Name = "picture_logo";
             this.picture_logo.Size = new System.Drawing.Size(84, 68);
@@ -276,7 +292,7 @@ namespace Proyecto_escuela
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(233, 82);
+            this.panel1.Size = new System.Drawing.Size(233, 87);
             this.panel1.TabIndex = 0;
             // 
             // pic_menu
@@ -305,10 +321,10 @@ namespace Proyecto_escuela
             this.btn_cerrar_sesion.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_cerrar_sesion.Image = global::Proyecto_escuela.Properties.Resources.cerrar_sesion;
             this.btn_cerrar_sesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrar_sesion.Location = new System.Drawing.Point(4, 459);
+            this.btn_cerrar_sesion.Location = new System.Drawing.Point(4, 484);
             this.btn_cerrar_sesion.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_cerrar_sesion.Name = "btn_cerrar_sesion";
-            this.btn_cerrar_sesion.Size = new System.Drawing.Size(231, 53);
+            this.btn_cerrar_sesion.Size = new System.Drawing.Size(231, 56);
             this.btn_cerrar_sesion.TabIndex = 8;
             this.btn_cerrar_sesion.Text = "Cerrar sesion";
             this.btn_cerrar_sesion.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -328,10 +344,10 @@ namespace Proyecto_escuela
             this.btn_salidas.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_salidas.Image = global::Proyecto_escuela.Properties.Resources.puerta_de_salida;
             this.btn_salidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salidas.Location = new System.Drawing.Point(4, 402);
+            this.btn_salidas.Location = new System.Drawing.Point(4, 424);
             this.btn_salidas.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_salidas.Name = "btn_salidas";
-            this.btn_salidas.Size = new System.Drawing.Size(231, 53);
+            this.btn_salidas.Size = new System.Drawing.Size(231, 56);
             this.btn_salidas.TabIndex = 5;
             this.btn_salidas.Text = "Salidas";
             this.btn_salidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -351,10 +367,10 @@ namespace Proyecto_escuela
             this.btn_Empleados.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_Empleados.Image = global::Proyecto_escuela.Properties.Resources.empleado;
             this.btn_Empleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Empleados.Location = new System.Drawing.Point(4, 345);
+            this.btn_Empleados.Location = new System.Drawing.Point(4, 364);
             this.btn_Empleados.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_Empleados.Name = "btn_Empleados";
-            this.btn_Empleados.Size = new System.Drawing.Size(231, 53);
+            this.btn_Empleados.Size = new System.Drawing.Size(231, 56);
             this.btn_Empleados.TabIndex = 4;
             this.btn_Empleados.Text = "Empleados";
             this.btn_Empleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -374,10 +390,10 @@ namespace Proyecto_escuela
             this.btn_usuarios.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_usuarios.Image = global::Proyecto_escuela.Properties.Resources.grupo;
             this.btn_usuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_usuarios.Location = new System.Drawing.Point(4, 288);
+            this.btn_usuarios.Location = new System.Drawing.Point(4, 304);
             this.btn_usuarios.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_usuarios.Name = "btn_usuarios";
-            this.btn_usuarios.Size = new System.Drawing.Size(231, 53);
+            this.btn_usuarios.Size = new System.Drawing.Size(231, 56);
             this.btn_usuarios.TabIndex = 3;
             this.btn_usuarios.Text = "Usuarios";
             this.btn_usuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -397,10 +413,10 @@ namespace Proyecto_escuela
             this.btn_alumnos.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.btn_alumnos.Image = global::Proyecto_escuela.Properties.Resources.leer;
             this.btn_alumnos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_alumnos.Location = new System.Drawing.Point(4, 231);
+            this.btn_alumnos.Location = new System.Drawing.Point(4, 244);
             this.btn_alumnos.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.btn_alumnos.Name = "btn_alumnos";
-            this.btn_alumnos.Size = new System.Drawing.Size(231, 53);
+            this.btn_alumnos.Size = new System.Drawing.Size(231, 56);
             this.btn_alumnos.TabIndex = 1;
             this.btn_alumnos.Text = "Alumnos";
             this.btn_alumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
@@ -504,18 +520,6 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 25);
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
-            // 
-            // lbltitulo
-            // 
-            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.BackColor = System.Drawing.Color.Transparent;
-            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(293, 7);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(532, 37);
-            this.lbltitulo.TabIndex = 18;
-            this.lbltitulo.Text = "Inicio";
-            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Frm_main
             // 
