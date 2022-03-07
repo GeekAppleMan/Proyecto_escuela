@@ -26,7 +26,7 @@ namespace Proyecto_escuela
         private void Frm_Modificar_tutor_Load(object sender, EventArgs e)
         {
             cargar_dispositivo();
-            Clases.Cls_empleados.conservar_modificar_imagen = true;
+            Cls_tutores.conservar_modificar_imagen = true;
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
@@ -121,7 +121,7 @@ namespace Proyecto_escuela
             btn_enceder.Enabled = false;
             picture_captura.Enabled = false;
             btn_capturar_foto.Enabled = false;
-            Clases.Cls_empleados.conservar_modificar_imagen = true;
+            Cls_tutores.conservar_modificar_imagen = true;
         }
 
         private void txt_nombres_Leave(object sender, EventArgs e)
@@ -250,12 +250,12 @@ namespace Proyecto_escuela
             btn_enceder.Enabled = false;
             picture_captura.Enabled = false;
             btn_capturar_foto.Enabled = false;
-            Clases.Cls_empleados.conservar_modificar_imagen = true;
+            Cls_tutores.conservar_modificar_imagen = true;
         }
 
         private void rdb_modificar_Click(object sender, EventArgs e)
         {
-            Clases.Cls_empleados.conservar_modificar_imagen = false;
+            Cls_tutores.conservar_modificar_imagen = false;
             picture_tiempo_real.Enabled = true;
             combo_dispositivos.Enabled = true;
             btn_enceder.Enabled = true;
@@ -278,5 +278,6 @@ namespace Proyecto_escuela
                 e.Handled = true;
             }
         }
+
     }
 }

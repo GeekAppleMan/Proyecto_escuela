@@ -163,22 +163,26 @@ namespace Proyecto_escuela
                     MySqlDataReader reader;
                     databaseConnection.Open();
                     reader = commandDatabase.ExecuteReader();
+                    
                     try
                     {
                         pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
                         MessageBox.Show("Se registro al tutor correctamente");
+                        principal.Close();
+                        new Frm_Asignacion_de_alumno().ShowDialog();
                     }
                     catch (Exception)
                     {
-
                         MessageBox.Show("se registro al tutor pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
+                        principal.Close();
+                        new Frm_Asignacion_de_alumno().ShowDialog();
                     }
-                    principal.Close();
+                   
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
+                MessageBox.Show("El numero de telefono no puede ser uno ya asignado a otro tutor,si el error persiste comuniquese con el equipo de sistemas");
             }
            
         }
@@ -306,7 +310,7 @@ namespace Proyecto_escuela
         {
             try
             {
-                string query = "UPDATE `tb_padres` SET `estatus` = '2' WHERE id_tutor = " + "'" + tutores[8, index].Value.ToString() + "'";
+                string query = "UPDATE `tb_padres` SET `estatus` = '2' WHERE id_tutor = " + "'" + Frm_credencial_tutor.id_tutor + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                 commandDatabase.CommandTimeout = 60;

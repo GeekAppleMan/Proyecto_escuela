@@ -99,18 +99,19 @@ namespace Proyecto_escuela
             // lbltitulo
             // 
             this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(525, 14);
+            this.lbltitulo.Location = new System.Drawing.Point(293, 7);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(59, 23);
+            this.lbltitulo.Size = new System.Drawing.Size(532, 37);
             this.lbltitulo.TabIndex = 18;
             this.lbltitulo.Text = "Inicio";
+            this.lbltitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pic_fecha
             // 
             this.pic_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pic_fecha.BackColor = System.Drawing.Color.Transparent;
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
             this.pic_fecha.Location = new System.Drawing.Point(930, 5);
@@ -125,6 +126,7 @@ namespace Proyecto_escuela
             // 
             this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha.AutoSize = true;
+            this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
             this.lbl_fecha.Location = new System.Drawing.Point(974, 15);
@@ -136,6 +138,7 @@ namespace Proyecto_escuela
             // lbl_hora
             // 
             this.lbl_hora.AutoSize = true;
+            this.lbl_hora.BackColor = System.Drawing.Color.Transparent;
             this.lbl_hora.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_hora.ForeColor = System.Drawing.Color.Black;
             this.lbl_hora.Location = new System.Drawing.Point(52, 16);
@@ -146,6 +149,7 @@ namespace Proyecto_escuela
             // 
             // pic_hora
             // 
+            this.pic_hora.BackColor = System.Drawing.Color.Transparent;
             this.pic_hora.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_hora.Image = global::Proyecto_escuela.Properties.Resources.reloj;
             this.pic_hora.Location = new System.Drawing.Point(5, 7);
@@ -558,7 +562,6 @@ namespace Proyecto_escuela
 
         private System.Windows.Forms.Panel panel_contenedor;
         private System.Windows.Forms.Panel panel_barra_titulo;
-        private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.PictureBox pic_fecha;
         private System.Windows.Forms.Label lbl_fecha;
         private System.Windows.Forms.Label lbl_hora;
@@ -586,5 +589,6 @@ namespace Proyecto_escuela
         public System.Windows.Forms.Panel panel_barra_izquierda;
         public System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.PictureBox picture_logo;
+        public System.Windows.Forms.Label lbltitulo;
     }
 }
