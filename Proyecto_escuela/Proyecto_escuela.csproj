@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cls_Salida.cs" />
     <Compile Include="Clases\Cls_empleados.cs" />
     <Compile Include="Clases\Cls_Login.cs" />
     <Compile Include="Clases\Cls_registro.cs" />

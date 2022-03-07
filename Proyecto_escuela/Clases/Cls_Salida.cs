@@ -1,0 +1,65 @@
+﻿using MySql.Data.MySqlClient;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Proyecto_escuela.Clases
+{
+    class Cls_Salida : Cls_conexion
+    {
+
+        public void estatus()
+        {
+            string estatus = "";
+            string query = "SELECT estatus_salida from tb_estatus_salida";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    if (reader.GetString(0)=="1")
+                    {
+
+                    }
+                    if (reader.GetString(0) == "2")
+                    {
+                        
+                    }
+                    if (reader.GetString(0) == "3")
+                    {
+
+                    }
+                }
+            }
+            databaseConnection.Close();
+        }
+        public void Cargar(DataGridView grid)
+        {
+            grid.Rows.Clear();
+            string query = "SELECT id_alumno, matricula, nombres, apellidos FROM tb_alumnos ";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                }
+            }
+            databaseConnection.Close();
+        }
+    }
+}
