@@ -10,7 +10,7 @@ namespace Proyecto_escuela.Clases
 {
     class Cls_Salida : Cls_conexion
     {
-
+        public int estatu = 0;
         public void estatus()
         {
             string estatus = "";
@@ -27,15 +27,15 @@ namespace Proyecto_escuela.Clases
                 {
                     if (reader.GetString(0)=="1")
                     {
-
+                        estatu = 1;
                     }
                     if (reader.GetString(0) == "2")
                     {
-                        
+                        estatu = 2;
                     }
                     if (reader.GetString(0) == "3")
                     {
-
+                        estatu = 3;
                     }
                 }
             }

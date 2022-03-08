@@ -19,14 +19,27 @@ namespace Proyecto_escuela
             InitializeComponent();
         }
 
-        private void cargar_salida()
+        private void cargar_salidadgv1()
         {
             obj_salida.Cargar(dataGridView1);
         }
 
+        private void cargarsalidadgv_alumno()
+        {
+            obj_salida.Cargar(dgv_alumno);
+        }
+
         private void Frm_salidas_Load(object sender, EventArgs e)
         {
-            cargar_salida();
+            obj_salida.estatus();
+            if (obj_salida.estatu==2)
+            {
+                cargar_salidadgv1();
+            }
+            else if (obj_salida.estatu==3)
+            {
+                cargarsalidadgv_alumno();
+            }
         }
     }
 }
