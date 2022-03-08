@@ -121,7 +121,7 @@ namespace Proyecto_escuela
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(38, 27);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(222, 23);
+            this.label1.Size = new System.Drawing.Size(175, 21);
             this.label1.TabIndex = 83;
             this.label1.Text = "Seleccionar webcam";
             // 
@@ -132,7 +132,7 @@ namespace Proyecto_escuela
             this.combo_dispositivos.FormattingEnabled = true;
             this.combo_dispositivos.Location = new System.Drawing.Point(42, 61);
             this.combo_dispositivos.Name = "combo_dispositivos";
-            this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
+            this.combo_dispositivos.Size = new System.Drawing.Size(278, 25);
             this.combo_dispositivos.TabIndex = 0;
             this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
@@ -248,7 +248,7 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.line1, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 21;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
@@ -272,10 +272,7 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(281, 632);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(281, 636);
             this.tableLayoutPanel1.TabIndex = 103;
             // 
             // lbl_tutor
@@ -283,9 +280,9 @@ namespace Proyecto_escuela
             this.lbl_tutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_tutor.AutoSize = true;
             this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tutor.Location = new System.Drawing.Point(3, 9);
+            this.lbl_tutor.Location = new System.Drawing.Point(3, 10);
             this.lbl_tutor.Name = "lbl_tutor";
-            this.lbl_tutor.Size = new System.Drawing.Size(275, 23);
+            this.lbl_tutor.Size = new System.Drawing.Size(275, 21);
             this.lbl_tutor.TabIndex = 82;
             this.lbl_tutor.Text = "Nombres del tutor";
             // 
@@ -296,9 +293,9 @@ namespace Proyecto_escuela
             this.txt_nombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombres.ForeColor = System.Drawing.Color.Gray;
-            this.txt_nombres.Location = new System.Drawing.Point(3, 49);
+            this.txt_nombres.Location = new System.Drawing.Point(3, 51);
             this.txt_nombres.Name = "txt_nombres";
-            this.txt_nombres.Size = new System.Drawing.Size(275, 25);
+            this.txt_nombres.Size = new System.Drawing.Size(275, 20);
             this.txt_nombres.TabIndex = 1;
             this.txt_nombres.Text = "Nombres";
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
@@ -327,9 +324,9 @@ namespace Proyecto_escuela
             "Padre",
             "Madre",
             "Tutor"});
-            this.combo_parentesco.Location = new System.Drawing.Point(3, 580);
+            this.combo_parentesco.Location = new System.Drawing.Point(3, 581);
             this.combo_parentesco.Name = "combo_parentesco";
-            this.combo_parentesco.Size = new System.Drawing.Size(275, 31);
+            this.combo_parentesco.Size = new System.Drawing.Size(275, 29);
             this.combo_parentesco.TabIndex = 7;
             this.combo_parentesco.Text = "Padre";
             this.combo_parentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_parentesco_KeyPress);
@@ -339,9 +336,9 @@ namespace Proyecto_escuela
             this.lbl_parentesco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_parentesco.AutoSize = true;
             this.lbl_parentesco.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_parentesco.Location = new System.Drawing.Point(3, 543);
+            this.lbl_parentesco.Location = new System.Drawing.Point(3, 544);
             this.lbl_parentesco.Name = "lbl_parentesco";
-            this.lbl_parentesco.Size = new System.Drawing.Size(275, 23);
+            this.lbl_parentesco.Size = new System.Drawing.Size(275, 21);
             this.lbl_parentesco.TabIndex = 98;
             this.lbl_parentesco.Text = "parentesco";
             // 
@@ -350,9 +347,9 @@ namespace Proyecto_escuela
             this.dtp_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_fecha_nacimiento.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.dtp_fecha_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(3, 490);
+            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(3, 493);
             this.dtp_fecha_nacimiento.Name = "dtp_fecha_nacimiento";
-            this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(275, 32);
+            this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(275, 27);
             this.dtp_fecha_nacimiento.TabIndex = 6;
             this.dtp_fecha_nacimiento.Value = new System.DateTime(2021, 12, 28, 0, 0, 0, 0);
             // 
@@ -361,9 +358,9 @@ namespace Proyecto_escuela
             this.lbl_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha_nacimiento.AutoSize = true;
             this.lbl_fecha_nacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_nacimiento.Location = new System.Drawing.Point(3, 454);
+            this.lbl_fecha_nacimiento.Location = new System.Drawing.Point(3, 455);
             this.lbl_fecha_nacimiento.Name = "lbl_fecha_nacimiento";
-            this.lbl_fecha_nacimiento.Size = new System.Drawing.Size(275, 23);
+            this.lbl_fecha_nacimiento.Size = new System.Drawing.Size(275, 21);
             this.lbl_fecha_nacimiento.TabIndex = 96;
             this.lbl_fecha_nacimiento.Text = "Fecha de nacimiento";
             // 
@@ -374,9 +371,9 @@ namespace Proyecto_escuela
             this.txt_correo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_correo.ForeColor = System.Drawing.Color.Gray;
-            this.txt_correo.Location = new System.Drawing.Point(3, 405);
+            this.txt_correo.Location = new System.Drawing.Point(3, 407);
             this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(275, 25);
+            this.txt_correo.Size = new System.Drawing.Size(275, 20);
             this.txt_correo.TabIndex = 5;
             this.txt_correo.Text = "Correo";
             this.txt_correo.Enter += new System.EventHandler(this.txt_correo_Enter);
@@ -387,9 +384,9 @@ namespace Proyecto_escuela
             this.lbl_correo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_correo.AutoSize = true;
             this.lbl_correo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_correo.Location = new System.Drawing.Point(3, 365);
+            this.lbl_correo.Location = new System.Drawing.Point(3, 366);
             this.lbl_correo.Name = "lbl_correo";
-            this.lbl_correo.Size = new System.Drawing.Size(275, 23);
+            this.lbl_correo.Size = new System.Drawing.Size(275, 21);
             this.lbl_correo.TabIndex = 94;
             this.lbl_correo.Text = "Correo";
             // 
@@ -411,9 +408,9 @@ namespace Proyecto_escuela
             this.txt_telefono.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_telefono.ForeColor = System.Drawing.Color.Gray;
-            this.txt_telefono.Location = new System.Drawing.Point(3, 316);
+            this.txt_telefono.Location = new System.Drawing.Point(3, 318);
             this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(275, 25);
+            this.txt_telefono.Size = new System.Drawing.Size(275, 20);
             this.txt_telefono.TabIndex = 4;
             this.txt_telefono.Text = "Telefono";
             this.txt_telefono.Enter += new System.EventHandler(this.txt_telefono_Enter);
@@ -425,9 +422,9 @@ namespace Proyecto_escuela
             this.lbl_telefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_telefono.AutoSize = true;
             this.lbl_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefono.Location = new System.Drawing.Point(3, 276);
+            this.lbl_telefono.Location = new System.Drawing.Point(3, 277);
             this.lbl_telefono.Name = "lbl_telefono";
-            this.lbl_telefono.Size = new System.Drawing.Size(275, 23);
+            this.lbl_telefono.Size = new System.Drawing.Size(275, 21);
             this.lbl_telefono.TabIndex = 91;
             this.lbl_telefono.Text = "Telefono";
             // 
@@ -438,9 +435,9 @@ namespace Proyecto_escuela
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.Gray;
-            this.txt_direccion.Location = new System.Drawing.Point(3, 227);
+            this.txt_direccion.Location = new System.Drawing.Point(3, 229);
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(275, 25);
+            this.txt_direccion.Size = new System.Drawing.Size(275, 20);
             this.txt_direccion.TabIndex = 3;
             this.txt_direccion.Text = "Direccion";
             this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_Enter);
@@ -462,9 +459,9 @@ namespace Proyecto_escuela
             this.lbl_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_direccion.AutoSize = true;
             this.lbl_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_direccion.Location = new System.Drawing.Point(3, 187);
+            this.lbl_direccion.Location = new System.Drawing.Point(3, 188);
             this.lbl_direccion.Name = "lbl_direccion";
-            this.lbl_direccion.Size = new System.Drawing.Size(275, 23);
+            this.lbl_direccion.Size = new System.Drawing.Size(275, 21);
             this.lbl_direccion.TabIndex = 88;
             this.lbl_direccion.Text = "Direccion";
             // 
@@ -475,9 +472,9 @@ namespace Proyecto_escuela
             this.txt_apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellidos.ForeColor = System.Drawing.Color.Gray;
-            this.txt_apellidos.Location = new System.Drawing.Point(3, 138);
+            this.txt_apellidos.Location = new System.Drawing.Point(3, 140);
             this.txt_apellidos.Name = "txt_apellidos";
-            this.txt_apellidos.Size = new System.Drawing.Size(275, 25);
+            this.txt_apellidos.Size = new System.Drawing.Size(275, 20);
             this.txt_apellidos.TabIndex = 2;
             this.txt_apellidos.Text = "Apellidos";
             this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
@@ -500,9 +497,9 @@ namespace Proyecto_escuela
             this.lbl_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidos.AutoSize = true;
             this.lbl_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidos.Location = new System.Drawing.Point(3, 98);
+            this.lbl_apellidos.Location = new System.Drawing.Point(3, 99);
             this.lbl_apellidos.Name = "lbl_apellidos";
-            this.lbl_apellidos.Size = new System.Drawing.Size(275, 23);
+            this.lbl_apellidos.Size = new System.Drawing.Size(275, 21);
             this.lbl_apellidos.TabIndex = 85;
             this.lbl_apellidos.Text = "Apellidos del tutor";
             // 
@@ -550,7 +547,7 @@ namespace Proyecto_escuela
             // 
             // Frm_registrar_tutores
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(938, 657);
