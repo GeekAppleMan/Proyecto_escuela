@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btnregistrar = new System.Windows.Forms.Button();
+            this.btncancelar = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
             this.lbl_matricula = new System.Windows.Forms.Label();
             this.txt_matricula = new System.Windows.Forms.TextBox();
@@ -38,9 +41,6 @@
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_correo = new System.Windows.Forms.TextBox();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btncancelar = new System.Windows.Forms.Button();
-            this.btnregistrar = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -59,12 +59,59 @@
             this.groupBox1.Controls.Add(this.line1);
             this.groupBox1.Controls.Add(this.txt_correo);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(384, 368);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del usuario";
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 2;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Controls.Add(this.btnregistrar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 308);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 57);
+            this.tableLayoutPanel1.TabIndex = 113;
+            // 
+            // btnregistrar
+            // 
+            this.btnregistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnregistrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnregistrar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btnregistrar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnregistrar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btnregistrar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnregistrar.Location = new System.Drawing.Point(3, 3);
+            this.btnregistrar.Name = "btnregistrar";
+            this.btnregistrar.Size = new System.Drawing.Size(183, 51);
+            this.btnregistrar.TabIndex = 1;
+            this.btnregistrar.Text = "Registrar";
+            this.btnregistrar.UseVisualStyleBackColor = false;
+            this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
+            // 
+            // btncancelar
+            // 
+            this.btncancelar.BackColor = System.Drawing.Color.Red;
+            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btncancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btncancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btncancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btncancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btncancelar.Location = new System.Drawing.Point(192, 3);
+            this.btncancelar.Name = "btncancelar";
+            this.btncancelar.Size = new System.Drawing.Size(183, 51);
+            this.btncancelar.TabIndex = 0;
+            this.btncancelar.Text = "Cancelar";
+            this.btncancelar.UseVisualStyleBackColor = false;
             // 
             // panel8
             // 
@@ -167,49 +214,15 @@
             this.txt_correo.Enter += new System.EventHandler(this.txt_correo_Enter);
             this.txt_correo.Leave += new System.EventHandler(this.txt_correo_Leave);
             // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btnregistrar, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btncancelar, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 308);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(378, 57);
-            this.tableLayoutPanel1.TabIndex = 113;
-            // 
-            // btncancelar
-            // 
-            this.btncancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btncancelar.Location = new System.Drawing.Point(192, 3);
-            this.btncancelar.Name = "btncancelar";
-            this.btncancelar.Size = new System.Drawing.Size(183, 51);
-            this.btncancelar.TabIndex = 0;
-            this.btncancelar.Text = "Cancelar";
-            this.btncancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnregistrar
-            // 
-            this.btnregistrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnregistrar.Location = new System.Drawing.Point(3, 3);
-            this.btnregistrar.Name = "btnregistrar";
-            this.btnregistrar.Size = new System.Drawing.Size(183, 51);
-            this.btnregistrar.TabIndex = 1;
-            this.btnregistrar.Text = "Registrar";
-            this.btnregistrar.UseVisualStyleBackColor = true;
-            this.btnregistrar.Click += new System.EventHandler(this.btnregistrar_Click);
-            // 
             // Frm_crear_usuario_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 368);
             this.Controls.Add(this.groupBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Frm_crear_usuario_alumno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear usuario para alumno";

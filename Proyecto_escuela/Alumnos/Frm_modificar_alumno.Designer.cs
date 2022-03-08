@@ -46,7 +46,6 @@ namespace Proyecto_escuela
             this.combo_estatus = new System.Windows.Forms.ComboBox();
             this.lbl_estatus = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.lbl_matricula = new System.Windows.Forms.Label();
             this.txt_matricula = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.combo_grupo = new System.Windows.Forms.ComboBox();
@@ -63,10 +62,13 @@ namespace Proyecto_escuela
             this.lbl_alumno = new System.Windows.Forms.Label();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt_nombres = new System.Windows.Forms.TextBox();
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_matricula = new System.Windows.Forms.Label();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
             this.gb_datos.SuspendLayout();
+            this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_foto_perfil
@@ -86,7 +88,7 @@ namespace Proyecto_escuela
             this.gb_foto_perfil.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.gb_foto_perfil.Location = new System.Drawing.Point(277, 0);
             this.gb_foto_perfil.Name = "gb_foto_perfil";
-            this.gb_foto_perfil.Size = new System.Drawing.Size(668, 678);
+            this.gb_foto_perfil.Size = new System.Drawing.Size(661, 657);
             this.gb_foto_perfil.TabIndex = 85;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
@@ -117,15 +119,14 @@ namespace Proyecto_escuela
             // 
             // btn_enceder
             // 
-            this.btn_enceder.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_enceder.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_enceder.BackColor = System.Drawing.Color.Orange;
             this.btn_enceder.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_enceder.Enabled = false;
             this.btn_enceder.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_enceder.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_enceder.ForeColor = System.Drawing.Color.Black;
-            this.btn_enceder.Location = new System.Drawing.Point(339, 106);
+            this.btn_enceder.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_enceder.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_enceder.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_enceder.Location = new System.Drawing.Point(339, 104);
             this.btn_enceder.Name = "btn_enceder";
             this.btn_enceder.Size = new System.Drawing.Size(278, 34);
             this.btn_enceder.TabIndex = 1;
@@ -167,14 +168,13 @@ namespace Proyecto_escuela
             // 
             // btn_cancelar
             // 
-            this.btn_cancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_cancelar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.BackColor = System.Drawing.Color.Red;
             this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cancelar.ForeColor = System.Drawing.Color.Black;
-            this.btn_cancelar.Location = new System.Drawing.Point(40, 607);
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_cancelar.Location = new System.Drawing.Point(42, 597);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 42);
             this.btn_cancelar.TabIndex = 4;
@@ -184,14 +184,13 @@ namespace Proyecto_escuela
             // 
             // btn_modificar
             // 
-            this.btn_modificar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_modificar.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.btn_modificar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_modificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.Color.Black;
-            this.btn_modificar.Location = new System.Drawing.Point(40, 558);
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_modificar.Location = new System.Drawing.Point(42, 549);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(575, 42);
             this.btn_modificar.TabIndex = 3;
@@ -201,15 +200,14 @@ namespace Proyecto_escuela
             // 
             // btn_capturar_foto
             // 
-            this.btn_capturar_foto.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_capturar_foto.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_capturar_foto.BackColor = System.Drawing.Color.Green;
             this.btn_capturar_foto.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_capturar_foto.Enabled = false;
             this.btn_capturar_foto.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btn_capturar_foto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_capturar_foto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_capturar_foto.ForeColor = System.Drawing.Color.Black;
-            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 441);
+            this.btn_capturar_foto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_capturar_foto.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
+            this.btn_capturar_foto.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_capturar_foto.Location = new System.Drawing.Point(42, 442);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 42);
             this.btn_capturar_foto.TabIndex = 2;
@@ -241,47 +239,30 @@ namespace Proyecto_escuela
             // 
             // gb_datos
             // 
-            this.gb_datos.Controls.Add(this.panel9);
-            this.gb_datos.Controls.Add(this.combo_estatus);
-            this.gb_datos.Controls.Add(this.lbl_estatus);
-            this.gb_datos.Controls.Add(this.panel8);
-            this.gb_datos.Controls.Add(this.lbl_matricula);
-            this.gb_datos.Controls.Add(this.txt_matricula);
-            this.gb_datos.Controls.Add(this.panel6);
-            this.gb_datos.Controls.Add(this.combo_grupo);
-            this.gb_datos.Controls.Add(this.lbl_grupo);
-            this.gb_datos.Controls.Add(this.dtp_fecha_nacimiento);
-            this.gb_datos.Controls.Add(this.lbl_fecha_nacimiento);
-            this.gb_datos.Controls.Add(this.panel5);
-            this.gb_datos.Controls.Add(this.lbl_direccion);
-            this.gb_datos.Controls.Add(this.panel2);
-            this.gb_datos.Controls.Add(this.txt_direccion);
-            this.gb_datos.Controls.Add(this.lbl_apellidos);
-            this.gb_datos.Controls.Add(this.panel1);
-            this.gb_datos.Controls.Add(this.txt_apellidos);
-            this.gb_datos.Controls.Add(this.lbl_alumno);
-            this.gb_datos.Controls.Add(this.line1);
-            this.gb_datos.Controls.Add(this.txt_nombres);
+            this.gb_datos.Controls.Add(this.tableLayoutPanel1);
             this.gb_datos.Dock = System.Windows.Forms.DockStyle.Left;
             this.gb_datos.Font = new System.Drawing.Font("Century Gothic", 9F);
             this.gb_datos.Location = new System.Drawing.Point(0, 0);
             this.gb_datos.Name = "gb_datos";
-            this.gb_datos.Size = new System.Drawing.Size(277, 678);
+            this.gb_datos.Size = new System.Drawing.Size(277, 657);
             this.gb_datos.TabIndex = 84;
             this.gb_datos.TabStop = false;
             this.gb_datos.Text = "Datos del alumno";
             // 
             // panel9
             // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.BackColor = System.Drawing.Color.Gray;
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel9.Location = new System.Drawing.Point(16, 634);
+            this.panel9.Location = new System.Drawing.Point(3, 619);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(238, 1);
-            this.panel9.TabIndex = 115;
+            this.panel9.Size = new System.Drawing.Size(265, 1);
+            this.panel9.TabIndex = 136;
             // 
             // combo_estatus
             // 
+            this.combo_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.combo_estatus.BackColor = System.Drawing.Color.WhiteSmoke;
             this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -289,52 +270,46 @@ namespace Proyecto_escuela
             this.combo_estatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.combo_estatus.Location = new System.Drawing.Point(16, 597);
+            this.combo_estatus.Location = new System.Drawing.Point(3, 580);
             this.combo_estatus.Name = "combo_estatus";
-            this.combo_estatus.Size = new System.Drawing.Size(234, 31);
-            this.combo_estatus.TabIndex = 113;
+            this.combo_estatus.Size = new System.Drawing.Size(265, 31);
+            this.combo_estatus.TabIndex = 134;
             this.combo_estatus.Text = "Activo";
             this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
             // lbl_estatus
             // 
+            this.lbl_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_estatus.AutoSize = true;
             this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(12, 558);
+            this.lbl_estatus.Location = new System.Drawing.Point(3, 543);
             this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(77, 23);
-            this.lbl_estatus.TabIndex = 114;
+            this.lbl_estatus.Size = new System.Drawing.Size(265, 23);
+            this.lbl_estatus.TabIndex = 135;
             this.lbl_estatus.Text = "Estatus";
             // 
             // panel8
             // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.BackColor = System.Drawing.Color.Gray;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel8.Location = new System.Drawing.Point(12, 94);
+            this.panel8.Location = new System.Drawing.Point(3, 85);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(238, 1);
-            this.panel8.TabIndex = 103;
-            // 
-            // lbl_matricula
-            // 
-            this.lbl_matricula.AutoSize = true;
-            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula.Location = new System.Drawing.Point(8, 28);
-            this.lbl_matricula.Name = "lbl_matricula";
-            this.lbl_matricula.Size = new System.Drawing.Size(220, 23);
-            this.lbl_matricula.TabIndex = 102;
-            this.lbl_matricula.Text = "Matricula del alumno";
+            this.panel8.Size = new System.Drawing.Size(265, 1);
+            this.panel8.TabIndex = 133;
             // 
             // txt_matricula
             // 
+            this.txt_matricula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_matricula.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_matricula.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_matricula.ForeColor = System.Drawing.Color.Black;
-            this.txt_matricula.Location = new System.Drawing.Point(12, 63);
+            this.txt_matricula.Location = new System.Drawing.Point(3, 49);
             this.txt_matricula.Name = "txt_matricula";
-            this.txt_matricula.Size = new System.Drawing.Size(238, 25);
-            this.txt_matricula.TabIndex = 2;
+            this.txt_matricula.Size = new System.Drawing.Size(265, 25);
+            this.txt_matricula.TabIndex = 116;
             this.txt_matricula.Text = "Matricula";
             this.txt_matricula.Enter += new System.EventHandler(this.txt_matricula_Enter);
             this.txt_matricula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_matricula_KeyPress);
@@ -342,15 +317,18 @@ namespace Proyecto_escuela
             // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BackColor = System.Drawing.Color.Gray;
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel6.Location = new System.Drawing.Point(16, 546);
+            this.panel6.Location = new System.Drawing.Point(3, 530);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(238, 1);
-            this.panel6.TabIndex = 100;
+            this.panel6.Size = new System.Drawing.Size(265, 1);
+            this.panel6.TabIndex = 131;
             // 
             // combo_grupo
             // 
+            this.combo_grupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.combo_grupo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.combo_grupo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_grupo.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -362,114 +340,127 @@ namespace Proyecto_escuela
             "4:A",
             "5:A",
             "6:A"});
-            this.combo_grupo.Location = new System.Drawing.Point(16, 509);
+            this.combo_grupo.Location = new System.Drawing.Point(3, 491);
             this.combo_grupo.Name = "combo_grupo";
-            this.combo_grupo.Size = new System.Drawing.Size(234, 31);
-            this.combo_grupo.TabIndex = 7;
+            this.combo_grupo.Size = new System.Drawing.Size(265, 31);
+            this.combo_grupo.TabIndex = 121;
             this.combo_grupo.Text = "1:A";
             this.combo_grupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
             // lbl_grupo
             // 
+            this.lbl_grupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_grupo.AutoSize = true;
             this.lbl_grupo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_grupo.Location = new System.Drawing.Point(12, 473);
+            this.lbl_grupo.Location = new System.Drawing.Point(3, 454);
             this.lbl_grupo.Name = "lbl_grupo";
-            this.lbl_grupo.Size = new System.Drawing.Size(68, 23);
-            this.lbl_grupo.TabIndex = 98;
+            this.lbl_grupo.Size = new System.Drawing.Size(265, 23);
+            this.lbl_grupo.TabIndex = 130;
             this.lbl_grupo.Text = "grupo";
             // 
             // dtp_fecha_nacimiento
             // 
+            this.dtp_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_fecha_nacimiento.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.dtp_fecha_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(16, 421);
+            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(3, 401);
             this.dtp_fecha_nacimiento.Name = "dtp_fecha_nacimiento";
-            this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(234, 32);
-            this.dtp_fecha_nacimiento.TabIndex = 6;
+            this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(265, 32);
+            this.dtp_fecha_nacimiento.TabIndex = 120;
             this.dtp_fecha_nacimiento.Value = new System.DateTime(2021, 12, 28, 0, 0, 0, 0);
             // 
             // lbl_fecha_nacimiento
             // 
+            this.lbl_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha_nacimiento.AutoSize = true;
             this.lbl_fecha_nacimiento.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_nacimiento.Location = new System.Drawing.Point(12, 385);
+            this.lbl_fecha_nacimiento.Location = new System.Drawing.Point(3, 365);
             this.lbl_fecha_nacimiento.Name = "lbl_fecha_nacimiento";
-            this.lbl_fecha_nacimiento.Size = new System.Drawing.Size(220, 23);
-            this.lbl_fecha_nacimiento.TabIndex = 96;
+            this.lbl_fecha_nacimiento.Size = new System.Drawing.Size(265, 23);
+            this.lbl_fecha_nacimiento.TabIndex = 129;
             this.lbl_fecha_nacimiento.Text = "Fecha de nacimiento";
             // 
             // panel5
             // 
+            this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BackColor = System.Drawing.Color.Gray;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Location = new System.Drawing.Point(16, 457);
+            this.panel5.Location = new System.Drawing.Point(3, 441);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(238, 1);
-            this.panel5.TabIndex = 95;
+            this.panel5.Size = new System.Drawing.Size(265, 1);
+            this.panel5.TabIndex = 128;
             // 
             // lbl_direccion
             // 
+            this.lbl_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_direccion.AutoSize = true;
             this.lbl_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_direccion.Location = new System.Drawing.Point(12, 290);
+            this.lbl_direccion.Location = new System.Drawing.Point(3, 276);
             this.lbl_direccion.Name = "lbl_direccion";
-            this.lbl_direccion.Size = new System.Drawing.Size(101, 23);
-            this.lbl_direccion.TabIndex = 88;
+            this.lbl_direccion.Size = new System.Drawing.Size(265, 23);
+            this.lbl_direccion.TabIndex = 127;
             this.lbl_direccion.Text = "Direccion";
             // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BackColor = System.Drawing.Color.Gray;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel2.Location = new System.Drawing.Point(16, 362);
+            this.panel2.Location = new System.Drawing.Point(3, 352);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(238, 1);
-            this.panel2.TabIndex = 87;
+            this.panel2.Size = new System.Drawing.Size(265, 1);
+            this.panel2.TabIndex = 126;
             // 
             // txt_direccion
             // 
+            this.txt_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_direccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_direccion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_direccion.ForeColor = System.Drawing.Color.Black;
-            this.txt_direccion.Location = new System.Drawing.Point(16, 329);
+            this.txt_direccion.Location = new System.Drawing.Point(3, 316);
             this.txt_direccion.Name = "txt_direccion";
-            this.txt_direccion.Size = new System.Drawing.Size(238, 25);
-            this.txt_direccion.TabIndex = 5;
+            this.txt_direccion.Size = new System.Drawing.Size(265, 25);
+            this.txt_direccion.TabIndex = 119;
             this.txt_direccion.Text = "Direccion";
             this.txt_direccion.Enter += new System.EventHandler(this.txt_direccion_Enter);
             this.txt_direccion.Leave += new System.EventHandler(this.txt_direccion_Leave);
             // 
             // lbl_apellidos
             // 
+            this.lbl_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidos.AutoSize = true;
             this.lbl_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidos.Location = new System.Drawing.Point(12, 197);
+            this.lbl_apellidos.Location = new System.Drawing.Point(3, 187);
             this.lbl_apellidos.Name = "lbl_apellidos";
-            this.lbl_apellidos.Size = new System.Drawing.Size(219, 23);
-            this.lbl_apellidos.TabIndex = 85;
+            this.lbl_apellidos.Size = new System.Drawing.Size(265, 23);
+            this.lbl_apellidos.TabIndex = 125;
             this.lbl_apellidos.Text = "Apellidos del alumno";
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.BackColor = System.Drawing.Color.Gray;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Location = new System.Drawing.Point(16, 270);
+            this.panel1.Location = new System.Drawing.Point(3, 263);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(238, 1);
-            this.panel1.TabIndex = 84;
+            this.panel1.Size = new System.Drawing.Size(265, 1);
+            this.panel1.TabIndex = 124;
             // 
             // txt_apellidos
             // 
+            this.txt_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_apellidos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_apellidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_apellidos.ForeColor = System.Drawing.Color.Black;
-            this.txt_apellidos.Location = new System.Drawing.Point(16, 237);
+            this.txt_apellidos.Location = new System.Drawing.Point(3, 227);
             this.txt_apellidos.Name = "txt_apellidos";
-            this.txt_apellidos.Size = new System.Drawing.Size(238, 25);
-            this.txt_apellidos.TabIndex = 4;
+            this.txt_apellidos.Size = new System.Drawing.Size(265, 25);
+            this.txt_apellidos.TabIndex = 118;
             this.txt_apellidos.Text = "Apellidos";
             this.txt_apellidos.Enter += new System.EventHandler(this.txt_apellidos_Enter);
             this.txt_apellidos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidos_KeyPress);
@@ -477,44 +468,112 @@ namespace Proyecto_escuela
             // 
             // lbl_alumno
             // 
+            this.lbl_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_alumno.AutoSize = true;
             this.lbl_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_alumno.Location = new System.Drawing.Point(8, 108);
+            this.lbl_alumno.Location = new System.Drawing.Point(3, 98);
             this.lbl_alumno.Name = "lbl_alumno";
-            this.lbl_alumno.Size = new System.Drawing.Size(217, 23);
-            this.lbl_alumno.TabIndex = 82;
+            this.lbl_alumno.Size = new System.Drawing.Size(265, 23);
+            this.lbl_alumno.TabIndex = 123;
             this.lbl_alumno.Text = "Nombres del alumno";
             // 
             // line1
             // 
+            this.line1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.line1.BackColor = System.Drawing.Color.Gray;
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line1.Location = new System.Drawing.Point(12, 180);
+            this.line1.Location = new System.Drawing.Point(3, 174);
             this.line1.Name = "line1";
-            this.line1.Size = new System.Drawing.Size(238, 1);
-            this.line1.TabIndex = 81;
+            this.line1.Size = new System.Drawing.Size(265, 1);
+            this.line1.TabIndex = 122;
             // 
             // txt_nombres
             // 
+            this.txt_nombres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombres.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_nombres.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_nombres.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombres.ForeColor = System.Drawing.Color.Black;
-            this.txt_nombres.Location = new System.Drawing.Point(12, 147);
+            this.txt_nombres.Location = new System.Drawing.Point(3, 138);
             this.txt_nombres.Name = "txt_nombres";
-            this.txt_nombres.Size = new System.Drawing.Size(238, 25);
-            this.txt_nombres.TabIndex = 3;
+            this.txt_nombres.Size = new System.Drawing.Size(265, 25);
+            this.txt_nombres.TabIndex = 117;
             this.txt_nombres.Text = "Nombres";
             this.txt_nombres.Enter += new System.EventHandler(this.txt_nombres_Enter);
             this.txt_nombres.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombres_KeyPress);
             this.txt_nombres.Leave += new System.EventHandler(this.txt_nombres_Leave);
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 1;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Controls.Add(this.panel9, 0, 20);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_matricula, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 0, 17);
+            this.tableLayoutPanel1.Controls.Add(this.panel8, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 14);
+            this.tableLayoutPanel1.Controls.Add(this.combo_estatus, 0, 19);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 11);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_alumno, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 8);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_estatus, 0, 18);
+            this.tableLayoutPanel1.Controls.Add(this.line1, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.txt_matricula, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.dtp_fecha_nacimiento, 0, 13);
+            this.tableLayoutPanel1.Controls.Add(this.combo_grupo, 0, 16);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_apellidos, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_direccion, 0, 9);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_fecha_nacimiento, 0, 12);
+            this.tableLayoutPanel1.Controls.Add(this.lbl_grupo, 0, 15);
+            this.tableLayoutPanel1.Controls.Add(this.txt_direccion, 0, 10);
+            this.tableLayoutPanel1.Controls.Add(this.txt_nombres, 0, 4);
+            this.tableLayoutPanel1.Controls.Add(this.txt_apellidos, 0, 7);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 22);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 21;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142857F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.142856F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(271, 632);
+            this.tableLayoutPanel1.TabIndex = 137;
+            // 
+            // lbl_matricula
+            // 
+            this.lbl_matricula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_matricula.AutoSize = true;
+            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_matricula.Location = new System.Drawing.Point(3, 9);
+            this.lbl_matricula.Name = "lbl_matricula";
+            this.lbl_matricula.Size = new System.Drawing.Size(265, 23);
+            this.lbl_matricula.TabIndex = 132;
+            this.lbl_matricula.Text = "Matricula del alumno";
             // 
             // Frm_modificar_alumno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(945, 678);
+            this.ClientSize = new System.Drawing.Size(938, 657);
             this.Controls.Add(this.gb_foto_perfil);
             this.Controls.Add(this.gb_datos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
@@ -530,7 +589,8 @@ namespace Proyecto_escuela
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).EndInit();
             this.gb_datos.ResumeLayout(false);
-            this.gb_datos.PerformLayout();
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -547,29 +607,30 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Button btn_capturar_foto;
         private System.Windows.Forms.PictureBox picture_captura;
         private System.Windows.Forms.PictureBox picture_tiempo_real;
-        private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Label lbl_matricula;
-        private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label lbl_grupo;
-        private System.Windows.Forms.Label lbl_fecha_nacimiento;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label lbl_direccion;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label lbl_apellidos;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lbl_alumno;
-        private System.Windows.Forms.Panel line1;
-        private System.Windows.Forms.Panel panel9;
-        public System.Windows.Forms.ComboBox combo_estatus;
-        private System.Windows.Forms.Label lbl_estatus;
         private System.Windows.Forms.RadioButton rdb_conservar;
         private System.Windows.Forms.RadioButton rdb_cambiar;
         public System.Windows.Forms.GroupBox gb_datos;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label lbl_matricula;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel5;
+        public System.Windows.Forms.ComboBox combo_estatus;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label lbl_alumno;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lbl_estatus;
+        private System.Windows.Forms.Panel line1;
         public System.Windows.Forms.TextBox txt_matricula;
-        public System.Windows.Forms.ComboBox combo_grupo;
         public System.Windows.Forms.DateTimePicker dtp_fecha_nacimiento;
+        public System.Windows.Forms.ComboBox combo_grupo;
+        private System.Windows.Forms.Label lbl_apellidos;
+        private System.Windows.Forms.Label lbl_direccion;
+        private System.Windows.Forms.Label lbl_fecha_nacimiento;
+        private System.Windows.Forms.Label lbl_grupo;
         public System.Windows.Forms.TextBox txt_direccion;
-        public System.Windows.Forms.TextBox txt_apellidos;
         public System.Windows.Forms.TextBox txt_nombres;
+        public System.Windows.Forms.TextBox txt_apellidos;
     }
 }
