@@ -34,14 +34,14 @@ namespace Proyecto_escuela
             }
             else
             {
-                lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
-                lbl_apellidos_tutor.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
-                lbl_direccion_tutor.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
-                lbl_telefono_tutor.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
-                lbl_correo_tutor.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
-                lbl_fecha_tutor.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
-                lbl_parentesco_tutor.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
-                lbl_estatus_tutor.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
+                lbl_nombres_tutor.Text = "Nombres: " + dgv_tutor[0, e.RowIndex].Value.ToString();
+                lbl_apellidos_tutor.Text = "Apellidos: " + dgv_tutor[1, e.RowIndex].Value.ToString();
+                lbl_direccion_tutor.Text = "Direccion: " + dgv_tutor[2, e.RowIndex].Value.ToString();
+                lbl_telefono_tutor.Text = "Telefono: " + dgv_tutor[3, e.RowIndex].Value.ToString();
+                lbl_correo_tutor.Text = "Correo: " + dgv_tutor[4, e.RowIndex].Value.ToString();
+                lbl_fecha_tutor.Text = "Nacimiento: " + dgv_tutor[5, e.RowIndex].Value.ToString();
+                lbl_parentesco_tutor.Text = "Parentesco: " + dgv_tutor[6, e.RowIndex].Value.ToString();
+                lbl_estatus_tutor.Text = "Estatus: " + dgv_tutor[7, e.RowIndex].Value.ToString();
                 string path = dgv_tutor[9, e.RowIndex].Value.ToString();
                 if (path == "")
                 {

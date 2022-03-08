@@ -73,6 +73,7 @@ namespace Proyecto_escuela
                     miwebcam = new VideoCaptureDevice(nombrevideo);
                     miwebcam.NewFrame += new NewFrameEventHandler(capturando);
                     miwebcam.Start();
+                    btn_capturar_foto.Enabled = true;
                 }
                 catch (Exception)
                 {
@@ -206,6 +207,11 @@ namespace Proyecto_escuela
             {
                 e.Handled = true;
             }
+        }
+
+        private void gb_foto_perfil_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

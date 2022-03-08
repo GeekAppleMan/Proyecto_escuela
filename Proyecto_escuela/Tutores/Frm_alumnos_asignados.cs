@@ -33,13 +33,13 @@ namespace Proyecto_escuela
             }
             else
             {
-                lbl_matricula_alumno.Text = dgv_alumno[1, e.RowIndex].Value.ToString();
-                lbl_nombres_alumno.Text = dgv_alumno[2, e.RowIndex].Value.ToString();
-                lbl_apellidos_alumno.Text = dgv_alumno[3, e.RowIndex].Value.ToString();
-                lbl_fecha_alumno.Text = dgv_alumno[4, e.RowIndex].Value.ToString();
-                lbl_direccion_alumno.Text = dgv_alumno[5, e.RowIndex].Value.ToString();
-                lbl_grupo_alumno.Text = dgv_alumno[6, e.RowIndex].Value.ToString();
-                lbl_estatus_alumno.Text = dgv_alumno[7, e.RowIndex].Value.ToString();
+                lbl_matricula_alumno.Text = "Matricula: " + dgv_alumno[1, e.RowIndex].Value.ToString();
+                lbl_nombres_alumno.Text = "Nombres: " + dgv_alumno[2, e.RowIndex].Value.ToString();
+                lbl_apellidos_alumno.Text = "Apellidos: " + dgv_alumno[3, e.RowIndex].Value.ToString();
+                lbl_fecha_alumno.Text = "Nacimiento: " + dgv_alumno[4, e.RowIndex].Value.ToString();
+                lbl_direccion_alumno.Text = "Direccion: " + dgv_alumno[5, e.RowIndex].Value.ToString();
+                lbl_grupo_alumno.Text = "Grupo: " + dgv_alumno[6, e.RowIndex].Value.ToString();
+                lbl_estatus_alumno.Text = "Estatus: " + dgv_alumno[7, e.RowIndex].Value.ToString();
                 string path = dgv_alumno[8, e.RowIndex].Value.ToString();
                 if (path == "")
                 {

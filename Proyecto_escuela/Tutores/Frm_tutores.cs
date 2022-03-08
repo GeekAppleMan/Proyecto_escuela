@@ -65,14 +65,14 @@ namespace Proyecto_escuela
                     Frm_credencial_tutor.id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
                     Frm_Asignacion_de_alumno.Id_tutor = dgv_tutor[8, e.RowIndex].Value.ToString();
                     Frm_credencial_tutor.rowindex = e.RowIndex;
-                    obj_credencial.lbl_nombres_tutor.Text = dgv_tutor[0, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_apellidos_tutor.Text = dgv_tutor[1, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_direccion_tutor.Text = dgv_tutor[2, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_telefono_tutor.Text = dgv_tutor[3, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_correo_tutor.Text = dgv_tutor[4, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_fecha_tutor.Text = dgv_tutor[5, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_parentesco_tutor.Text = dgv_tutor[6, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_estatus_tutor.Text = dgv_tutor[7, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_nombres_tutor.Text = "Nombres: " + dgv_tutor[0, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_apellidos_tutor.Text = "Apellidos: " + dgv_tutor[1, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_direccion_tutor.Text = "Direccion: " + dgv_tutor[2, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_telefono_tutor.Text = "Telefono: " + dgv_tutor[3, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_correo_tutor.Text = "Correo: " + dgv_tutor[4, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_fecha_tutor.Text = "Nacimiento: " + dgv_tutor[5, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_parentesco_tutor.Text = "Parentesco: " + dgv_tutor[6, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_estatus_tutor.Text = "Estatus: " + dgv_tutor[7, e.RowIndex].Value.ToString();
                     string path = dgv_tutor[9, e.RowIndex].Value.ToString();
                     if (path == "")
                     {
