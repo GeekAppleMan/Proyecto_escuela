@@ -252,7 +252,6 @@ namespace Proyecto_escuela
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.picture_logo);
-            this.panel2.Controls.Add(this.lbl_jane);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(4, 93);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
@@ -262,12 +261,12 @@ namespace Proyecto_escuela
             // 
             // picture_logo
             // 
-            this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.picture_logo.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
-            this.picture_logo.Location = new System.Drawing.Point(71, 30);
+            this.picture_logo.Location = new System.Drawing.Point(0, -56);
             this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(84, 68);
+            this.picture_logo.Size = new System.Drawing.Size(231, 143);
             this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picture_logo.TabIndex = 4;
             this.picture_logo.TabStop = false;
@@ -275,10 +274,10 @@ namespace Proyecto_escuela
             // lbl_jane
             // 
             this.lbl_jane.AutoSize = true;
-            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13F);
             this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_jane.Location = new System.Drawing.Point(0, 0);
+            this.lbl_jane.Location = new System.Drawing.Point(0, 62);
             this.lbl_jane.Name = "lbl_jane";
             this.lbl_jane.Size = new System.Drawing.Size(167, 25);
             this.lbl_jane.TabIndex = 1;
@@ -288,6 +287,7 @@ namespace Proyecto_escuela
             // panel1
             // 
             this.panel1.Controls.Add(this.pic_menu);
+            this.panel1.Controls.Add(this.lbl_jane);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -547,9 +547,9 @@ namespace Proyecto_escuela
             this.panel_barra_izquierda.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

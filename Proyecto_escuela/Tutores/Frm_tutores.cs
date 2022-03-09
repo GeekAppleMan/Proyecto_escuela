@@ -23,7 +23,7 @@ namespace Proyecto_escuela
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Frm_registrar_tutores obj_registrar = new Frm_registrar_tutores();
+            frm_registrar_tutor obj_registrar = new frm_registrar_tutor();
             obj_registrar.ShowDialog();
             cargar_tutores();
         }

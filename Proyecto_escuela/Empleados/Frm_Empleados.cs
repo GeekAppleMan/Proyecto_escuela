@@ -68,15 +68,15 @@ namespace Proyecto_escuela.Empleados
                 {
                     Cls_empleados.empleados = dgv_empleado;
                     Cls_empleados.index = e.RowIndex;
-                    obj_credencial.lbl_matricula_empleado.Text = dgv_empleado[1, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_nombres_empleado.Text = dgv_empleado[2, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_apellidos_empleado.Text = dgv_empleado[3, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_fecha_empleado.Text = dgv_empleado[4, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_direccion_empleado.Text = dgv_empleado[5, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_correo_empleado.Text = dgv_empleado[6, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_telefono_empleado.Text = dgv_empleado[7, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_rol_empleado.Text = dgv_empleado[8, e.RowIndex].Value.ToString();
-                    obj_credencial.lbl_estatus_empleado.Text = dgv_empleado[9, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_matricula_empleado.Text = "Matricula: " + dgv_empleado[1, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_nombres_empleado.Text = "Nombres: " + dgv_empleado[2, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_apellidos_empleado.Text = "Apellidos: " + dgv_empleado[3, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_fecha_empleado.Text = "Nacimiento: " + dgv_empleado[4, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_direccion_empleado.Text = "Direccion: " + dgv_empleado[5, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_correo_empleado.Text = "Correo: " + dgv_empleado[6, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_telefono_empleado.Text = "Telefono: " + dgv_empleado[7, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_rol_empleado.Text = "Rol: " + dgv_empleado[8, e.RowIndex].Value.ToString();
+                    obj_credencial.lbl_estatus_empleado.Text = "Estatus: " + dgv_empleado[9, e.RowIndex].Value.ToString();
                     Frm_credencial_empleado.rowindex = e.RowIndex;
                     Frm_credencial_empleado.dgv = dgv_empleado;
                     string path = dgv_empleado[10, e.RowIndex].Value.ToString();
