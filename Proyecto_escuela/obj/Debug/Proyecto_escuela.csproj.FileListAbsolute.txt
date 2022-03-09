@@ -178,7 +178,6 @@ C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
-C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.CoreCompileInputs.cache
@@ -270,3 +269,4 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_empleado.resources
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_salidas.resources
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_usuario.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.frm_registrar_tutor.resources

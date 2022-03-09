@@ -41,11 +41,9 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ajustes = new System.Windows.Forms.Button();
             this.btn_tutores = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.picture_logo = new System.Windows.Forms.PictureBox();
-            this.lbl_jane = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic_menu = new System.Windows.Forms.PictureBox();
+            this.lbl_jane = new System.Windows.Forms.Label();
             this.btn_cerrar_sesion = new System.Windows.Forms.Button();
             this.btn_salidas = new System.Windows.Forms.Button();
             this.btn_Empleados = new System.Windows.Forms.Button();
@@ -60,16 +58,18 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             this.panel_barra_izquierda.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -198,6 +198,7 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.954952F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.954952F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 9.95858F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(239, 603);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -248,46 +249,10 @@ namespace Proyecto_escuela
             this.btn_tutores.UseVisualStyleBackColor = false;
             this.btn_tutores.Click += new System.EventHandler(this.btn_tutores_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.picture_logo);
-            this.panel2.Controls.Add(this.lbl_jane);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 93);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 87);
-            this.panel2.TabIndex = 0;
-            // 
-            // picture_logo
-            // 
-            this.picture_logo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
-            this.picture_logo.Location = new System.Drawing.Point(71, 30);
-            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(84, 68);
-            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture_logo.TabIndex = 4;
-            this.picture_logo.TabStop = false;
-            // 
-            // lbl_jane
-            // 
-            this.lbl_jane.AutoSize = true;
-            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbl_jane.Location = new System.Drawing.Point(0, 0);
-            this.lbl_jane.Name = "lbl_jane";
-            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
-            this.lbl_jane.TabIndex = 1;
-            this.lbl_jane.Text = "Jane Software";
-            this.lbl_jane.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pic_menu);
+            this.panel1.Controls.Add(this.lbl_jane);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -307,6 +272,19 @@ namespace Proyecto_escuela
             this.pic_menu.TabIndex = 2;
             this.pic_menu.TabStop = false;
             this.pic_menu.Click += new System.EventHandler(this.pic_menu_Click_1);
+            // 
+            // lbl_jane
+            // 
+            this.lbl_jane.AutoSize = true;
+            this.lbl_jane.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.lbl_jane.Font = new System.Drawing.Font("Century Gothic", 13F);
+            this.lbl_jane.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbl_jane.Location = new System.Drawing.Point(0, 62);
+            this.lbl_jane.Name = "lbl_jane";
+            this.lbl_jane.Size = new System.Drawing.Size(167, 25);
+            this.lbl_jane.TabIndex = 1;
+            this.lbl_jane.Text = "Jane Software";
+            this.lbl_jane.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btn_cerrar_sesion
             // 
@@ -521,6 +499,29 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.picture_logo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(4, 93);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(231, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // picture_logo
+            // 
+            this.picture_logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
+            this.picture_logo.Location = new System.Drawing.Point(0, 0);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picture_logo.Name = "picture_logo";
+            this.picture_logo.Size = new System.Drawing.Size(231, 87);
+            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_logo.TabIndex = 5;
+            this.picture_logo.TabStop = false;
+            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -546,13 +547,13 @@ namespace Proyecto_escuela
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
             this.panel_barra_izquierda.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -574,7 +575,6 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Button btn_Empleados;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pic_menu;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbl_jane;
         private System.Windows.Forms.Button btn_tutores;
         private System.Windows.Forms.Timer timer_fecha_hora;
@@ -588,7 +588,8 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Button btn_ajustes;
         public System.Windows.Forms.Panel panel_barra_izquierda;
         public System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.PictureBox picture_logo;
         public System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox picture_logo;
     }
 }
