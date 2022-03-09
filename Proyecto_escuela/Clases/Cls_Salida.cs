@@ -13,8 +13,7 @@ namespace Proyecto_escuela.Clases
         public int estatu = 0;
         public void estatus()
         {
-            string estatus = "";
-            string query = "SELECT estatus_salida from tb_estatus_salida";
+            string query = "SELECT id_estatus_salida from tb_salida";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -44,7 +43,7 @@ namespace Proyecto_escuela.Clases
         public void Cargar(DataGridView grid)
         {
             grid.Rows.Clear();
-            string query = "SELECT id_alumno, matricula, nombres, apellidos FROM tb_alumnos ";
+            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;

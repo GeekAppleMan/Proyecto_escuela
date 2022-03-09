@@ -40,6 +40,20 @@ namespace Proyecto_escuela
             {
                 cargarsalidadgv_alumno();
             }
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            obj_salida.estatus();
+            if (obj_salida.estatu == 2)
+            {
+                cargar_salidadgv1();
+            }
+            else if (obj_salida.estatu == 3)
+            {
+                cargarsalidadgv_alumno();
+            }
         }
     }
 }
