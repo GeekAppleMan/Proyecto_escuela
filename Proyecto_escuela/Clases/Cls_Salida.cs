@@ -43,7 +43,7 @@ namespace Proyecto_escuela.Clases
         public void Cargar(DataGridView grid)
         {
             grid.Rows.Clear();
-            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno";
+            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno LIMIT 3";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -58,6 +58,26 @@ namespace Proyecto_escuela.Clases
                     grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
                 }
             }
+            databaseConnection.Close();
+        }
+
+        public void Estatus3()
+        {
+            string query = "INSERT INTO tb_salida_bitacora SELECT * from tb_salida WHERE id_estatus_salida='3'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            databaseConnection.Close();
+
+            string query2 = "DELETE FROM tb_salida WHERE id_estatus_salida='3'";
+            MySqlCommand commandDatabase2 = new MySqlCommand(query2, databaseConnection);
+            commandDatabase2.CommandTimeout = 60;
+            MySqlDataReader reader2;
+            databaseConnection.Open();
+            reader2 = commandDatabase2.ExecuteReader();
             databaseConnection.Close();
         }
     }

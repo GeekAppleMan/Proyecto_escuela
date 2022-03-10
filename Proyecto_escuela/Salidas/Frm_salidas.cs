@@ -39,6 +39,7 @@ namespace Proyecto_escuela
             else if (obj_salida.estatu==3)
             {
                 cargarsalidadgv_alumno();
+                obj_salida.Estatus3();
             }
             timer1.Start();
         }
@@ -53,6 +54,7 @@ namespace Proyecto_escuela
             else if (obj_salida.estatu == 3)
             {
                 cargarsalidadgv_alumno();
+                obj_salida.Estatus3();
             }
         }
     }
