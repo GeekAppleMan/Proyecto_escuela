@@ -12,8 +12,8 @@ namespace Proyecto_escuela
 {
     public partial class Frm_Ajustes : Form
     {
-        private static Color color { get; set; }
-        private static Color color_letra { get; set; }
+        public static Color color { get; set; }
+        public static Color color_letra { get; set; }
         public Frm_Ajustes()
         {
             InitializeComponent();

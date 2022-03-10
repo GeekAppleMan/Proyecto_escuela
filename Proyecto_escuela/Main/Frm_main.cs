@@ -26,6 +26,8 @@ namespace Proyecto_escuela
         {
             timer_fecha_hora.Stop();
             timer_fecha_hora.Enabled = false;
+            Frm_Ajustes.color = Color.FromArgb(0, 122, 204);
+            Frm_Ajustes.color_letra = Color.FromArgb(0, 122, 204);
             Frm_login obj_login = new Frm_login();
             obj_login.Show();
         }

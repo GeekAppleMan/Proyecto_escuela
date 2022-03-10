@@ -37,12 +37,12 @@
             this.btn_select_color_letra = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rdb_arriba = new System.Windows.Forms.RadioButton();
             this.rdb_izquierda = new System.Windows.Forms.RadioButton();
             this.colorDialog_menu = new System.Windows.Forms.ColorDialog();
             this.colorDialog_letras = new System.Windows.Forms.ColorDialog();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -143,28 +143,6 @@
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::Proyecto_escuela.Properties.Resources.menu_arriba;
-            this.pictureBox2.Location = new System.Drawing.Point(368, 64);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(352, 286);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.menu_izquierda;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(352, 286);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // rdb_arriba
             // 
             this.rdb_arriba.AutoSize = true;
@@ -190,6 +168,28 @@
             this.rdb_izquierda.Text = "Izquierda";
             this.rdb_izquierda.UseVisualStyleBackColor = true;
             this.rdb_izquierda.CheckedChanged += new System.EventHandler(this.rdb_izquierda_CheckedChanged);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proyecto_escuela.Properties.Resources.Arriba;
+            this.pictureBox2.Location = new System.Drawing.Point(368, 64);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(352, 286);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.izquierda;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(352, 286);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // Frm_Ajustes
             // 
