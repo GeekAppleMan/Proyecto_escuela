@@ -41,6 +41,8 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ajustes = new System.Windows.Forms.Button();
             this.btn_tutores = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic_menu = new System.Windows.Forms.PictureBox();
             this.lbl_jane = new System.Windows.Forms.Label();
@@ -58,18 +60,16 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izquierdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel_barra_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             this.panel_barra_izquierda.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_contenedor
@@ -249,6 +249,29 @@ namespace Proyecto_escuela
             this.btn_tutores.UseVisualStyleBackColor = false;
             this.btn_tutores.Click += new System.EventHandler(this.btn_tutores_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.picture_logo);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(4, 93);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(231, 87);
+            this.panel2.TabIndex = 0;
+            // 
+            // picture_logo
+            // 
+            this.picture_logo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
+            this.picture_logo.Location = new System.Drawing.Point(0, 0);
+            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.picture_logo.Name = "picture_logo";
+            this.picture_logo.Size = new System.Drawing.Size(231, 87);
+            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picture_logo.TabIndex = 5;
+            this.picture_logo.TabStop = false;
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.pic_menu);
@@ -423,7 +446,7 @@ namespace Proyecto_escuela
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1357, 29);
+            this.menuStrip1.Size = new System.Drawing.Size(1357, 30);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -499,29 +522,6 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Transparent;
-            this.panel2.Controls.Add(this.picture_logo);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(4, 93);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(231, 87);
-            this.panel2.TabIndex = 0;
-            // 
-            // picture_logo
-            // 
-            this.picture_logo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picture_logo.Image = global::Proyecto_escuela.Properties.Resources.colegioalfa;
-            this.picture_logo.Location = new System.Drawing.Point(0, 0);
-            this.picture_logo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.picture_logo.Name = "picture_logo";
-            this.picture_logo.Size = new System.Drawing.Size(231, 87);
-            this.picture_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picture_logo.TabIndex = 5;
-            this.picture_logo.TabStop = false;
-            // 
             // Frm_main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -547,13 +547,13 @@ namespace Proyecto_escuela
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
             this.panel_barra_izquierda.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_menu)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

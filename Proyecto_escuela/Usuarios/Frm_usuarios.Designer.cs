@@ -32,7 +32,6 @@ namespace Proyecto_escuela.Usuarios
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.lbl_usuario = new System.Windows.Forms.Label();
             this.dgv_usuario = new System.Windows.Forms.DataGridView();
@@ -43,14 +42,18 @@ namespace Proyecto_escuela.Usuarios
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Grupo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_busqueda
             // 
             this.panel_busqueda.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_busqueda.Controls.Add(this.panel3);
+            this.panel_busqueda.Controls.Add(this.pictureBox1);
             this.panel_busqueda.Controls.Add(this.txt_usuario);
             this.panel_busqueda.Controls.Add(this.lbl_usuario);
             this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
@@ -58,15 +61,6 @@ namespace Proyecto_escuela.Usuarios
             this.panel_busqueda.Name = "panel_busqueda";
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(492, 43);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(325, 1);
-            this.panel3.TabIndex = 17;
             // 
             // txt_usuario
             // 
@@ -85,11 +79,11 @@ namespace Proyecto_escuela.Usuarios
             this.lbl_usuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_usuario.AutoSize = true;
             this.lbl_usuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_usuario.Location = new System.Drawing.Point(215, 21);
+            this.lbl_usuario.Location = new System.Drawing.Point(215, 16);
             this.lbl_usuario.Name = "lbl_usuario";
-            this.lbl_usuario.Size = new System.Drawing.Size(250, 23);
+            this.lbl_usuario.Size = new System.Drawing.Size(255, 23);
             this.lbl_usuario.TabIndex = 15;
-            this.lbl_usuario.Text = "Matricula del empleado";
+            this.lbl_usuario.Text = "Matricula del empleado:";
             // 
             // dgv_usuario
             // 
@@ -182,6 +176,27 @@ namespace Proyecto_escuela.Usuarios
             this.Grupo.MinimumWidth = 6;
             this.Grupo.Name = "Grupo";
             // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel3.Location = new System.Drawing.Point(219, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(599, 3);
+            this.panel3.TabIndex = 26;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources._1486505375_files_folder_search_magnifying_glass_file_search_magnifier_storage_81440;
+            this.pictureBox1.Location = new System.Drawing.Point(819, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
+            // 
             // Frm_usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -196,6 +211,7 @@ namespace Proyecto_escuela.Usuarios
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_usuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -203,7 +219,6 @@ namespace Proyecto_escuela.Usuarios
         #endregion
 
         private System.Windows.Forms.Panel panel_busqueda;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.Label lbl_usuario;
         public System.Windows.Forms.DataGridView dgv_usuario;
@@ -214,5 +229,7 @@ namespace Proyecto_escuela.Usuarios
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Grupo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

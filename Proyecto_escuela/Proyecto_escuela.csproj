@@ -472,6 +472,8 @@
   <ItemGroup>
     <None Include="Resources\colegioalfa.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1486505375-files-folder-search-magnifying-glass-file-search-magnifier-storage_81440.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
