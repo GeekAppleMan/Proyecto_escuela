@@ -40,10 +40,31 @@ namespace Proyecto_escuela.Clases
             }
             databaseConnection.Close();
         }
-        public void Cargar(DataGridView grid)
+        public void CargarEnEspera(DataGridView grid)
         {
             grid.Rows.Clear();
             string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno LIMIT 3";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                }
+            }
+            databaseConnection.Close();
+        }
+
+        public void CargarSalida(DataGridView grid)
+        {
+            grid.Rows.Clear();
+            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno LIMIT 1";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
