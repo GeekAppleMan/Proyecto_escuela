@@ -84,6 +84,16 @@ namespace Proyecto_escuela.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Arriba {
+            get {
+                object obj = ResourceManager.GetObject("Arriba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap calendario {
             get {
                 object obj = ResourceManager.GetObject("calendario", resourceCulture);
@@ -217,6 +227,16 @@ namespace Proyecto_escuela.Properties {
         internal static System.Drawing.Bitmap iniciar_sesion {
             get {
                 object obj = ResourceManager.GetObject("iniciar-sesion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap izquierda {
+            get {
+                object obj = ResourceManager.GetObject("izquierda", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

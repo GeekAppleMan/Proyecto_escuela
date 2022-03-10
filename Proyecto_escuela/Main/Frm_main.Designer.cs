@@ -458,7 +458,7 @@ namespace Proyecto_escuela
             this.tutoresToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.tutoresToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.familia;
             this.tutoresToolStripMenuItem.Name = "tutoresToolStripMenuItem";
-            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(103, 25);
+            this.tutoresToolStripMenuItem.Size = new System.Drawing.Size(103, 26);
             this.tutoresToolStripMenuItem.Text = "Tutores";
             this.tutoresToolStripMenuItem.Click += new System.EventHandler(this.tutoresToolStripMenuItem_Click);
             // 
@@ -468,7 +468,7 @@ namespace Proyecto_escuela
             this.alumnosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.alumnosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.leer;
             this.alumnosToolStripMenuItem.Name = "alumnosToolStripMenuItem";
-            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(113, 25);
+            this.alumnosToolStripMenuItem.Size = new System.Drawing.Size(113, 26);
             this.alumnosToolStripMenuItem.Text = "Alumnos";
             this.alumnosToolStripMenuItem.Click += new System.EventHandler(this.alumnosToolStripMenuItem_Click);
             // 
@@ -478,7 +478,7 @@ namespace Proyecto_escuela
             this.usuariosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.usuariosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.grupo;
             this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
-            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(111, 25);
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(111, 26);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
             // 
@@ -488,7 +488,7 @@ namespace Proyecto_escuela
             this.empleadosToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.empleadosToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.empleado;
             this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(136, 25);
+            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
             this.empleadosToolStripMenuItem.Text = "Empleados";
             this.empleadosToolStripMenuItem.Click += new System.EventHandler(this.empleadosToolStripMenuItem_Click);
             // 
@@ -498,7 +498,7 @@ namespace Proyecto_escuela
             this.salidasToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.salidasToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.puerta_de_salida;
             this.salidasToolStripMenuItem.Name = "salidasToolStripMenuItem";
-            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(101, 25);
+            this.salidasToolStripMenuItem.Size = new System.Drawing.Size(101, 26);
             this.salidasToolStripMenuItem.Text = "Salidas";
             this.salidasToolStripMenuItem.Click += new System.EventHandler(this.salidasToolStripMenuItem_Click);
             // 
@@ -508,7 +508,7 @@ namespace Proyecto_escuela
             this.cerrarSesionToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.cerrarSesionToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.cerrar_sesion;
             this.cerrarSesionToolStripMenuItem.Name = "cerrarSesionToolStripMenuItem";
-            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(150, 25);
+            this.cerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
             this.cerrarSesionToolStripMenuItem.Text = "Cerrar sesion";
             this.cerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesionToolStripMenuItem_Click);
             // 
@@ -518,7 +518,7 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.izquierdaToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.ajustes;
             this.izquierdaToolStripMenuItem.Name = "izquierdaToolStripMenuItem";
-            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 25);
+            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 26);
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
             // 
