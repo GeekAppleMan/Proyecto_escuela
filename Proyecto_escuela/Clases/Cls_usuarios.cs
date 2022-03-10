@@ -104,13 +104,13 @@ namespace Proyecto_escuela.Clases
                         resul_rol = "Basico";
                     }
                     Frm_credencial_usuario obj_credencial = new Frm_credencial_usuario();
-                    obj_credencial.lbl_matricula_empleado.Text = reader.GetString(1);
-                    obj_credencial.lbl_nombres_empleado.Text = reader.GetString(2);
-                    obj_credencial.lbl_apellidos_empleado.Text = reader.GetString(3);
-                    obj_credencial.lbl_fecha_empleado.Text = reader.GetString(4);
-                    obj_credencial.lbl_direccion_empleado.Text = reader.GetString(5);
-                    obj_credencial.lbl_correo_empleado.Text = reader.GetString(6);
-                    obj_credencial.lbl_telefono_empleado.Text = reader.GetString(7);
+                    obj_credencial.lbl_matricula_empleado.Text = "Matricula: " + reader.GetString(1);
+                    obj_credencial.lbl_nombres_empleado.Text = "Nombres: " + reader.GetString(2);
+                    obj_credencial.lbl_apellidos_empleado.Text = "Apellidos: " + reader.GetString(3);
+                    obj_credencial.lbl_fecha_empleado.Text = "Nacimiento: " + reader.GetString(4);
+                    obj_credencial.lbl_direccion_empleado.Text = "Direccion: " + reader.GetString(5);
+                    obj_credencial.lbl_correo_empleado.Text = "Correo: " + reader.GetString(6);
+                    obj_credencial.lbl_telefono_empleado.Text = "Telefono: " + reader.GetString(7);
                     try
                     {
                         obj_credencial.picture_imagen_perfil.Image = new Bitmap(reader.GetString(8));
@@ -119,8 +119,8 @@ namespace Proyecto_escuela.Clases
                     {
 
                     }
-                    obj_credencial.lbl_rol_empleado.Text = resul_rol;
-                    obj_credencial.lbl_estatus_empleado.Text = resul_estatus;
+                    obj_credencial.lbl_rol_empleado.Text = "Rol: " + resul_rol;
+                    obj_credencial.lbl_estatus_empleado.Text = "Estatus: " + resul_estatus;
                     obj_credencial.ShowDialog();
 
                 }

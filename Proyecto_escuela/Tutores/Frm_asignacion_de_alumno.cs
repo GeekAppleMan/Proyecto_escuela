@@ -13,7 +13,7 @@ namespace Proyecto_escuela
     public partial class Frm_Asignacion_de_alumno : Form
     {
         public static string Id_tutor { get; set; }
-
+        public static Form asignacion { get; set; }
         public Frm_Asignacion_de_alumno()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Proyecto_escuela
 
         private void Frm_Asignacion_de_alumno_Load(object sender, EventArgs e)
         {
-           
+            asignacion = this;
         }
 
         private void btn_asignar_alumno_Click(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace Proyecto_escuela
             }
             else
             {
-                new Cls_tutores().registrar_asignacion_alumno(dgv_tutor);
+                new Cls_tutores().registrar_asignacion_alumno();
             }
         }
     }

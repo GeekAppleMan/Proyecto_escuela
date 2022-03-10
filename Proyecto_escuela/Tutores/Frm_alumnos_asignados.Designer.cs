@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgv_alumno = new System.Windows.Forms.DataGridView();
@@ -46,18 +46,11 @@
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_matricula_alumno = new System.Windows.Forms.Label();
             this.lbl_estatus_alumno = new System.Windows.Forms.Label();
-            this.lbl_matricula = new System.Windows.Forms.Label();
             this.lbl_grupo_alumno = new System.Windows.Forms.Label();
-            this.lbl_tutor = new System.Windows.Forms.Label();
             this.lbl_direccion_alumno = new System.Windows.Forms.Label();
-            this.lbl_apellidos = new System.Windows.Forms.Label();
             this.lbl_fecha_alumno = new System.Windows.Forms.Label();
-            this.lbl_estatus = new System.Windows.Forms.Label();
             this.lbl_apellidos_alumno = new System.Windows.Forms.Label();
-            this.lbl_direccion = new System.Windows.Forms.Label();
             this.lbl_nombres_alumno = new System.Windows.Forms.Label();
-            this.lbl_telefono = new System.Windows.Forms.Label();
-            this.lbl_grupo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
@@ -110,14 +103,14 @@
             this.dgv_alumno.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_alumno.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_alumno.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_alumno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_alumno.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_alumno.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_alumno.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id_alumno,
@@ -129,14 +122,14 @@
             this.Grupo,
             this.Estatus,
             this.Imagen});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_alumno.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_alumno.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_alumno.EnableHeadersVisualStyles = false;
             this.dgv_alumno.GridColor = System.Drawing.Color.LightGray;
@@ -224,23 +217,16 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle());
+            this.tableLayoutPanel2.ColumnCount = 1;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.lbl_matricula_alumno, 1, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_estatus_alumno, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_matricula, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_grupo_alumno, 1, 5);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_tutor, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_direccion_alumno, 1, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_apellidos, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_fecha_alumno, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_estatus, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_apellidos_alumno, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_direccion, 0, 3);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_nombres_alumno, 1, 1);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_telefono, 0, 4);
-            this.tableLayoutPanel2.Controls.Add(this.lbl_grupo, 0, 5);
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel2.Controls.Add(this.lbl_matricula_alumno, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_estatus_alumno, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_grupo_alumno, 0, 5);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_direccion_alumno, 0, 4);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_fecha_alumno, 0, 3);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_apellidos_alumno, 0, 2);
+            this.tableLayoutPanel2.Controls.Add(this.lbl_nombres_alumno, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -260,154 +246,77 @@
             this.lbl_matricula_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_matricula_alumno.AutoSize = true;
             this.lbl_matricula_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula_alumno.Location = new System.Drawing.Point(136, 19);
+            this.lbl_matricula_alumno.Location = new System.Drawing.Point(3, 19);
             this.lbl_matricula_alumno.Name = "lbl_matricula_alumno";
-            this.lbl_matricula_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_matricula_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_matricula_alumno.TabIndex = 132;
-            this.lbl_matricula_alumno.Text = "Matricula";
+            this.lbl_matricula_alumno.Text = "Matricula:";
             // 
             // lbl_estatus_alumno
             // 
             this.lbl_estatus_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_estatus_alumno.AutoSize = true;
             this.lbl_estatus_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus_alumno.Location = new System.Drawing.Point(136, 386);
+            this.lbl_estatus_alumno.Location = new System.Drawing.Point(3, 386);
             this.lbl_estatus_alumno.Name = "lbl_estatus_alumno";
-            this.lbl_estatus_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_estatus_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_estatus_alumno.TabIndex = 130;
-            this.lbl_estatus_alumno.Text = "Activo";
-            // 
-            // lbl_matricula
-            // 
-            this.lbl_matricula.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_matricula.AutoSize = true;
-            this.lbl_matricula.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matricula.Location = new System.Drawing.Point(3, 19);
-            this.lbl_matricula.Name = "lbl_matricula";
-            this.lbl_matricula.Size = new System.Drawing.Size(127, 23);
-            this.lbl_matricula.TabIndex = 131;
-            this.lbl_matricula.Text = "Matricula:";
+            this.lbl_estatus_alumno.Text = "Activo:";
             // 
             // lbl_grupo_alumno
             // 
             this.lbl_grupo_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_grupo_alumno.AutoSize = true;
             this.lbl_grupo_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_grupo_alumno.Location = new System.Drawing.Point(136, 324);
+            this.lbl_grupo_alumno.Location = new System.Drawing.Point(3, 324);
             this.lbl_grupo_alumno.Name = "lbl_grupo_alumno";
-            this.lbl_grupo_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_grupo_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_grupo_alumno.TabIndex = 128;
-            this.lbl_grupo_alumno.Text = "Grupo";
-            // 
-            // lbl_tutor
-            // 
-            this.lbl_tutor.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_tutor.AutoSize = true;
-            this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tutor.Location = new System.Drawing.Point(3, 80);
-            this.lbl_tutor.Name = "lbl_tutor";
-            this.lbl_tutor.Size = new System.Drawing.Size(127, 23);
-            this.lbl_tutor.TabIndex = 119;
-            this.lbl_tutor.Text = "Nombres:";
+            this.lbl_grupo_alumno.Text = "Grupo:";
             // 
             // lbl_direccion_alumno
             // 
             this.lbl_direccion_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_direccion_alumno.AutoSize = true;
             this.lbl_direccion_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_direccion_alumno.Location = new System.Drawing.Point(136, 263);
+            this.lbl_direccion_alumno.Location = new System.Drawing.Point(3, 263);
             this.lbl_direccion_alumno.Name = "lbl_direccion_alumno";
-            this.lbl_direccion_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_direccion_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_direccion_alumno.TabIndex = 127;
-            this.lbl_direccion_alumno.Text = "Direccion";
-            // 
-            // lbl_apellidos
-            // 
-            this.lbl_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_apellidos.AutoSize = true;
-            this.lbl_apellidos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidos.Location = new System.Drawing.Point(3, 141);
-            this.lbl_apellidos.Name = "lbl_apellidos";
-            this.lbl_apellidos.Size = new System.Drawing.Size(127, 23);
-            this.lbl_apellidos.TabIndex = 120;
-            this.lbl_apellidos.Text = "Apellidos:";
+            this.lbl_direccion_alumno.Text = "Direccion:";
             // 
             // lbl_fecha_alumno
             // 
             this.lbl_fecha_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha_alumno.AutoSize = true;
             this.lbl_fecha_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_alumno.Location = new System.Drawing.Point(136, 202);
+            this.lbl_fecha_alumno.Location = new System.Drawing.Point(3, 202);
             this.lbl_fecha_alumno.Name = "lbl_fecha_alumno";
-            this.lbl_fecha_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_fecha_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_fecha_alumno.TabIndex = 126;
-            this.lbl_fecha_alumno.Text = "Fecha";
-            // 
-            // lbl_estatus
-            // 
-            this.lbl_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_estatus.AutoSize = true;
-            this.lbl_estatus.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus.Location = new System.Drawing.Point(3, 386);
-            this.lbl_estatus.Name = "lbl_estatus";
-            this.lbl_estatus.Size = new System.Drawing.Size(127, 23);
-            this.lbl_estatus.TabIndex = 129;
-            this.lbl_estatus.Text = "Estatus:";
+            this.lbl_fecha_alumno.Text = "Fecha:";
             // 
             // lbl_apellidos_alumno
             // 
             this.lbl_apellidos_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_apellidos_alumno.AutoSize = true;
             this.lbl_apellidos_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidos_alumno.Location = new System.Drawing.Point(136, 141);
+            this.lbl_apellidos_alumno.Location = new System.Drawing.Point(3, 141);
             this.lbl_apellidos_alumno.Name = "lbl_apellidos_alumno";
-            this.lbl_apellidos_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_apellidos_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_apellidos_alumno.TabIndex = 125;
-            this.lbl_apellidos_alumno.Text = "Apellidos";
-            // 
-            // lbl_direccion
-            // 
-            this.lbl_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_direccion.AutoSize = true;
-            this.lbl_direccion.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_direccion.Location = new System.Drawing.Point(3, 202);
-            this.lbl_direccion.Name = "lbl_direccion";
-            this.lbl_direccion.Size = new System.Drawing.Size(127, 23);
-            this.lbl_direccion.TabIndex = 121;
-            this.lbl_direccion.Text = "Nacimiento:";
+            this.lbl_apellidos_alumno.Text = "Apellidos:";
             // 
             // lbl_nombres_alumno
             // 
             this.lbl_nombres_alumno.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_nombres_alumno.AutoSize = true;
             this.lbl_nombres_alumno.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombres_alumno.Location = new System.Drawing.Point(136, 80);
+            this.lbl_nombres_alumno.Location = new System.Drawing.Point(3, 80);
             this.lbl_nombres_alumno.Name = "lbl_nombres_alumno";
-            this.lbl_nombres_alumno.Size = new System.Drawing.Size(241, 23);
+            this.lbl_nombres_alumno.Size = new System.Drawing.Size(374, 23);
             this.lbl_nombres_alumno.TabIndex = 124;
-            this.lbl_nombres_alumno.Text = "Nombres";
-            // 
-            // lbl_telefono
-            // 
-            this.lbl_telefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_telefono.AutoSize = true;
-            this.lbl_telefono.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_telefono.Location = new System.Drawing.Point(3, 263);
-            this.lbl_telefono.Name = "lbl_telefono";
-            this.lbl_telefono.Size = new System.Drawing.Size(127, 23);
-            this.lbl_telefono.TabIndex = 122;
-            this.lbl_telefono.Text = "Direccion:";
-            // 
-            // lbl_grupo
-            // 
-            this.lbl_grupo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_grupo.AutoSize = true;
-            this.lbl_grupo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_grupo.Location = new System.Drawing.Point(3, 324);
-            this.lbl_grupo.Name = "lbl_grupo";
-            this.lbl_grupo.Size = new System.Drawing.Size(127, 23);
-            this.lbl_grupo.TabIndex = 123;
-            this.lbl_grupo.Text = "Grupo:";
+            this.lbl_nombres_alumno.Text = "Nombres:";
             // 
             // panel3
             // 
@@ -487,18 +396,11 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         public System.Windows.Forms.Label lbl_matricula_alumno;
         public System.Windows.Forms.Label lbl_estatus_alumno;
-        private System.Windows.Forms.Label lbl_matricula;
         public System.Windows.Forms.Label lbl_grupo_alumno;
-        private System.Windows.Forms.Label lbl_tutor;
         public System.Windows.Forms.Label lbl_direccion_alumno;
-        private System.Windows.Forms.Label lbl_apellidos;
         public System.Windows.Forms.Label lbl_fecha_alumno;
-        private System.Windows.Forms.Label lbl_estatus;
         public System.Windows.Forms.Label lbl_apellidos_alumno;
-        private System.Windows.Forms.Label lbl_direccion;
         public System.Windows.Forms.Label lbl_nombres_alumno;
-        private System.Windows.Forms.Label lbl_telefono;
-        private System.Windows.Forms.Label lbl_grupo;
         private System.Windows.Forms.GroupBox gb_foto_perfil;
         public System.Windows.Forms.PictureBox picture_imagen_perfil;
     }

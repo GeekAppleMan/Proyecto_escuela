@@ -12,8 +12,8 @@ namespace Proyecto_escuela
 {
     public partial class Frm_Ajustes : Form
     {
-        private static Color color { get; set; }
-        private static Color color_letra { get; set; }
+        public static Color color { get; set; }
+        public static Color color_letra { get; set; }
         public Frm_Ajustes()
         {
             InitializeComponent();
@@ -62,40 +62,33 @@ namespace Proyecto_escuela
 
         private void btn_rojo_Click(object sender, EventArgs e)
         {
-            color = Color.Red;
-            cambiar_color_menu();
-        }
+            colorDialog_menu.ShowDialog();
+            if (colorDialog_menu.Color == null)
+            {
 
-        private void btn_azul_Click(object sender, EventArgs e)
+            }
+            else
+            {
+                color = colorDialog_menu.Color;
+                btn_select_color_menu.BackColor = colorDialog_menu.Color;
+                cambiar_color_menu();
+            }
+        }
+        private void button1_Click(object sender, EventArgs e)
         {
-            color = Color.FromArgb(0, 122, 204);
-            cambiar_color_menu();
-        }
+            colorDialog_letras.ShowDialog();
+            if (colorDialog_letras.Color == null)
+            {
 
-        private void btn_verde_Click(object sender, EventArgs e)
-        {
-            color = Color.Green;
-            cambiar_color_menu();
+            }
+            else
+            {
+                color_letra = colorDialog_letras.Color;
+                btn_select_color_letra.BackColor = colorDialog_letras.Color;
+                cambiar_color_letra();
+            }
         }
-
-        private void btn_white_Click(object sender, EventArgs e)
-        {
-            color_letra = Color.WhiteSmoke;
-            cambiar_color_letra();
-        }
-
-        private void btn_black_Click(object sender, EventArgs e)
-        {
-            color_letra = Color.Black;
-            cambiar_color_letra();
-        }
-
-        private void btn_red_Click(object sender, EventArgs e)
-        {
-            color_letra = Color.Red;
-            cambiar_color_letra();
-        }
-
+              
         private void rdb_izquierda_CheckedChanged(object sender, EventArgs e)
         {
             Frm_main.panel_izquierda.Visible = true;
@@ -107,6 +100,28 @@ namespace Proyecto_escuela
 
             Frm_main.panel_izquierda.Visible = false;
             Frm_main.menu_arriba.Visible = true;
+        }
+
+        private void Frm_Ajustes_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                if (color.Name == "0" && color_letra.Name == "0")
+                {
+                    btn_select_color_menu.BackColor = Color.FromArgb(0, 122, 204);
+                    btn_select_color_letra.BackColor = Color.FromArgb(0, 122, 204);
+                }
+                else
+                {
+                    btn_select_color_menu.BackColor = color;
+                    btn_select_color_letra.BackColor = color_letra;
+                }
+            }
+            catch (Exception)
+            {
+
+            }
+           
         }
     }
 }

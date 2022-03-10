@@ -95,6 +95,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Clases\Cls_Salida.cs" />
     <Compile Include="Clases\Cls_empleados.cs" />
     <Compile Include="Clases\Cls_Login.cs" />
     <Compile Include="Clases\Cls_registro.cs" />
@@ -167,6 +168,12 @@
     <Compile Include="Empleados\Frm_Modificar_empleado.Designer.cs">
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="Tutores\frm_registrar_tutor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tutores\frm_registrar_tutor.Designer.cs">
+      <DependentUpon>frm_registrar_tutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Salidas\Frm_salidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,12 +240,6 @@
     <Compile Include="Tutores\Frm_credencial_tutor.Designer.cs">
       <DependentUpon>Frm_credencial_tutor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tutores\Frm_registrar_tutores.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Tutores\Frm_registrar_tutores.Designer.cs">
-      <DependentUpon>Frm_registrar_tutores.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tutores\Frm_tutores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -293,6 +294,9 @@
     <EmbeddedResource Include="Empleados\Frm_credencial_empleado.resx">
       <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Tutores\frm_registrar_tutor.resx">
+      <DependentUpon>frm_registrar_tutor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Salidas\Frm_salidas.resx">
       <DependentUpon>Frm_salidas.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,9 +334,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_credencial_tutor.resx">
       <DependentUpon>Frm_credencial_tutor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Tutores\Frm_registrar_tutores.resx">
-      <DependentUpon>Frm_registrar_tutores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\Frm_tutores.resx">
       <DependentUpon>Frm_tutores.cs</DependentUpon>
@@ -471,6 +472,14 @@
   <ItemGroup>
     <None Include="Resources\colegioalfa.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\1486505375-files-folder-search-magnifying-glass-file-search-magnifier-storage_81440.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\izquierda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arriba.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

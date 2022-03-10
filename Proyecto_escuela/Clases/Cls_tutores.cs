@@ -19,6 +19,7 @@ namespace Proyecto_escuela
         private Random objrandom = new Random();
         private char letrarandom;
         public static int index { get; set; }
+        public static DataGridView alumnos { get; set; }
         public void cargar_tutores(string nombre, DataGridView grid)
         {
             string tutor = "";
@@ -168,6 +169,7 @@ namespace Proyecto_escuela
                     {
                         pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
                         MessageBox.Show("Se registro al tutor correctamente");
+                        buscar_id_tutor(correo,telefono);
                         principal.Close();
                         new Frm_Asignacion_de_alumno().ShowDialog();
                     }
@@ -175,6 +177,7 @@ namespace Proyecto_escuela
                     {
                         MessageBox.Show("se registro al tutor pero ocurrio un problema al guardar la imagen, comuniquese con el equipo de sistemas");
                         principal.Close();
+                        buscar_id_tutor(correo, telefono);
                         new Frm_Asignacion_de_alumno().ShowDialog();
                     }
                    
@@ -185,6 +188,25 @@ namespace Proyecto_escuela
                 MessageBox.Show("El numero de telefono no puede ser uno ya asignado a otro tutor,si el error persiste comuniquese con el equipo de sistemas");
             }
            
+        }
+        public void buscar_id_tutor(string correo, string telefono)
+        {
+            string query = "SELECT * FROM tb_padres WHERE correo = " + "'" + correo + "'" + "AND telefono= " + "'" + telefono + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+
+            reader = commandDatabase.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                while (reader.Read())
+                {
+                    Frm_Asignacion_de_alumno.Id_tutor = reader.GetString(0);
+                }
+            }
         }
         public void modificar_tutores(string nombres, string apellidos, string direcciones, string telefono, string correo, string fecha_nacimiento, string parentesco,string estatus, PictureBox pic_captura, Form principal, bool verificar)
         {
@@ -391,6 +413,7 @@ namespace Proyecto_escuela
                         else if(verificar_alumno_grid != true && verificar_alumno_bd != true)
                         {
                             asignacion.Rows.Add(reader.GetString(0), Frm_Asignacion_de_alumno.Id_tutor, reader.GetString(2), reader.GetString(3));
+                            alumnos = asignacion;
                         }
                     }
                     matricula2.Text = "";
@@ -428,13 +451,15 @@ namespace Proyecto_escuela
             databaseConnection.Close();
             return verificar;
         }
-        public void registrar_asignacion_alumno(DataGridView alumnos)
+        public void registrar_asignacion_alumno()
         {
             try
             {
                 for (int i = 0; i < alumnos.Rows.Count; i++)
                 {
-                    string query = "INSERT INTO `tb_relacion_tutor_alumno`(`Tutor`, `Alumno`) VALUES (" + "'" + alumnos[1, i].Value.ToString() + "'" + ',' + "'" + alumnos[0, i].Value.ToString() + "')";
+                    string tutor = alumnos[1, i].Value.ToString();
+                    string alumno2 = alumnos[0, i].Value.ToString();
+                    string query = "INSERT INTO `tb_relacion_tutor_alumno`(`Tutor`, `Alumno`) VALUES (" + "'" + tutor + "'" + ',' + "'" + alumno2 + "')";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
@@ -445,6 +470,7 @@ namespace Proyecto_escuela
                 }
                 MessageBox.Show("Se asignaron a los alumnos");
                 alumnos.Rows.Clear();
+                Frm_Asignacion_de_alumno.asignacion.Close();
             }
             catch (Exception)
             {

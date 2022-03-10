@@ -29,17 +29,13 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.btn_registrar_tutor = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.txt_tutor = new System.Windows.Forms.TextBox();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
             this.dgv_tutor = new System.Windows.Forms.DataGridView();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.Nombres = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,16 +46,23 @@ namespace Proyecto_escuela
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id_tutor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_registrar_tutor = new System.Windows.Forms.Button();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel_busqueda.SuspendLayout();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_busqueda
             // 
             this.panel_busqueda.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_busqueda.Controls.Add(this.btn_registrar_tutor);
             this.panel_busqueda.Controls.Add(this.panel3);
+            this.panel_busqueda.Controls.Add(this.pictureBox1);
+            this.panel_busqueda.Controls.Add(this.btn_registrar_tutor);
             this.panel_busqueda.Controls.Add(this.txt_tutor);
             this.panel_busqueda.Controls.Add(this.lbl_tutor);
             this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
@@ -68,44 +71,15 @@ namespace Proyecto_escuela
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 5;
             // 
-            // btn_registrar_tutor
-            // 
-            this.btn_registrar_tutor.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registrar_tutor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
-            this.btn_registrar_tutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_tutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registrar_tutor.Location = new System.Drawing.Point(3, 3);
-            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
-            this.btn_registrar_tutor.Size = new System.Drawing.Size(246, 41);
-            this.btn_registrar_tutor.TabIndex = 18;
-            this.btn_registrar_tutor.Text = "Registrar tutor";
-            this.btn_registrar_tutor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_registrar_tutor.UseVisualStyleBackColor = true;
-            this.btn_registrar_tutor.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(466, 43);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(325, 1);
-            this.panel3.TabIndex = 17;
-            // 
             // txt_tutor
             // 
             this.txt_tutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_tutor.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_tutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_tutor.Location = new System.Drawing.Point(469, 18);
+            this.txt_tutor.Location = new System.Drawing.Point(466, 16);
             this.txt_tutor.Name = "txt_tutor";
-            this.txt_tutor.Size = new System.Drawing.Size(318, 21);
+            this.txt_tutor.Size = new System.Drawing.Size(325, 21);
             this.txt_tutor.TabIndex = 0;
             this.txt_tutor.TextChanged += new System.EventHandler(this.txt_tutor_TextChanged);
             // 
@@ -114,11 +88,11 @@ namespace Proyecto_escuela
             this.lbl_tutor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbl_tutor.AutoSize = true;
             this.lbl_tutor.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tutor.Location = new System.Drawing.Point(267, 16);
+            this.lbl_tutor.Location = new System.Drawing.Point(262, 14);
             this.lbl_tutor.Name = "lbl_tutor";
-            this.lbl_tutor.Size = new System.Drawing.Size(179, 23);
+            this.lbl_tutor.Size = new System.Drawing.Size(184, 23);
             this.lbl_tutor.TabIndex = 15;
-            this.lbl_tutor.Text = "Nombre del tutor";
+            this.lbl_tutor.Text = "Nombre del tutor:";
             // 
             // panel_grid
             // 
@@ -139,14 +113,14 @@ namespace Proyecto_escuela
             this.dgv_tutor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_tutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_tutor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle27.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle27.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle27.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle27.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle27.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle27;
             this.dgv_tutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombres,
@@ -159,14 +133,14 @@ namespace Proyecto_escuela
             this.Estatus,
             this.id_tutor,
             this.imagen});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle28.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle28.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle28.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle28.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle28.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle28.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle28;
             this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_tutor.EnableHeadersVisualStyles = false;
             this.dgv_tutor.GridColor = System.Drawing.Color.LightGray;
@@ -178,24 +152,6 @@ namespace Proyecto_escuela
             this.dgv_tutor.Size = new System.Drawing.Size(1178, 503);
             this.dgv_tutor.TabIndex = 5;
             this.dgv_tutor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_tutor_CellClick);
-            // 
-            // dataGridViewImageColumn1
-            // 
-            this.dataGridViewImageColumn1.HeaderText = "Modificar";
-            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
-            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn1.MinimumWidth = 6;
-            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
-            this.dataGridViewImageColumn1.Width = 131;
-            // 
-            // dataGridViewImageColumn2
-            // 
-            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
-            this.dataGridViewImageColumn2.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
-            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.dataGridViewImageColumn2.MinimumWidth = 6;
-            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
-            this.dataGridViewImageColumn2.Width = 131;
             // 
             // Nombres
             // 
@@ -267,6 +223,65 @@ namespace Proyecto_escuela
             this.imagen.Name = "imagen";
             this.imagen.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources._1486505375_files_folder_search_magnifying_glass_file_search_magnifier_storage_81440;
+            this.pictureBox1.Location = new System.Drawing.Point(797, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btn_registrar_tutor
+            // 
+            this.btn_registrar_tutor.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_registrar_tutor.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
+            this.btn_registrar_tutor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_tutor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registrar_tutor.Location = new System.Drawing.Point(3, 3);
+            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
+            this.btn_registrar_tutor.Size = new System.Drawing.Size(246, 41);
+            this.btn_registrar_tutor.TabIndex = 18;
+            this.btn_registrar_tutor.Text = "Registrar tutor";
+            this.btn_registrar_tutor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_registrar_tutor.UseVisualStyleBackColor = true;
+            this.btn_registrar_tutor.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.HeaderText = "Modificar";
+            this.dataGridViewImageColumn1.Image = global::Proyecto_escuela.Properties.Resources.usuario__4_;
+            this.dataGridViewImageColumn1.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 131;
+            // 
+            // dataGridViewImageColumn2
+            // 
+            this.dataGridViewImageColumn2.HeaderText = "Eliminar";
+            this.dataGridViewImageColumn2.Image = global::Proyecto_escuela.Properties.Resources.usuario__3_;
+            this.dataGridViewImageColumn2.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.dataGridViewImageColumn2.MinimumWidth = 6;
+            this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
+            this.dataGridViewImageColumn2.Width = 131;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel3.Location = new System.Drawing.Point(266, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(530, 3);
+            this.panel3.TabIndex = 22;
+            // 
             // Frm_tutores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -282,6 +297,7 @@ namespace Proyecto_escuela
             this.panel_busqueda.PerformLayout();
             this.panel_grid.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -289,7 +305,6 @@ namespace Proyecto_escuela
         #endregion
 
         private System.Windows.Forms.Panel panel_busqueda;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_tutor;
         private System.Windows.Forms.Label lbl_tutor;
         private System.Windows.Forms.Panel panel_grid;
@@ -307,5 +322,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_tutor;
         private System.Windows.Forms.DataGridViewTextBoxColumn imagen;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
     }
 }

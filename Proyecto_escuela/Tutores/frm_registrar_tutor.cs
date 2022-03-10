@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Drawing.Imaging;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,57 +12,14 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    public partial class Frm_registrar_tutores : Form
+    public partial class frm_registrar_tutor : Form
     {
         Cls_tutores obj_tutores = new Cls_tutores();
         private FilterInfoCollection misdispositivos;
         private VideoCaptureDevice miwebcam;
-        public Frm_registrar_tutores()
+        public frm_registrar_tutor()
         {
             InitializeComponent();
-        }
-
-        private void Frm_registrar_tutores_Load(object sender, EventArgs e)
-        {
-            cargar_dispositivo();
-        }
-
-        private void cargar_dispositivo()
-        {
-            combo_dispositivos.Items.Clear();
-            misdispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            if (misdispositivos.Count > 0)
-            {
-                for (int i = 0; i < misdispositivos.Count; i++)
-                {
-                    combo_dispositivos.Items.Add(misdispositivos[i].Name.ToString());
-                    combo_dispositivos.Text = misdispositivos[0].Name.ToString();
-                }  
-            }
-            else
-            {
-                combo_dispositivos.Text = "";
-            }
-        }
-
-        private void cerrar_webcam()
-        {
-            if (miwebcam!=null && miwebcam.IsRunning)
-            {
-                miwebcam.SignalToStop();
-                miwebcam = null;
-            }
-        }
-
-        private void capturando (object sender, NewFrameEventArgs eventArgs)
-        {
-            Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
-            picture_tiempo_real.Image = imagen;
-        }
-
-        private void Frm_registrar_tutores_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            cerrar_webcam();
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
@@ -89,6 +45,38 @@ namespace Proyecto_escuela
                 }
             }
         }
+        private void cargar_dispositivo()
+        {
+            combo_dispositivos.Items.Clear();
+            misdispositivos = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            if (misdispositivos.Count > 0)
+            {
+                for (int i = 0; i < misdispositivos.Count; i++)
+                {
+                    combo_dispositivos.Items.Add(misdispositivos[i].Name.ToString());
+                    combo_dispositivos.Text = misdispositivos[0].Name.ToString();
+                }
+            }
+            else
+            {
+                combo_dispositivos.Text = "";
+            }
+        }
+        private void cerrar_webcam()
+        {
+            if (miwebcam != null && miwebcam.IsRunning)
+            {
+                miwebcam.SignalToStop();
+                miwebcam = null;
+            }
+        }
+
+        private void capturando(object sender, NewFrameEventArgs eventArgs)
+        {
+            Bitmap imagen = (Bitmap)eventArgs.Frame.Clone();
+            picture_tiempo_real.Image = imagen;
+        }
+
 
         private void btn_capturar_foto_Click(object sender, EventArgs e)
         {
@@ -99,11 +87,6 @@ namespace Proyecto_escuela
             }
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void btn_registrar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(txt_correo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || string.IsNullOrEmpty(combo_parentesco.Text) || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_correo.Text == "Correo" || txt_telefono.Text == "Telefono")
@@ -112,11 +95,9 @@ namespace Proyecto_escuela
             }
             else
             {
-                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura,this);
+                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
             }
-           
         }
-
         private void txt_nombres_Leave(object sender, EventArgs e)
         {
             if (txt_nombres.Text == "")
@@ -244,6 +225,16 @@ namespace Proyecto_escuela
             {
                 e.Handled = true;
             }
+        }
+
+        private void frm_registrar_tutor_Load(object sender, EventArgs e)
+        {
+            cargar_dispositivo();
+        }
+
+        private void frm_registrar_tutor_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            cerrar_webcam();
         }
 
     }
