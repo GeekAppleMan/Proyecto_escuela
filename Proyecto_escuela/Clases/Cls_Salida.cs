@@ -36,6 +36,10 @@ namespace Proyecto_escuela.Clases
                     {
                         estatu = 3;
                     }
+                    if (reader.GetString(0)=="4")
+                    {
+                        estatu = 4;
+                    }
                 }
             }
             databaseConnection.Close();
@@ -82,9 +86,9 @@ namespace Proyecto_escuela.Clases
             databaseConnection.Close();
         }
 
-        public void Estatus3()
+        public void Estatus4()
         {
-            string query = "INSERT INTO tb_salida_bitacora SELECT * from tb_salida WHERE id_estatus_salida='3'";
+            string query = "INSERT INTO tb_salida_bitacora SELECT * from tb_salida WHERE id_estatus_salida='4'";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
