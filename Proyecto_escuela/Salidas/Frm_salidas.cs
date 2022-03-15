@@ -32,15 +32,15 @@ namespace Proyecto_escuela
         private void Frm_salidas_Load(object sender, EventArgs e)
         {
             obj_salida.estatus();
-            if (obj_salida.estatu==2)
+            if (obj_salida.estatus2==2)
             {
                 cargar_EnEspera();
             }
-            else if (obj_salida.estatu==3)
+            if (obj_salida.estatus3==3)
             {
                 cargarsalidadgv();
             }
-            else if(obj_salida.estatu==4)
+            if(obj_salida.estatus4==4)
             {
                 obj_salida.Estatus4();
             }
@@ -51,15 +51,15 @@ namespace Proyecto_escuela
         private void timer1_Tick(object sender, EventArgs e)
         {
             obj_salida.estatus();
-            if (obj_salida.estatu == 2)
+            if (obj_salida.estatus2 == 2)
             {
                 cargar_EnEspera();
             }
-            else if (obj_salida.estatu == 3)
+            if (obj_salida.estatus3 == 3)
             {
                 cargarsalidadgv();
             }
-            else if (obj_salida.estatu == 4)
+            if (obj_salida.estatus4 == 4)
             {
                 obj_salida.Estatus4();
             }
