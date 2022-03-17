@@ -32,13 +32,13 @@ namespace Proyecto_escuela.Login
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
             this.lbltitulo = new System.Windows.Forms.Label();
-            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -60,7 +60,7 @@ namespace Proyecto_escuela.Login
             this.lbljane.AutoSize = true;
             this.lbljane.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbljane.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lbljane.Location = new System.Drawing.Point(24, 152);
+            this.lbljane.Location = new System.Drawing.Point(12, 153);
             this.lbljane.Name = "lbljane";
             this.lbljane.Size = new System.Drawing.Size(167, 23);
             this.lbljane.TabIndex = 3;
@@ -81,6 +81,23 @@ namespace Proyecto_escuela.Login
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(576, 327);
             this.panel2.TabIndex = 1;
+            // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
+            this.btniniciarsesion.Location = new System.Drawing.Point(63, 254);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
+            this.btniniciarsesion.TabIndex = 60;
+            this.btniniciarsesion.Text = "Reestablecer contraseña";
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // linkLabelRegresar
             // 
@@ -157,22 +174,6 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.Size = new System.Drawing.Size(259, 23);
             this.lbltitulo.TabIndex = 51;
             this.lbltitulo.Text = "Reestablecer contraseña";
-            // 
-            // btniniciarsesion
-            // 
-            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(63, 254);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
-            this.btniniciarsesion.TabIndex = 60;
-            this.btniniciarsesion.Text = "Reestablecer contraseña";
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
             // 
             // Frm_Reestablecercontraseña
             // 
