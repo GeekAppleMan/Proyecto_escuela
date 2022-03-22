@@ -14,6 +14,8 @@ namespace Proyecto_escuela.Clases
         private static string id_empleado { get; set; }
         private static string nombre_empleado { get; set; }
         public static string rol { get; set; }
+
+        public int comparacion=0;
         public void comparar_login(string usuario, string telefono,string contraseña)
         {
             try
@@ -124,7 +126,7 @@ namespace Proyecto_escuela.Clases
             reader = commandDatabase.ExecuteReader();
             if (reader.Read())
             {
-
+                comparacion = 1;
             }
             else
             {
