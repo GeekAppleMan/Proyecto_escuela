@@ -14,8 +14,8 @@ namespace Proyecto_escuela.Login
     public partial class Frm_Reestablecercontraseña : Form
     {
         Frm_login objlog = new Frm_login();
-        Cls_Login objClaseLogin= new Cls_Login();
-
+        Cls_Login objClaseLogin = new Cls_Login();
+        FrmLoginCodigo objcod = new FrmLoginCodigo();
         public Frm_Reestablecercontraseña()
         {
             InitializeComponent();

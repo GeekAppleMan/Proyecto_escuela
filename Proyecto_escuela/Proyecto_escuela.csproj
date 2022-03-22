@@ -168,11 +168,11 @@
     <Compile Include="Empleados\Frm_Modificar_empleado.Designer.cs">
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\ClsCodigoLogin.cs">
+    <Compile Include="Login\FrmLoginCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login\ClsCodigoLogin.Designer.cs">
-      <DependentUpon>ClsCodigoLogin.cs</DependentUpon>
+    <Compile Include="Login\FrmLoginCodigo.Designer.cs">
+      <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </Compile>
     <Compile Include="Tutores\frm_registrar_tutor.cs">
       <SubType>Form</SubType>
@@ -300,8 +300,8 @@
     <EmbeddedResource Include="Empleados\Frm_credencial_empleado.resx">
       <DependentUpon>Frm_credencial_empleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\ClsCodigoLogin.resx">
-      <DependentUpon>ClsCodigoLogin.cs</DependentUpon>
+    <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
+      <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\frm_registrar_tutor.resx">
       <DependentUpon>frm_registrar_tutor.cs</DependentUpon>

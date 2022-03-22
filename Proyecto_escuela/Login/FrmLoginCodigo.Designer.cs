@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_escuela.Login
 {
-    partial class FrmLogin
+    partial class FrmLoginCodigo
     {
         /// <summary>
         /// Required designer variable.

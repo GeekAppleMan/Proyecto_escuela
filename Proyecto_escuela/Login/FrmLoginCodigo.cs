@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Proyecto_escuela.Login
 {
-    public partial class FrmLogin : Form
+    public partial class FrmLoginCodigo : Form
     {
-        public FrmLogin()
+        public FrmLoginCodigo()
         {
             InitializeComponent();
         }
