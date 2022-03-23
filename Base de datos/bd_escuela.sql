@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-03-2022 a las 19:13:26
+-- Tiempo de generación: 23-03-2022 a las 21:44:09
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -36,16 +36,16 @@ CREATE TABLE `tb_alumnos` (
   `direccion` varchar(255) NOT NULL,
   `grupo` varchar(255) NOT NULL,
   `estatus` int(11) NOT NULL,
-  `foto_perfil` varchar(255) NOT NULL
+  `foto_perfil` varchar(255) NOT NULL,
+  `codigo_imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_alumnos`
 --
 
-INSERT INTO `tb_alumnos` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`, `foto_perfil`) VALUES
-(1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', '6:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/7I16F8A12E0E8I.jpg'),
-(4, '18347322', 'Diego Fernando C', 'Macias Diaz', '04/04/2000', 'Nuevo Nogales', '3:A', 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/9E4C6A3F9I1B.jpg');
+INSERT INTO `tb_alumnos` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`, `foto_perfil`, `codigo_imagen`) VALUES
+(34, '17340346', 'Jaime alberto', 'Sanchez Martinez', '28/12/2021', 'Cuba 790', '1:A', 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/13E10H8H5I2H1C.jpg', '13E10H8H5I2H1C');
 
 -- --------------------------------------------------------
 
@@ -64,17 +64,19 @@ CREATE TABLE `tb_empleados` (
   `telefono` varchar(10) NOT NULL,
   `foto_perfil` varchar(255) NOT NULL,
   `rol` varchar(250) NOT NULL,
-  `estatus` varchar(25) NOT NULL
+  `estatus` varchar(25) NOT NULL,
+  `codigo_imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_empleados`
 --
 
-INSERT INTO `tb_empleados` (`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`) VALUES
-(2, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', 'Jaime@gmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1F15C2G4G18C17H.jpg', '1', '1'),
-(3, '17340347', 'Giovanny', 'Siqueiros', '05/09/2000', 'NA', 'Giovanny@gmail.com', '6311987211', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/11G11G8I2H6A16I.jpg', '1', '1'),
-(7, '18340342', 'Uriel', 'Orozco', '08/02/2000', 'na', 'uriel@gmail.com', '6311987211', '', '1', '1');
+INSERT INTO `tb_empleados` (`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`, `codigo_imagen`) VALUES
+(2, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', 'Jaime@gmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1F15C2G4G18C17H.jpg', '1', '1', ''),
+(3, '17340347', 'Giovanny', 'Siqueiros', '05/09/2000', 'NA', 'Giovanny@gmail.com', '6311987211', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/11G11G8I2H6A16I.jpg', '1', '1', ''),
+(7, '18340342', 'Uriel', 'Orozco', '08/02/2000', 'na', 'uriel@gmail.com', '6311987211', '', '1', '1', ''),
+(8, '17340322', 'Jaime Alberto', 'Sanchez Martinez', '28/12/2021', 'Cuba 790', 'Jaime13@gmail.com', '6311987311', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/7H13C18D16B13F0F.jpg', '1', '1', '7H13C18D16B13F0F');
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,8 @@ CREATE TABLE `tb_empleados_usuarios` (
 INSERT INTO `tb_empleados_usuarios` (`id_usuario`, `id_empleado`) VALUES
 (11, '2'),
 (12, '3'),
-(13, '7');
+(13, '7'),
+(14, '8');
 
 -- --------------------------------------------------------
 
@@ -123,18 +126,16 @@ CREATE TABLE `tb_padres` (
   `fecha_nacimiento` varchar(255) NOT NULL,
   `parentesco` int(20) NOT NULL,
   `estatus` int(11) NOT NULL,
-  `foto_perfil` varchar(255) NOT NULL
+  `foto_perfil` varchar(255) NOT NULL,
+  `codigo_imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `tb_padres`
 --
 
-INSERT INTO `tb_padres` (`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus`, `foto_perfil`) VALUES
-(16, 'Jaime Alberto ', 'Sanchez Martinez ', 'Cuba 790 ', '6311987311', 'Jaimehbo13@hotmail.com', '08/04/2000', 1, 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/7I16F8A12E0E8I.jpg'),
-(21, 'Helmer antonio', 'Gamez Castillo', 'Av los maestros', '6311987312', 'Helmer@gmail.com', '28/12/2021', 1, 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/15B18B12C5B14G9D.jpg'),
-(22, 'Diego Fernando', 'Macias Diaz', 'jnajndsa', '123123123', 'ansjdnasdnasd', '28/12/2021', 1, 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/17I14G4I3F8A10G.jpg'),
-(23, 'hbasjhdb', 'hashjdbsa', 'ajsbdhjads', '123123', 'jbahdjasd', '28/12/2021', 1, 1, 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/13E2H16A15A18B3I.jpg');
+INSERT INTO `tb_padres` (`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus`, `foto_perfil`, `codigo_imagen`) VALUES
+(38, 'Jaime', 'Sanchez', 'Cuba 790', '6311987311', 'Jaime@gmail.com', '28/12/2021', 1, 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/19G0D8B6E6I1A.jpg', '19G0D8B6E6I1A');
 
 -- --------------------------------------------------------
 
@@ -175,7 +176,8 @@ CREATE TABLE `tb_registro` (
 INSERT INTO `tb_registro` (`id_usuario`, `correo`, `telefono`, `contraseña`) VALUES
 (11, 'Jaime@gmail.com', '6311987311', '123'),
 (12, 'Giovanny@gmail.com', '6311987211', '123'),
-(13, 'uriel@gmail.com', '6311987111', '123');
+(13, 'uriel@gmail.com', '6311987111', '123'),
+(14, 'Jaime13@gmail.com', '6311987311', '123');
 
 -- --------------------------------------------------------
 
@@ -197,7 +199,8 @@ INSERT INTO `tb_relacion_alumno_usuario` (`id_relacion`, `id_alumno`, `id_usuari
 (1, '8', '5'),
 (2, '9', '8'),
 (3, '11', '9'),
-(4, '12', '10');
+(4, '12', '10'),
+(5, '23', '11');
 
 -- --------------------------------------------------------
 
@@ -216,10 +219,7 @@ CREATE TABLE `tb_relacion_tutor_alumno` (
 --
 
 INSERT INTO `tb_relacion_tutor_alumno` (`id_relacion`, `Tutor`, `Alumno`) VALUES
-(3, '16', '1'),
-(4, '16', '5'),
-(5, '22', '5'),
-(6, '22', '1');
+(11, '38', '34');
 
 -- --------------------------------------------------------
 
@@ -263,16 +263,6 @@ CREATE TABLE `tb_usuarios_alumnos` (
   `correo` varchar(255) NOT NULL,
   `contraseña` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `tb_usuarios_alumnos`
---
-
-INSERT INTO `tb_usuarios_alumnos` (`id_usuario`, `matricula`, `correo`, `contraseña`) VALUES
-(4, '123556', 'Correo', 'Contraseña'),
-(8, '1234', 'asd', 'asdasd'),
-(9, '1234212323', 'asdwqdsad', 'asdasdasd'),
-(10, '12232', 'Jaime@gmail.com', '123');
 
 --
 -- Índices para tablas volcadas
@@ -356,19 +346,19 @@ ALTER TABLE `tb_usuarios_alumnos`
 -- AUTO_INCREMENT de la tabla `tb_alumnos`
 --
 ALTER TABLE `tb_alumnos`
-  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados_usuarios`
 --
 ALTER TABLE `tb_empleados_usuarios`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_estatus_salida`
@@ -380,25 +370,25 @@ ALTER TABLE `tb_estatus_salida`
 -- AUTO_INCREMENT de la tabla `tb_padres`
 --
 ALTER TABLE `tb_padres`
-  MODIFY `id_tutor` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id_tutor` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_registro`
 --
 ALTER TABLE `tb_registro`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_relacion_alumno_usuario`
 --
 ALTER TABLE `tb_relacion_alumno_usuario`
-  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_relacion_tutor_alumno`
 --
 ALTER TABLE `tb_relacion_tutor_alumno`
-  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_salida`
@@ -416,7 +406,7 @@ ALTER TABLE `tb_salida_bitacora`
 -- AUTO_INCREMENT de la tabla `tb_usuarios_alumnos`
 --
 ALTER TABLE `tb_usuarios_alumnos`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
