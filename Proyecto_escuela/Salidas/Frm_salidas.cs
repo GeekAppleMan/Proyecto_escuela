@@ -19,40 +19,49 @@ namespace Proyecto_escuela
             InitializeComponent();
         }
 
-        private void cargar_salidadgv1()
+        private void cargar_EnEspera()
         {
-            obj_salida.Cargar(dataGridView1);
+            obj_salida.CargarEnEspera(dataGridView1);
         }
 
-        private void cargarsalidadgv_alumno()
+        private void cargarsalidadgv()
         {
-            obj_salida.Cargar(dgv_alumno);
+            obj_salida.CargarSalida(dgv_alumno);
         }
 
         private void Frm_salidas_Load(object sender, EventArgs e)
         {
             obj_salida.estatus();
-            if (obj_salida.estatu==2)
+            if (obj_salida.estatus2==2)
             {
-                cargar_salidadgv1();
+                cargar_EnEspera();
             }
-            else if (obj_salida.estatu==3)
+            if (obj_salida.estatus3==3)
             {
-                cargarsalidadgv_alumno();
+                cargarsalidadgv();
             }
+            if(obj_salida.estatus4==4)
+            {
+                obj_salida.Estatus4();
+            }
+
             timer1.Start();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             obj_salida.estatus();
-            if (obj_salida.estatu == 2)
+            if (obj_salida.estatus2 == 2)
             {
-                cargar_salidadgv1();
+                cargar_EnEspera();
             }
-            else if (obj_salida.estatu == 3)
+            if (obj_salida.estatus3 == 3)
             {
-                cargarsalidadgv_alumno();
+                cargarsalidadgv();
+            }
+            if (obj_salida.estatus4 == 4)
+            {
+                obj_salida.Estatus4();
             }
         }
     }

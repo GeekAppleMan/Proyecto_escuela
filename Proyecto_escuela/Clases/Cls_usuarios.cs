@@ -113,7 +113,7 @@ namespace Proyecto_escuela.Clases
                     obj_credencial.lbl_telefono_empleado.Text = "Telefono: " + reader.GetString(7);
                     try
                     {
-                        obj_credencial.picture_imagen_perfil.Image = new Bitmap(reader.GetString(8));
+                        obj_credencial.picture_imagen_perfil.LoadAsync(reader.GetString(8));
                     }
                     catch (Exception)
                     {

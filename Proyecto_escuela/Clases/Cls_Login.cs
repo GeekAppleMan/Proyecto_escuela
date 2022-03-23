@@ -14,6 +14,8 @@ namespace Proyecto_escuela.Clases
         private static string id_empleado { get; set; }
         private static string nombre_empleado { get; set; }
         public static string rol { get; set; }
+
+        public int comparacion=0;
         public void comparar_login(string usuario, string telefono,string contraseña)
         {
             try
@@ -21,9 +23,6 @@ namespace Proyecto_escuela.Clases
                 string query = "SELECT * from tb_registro Where correo = " + "'" + usuario + "'" + "AND contraseña = " + "'" + contraseña + "'";
                 MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                 MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
-                //commandDatabase.Parameters.AddWithValue("@Correo", usuario);
-                //commandDatabase.Parameters.AddWithValue("@Telefono", telefono);
-                //commandDatabase.Parameters.AddWithValue("@Contraseña", contraseña);
                 commandDatabase.CommandTimeout = 60;
                 MySqlDataReader reader;
                 databaseConnection.Open();
@@ -114,6 +113,25 @@ namespace Proyecto_escuela.Clases
                 MessageBox.Show("Ocurrio un error comuniquese con el equipo de sistemas");
             }
             return estatus;
+        }
+
+        public void CompararCorreo(string correo)
+        {
+            string query = "SELECT correo from tb_registro Where correo = " + "'" + correo +"'" ;
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            if (reader.Read())
+            {
+                comparacion = 1;
+            }
+            else
+            {
+                MessageBox.Show("Intoduzca un correo electronico registrado valido");
+            }
         }
     }
 }

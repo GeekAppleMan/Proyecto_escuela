@@ -46,7 +46,7 @@ namespace Proyecto_escuela
 
         private void dgv_alumno_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            Frm_tutores_asignados.id_alumno = dgv_alumno[0, e.RowIndex].Value.ToString();
+         
             if (e.RowIndex == -1)
             {
 
@@ -55,6 +55,7 @@ namespace Proyecto_escuela
             {
                 if (e.ColumnIndex == 0 || e.ColumnIndex == 1 || e.ColumnIndex == 2 || e.ColumnIndex == 3 || e.ColumnIndex == 4 || e.ColumnIndex == 5 || e.ColumnIndex == 6 || e.ColumnIndex == 7)
                 {
+                    Frm_tutores_asignados.id_alumno = dgv_alumno[0, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_matricula_alumno.Text = "Matricula: " + dgv_alumno[1, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_nombres_alumno.Text = "Nombres: " + dgv_alumno[2, e.RowIndex].Value.ToString();
                     obj_credencial.lbl_apellidos_alumno.Text = "Apellidos: " + dgv_alumno[3, e.RowIndex].Value.ToString();

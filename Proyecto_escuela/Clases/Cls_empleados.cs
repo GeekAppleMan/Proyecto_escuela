@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
@@ -12,7 +13,7 @@ namespace Proyecto_escuela.Clases
 {
     class Cls_empleados : Cls_conexion
     {
-        private string path = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/";
+        private string path = Application.StartupPath + @"\Imagenes\";
         public static bool conservar_modificar_imagen { get; set; }
         private Random objrandom = new Random();
         private char letrarandom;
@@ -55,7 +56,7 @@ namespace Proyecto_escuela.Clases
                         {
                             resul_rol = "Basico";
                         }
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), resul_rol, resul_estatus, reader.GetString(8));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), resul_rol, resul_estatus, reader.GetString(8),reader.GetString(11));
                         empleados = grid;
                     }
                 }
@@ -100,7 +101,7 @@ namespace Proyecto_escuela.Clases
                         {
                             resul_rol = "Basico";
                         }
-                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), resul_rol, resul_estatus, reader.GetString(8));
+                        grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), reader.GetString(7), resul_rol, resul_estatus, reader.GetString(8),reader.GetString(11));
                         empleados = grid;
                     }
                 }
@@ -144,9 +145,9 @@ namespace Proyecto_escuela.Clases
                         default:
                             break;
                     }
-                    string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                    string imagen_bd = @"http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/" + codigo_imagen + ".jpg";
                     string path_save = path + codigo_imagen + ".jpg";
-                    string query = "INSERT INTO `tb_empleados`(`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`)VALUES ('" + "" + "'," + "'" + matricula + "'," + "'" + nombres + "'," + "'" + apellidos + "'," + "'" + fecha_nacimiento + "'," + "'" + direccion + "'," + "'" + correo + "'," + "'" + telefono + "'," + "'" + imagen_bd + "'," + "'" + resul_rol + "'," + "'" + "1" + "')";
+                    string query = "INSERT INTO `tb_empleados`(`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`,`codigo_imagen`)VALUES ('" + "" + "'," + "'" + matricula + "'," + "'" + nombres + "'," + "'" + apellidos + "'," + "'" + fecha_nacimiento + "'," + "'" + direccion + "'," + "'" + correo + "'," + "'" + telefono + "'," + "'" + imagen_bd + "'," + "'" + resul_rol + "'," + "'" + "1"  + "'" + "," + "'" + codigo_imagen + "')";
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
                     MySqlDataReader reader;
@@ -155,7 +156,19 @@ namespace Proyecto_escuela.Clases
                     try
                     {
                         pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
+                        byte[] data;
+                        using (Image image = Image.FromFile(path_save))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                data = m.ToArray();
+                            }
+                        }
+                        FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_empleados", "escuela", "escuela2022");
+                        fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
                         MessageBox.Show("Se registro al empleado correctamente");
+                        File.Delete(path_save);
                     }
                     catch (Exception)
                     {
@@ -284,7 +297,7 @@ namespace Proyecto_escuela.Clases
                         }
                         else if (verificar_codigo == false)
                         {
-                            string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                            string imagen_bd = @"http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/" + codigo_imagen + ".jpg";
                             string path_save = path + codigo_imagen + ".jpg";
                             string resul_rol = "";
                             switch (rol)
@@ -306,7 +319,7 @@ namespace Proyecto_escuela.Clases
                             {
                                 resul_estatus = "2";
                             }
-                            string query = "UPDATE `tb_empleados` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`rol`= " + "'" + resul_rol + "'," + "`estatus`= " + "'" + resul_estatus + "'," + "`foto_perfil`= " + "'" + imagen_bd + "'" + "WHERE id_empleado = " + "'" + id_empleado + "'";
+                            string query = "UPDATE `tb_empleados` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`rol`= " + "'" + resul_rol + "'," + "`estatus`= " + "'" + resul_estatus + "'," + "`foto_perfil`= " + "'" + imagen_bd + "'" + "," + "`codigo_imagen`= " + "'" + codigo_imagen + "'" + "WHERE id_empleado = " + "'" + id_empleado + "'";
                             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                             commandDatabase.CommandTimeout = 60;
@@ -315,8 +328,20 @@ namespace Proyecto_escuela.Clases
                             reader = commandDatabase.ExecuteReader();
                             try
                             {
-                                File.Delete(empleados[9, index].Value.ToString());
                                 pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
+                                byte[] data;
+                                using (Image image = Image.FromFile(path_save))
+                                {
+                                    using (MemoryStream m = new MemoryStream())
+                                    {
+                                        image.Save(m, image.RawFormat);
+                                        data = m.ToArray();
+                                    }
+                                }
+                                FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_empleados", "escuela", "escuela2022");
+                                fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
+                                fTPHelper.Delete(empleados[11, index].Value.ToString() + ".jpg");
+                                File.Delete(path_save);
                                 MessageBox.Show("Se modifico al empleado correctamente");
                                 buscar_id_usuario(id_empleado, correo, telefono);
                                 principal.Close();

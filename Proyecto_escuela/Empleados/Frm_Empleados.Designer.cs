@@ -32,6 +32,8 @@ namespace Proyecto_escuela.Empleados
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_registar_empleado = new System.Windows.Forms.Button();
             this.txt_empleado = new System.Windows.Forms.TextBox();
             this.lbl_matricula_empleado = new System.Windows.Forms.Label();
@@ -47,11 +49,10 @@ namespace Proyecto_escuela.Empleados
             this.Rol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Imagen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel_busqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).BeginInit();
             this.SuspendLayout();
             // 
             // panel_busqueda
@@ -67,6 +68,27 @@ namespace Proyecto_escuela.Empleados
             this.panel_busqueda.Name = "panel_busqueda";
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 10;
+            // 
+            // panel3
+            // 
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.panel3.Location = new System.Drawing.Point(253, 44);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(589, 3);
+            this.panel3.TabIndex = 24;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources._1486505375_files_folder_search_magnifying_glass_file_search_magnifier_storage_81440;
+            this.pictureBox1.Location = new System.Drawing.Point(843, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 47);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 23;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_registar_empleado
             // 
@@ -141,7 +163,8 @@ namespace Proyecto_escuela.Empleados
             this.Telefono,
             this.Rol,
             this.Estatus,
-            this.Imagen});
+            this.Imagen,
+            this.codigo});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10F);
@@ -230,26 +253,12 @@ namespace Proyecto_escuela.Empleados
             this.Imagen.Name = "Imagen";
             this.Imagen.Visible = false;
             // 
-            // panel3
+            // codigo
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(253, 44);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(589, 3);
-            this.panel3.TabIndex = 24;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources._1486505375_files_folder_search_magnifying_glass_file_search_magnifier_storage_81440;
-            this.pictureBox1.Location = new System.Drawing.Point(843, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 47);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
+            this.codigo.HeaderText = "codigo";
+            this.codigo.MinimumWidth = 6;
+            this.codigo.Name = "codigo";
+            this.codigo.Visible = false;
             // 
             // Frm_Empleados
             // 
@@ -264,8 +273,8 @@ namespace Proyecto_escuela.Empleados
             this.Load += new System.EventHandler(this.Frm_Empleados_Load);
             this.panel_busqueda.ResumeLayout(false);
             this.panel_busqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_empleado)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -277,6 +286,8 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.TextBox txt_empleado;
         private System.Windows.Forms.Label lbl_matricula_empleado;
         public System.Windows.Forms.DataGridView dgv_empleado;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
@@ -288,7 +299,6 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.DataGridViewTextBoxColumn Rol;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
     }
 }

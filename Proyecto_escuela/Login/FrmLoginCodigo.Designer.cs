@@ -1,7 +1,7 @@
 ﻿
 namespace Proyecto_escuela.Login
 {
-    partial class Frm_Reestablecercontraseña
+    partial class FrmLoginCodigo
     {
         /// <summary>
         /// Required designer variable.
@@ -35,7 +35,7 @@ namespace Proyecto_escuela.Login
             this.btniniciarsesion = new System.Windows.Forms.Button();
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
-            this.txtusuario = new System.Windows.Forms.TextBox();
+            this.txtcodigo = new System.Windows.Forms.TextBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
             this.lbltitulo = new System.Windows.Forms.Label();
@@ -53,7 +53,7 @@ namespace Proyecto_escuela.Login
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(214, 327);
-            this.panel1.TabIndex = 0;
+            this.panel1.TabIndex = 1;
             // 
             // lbljane
             // 
@@ -72,7 +72,7 @@ namespace Proyecto_escuela.Login
             this.panel2.Controls.Add(this.btniniciarsesion);
             this.panel2.Controls.Add(this.linkLabelRegresar);
             this.panel2.Controls.Add(this.line1);
-            this.panel2.Controls.Add(this.txtusuario);
+            this.panel2.Controls.Add(this.txtcodigo);
             this.panel2.Controls.Add(this.piccerrar);
             this.panel2.Controls.Add(this.picmin);
             this.panel2.Controls.Add(this.lbltitulo);
@@ -80,7 +80,7 @@ namespace Proyecto_escuela.Login
             this.panel2.Location = new System.Drawing.Point(214, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(576, 327);
-            this.panel2.TabIndex = 1;
+            this.panel2.TabIndex = 2;
             // 
             // btniniciarsesion
             // 
@@ -95,9 +95,8 @@ namespace Proyecto_escuela.Login
             this.btniniciarsesion.Name = "btniniciarsesion";
             this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
             this.btniniciarsesion.TabIndex = 60;
-            this.btniniciarsesion.Text = "Reestablecer contraseña";
+            this.btniniciarsesion.Text = "Verificar codigo";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // linkLabelRegresar
             // 
@@ -114,7 +113,6 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar.TabIndex = 59;
             this.linkLabelRegresar.TabStop = true;
             this.linkLabelRegresar.Text = "Regresar";
-            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
             // 
             // line1
             // 
@@ -126,21 +124,20 @@ namespace Proyecto_escuela.Login
             this.line1.Size = new System.Drawing.Size(451, 1);
             this.line1.TabIndex = 58;
             // 
-            // txtusuario
+            // txtcodigo
             // 
-            this.txtusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtusuario.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtusuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtusuario.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtusuario.ForeColor = System.Drawing.Color.Gray;
-            this.txtusuario.Location = new System.Drawing.Point(65, 155);
-            this.txtusuario.Name = "txtusuario";
-            this.txtusuario.Size = new System.Drawing.Size(451, 25);
-            this.txtusuario.TabIndex = 57;
-            this.txtusuario.Text = "Correo de usuario";
-            this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
-            this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
-            this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
+            this.txtcodigo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtcodigo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtcodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtcodigo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtcodigo.ForeColor = System.Drawing.Color.Gray;
+            this.txtcodigo.Location = new System.Drawing.Point(65, 155);
+            this.txtcodigo.Name = "txtcodigo";
+            this.txtcodigo.Size = new System.Drawing.Size(451, 25);
+            this.txtcodigo.TabIndex = 57;
+            this.txtcodigo.Text = "Codigo";
+            this.txtcodigo.Click += new System.EventHandler(this.txtusuario_Click);
+            this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
             // 
             // piccerrar
             // 
@@ -152,7 +149,6 @@ namespace Proyecto_escuela.Login
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 53;
             this.piccerrar.TabStop = false;
-            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
             // picmin
             // 
@@ -164,7 +160,6 @@ namespace Proyecto_escuela.Login
             this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picmin.TabIndex = 52;
             this.picmin.TabStop = false;
-            this.picmin.Click += new System.EventHandler(this.picmin_Click);
             // 
             // lbltitulo
             // 
@@ -174,11 +169,11 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.ForeColor = System.Drawing.Color.Black;
             this.lbltitulo.Location = new System.Drawing.Point(162, 95);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(259, 23);
+            this.lbltitulo.Size = new System.Drawing.Size(233, 23);
             this.lbltitulo.TabIndex = 51;
-            this.lbltitulo.Text = "Reestablecer contraseña";
+            this.lbltitulo.Text = "Codigo de verificación";
             // 
-            // Frm_Reestablecercontraseña
+            // ClsCodigoLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,9 +181,9 @@ namespace Proyecto_escuela.Login
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Reestablecercontraseña";
+            this.Name = "ClsCodigoLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reestablecer contraseña";
+            this.Text = "ClsCodigoLogin";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -202,14 +197,14 @@ namespace Proyecto_escuela.Login
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lbljane;
-        private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button btniniciarsesion;
+        private System.Windows.Forms.LinkLabel linkLabelRegresar;
+        private System.Windows.Forms.Panel line1;
+        private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.PictureBox picmin;
-        private System.Windows.Forms.Panel line1;
-        private System.Windows.Forms.TextBox txtusuario;
-        private System.Windows.Forms.LinkLabel linkLabelRegresar;
-        private System.Windows.Forms.Button btniniciarsesion;
+        private System.Windows.Forms.Label lbltitulo;
     }
 }
