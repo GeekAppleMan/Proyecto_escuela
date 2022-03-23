@@ -1,24 +1,66 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Proyecto_escuela
 {
-    internal class FTPHelper
+    internal class FTPHelpler
     {
-        private string v1;
-        private string v2;
-        private string v3;
-
-        public FTPHelper(string v1, string v2, string v3)
+        public FTPHelpler(string address, string login, string password)
         {
-            this.v1 = v1;
-            this.v2 = v2;
-            this.v3 = v3;
+            Address = address;
+            Login = login;
+            Password = password;
+        }
+        public void Upload(MemoryStream stream, string fileName)
+        {
+            try
+            {
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(Address + @"/" + fileName);
+                request.Method = WebRequestMethods.Ftp.UploadFile;
+                request.Credentials = new NetworkCredential(Login, Password);
+                request.UseBinary = true;
+                byte[] buffer = new byte[stream.Length];
+                stream.Read(buffer, 0, buffer.Length);
+                stream.Close();
+                Stream requestStream = request.GetRequestStream();
+                requestStream.Write(buffer, 0, buffer.Length);
+                requestStream.Close();
+                FtpWebResponse response = (FtpWebResponse)request.GetResponse();
+                response.Close();
+                MessageBox.Show("successful upload");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
-        internal string Upload(MemoryStream memoryStream, string v)
+        public void Delete(string fileName)
         {
-            throw new NotImplementedException();
+            try
+            {
+                FtpWebRequest request = (FtpWebRequest)WebRequest.Create(Address + "/" + fileName);
+                request.Method = WebRequestMethods.Ftp.DeleteFile;
+                request.Credentials = new NetworkCredential(Login, Password);
+
+                using (FtpWebResponse response = (FtpWebResponse)request.GetResponse())
+                {
+                    MessageBox.Show(response.StatusDescription);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+        public string Address { get; set; }
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }
