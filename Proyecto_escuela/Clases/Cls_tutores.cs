@@ -8,12 +8,13 @@ using System.Windows.Forms;
 using System.Data;
 using System.Drawing.Imaging;
 using System.IO;
+using System.Drawing;
 
 namespace Proyecto_escuela
 {
     class Cls_tutores : Cls_conexion
     {
-        private string path = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/";
+        private string path = Application.StartupPath + @"\Imagenes\";
         public static bool conservar_modificar_imagen { get; set; }
         public static DataGridView tutores;
         private Random objrandom = new Random();
@@ -60,7 +61,7 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),reader.GetString(5),reader.GetString(6),tutor,estatus, reader.GetString(0), reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4),reader.GetString(5),reader.GetString(6),tutor,estatus, reader.GetString(0), reader.GetString(9),reader.GetString(10));
                         tutores = grid;
                     }
                 }
@@ -107,7 +108,7 @@ namespace Proyecto_escuela
                         {
                             estatus = "Inactivo";
                         }
-                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus, reader.GetString(0), reader.GetString(9));
+                        grid.Rows.Add(reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4), reader.GetString(5), reader.GetString(6), tutor, estatus, reader.GetString(0), reader.GetString(9),reader.GetString(10));
                         tutores = grid;
                     }
                 }
@@ -155,9 +156,9 @@ namespace Proyecto_escuela
                         default:
                             break;
                     }
-                    string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                    string imagen_bd = @"http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/" + codigo_imagen + ".jpg";
                     string path_save = path + codigo_imagen + ".jpg";
-                    string query = "INSERT INTO `tb_padres`(`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus` ,`foto_perfil`) VALUES ('" + "" + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + direcciones + "'" + "," + "'" + telefono + "'" + "," + "'" + correo + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + resul_parentesco + "'" + "," + "'1'" + "," + "'" + imagen_bd + "')";
+                    string query = "INSERT INTO `tb_padres`(`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus` ,`foto_perfil`,`codigo_imagen`) VALUES ('" + "" + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + direcciones + "'" + "," + "'" + telefono + "'" + "," + "'" + correo + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + resul_parentesco + "'" + "," + "'1'" + "," + "'" + imagen_bd + "'" + "," + "'" + codigo_imagen + "')";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
@@ -168,7 +169,19 @@ namespace Proyecto_escuela
                     try
                     {
                         pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
+                        byte[] data;
+                        using (Image image = Image.FromFile(path_save))
+                        {
+                            using (MemoryStream m = new MemoryStream())
+                            {
+                                image.Save(m, image.RawFormat);
+                                data = m.ToArray();
+                            }
+                        }
+                        FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_tutores", "escuela", "escuela2022");
+                        fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
                         MessageBox.Show("Se registro al tutor correctamente");
+                        File.Delete(path_save);
                         buscar_id_tutor(correo,telefono);
                         principal.Close();
                         new Frm_Asignacion_de_alumno().ShowDialog();
@@ -275,7 +288,7 @@ namespace Proyecto_escuela
                         }
                         else if (verificar_codigo == false)
                         {
-                            string imagen_bd = @"C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/" + codigo_imagen + ".jpg";
+                            string imagen_bd = @"http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/" + codigo_imagen + ".jpg";
                             string path_save = path + codigo_imagen + ".jpg";
                             switch (parentesco)
                             {
@@ -299,7 +312,7 @@ namespace Proyecto_escuela
                             {
                                 resul_estatus = "2";
                             }
-                            string query = "UPDATE `tb_padres` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`parentesco`= " + "'" + resul_parentesco + "'," + "`estatus`= " + "'" + resul_estatus + "'," + "`foto_perfil`= " + "'" + imagen_bd + "'" + "WHERE id_tutor = " + "'" + id_tutor + "'";
+                            string query = "UPDATE `tb_padres` SET `nombres`= " + "'" + nombres + "'," + "`apellidos`= " + "'" + apellidos + "'," + "`direccion`= " + "'" + direcciones + "'," + "`telefono`= " + "'" + telefono + "'," + "`correo`= " + "'" + correo + "'," + "`fecha_nacimiento`= " + "'" + fecha_nacimiento + "'," + "`parentesco`= " + "'" + resul_parentesco + "'," + "`estatus`= " + "'" + resul_estatus + "'," + "`foto_perfil`= " + "'" + imagen_bd + "'" + "," + "`codigo_imagen`= " + "'" + codigo_imagen + "'" + "WHERE id_tutor = " + "'" + id_tutor + "'";
                             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                             commandDatabase.CommandTimeout = 60;
@@ -308,8 +321,21 @@ namespace Proyecto_escuela
                             reader = commandDatabase.ExecuteReader();
                             try
                             {
-                                File.Delete(tutores[9, index].Value.ToString());
+
                                 pic_captura.Image.Save(path_save, ImageFormat.Jpeg);
+                                byte[] data;
+                                using (Image image = Image.FromFile(path_save))
+                                {
+                                    using (MemoryStream m = new MemoryStream())
+                                    {
+                                        image.Save(m, image.RawFormat);
+                                        data = m.ToArray();
+                                    }
+                                }
+                                FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_tutores", "escuela", "escuela2022");
+                                fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
+                                fTPHelper.Delete(tutores[10, index].Value.ToString() + ".jpg");
+                                File.Delete(path_save);
                                 MessageBox.Show("Se modifico al tutor correctamente");
                             }
                             catch (Exception)
