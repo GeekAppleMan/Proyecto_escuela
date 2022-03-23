@@ -119,7 +119,7 @@ namespace Proyecto_escuela
                 {
                     string imagen_bd = @"http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/" + codigo_imagen + ".jpg";
                     string path_save = path + codigo_imagen + ".jpg";
-                    string query = "INSERT INTO `tb_alumnos`(`matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`,`foto_perfil`,`codigo_imagen`) VALUES ('" + matricula + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + direccion + "'" + "," + "'" + grupo + "'" + "," + "'" + "1" + "'" + "," + "'" + imagen_bd + "," + "'" + codigo_imagen + "')";
+                    string query = "INSERT INTO `tb_alumnos`(`matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`,`foto_perfil`,`codigo_imagen`) VALUES ('" + matricula + "'," + "'" + nombres + "'" + "," + "'" + apellidos + "'" + "," + "'" + fecha_nacimiento + "'" + "," + "'" + direccion + "'" + "," + "'" + grupo + "'" + "," + "'" + "1" + "'" + "," + "'" + imagen_bd + "'" + "," + "'" + codigo_imagen + "')";
                     MySqlConnection databaseConnection = new MySqlConnection(connectionString);
                     MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
                     commandDatabase.CommandTimeout = 60;
@@ -139,8 +139,7 @@ namespace Proyecto_escuela
                             }
                         }
                         FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_alumnos", "escuela", "escuela2022");
-                        string result = fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
-                        MessageBox.Show(result);
+                        fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
                         MessageBox.Show("Se registro al alumno correctamente, a continuacion se registrara el usuario del alumno");
                         File.Delete(path_save);
                         Frm_crear_usuario_alumno obj_usuario = new Frm_crear_usuario_alumno();
@@ -247,8 +246,7 @@ namespace Proyecto_escuela
                                     }
                                 }
                                 FTPHelpler fTPHelper = new FTPHelpler("ftp://189.204.133.38/imagenes_alumnos", "escuela", "escuela2022");
-                                string result = fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
-                                MessageBox.Show(result);
+                                fTPHelper.Upload(new MemoryStream(data), codigo_imagen + ".jpg");
                                 fTPHelper.Delete(alumnos[9,index].Value.ToString() + ".jpg");
                                 File.Delete(path_save);
                                 MessageBox.Show("Se modifico al alumno correctamente");
