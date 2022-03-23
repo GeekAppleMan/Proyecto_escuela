@@ -130,8 +130,13 @@ namespace Proyecto_escuela.Clases
             }
             else
             {
-                MessageBox.Show("Intoduzca un correo electronico registrado valido");
+                MessageBox.Show("Introduzca un correo electronico registrado valido");
             }
+        }
+
+        public void CambiarContraseña(string contraseña, string correo)
+        {
+            string query = "UPDATE tb_registro SET contraseña = '" + contraseña + "' WHERE correo = '"+correo+ "'"; 
         }
     }
 }
