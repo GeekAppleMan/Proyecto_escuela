@@ -8,22 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Net;
-using System.Net.Mail;
 
 namespace Proyecto_escuela.Login
 {
     public partial class Frm_Reestablecercontraseña : Form
     {
-        
+        Frm_login objlog = new Frm_login();
+        Cls_Login objClaseLogin = new Cls_Login();
+        FrmLoginCodigo objcod = new FrmLoginCodigo();
         public Frm_Reestablecercontraseña()
         {
             InitializeComponent();
         }
-        public string correo;
-        public string RandomCode;
-        public static string para;
-        
+
         private void picmin_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
@@ -36,47 +33,16 @@ namespace Proyecto_escuela.Login
 
         private void linkLabelRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Frm_login objlog = new Frm_login();
             objlog.Show();
             this.Hide();
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            FrmLoginCodigo objcod = new FrmLoginCodigo();
-            Cls_Login objClaseLogin = new Cls_Login();
-            correo = txtusuario.Text;
             objClaseLogin.CompararCorreo(txtusuario.Text);
-            if (objClaseLogin.comparacion == 1)
+            if (objClaseLogin.comparacion==1)
             {
-                string de, pass, messagebody;
-                Random rand = new Random();
-                RandomCode = (rand.Next(999999)).ToString();
-                MailMessage message = new MailMessage();
-                para = (txtusuario.Text).ToString();
-                de = "18340425@itnogales.edu.mx";
-                pass = "Potros2020";
-                messagebody = "Tu codigo de verificacion es" + RandomCode;
-                message.To.Add(para);
-                message.From = new MailAddress(de);
-                message.Body = messagebody;
-                message.Subject = "Codigo de reestablecimiento de contraseña";
-                SmtpClient smtp = new SmtpClient("smtp.gmail.com");
-                smtp.EnableSsl = true;
-                smtp.Port = 587;
-                smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtp.Credentials = new NetworkCredential(de, pass);
-                try
-                {
-                    smtp.Send(message);
-                    MessageBox.Show("Codigo enviado de manera exitosa");
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-                this.Close();
-                objcod.Show();
+
             }
         }
 
@@ -87,10 +53,10 @@ namespace Proyecto_escuela.Login
 
         private void txtusuario_Enter(object sender, EventArgs e)
         {
-            if (txtusuario.Text == "Correo de usuario")
+            if (txtusuario.Text == "Correo")
             {
                 txtusuario.Text = "";
-                txtusuario.ForeColor = Color.Black;
+                txtusuario.ForeColor = Color.Gray;
             }
         }
 

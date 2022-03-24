@@ -36,9 +36,9 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -97,7 +97,6 @@ namespace Proyecto_escuela.Login
             this.btniniciarsesion.TabIndex = 60;
             this.btniniciarsesion.Text = "Verificar codigo";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // linkLabelRegresar
             // 
@@ -114,7 +113,6 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar.TabIndex = 59;
             this.linkLabelRegresar.TabStop = true;
             this.linkLabelRegresar.Text = "Regresar";
-            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
             // 
             // line1
             // 
@@ -139,8 +137,29 @@ namespace Proyecto_escuela.Login
             this.txtcodigo.TabIndex = 57;
             this.txtcodigo.Text = "Codigo";
             this.txtcodigo.Click += new System.EventHandler(this.txtusuario_Click);
-            this.txtcodigo.Enter += new System.EventHandler(this.txtcodigo_Enter);
             this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
+            // 
+            // piccerrar
+            // 
+            this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.piccerrar.Image = global::Proyecto_escuela.Properties.Resources.cerrar;
+            this.piccerrar.Location = new System.Drawing.Point(534, 12);
+            this.piccerrar.Name = "piccerrar";
+            this.piccerrar.Size = new System.Drawing.Size(30, 30);
+            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.piccerrar.TabIndex = 53;
+            this.piccerrar.TabStop = false;
+            // 
+            // picmin
+            // 
+            this.picmin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.picmin.Image = global::Proyecto_escuela.Properties.Resources.minimizar;
+            this.picmin.Location = new System.Drawing.Point(498, 12);
+            this.picmin.Name = "picmin";
+            this.picmin.Size = new System.Drawing.Size(30, 30);
+            this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picmin.TabIndex = 52;
+            this.picmin.TabStop = false;
             // 
             // lbltitulo
             // 
@@ -154,31 +173,7 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.TabIndex = 51;
             this.lbltitulo.Text = "Codigo de verificación";
             // 
-            // piccerrar
-            // 
-            this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.piccerrar.Image = global::Proyecto_escuela.Properties.Resources.cerrar;
-            this.piccerrar.Location = new System.Drawing.Point(534, 12);
-            this.piccerrar.Name = "piccerrar";
-            this.piccerrar.Size = new System.Drawing.Size(30, 30);
-            this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.piccerrar.TabIndex = 53;
-            this.piccerrar.TabStop = false;
-            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
-            // 
-            // picmin
-            // 
-            this.picmin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.picmin.Image = global::Proyecto_escuela.Properties.Resources.minimizar;
-            this.picmin.Location = new System.Drawing.Point(498, 12);
-            this.picmin.Name = "picmin";
-            this.picmin.Size = new System.Drawing.Size(30, 30);
-            this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picmin.TabIndex = 52;
-            this.picmin.TabStop = false;
-            this.picmin.Click += new System.EventHandler(this.picmin_Click);
-            // 
-            // FrmLoginCodigo
+            // ClsCodigoLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -186,7 +181,7 @@ namespace Proyecto_escuela.Login
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmLoginCodigo";
+            this.Name = "ClsCodigoLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClsCodigoLogin";
             this.panel1.ResumeLayout(false);

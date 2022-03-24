@@ -175,12 +175,6 @@
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\FrmNuevaContra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\FrmNuevaContra.Designer.cs">
-      <DependentUpon>FrmNuevaContra.cs</DependentUpon>
-    </Compile>
     <Compile Include="Tutores\frm_registrar_tutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,9 +303,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login\FrmNuevaContra.resx">
-      <DependentUpon>FrmNuevaContra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\frm_registrar_tutor.resx">
       <DependentUpon>frm_registrar_tutor.cs</DependentUpon>

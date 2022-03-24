@@ -252,7 +252,6 @@ C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_main.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Properties.Resources.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_tutor.resources
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_registrar_tutores.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_tutores.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Usuarios.Frm_usuarios.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.GenerateResource.cache
@@ -269,6 +268,4 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_salidas.resources
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_credencial_usuario.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.frm_registrar_tutor.resources
-C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.frm_registrar_tutor.resources
-C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.FrmLoginCodigo.resources
-C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.FrmNuevaContra.resources
+C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.FrmLoginCodigo.resources

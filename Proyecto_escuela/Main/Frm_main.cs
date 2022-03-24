@@ -68,12 +68,13 @@ namespace Proyecto_escuela
                 lbl_jane.TextAlign = ContentAlignment.MiddleCenter;
             }
         }
-
+        Form fh;
         private void abrir_form(object formhijo)
         {
+            
             if (this.panel_contenedor.Controls.Count == 0)
             {
-                Form fh = formhijo as Form;
+                fh = formhijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
                 this.panel_contenedor.Controls.Add(fh);
@@ -82,8 +83,8 @@ namespace Proyecto_escuela
             }
             else
             {
-                this.panel_contenedor.Controls.RemoveAt(0);
-                Form fh = formhijo as Form;
+                fh.Close();
+                fh = formhijo as Form;
                 fh.TopLevel = false;
                 fh.Dock = DockStyle.Fill;
                 this.panel_contenedor.Controls.Add(fh);
