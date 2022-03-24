@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Mail;
 
 namespace Proyecto_escuela.Login
 {
     public partial class FrmLoginCodigo : Form
     {
+        Frm_login log = new Frm_login();
         public FrmLoginCodigo()
         {
             InitializeComponent();
@@ -29,6 +32,23 @@ namespace Proyecto_escuela.Login
                 txtcodigo.Text = "Codigo";
                 txtcodigo.ForeColor = Color.Gray;
             }
+        }
+
+        private void piccerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+
+        }
+
+        private void linkLabelRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            log.Show();
+        }
+
+        private void FrmLoginCodigo_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
