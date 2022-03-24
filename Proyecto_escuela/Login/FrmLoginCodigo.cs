@@ -15,6 +15,7 @@ namespace Proyecto_escuela.Login
     public partial class FrmLoginCodigo : Form
     {
         Frm_login log = new Frm_login();
+        Frm_Reestablecercontraseña ree = new Frm_Reestablecercontraseña();
         public FrmLoginCodigo()
         {
             InitializeComponent();
@@ -49,6 +50,19 @@ namespace Proyecto_escuela.Login
         private void FrmLoginCodigo_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btniniciarsesion_Click(object sender, EventArgs e)
+        {
+            //MessageBox.Show((ree.randomCode).ToString());
+            //if (txtcodigo.Text == ree.r)
+            //{
+            //    MessageBox.Show("Ci");
+            //}
+            //else
+            //{
+            //    MessageBox.Show("No");
+            //}
         }
     }
 }

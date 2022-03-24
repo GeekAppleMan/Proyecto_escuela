@@ -15,10 +15,7 @@ namespace Proyecto_escuela.Login
 {
     public partial class Frm_Reestablecercontraseña : Form
     {
-        Frm_login objlog = new Frm_login();
-        Cls_Login objClaseLogin = new Cls_Login();
-        FrmLoginCodigo objcod = new FrmLoginCodigo();
-        string randomCode;
+        public string randomCode;
         public static string to;
         public Frm_Reestablecercontraseña()
         {
@@ -37,12 +34,15 @@ namespace Proyecto_escuela.Login
 
         private void linkLabelRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            Frm_login objlog = new Frm_login();
             objlog.Show();
             this.Hide();
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
+            FrmLoginCodigo objcod = new FrmLoginCodigo();
+            Cls_Login objClaseLogin = new Cls_Login();
             objClaseLogin.CompararCorreo(txtusuario.Text);
             if (objClaseLogin.comparacion==1)
             {

@@ -97,6 +97,7 @@ namespace Proyecto_escuela.Login
             this.btniniciarsesion.TabIndex = 60;
             this.btniniciarsesion.Text = "Verificar codigo";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // linkLabelRegresar
             // 
