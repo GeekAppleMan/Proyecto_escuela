@@ -49,20 +49,19 @@ namespace Proyecto_escuela.Login
 
         private void FrmLoginCodigo_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show(ree.getRandomCode());
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show((ree.randomCode).ToString());
-            //if (txtcodigo.Text == ree.r)
-            //{
-            //    MessageBox.Show("Ci");
-            //}
-            //else
-            //{
-            //    MessageBox.Show("No");
-            //}
+            if (txtcodigo.Text == ree.getRandomCode())
+            {
+                MessageBox.Show("Ci");
+            }
+            else
+            {
+                MessageBox.Show("Codigo incorrecto, intentelo de nuevo");
+            }
         }
     }
 }

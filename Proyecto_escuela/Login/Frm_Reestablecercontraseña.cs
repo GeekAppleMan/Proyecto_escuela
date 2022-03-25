@@ -15,7 +15,7 @@ namespace Proyecto_escuela.Login
 {
     public partial class Frm_Reestablecercontraseña : Form
     {
-        public string randomCode;
+        public static string randomCode="";
         public static string to;
         public Frm_Reestablecercontraseña()
         {
@@ -75,6 +75,11 @@ namespace Proyecto_escuela.Login
                 this.Close();
                 objcod.Show();
             }
+        }
+
+        public string getRandomCode()
+        {
+            return randomCode;
         }
 
         private void txtusuario_Click(object sender, EventArgs e)
