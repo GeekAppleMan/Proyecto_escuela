@@ -36,9 +36,9 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtcodigo = new System.Windows.Forms.TextBox();
+            this.lbltitulo = new System.Windows.Forms.Label();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -141,6 +141,18 @@ namespace Proyecto_escuela.Login
             this.txtcodigo.Click += new System.EventHandler(this.txtusuario_Click);
             this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
             // 
+            // lbltitulo
+            // 
+            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
+            this.lbltitulo.Location = new System.Drawing.Point(162, 95);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(233, 23);
+            this.lbltitulo.TabIndex = 51;
+            this.lbltitulo.Text = "Codigo de verificación";
+            // 
             // piccerrar
             // 
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -163,18 +175,7 @@ namespace Proyecto_escuela.Login
             this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picmin.TabIndex = 52;
             this.picmin.TabStop = false;
-            // 
-            // lbltitulo
-            // 
-            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(162, 95);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(233, 23);
-            this.lbltitulo.TabIndex = 51;
-            this.lbltitulo.Text = "Codigo de verificación";
+            this.picmin.Click += new System.EventHandler(this.picmin_Click);
             // 
             // FrmLoginCodigo
             // 

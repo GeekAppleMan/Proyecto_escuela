@@ -172,11 +172,18 @@
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\FTPHelper.cs" />
+    <Compile Include="Login\cls_Login.cs" />
     <Compile Include="Login\FrmLoginCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login\Frm_NuevaContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_NuevaContraseña.Designer.cs">
+      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
     </Compile>
     <Compile Include="Textbox\Rjtextbox.cs">
       <SubType>UserControl</SubType>
@@ -312,6 +319,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_NuevaContraseña.resx">
+      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Textbox\Rjtextbox.resx">
       <DependentUpon>Rjtextbox.cs</DependentUpon>
