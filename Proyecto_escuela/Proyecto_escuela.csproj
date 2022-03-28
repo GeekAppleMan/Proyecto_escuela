@@ -171,7 +171,7 @@
     <Compile Include="Empleados\Frm_Modificar_empleado.Designer.cs">
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="FTPHelper.cs" />
+    <Compile Include="Clases\FTPHelper.cs" />
     <Compile Include="Login\FrmLoginCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
