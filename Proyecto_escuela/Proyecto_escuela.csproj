@@ -135,6 +135,12 @@
     <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Combobox\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Datetime\Rjdatetime.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Empleados\Frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -172,18 +178,14 @@
       <DependentUpon>Frm_Modificar_empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Clases\FTPHelper.cs" />
-    <Compile Include="Login\cls_Login.cs" />
     <Compile Include="Login\FrmLoginCodigo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\Frm_NuevaContraseña.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\Frm_NuevaContraseña.Designer.cs">
-      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
+    <Compile Include="RJToggleButton\RJToggleButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Textbox\Rjtextbox.cs">
       <SubType>UserControl</SubType>
@@ -319,9 +321,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login\Frm_NuevaContraseña.resx">
-      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Textbox\Rjtextbox.resx">
       <DependentUpon>Rjtextbox.cs</DependentUpon>
@@ -512,6 +511,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
