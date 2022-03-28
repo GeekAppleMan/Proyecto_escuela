@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 23-03-2022 a las 22:07:44
+-- Tiempo de generación: 24-03-2022 a las 19:30:38
 -- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.1
+-- Versión de PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -109,8 +109,18 @@ INSERT INTO `tb_empleados_usuarios` (`id_usuario`, `id_empleado`) VALUES
 
 CREATE TABLE `tb_estatus_salida` (
   `id_estatus_salida` int(40) NOT NULL,
-  `estatus_salida` int(40) NOT NULL
+  `estatus_salida` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_estatus_salida`
+--
+
+INSERT INTO `tb_estatus_salida` (`id_estatus_salida`, `estatus_salida`) VALUES
+(1, 'Tutor en cola'),
+(2, 'Alumno en cola'),
+(3, 'Alumno en salida'),
+(4, 'Alumno entregado');
 
 -- --------------------------------------------------------
 
@@ -377,7 +387,7 @@ ALTER TABLE `tb_empleados_usuarios`
 -- AUTO_INCREMENT de la tabla `tb_estatus_salida`
 --
 ALTER TABLE `tb_estatus_salida`
-  MODIFY `id_estatus_salida` int(40) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_estatus_salida` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_padres`
