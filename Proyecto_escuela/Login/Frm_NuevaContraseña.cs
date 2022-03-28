@@ -21,12 +21,6 @@ namespace Proyecto_escuela.Login
             InitializeComponent();
         }
 
-        private void linkLabelRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Close();
-            objlog.Show();
-        }
-
         private void piccerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -37,18 +31,24 @@ namespace Proyecto_escuela.Login
             this.WindowState = FormWindowState.Minimized;
         }
 
+        private void linkLabelRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            objlog.Show();
+        }
+
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
-            if (txt2.Text==txt1.Text)
+            if (txt1.Text==txt2.Text)
             {
-                objL.CambiarContra(ree.getEmail(), txt2.Text);
-                MessageBox.Show("Contraseña cambiada exitosamente");
+                objL.CambiarContra(ree.getEmail(),txt1.Text);
+                MessageBox.Show("Contraseña cambiada con exito");
                 this.Close();
                 objlog.Show();
             }
             else
             {
-                MessageBox.Show("Las contraseñas no coinciden, vuelvalo a intental");
+                MessageBox.Show("Las contraseñas no coinciden, vuelvalo a intentar");
             }
         }
     }

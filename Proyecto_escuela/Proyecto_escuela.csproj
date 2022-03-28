@@ -184,6 +184,12 @@
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login\Frm_NuevaContraseña.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\Frm_NuevaContraseña.Designer.cs">
+      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
+    </Compile>
     <Compile Include="RJToggleButton\RJToggleButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -321,6 +327,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\Frm_NuevaContraseña.resx">
+      <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Textbox\Rjtextbox.resx">
       <DependentUpon>Rjtextbox.cs</DependentUpon>
