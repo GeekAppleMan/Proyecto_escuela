@@ -135,11 +135,7 @@ namespace Proyecto_escuela.Empleados
 
         private void txt_nombres_Leave(object sender, EventArgs e)
         {
-            if (txt_nombres.Text == "")
-            {
-                txt_nombres.Text = "Nombres";
-                txt_nombres.ForeColor = Color.Gray;
-            }
+
         }
 
         private void txt_nombres_Enter(object sender, EventArgs e)
