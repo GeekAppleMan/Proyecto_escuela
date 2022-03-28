@@ -20,6 +20,7 @@ namespace Proyecto_escuela
         public frm_registrar_tutor()
         {
             InitializeComponent();
+            cargar_dispositivo();
         }
 
         private void btn_enceder_Click(object sender, EventArgs e)
@@ -95,7 +96,7 @@ namespace Proyecto_escuela
             }
             else
             {
-                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
+                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, rjdatetime1.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
             }
         }
         private void txt_nombres_Leave(object sender, EventArgs e)
@@ -235,6 +236,42 @@ namespace Proyecto_escuela
         private void frm_registrar_tutor_FormClosed(object sender, FormClosedEventArgs e)
         {
             cerrar_webcam();
+        }
+
+        private void rjToggleButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Toggle_encender_camara.Checked == false)
+            {
+                cerrar_webcam();
+                lbltoggle.Text = "Apagada";
+            }
+            else
+            {
+                if (miwebcam != null && miwebcam.IsRunning)
+                {
+
+                }
+                else
+                {
+                    try
+                    {
+                        int i = combo_dispositivos.SelectedIndex;
+                        string nombrevideo = misdispositivos[i].MonikerString;
+                        miwebcam = new VideoCaptureDevice(nombrevideo);
+                        miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                        miwebcam.Start();
+                        btn_capturar_foto.Enabled = true;
+                        lbltoggle.Text = "Encendida";
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                        Toggle_encender_camara.Checked = false;
+                        lbltoggle.Text = "Apagada";
+                    }
+                }
+            }
+          
         }
 
     }
