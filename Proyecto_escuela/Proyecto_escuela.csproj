@@ -135,6 +135,12 @@
     <Compile Include="Alumnos\Frm_tutores_asignados.Designer.cs">
       <DependentUpon>Frm_tutores_asignados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Combobox\RJComboBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Datetime\Rjdatetime.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Empleados\Frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +183,9 @@
     </Compile>
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RJToggleButton\RJToggleButton.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Textbox\Rjtextbox.cs">
       <SubType>UserControl</SubType>
@@ -502,6 +511,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Arriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
