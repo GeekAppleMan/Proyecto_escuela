@@ -43,12 +43,7 @@ namespace Proyecto_escuela
 
         private void cargar_tutores()
         {
-            obj_tutores.cargar_tutores(txt_tutor.Text,dgv_tutor);
-        }
-
-        private void txt_tutor_TextChanged(object sender, EventArgs e)
-        {
-            cargar_tutores();
+            obj_tutores.cargar_tutores(txttutor.Texts,dgv_tutor);
         }
 
         private void dgv_tutor_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -122,6 +117,11 @@ namespace Proyecto_escuela
                 //}
             }
            
+        }
+
+        private void txttutor__TextChanged(object sender, EventArgs e)
+        {   
+            cargar_tutores();
         }
     }
 }
