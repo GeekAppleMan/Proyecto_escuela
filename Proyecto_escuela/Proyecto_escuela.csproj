@@ -175,6 +175,12 @@
     <Compile Include="Login\FrmLoginCodigo.Designer.cs">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
     </Compile>
+    <Compile Include="Textbox\Rjtextbox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Textbox\Rjtextbox.Designer.cs">
+      <DependentUpon>Rjtextbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tutores\frm_registrar_tutor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -303,6 +309,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\FrmLoginCodigo.resx">
       <DependentUpon>FrmLoginCodigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Textbox\Rjtextbox.resx">
+      <DependentUpon>Rjtextbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tutores\frm_registrar_tutor.resx">
       <DependentUpon>frm_registrar_tutor.cs</DependentUpon>
