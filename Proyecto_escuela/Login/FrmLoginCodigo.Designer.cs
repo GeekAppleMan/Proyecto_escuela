@@ -97,6 +97,7 @@ namespace Proyecto_escuela.Login
             this.btniniciarsesion.TabIndex = 60;
             this.btniniciarsesion.Text = "Verificar codigo";
             this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // linkLabelRegresar
             // 
@@ -113,6 +114,7 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar.TabIndex = 59;
             this.linkLabelRegresar.TabStop = true;
             this.linkLabelRegresar.Text = "Regresar";
+            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
             // 
             // line1
             // 
@@ -149,6 +151,7 @@ namespace Proyecto_escuela.Login
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 53;
             this.piccerrar.TabStop = false;
+            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
             // picmin
             // 
@@ -173,7 +176,7 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.TabIndex = 51;
             this.lbltitulo.Text = "Codigo de verificación";
             // 
-            // ClsCodigoLogin
+            // FrmLoginCodigo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -181,9 +184,10 @@ namespace Proyecto_escuela.Login
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ClsCodigoLogin";
+            this.Name = "FrmLoginCodigo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClsCodigoLogin";
+            this.Load += new System.EventHandler(this.FrmLoginCodigo_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
