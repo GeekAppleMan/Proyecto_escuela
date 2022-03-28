@@ -21,13 +21,6 @@ namespace Proyecto_escuela
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            frm_registrar_tutor obj_registrar = new frm_registrar_tutor();
-            obj_registrar.ShowDialog();
-            cargar_tutores();
-        }
-
         private void Frm_tutores_Load(object sender, EventArgs e)
         {
             if (Clases.Cls_Login.rol == "1")
@@ -121,6 +114,13 @@ namespace Proyecto_escuela
 
         private void txttutor__TextChanged(object sender, EventArgs e)
         {   
+            cargar_tutores();
+        }
+
+        private void btn_registrar_tutor_Click(object sender, EventArgs e)
+        {
+            frm_registrar_tutor obj_registrar = new frm_registrar_tutor();
+            obj_registrar.ShowDialog();
             cargar_tutores();
         }
     }
