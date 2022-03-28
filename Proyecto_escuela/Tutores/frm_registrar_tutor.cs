@@ -23,29 +23,6 @@ namespace Proyecto_escuela
             cargar_dispositivo();
         }
 
-        private void btn_enceder_Click(object sender, EventArgs e)
-        {
-            if (miwebcam != null && miwebcam.IsRunning)
-            {
-
-            }
-            else
-            {
-                try
-                {
-                    int i = combo_dispositivos.SelectedIndex;
-                    string nombrevideo = misdispositivos[i].MonikerString;
-                    miwebcam = new VideoCaptureDevice(nombrevideo);
-                    miwebcam.NewFrame += new NewFrameEventHandler(capturando);
-                    miwebcam.Start();
-                    btn_capturar_foto.Enabled = true;
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("Verifique que la camara este conectada y seleccionada");
-                }
-            }
-        }
         private void cargar_dispositivo()
         {
             combo_dispositivos.Items.Clear();
@@ -86,112 +63,6 @@ namespace Proyecto_escuela
                 picture_captura.Image = picture_tiempo_real.Image;
                 btn_registrar.Enabled = true;
             }
-        }
-
-        private void btn_registrar_Click(object sender, EventArgs e)
-        {
-            if (string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(txt_correo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || string.IsNullOrEmpty(combo_parentesco.Text) || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_correo.Text == "Correo" || txt_telefono.Text == "Telefono")
-            {
-                MessageBox.Show("Complete todos los campos");
-            }
-            else
-            {
-                obj_tutores.registrar_tutores(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, rjdatetime1.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
-            }
-        }
-        private void txt_nombres_Leave(object sender, EventArgs e)
-        {
-            if (txt_nombres.Text == "")
-            {
-                txt_nombres.Text = "Nombres";
-                txt_nombres.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_nombres_Enter(object sender, EventArgs e)
-        {
-            if (txt_nombres.Text == "Nombres")
-            {
-                txt_nombres.Text = "";
-                txt_nombres.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_apellidos_Leave(object sender, EventArgs e)
-        {
-            if (txt_apellidos.Text == "")
-            {
-                txt_apellidos.Text = "Apellidos";
-                txt_apellidos.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_apellidos_Enter(object sender, EventArgs e)
-        {
-            if (txt_apellidos.Text == "Apellidos")
-            {
-                txt_apellidos.Text = "";
-                txt_apellidos.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_direccion_Leave(object sender, EventArgs e)
-        {
-            if (txt_direccion.Text == "")
-            {
-                txt_direccion.Text = "Direccion";
-                txt_direccion.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_direccion_Enter(object sender, EventArgs e)
-        {
-            if (txt_direccion.Text == "Direccion")
-            {
-                txt_direccion.Text = "";
-                txt_direccion.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_telefono_Leave(object sender, EventArgs e)
-        {
-            if (txt_telefono.Text == "")
-            {
-                txt_telefono.Text = "Telefono";
-                txt_telefono.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_telefono_Enter(object sender, EventArgs e)
-        {
-            if (txt_telefono.Text == "Telefono")
-            {
-                txt_telefono.Text = "";
-                txt_telefono.ForeColor = Color.Black;
-            }
-        }
-
-        private void txt_correo_Leave(object sender, EventArgs e)
-        {
-            if (txt_correo.Text == "")
-            {
-                txt_correo.Text = "Correo";
-                txt_correo.ForeColor = Color.Gray;
-            }
-        }
-
-        private void txt_correo_Enter(object sender, EventArgs e)
-        {
-            if (txt_correo.Text == "Correo")
-            {
-                txt_correo.Text = "";
-                txt_correo.ForeColor = Color.Black;
-            }
-        }
-
-        private void combo_parentesco_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = true;
         }
 
         private void combo_dispositivos_KeyPress(object sender, KeyPressEventArgs e)
@@ -274,5 +145,26 @@ namespace Proyecto_escuela
           
         }
 
+        private void btn_capturar_foto_Click_1(object sender, EventArgs e)
+        {
+            picture_captura.Image = picture_tiempo_real.Image;
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btn_registrar_Click_1(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_nombres.Texts) || string.IsNullOrEmpty(txt_apellidos.Texts) || string.IsNullOrEmpty(txt_direccion.Texts) || string.IsNullOrEmpty(txt_telefono.Texts) || string.IsNullOrEmpty(txt_correo.Texts) || string.IsNullOrEmpty(combo_dispositivos.Text) || string.IsNullOrEmpty(combo_parentesco.Text) || txt_nombres.Texts == "Nombres" || txt_apellidos.Texts == "Apellidos" || txt_direccion.Texts == "Direccion" || txt_correo.Texts == "Correo" || txt_telefono.Texts == "Telefono")
+            {
+                MessageBox.Show("Complete todos los campos");
+            }
+            else
+            {
+                obj_tutores.registrar_tutores(txt_nombres.Texts, txt_apellidos.Texts, txt_direccion.Texts, txt_telefono.Texts, txt_correo.Texts, rjdatetime1.Value.ToString("d"), combo_parentesco.Text, picture_captura, this);
+            }
+        }
     }
 }
