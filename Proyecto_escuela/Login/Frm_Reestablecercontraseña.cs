@@ -17,6 +17,7 @@ namespace Proyecto_escuela.Login
     {
         public static string randomCode="";
         public static string to;
+        public static string email;
         public Frm_Reestablecercontraseña()
         {
             InitializeComponent();
@@ -49,15 +50,16 @@ namespace Proyecto_escuela.Login
                 string from, pass, messagebody;
                 Random rand = new Random();
                 randomCode = (rand.Next(999999)).ToString();
+                email = txtusuario.Text;
                 MailMessage message = new MailMessage();
                 to = (txtusuario.Text).ToString();
-                from = "18340425@itnogales.edu.mx";
-                pass="Potros2020";
-                messagebody = "Tu codigo de verificacion es " + randomCode;
+                from = "noreplyjanesoftware@gmail.com";
+                pass="JanePower123456789";
+                messagebody = "Tu codigo de verificacion es " + randomCode + "\n \nEsta es una cuenta de correo no monitoreada.  Su contenido es un mensaje automático generado por nuestro sistema. Por favor no responda a este correo. Si desea comunicarse con nosotros por algun problema comuniquese con el departamento escolar encargado.";
                 message.To.Add(to);
                 message.From = new MailAddress(from);
                 message.Body = messagebody;
-                message.Subject = "password reseting code";
+                message.Subject = "Codigo de reestablecimiento de contraseña";
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com");
                 smtp.EnableSsl = true;
                 smtp.Port = 587;
@@ -66,7 +68,7 @@ namespace Proyecto_escuela.Login
                 try
                 {
                     smtp.Send(message);
-                    MessageBox.Show("Codigo enviado con exito");
+                    MessageBox.Show("Codigo enviado con exito a su correo electronico\nSi no recibe ningun correo en su bandeja principal, revise su apartado de correo no deseado");
                 }
                 catch (Exception ex)
                 {
@@ -82,6 +84,10 @@ namespace Proyecto_escuela.Login
             return randomCode;
         }
 
+        public string getEmail()
+        {
+            return email;
+        }
         private void txtusuario_Click(object sender, EventArgs e)
         {
             txtusuario.Text = "";

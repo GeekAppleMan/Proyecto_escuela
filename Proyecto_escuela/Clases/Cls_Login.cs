@@ -132,6 +132,19 @@ namespace Proyecto_escuela.Clases
             {
                 MessageBox.Show("Intoduzca un correo electronico registrado valido");
             }
+            databaseConnection.Close();
+        }
+
+        public void CambiarContra(string correo, string contraseña)
+        {
+            string query = "Update tb_registro SET contraseña = '" + contraseña +"' WHERE correo = '" + correo + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            databaseConnection.Close();
         }
     }
 }
