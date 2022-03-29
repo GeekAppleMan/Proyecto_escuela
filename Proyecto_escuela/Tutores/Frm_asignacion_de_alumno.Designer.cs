@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_barra = new System.Windows.Forms.Panel();
-            this.btn_asignar_alumno = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txt_matricula = new System.Windows.Forms.TextBox();
             this.lbl_tutor = new System.Windows.Forms.Label();
@@ -43,9 +42,10 @@
             this.Apellidos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Eliminar = new System.Windows.Forms.DataGridViewImageColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_cancelar = new System.Windows.Forms.Button();
-            this.btn_aceptar = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.btn_aceptar = new Proyecto_escuela.Boton.RJButton();
+            this.btn_cancelar = new Proyecto_escuela.Boton.RJButton();
+            this.btn_asignar_alumno = new Proyecto_escuela.Boton.RJButton();
             this.panel_barra.SuspendLayout();
             this.panel_grid.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_tutor)).BeginInit();
@@ -63,26 +63,6 @@
             this.panel_barra.Name = "panel_barra";
             this.panel_barra.Size = new System.Drawing.Size(1172, 57);
             this.panel_barra.TabIndex = 0;
-            // 
-            // btn_asignar_alumno
-            // 
-            this.btn_asignar_alumno.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_asignar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_asignar_alumno.FlatAppearance.BorderSize = 0;
-            this.btn_asignar_alumno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_asignar_alumno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_asignar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_asignar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_asignar_alumno.Location = new System.Drawing.Point(12, 10);
-            this.btn_asignar_alumno.Name = "btn_asignar_alumno";
-            this.btn_asignar_alumno.Size = new System.Drawing.Size(232, 41);
-            this.btn_asignar_alumno.TabIndex = 22;
-            this.btn_asignar_alumno.Text = "Agregar alumno";
-            this.btn_asignar_alumno.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_asignar_alumno.UseVisualStyleBackColor = true;
-            this.btn_asignar_alumno.Click += new System.EventHandler(this.btn_asignar_alumno_Click);
             // 
             // panel3
             // 
@@ -209,8 +189,8 @@
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.btn_cancelar, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_aceptar, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.btn_cancelar, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 495);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -218,42 +198,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1172, 51);
             this.tableLayoutPanel1.TabIndex = 7;
-            // 
-            // btn_cancelar
-            // 
-            this.btn_cancelar.BackColor = System.Drawing.Color.Red;
-            this.btn_cancelar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_cancelar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_cancelar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_cancelar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_cancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cancelar.Location = new System.Drawing.Point(589, 3);
-            this.btn_cancelar.Name = "btn_cancelar";
-            this.btn_cancelar.Size = new System.Drawing.Size(580, 45);
-            this.btn_cancelar.TabIndex = 24;
-            this.btn_cancelar.Text = "Cancelar";
-            this.btn_cancelar.UseVisualStyleBackColor = false;
-            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
-            // 
-            // btn_aceptar
-            // 
-            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_aceptar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_aceptar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_aceptar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_aceptar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_aceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_aceptar.Location = new System.Drawing.Point(3, 3);
-            this.btn_aceptar.Name = "btn_aceptar";
-            this.btn_aceptar.Size = new System.Drawing.Size(580, 45);
-            this.btn_aceptar.TabIndex = 23;
-            this.btn_aceptar.Text = "Aceptar";
-            this.btn_aceptar.UseVisualStyleBackColor = false;
-            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // dataGridViewImageColumn1
             // 
@@ -263,6 +207,70 @@
             this.dataGridViewImageColumn1.MinimumWidth = 6;
             this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
             this.dataGridViewImageColumn1.Width = 192;
+            // 
+            // btn_aceptar
+            // 
+            this.btn_aceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_aceptar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_aceptar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_aceptar.BorderRadius = 15;
+            this.btn_aceptar.BorderSize = 0;
+            this.btn_aceptar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_aceptar.FlatAppearance.BorderSize = 0;
+            this.btn_aceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_aceptar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_aceptar.ForeColor = System.Drawing.Color.White;
+            this.btn_aceptar.Location = new System.Drawing.Point(3, 3);
+            this.btn_aceptar.Name = "btn_aceptar";
+            this.btn_aceptar.Size = new System.Drawing.Size(580, 45);
+            this.btn_aceptar.TabIndex = 91;
+            this.btn_aceptar.Text = "Aceptar";
+            this.btn_aceptar.TextColor = System.Drawing.Color.White;
+            this.btn_aceptar.UseVisualStyleBackColor = false;
+            this.btn_aceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
+            // 
+            // btn_cancelar
+            // 
+            this.btn_cancelar.BackColor = System.Drawing.Color.Red;
+            this.btn_cancelar.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_cancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_cancelar.BorderRadius = 15;
+            this.btn_cancelar.BorderSize = 0;
+            this.btn_cancelar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_cancelar.FlatAppearance.BorderSize = 0;
+            this.btn_cancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_cancelar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cancelar.ForeColor = System.Drawing.Color.White;
+            this.btn_cancelar.Location = new System.Drawing.Point(589, 3);
+            this.btn_cancelar.Name = "btn_cancelar";
+            this.btn_cancelar.Size = new System.Drawing.Size(580, 45);
+            this.btn_cancelar.TabIndex = 92;
+            this.btn_cancelar.Text = "Cancelar";
+            this.btn_cancelar.TextColor = System.Drawing.Color.White;
+            this.btn_cancelar.UseVisualStyleBackColor = false;
+            this.btn_cancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
+            // 
+            // btn_asignar_alumno
+            // 
+            this.btn_asignar_alumno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_asignar_alumno.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_asignar_alumno.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_asignar_alumno.BorderRadius = 15;
+            this.btn_asignar_alumno.BorderSize = 0;
+            this.btn_asignar_alumno.FlatAppearance.BorderSize = 0;
+            this.btn_asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_asignar_alumno.ForeColor = System.Drawing.Color.White;
+            this.btn_asignar_alumno.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_asignar_alumno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_asignar_alumno.Location = new System.Drawing.Point(3, 6);
+            this.btn_asignar_alumno.Name = "btn_asignar_alumno";
+            this.btn_asignar_alumno.Size = new System.Drawing.Size(242, 45);
+            this.btn_asignar_alumno.TabIndex = 92;
+            this.btn_asignar_alumno.Text = "Asignar alumno";
+            this.btn_asignar_alumno.TextColor = System.Drawing.Color.White;
+            this.btn_asignar_alumno.UseVisualStyleBackColor = false;
+            this.btn_asignar_alumno.Click += new System.EventHandler(this.btn_asignar_alumno_Click);
             // 
             // Frm_Asignacion_de_alumno
             // 
@@ -292,13 +300,10 @@
 
         private System.Windows.Forms.Panel panel_barra;
         private System.Windows.Forms.Panel panel_grid;
-        private System.Windows.Forms.Button btn_asignar_alumno;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txt_matricula;
         private System.Windows.Forms.Label lbl_tutor;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btn_cancelar;
-        private System.Windows.Forms.Button btn_aceptar;
         private System.Windows.Forms.DataGridView dgv_tutor;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
@@ -306,5 +311,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombres;
         private System.Windows.Forms.DataGridViewTextBoxColumn Apellidos;
         private System.Windows.Forms.DataGridViewImageColumn Eliminar;
+        private Boton.RJButton btn_aceptar;
+        private Boton.RJButton btn_asignar_alumno;
+        private Boton.RJButton btn_cancelar;
     }
 }

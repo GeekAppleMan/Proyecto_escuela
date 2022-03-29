@@ -55,11 +55,11 @@ namespace Proyecto_escuela
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             Cls_tutores.index = rowindex;
-            obj_modificar.txt_nombres.Text = dgv[0, rowindex].Value.ToString();
-            obj_modificar.txt_apellidos.Text = dgv[1, rowindex].Value.ToString();
-            obj_modificar.txt_direccion.Text = dgv[2, rowindex].Value.ToString();
-            obj_modificar.txt_telefono.Text = dgv[3, rowindex].Value.ToString();
-            obj_modificar.txt_correo.Text = dgv[4, rowindex].Value.ToString(); 
+            obj_modificar.txt_nombres.Texts = dgv[0, rowindex].Value.ToString();
+            obj_modificar.txt_apellidos.Texts = dgv[1, rowindex].Value.ToString();
+            obj_modificar.txt_direccion.Texts = dgv[2, rowindex].Value.ToString();
+            obj_modificar.txt_telefono.Texts = dgv[3, rowindex].Value.ToString();
+            obj_modificar.txt_correo.Texts = dgv[4, rowindex].Value.ToString(); 
             obj_modificar.dtp_fecha_nacimiento.Text = dgv[5, rowindex].Value.ToString();
             obj_modificar.combo_parentesco.Text = dgv[6, rowindex].Value.ToString();
             obj_modificar.combo_estatus.Text = dgv[7, rowindex].Value.ToString();
