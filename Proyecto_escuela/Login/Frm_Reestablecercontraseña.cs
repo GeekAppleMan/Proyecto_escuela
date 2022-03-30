@@ -55,7 +55,7 @@ namespace Proyecto_escuela.Login
                 to = (txtusuario.Text).ToString();
                 from = "noreplyjanesoftware@gmail.com";
                 pass="JanePower123456789";
-                messagebody = "Tu codigo de verificacion es " + randomCode + "\n \nEsta es una cuenta de correo no monitoreada.  Su contenido es un mensaje automático generado por nuestro sistema. Por favor no responda a este correo. Si desea comunicarse con nosotros por algun problema comuniquese con el departamento escolar encargado.";
+                messagebody = "Tu codigo de verificacion es " + randomCode + "\n \nEsta es una cuenta de correo no monitoreada. Su contenido es un mensaje automático generado por nuestro sistema. Por favor no responda a este correo. Si desea comunicarse con nosotros por algun problema comuniquese con el departamento escolar encargado.";
                 message.To.Add(to);
                 message.From = new MailAddress(from);
                 message.Body = messagebody;

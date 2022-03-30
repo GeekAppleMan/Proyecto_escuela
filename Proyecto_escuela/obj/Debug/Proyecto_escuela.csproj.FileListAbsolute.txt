@@ -282,3 +282,4 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_NuevaContraseña.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_NuevaContraseña.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\WhatsAppApi.dll
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\WhatsAppApi.dll

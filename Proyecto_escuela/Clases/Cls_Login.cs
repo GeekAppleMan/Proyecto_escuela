@@ -146,5 +146,21 @@ namespace Proyecto_escuela.Clases
             reader = commandDatabase.ExecuteReader();
             databaseConnection.Close();
         }
+
+        public void CompararContra(string contraseña)
+        {
+            string query = "SELECT * FROM tb_registro WHERE contraseña = '" + contraseña + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            if (reader.Read())
+            {
+                MessageBox.Show("");
+            }
+            databaseConnection.Close();
+        }
     }
 }
