@@ -39,8 +39,15 @@ namespace Proyecto_escuela.Login
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
+            
             if (txt1.Text==txt2.Text)
             {
+                objL.CompararContra(txt2.Text);
+                if (objL.comparacioncontraseña==1)
+                {
+                    objL.comparacioncontraseña = 0;
+                    return;
+                }
                 objL.CambiarContra(ree.getEmail(),txt1.Text);
                 MessageBox.Show("Contraseña cambiada con exito");
                 this.Close();
