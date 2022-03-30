@@ -518,7 +518,7 @@ namespace Proyecto_escuela
             this.izquierdaToolStripMenuItem.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.izquierdaToolStripMenuItem.Image = global::Proyecto_escuela.Properties.Resources.ajustes;
             this.izquierdaToolStripMenuItem.Name = "izquierdaToolStripMenuItem";
-            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(106, 26);
+            this.izquierdaToolStripMenuItem.Size = new System.Drawing.Size(107, 26);
             this.izquierdaToolStripMenuItem.Text = "Ajustes";
             this.izquierdaToolStripMenuItem.Click += new System.EventHandler(this.izquierdaToolStripMenuItem_Click);
             // 
