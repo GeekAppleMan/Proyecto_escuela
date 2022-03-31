@@ -25,13 +25,13 @@ namespace Proyecto_escuela
 
         private void btnregistrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || string.IsNullOrEmpty(txt_contraseña.Text) || txt_matricula.Text == "Matricula" || txt_correo.Text == "Correo"  || txt_contraseña.Text == "Contraseña")
+            if (string.IsNullOrEmpty(txt_matricula.Texts) || string.IsNullOrEmpty(txt_contraseña.Texts) || string.IsNullOrEmpty(txt_contraseña.Texts) || txt_matricula.Texts == "Matricula" || txt_correo.Texts == "Correo"  || txt_contraseña.Texts == "Contraseña")
             {
                 MessageBox.Show("Debe ingresar todos los datos antes de continuar");
             }
             else
             {
-                new Cls_Alumnos().registrar_usuario_alumno(txt_matricula.Text, txt_correo.Text, txt_contraseña.Text);
+                new Cls_Alumnos().registrar_usuario_alumno(txt_matricula.Texts, txt_correo.Texts, txt_contraseña.Texts);
                 this.Close();
             }
         }
@@ -96,6 +96,11 @@ namespace Proyecto_escuela
             {
                 e.Handled = true;
             }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
