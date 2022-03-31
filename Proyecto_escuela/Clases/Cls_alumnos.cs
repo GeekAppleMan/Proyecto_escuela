@@ -143,7 +143,7 @@ namespace Proyecto_escuela
                         MessageBox.Show("Se registro al alumno correctamente, a continuacion se registrara el usuario del alumno");
                         File.Delete(path_save);
                         Frm_crear_usuario_alumno obj_usuario = new Frm_crear_usuario_alumno();
-                        obj_usuario.txt_matricula.Text = matricula;
+                        obj_usuario.txt_matricula.Texts = matricula;
                         obj_usuario.ShowDialog();
                         
                     }
