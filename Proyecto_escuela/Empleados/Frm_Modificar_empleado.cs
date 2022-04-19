@@ -67,7 +67,7 @@ namespace Proyecto_escuela
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-            obj_empleados.modificar_empleados(txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text, txt_telefono.Text, txt_correo.Text, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, combo_estatus.Text, picture_captura, this, captura);
+            obj_empleados.modificar_empleados(txt_nombres.Texts, txt_apellidos.Texts, txt_direccion.Texts, txt_telefono.Texts, txt_correo.Texts, dtp_fecha_nacimiento.Value.ToString("d"), combo_parentesco.Text, combo_estatus.Text, picture_captura, this, captura);
         }
 
         private void Frm_Modificar_empleado_Load(object sender, EventArgs e)
@@ -81,7 +81,7 @@ namespace Proyecto_escuela
             Clases.Cls_empleados.conservar_modificar_imagen = false;
             picture_tiempo_real.Enabled = true;
             combo_dispositivos.Enabled = true;
-            btn_enceder.Enabled = true;
+            Toggle_encender_camara.Checked = true;
             btn_capturar_foto.Enabled = true;
             picture_captura.Enabled = true;
         }
@@ -91,7 +91,7 @@ namespace Proyecto_escuela
             cerrar_webcam();
             picture_tiempo_real.Enabled = false;
             combo_dispositivos.Enabled = false;
-            btn_enceder.Enabled = false;
+            Toggle_encender_camara.Checked = false;
             picture_captura.Enabled = false;
             btn_capturar_foto.Enabled = false;
             Clases.Cls_empleados.conservar_modificar_imagen = true;
@@ -139,7 +139,7 @@ namespace Proyecto_escuela
             cerrar_webcam();
             picture_tiempo_real.Enabled = false;
             combo_dispositivos.Enabled = false;
-            btn_enceder.Enabled = false;
+            Toggle_encender_camara.Checked = false;
             picture_captura.Enabled = false;
             btn_capturar_foto.Enabled = false;
             Clases.Cls_empleados.conservar_modificar_imagen = true;
@@ -276,6 +276,46 @@ namespace Proyecto_escuela
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void Toggle_encender_camara_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Toggle_encender_camara.Checked == false)
+            {
+                cerrar_webcam();
+                lbltoggle.Text = "Apagada";
+            }
+            else
+            {
+                if (miwebcam != null && miwebcam.IsRunning)
+                {
+
+                }
+                else
+                {
+                    try
+                    {
+                        int i = combo_dispositivos.SelectedIndex;
+                        string nombrevideo = misdispositivos[i].MonikerString;
+                        miwebcam = new VideoCaptureDevice(nombrevideo);
+                        miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                        miwebcam.Start();
+                        btn_capturar_foto.Enabled = true;
+                        lbltoggle.Text = "Encendida";
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                        Toggle_encender_camara.Checked = false;
+                        lbltoggle.Text = "Apagada";
+                    }
+                }
+            }
+        }
+
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

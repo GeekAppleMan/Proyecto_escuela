@@ -55,6 +55,7 @@
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.txt_nombres = new Proyecto_escuela.Textbox.Rjtextbox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
@@ -64,6 +65,7 @@
             // 
             // gb_foto_perfil
             // 
+            this.gb_foto_perfil.Controls.Add(this.panel7);
             this.gb_foto_perfil.Controls.Add(this.combo_dispositivos);
             this.gb_foto_perfil.Controls.Add(this.lbltoggle);
             this.gb_foto_perfil.Controls.Add(this.Toggle_encender_camara);
@@ -503,6 +505,15 @@
             this.panel8.Size = new System.Drawing.Size(238, 1);
             this.panel8.TabIndex = 103;
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(42, 90);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 1);
+            this.panel7.TabIndex = 93;
+            // 
             // frm_registrar_tutor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -559,5 +570,6 @@
         private System.Windows.Forms.ComboBox combo_dispositivos;
         private System.Windows.Forms.ComboBox combo_parentesco;
         private Datetime.Rjdatetime rjdatetime1;
+        private System.Windows.Forms.Panel panel7;
     }
 }
