@@ -102,7 +102,7 @@
             this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 92;
+            this.combo_dispositivos.TabIndex = 0;
             this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
@@ -145,7 +145,7 @@
             this.btn_capturar_foto.Location = new System.Drawing.Point(42, 393);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 40);
-            this.btn_capturar_foto.TabIndex = 87;
+            this.btn_capturar_foto.TabIndex = 1;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.TextColor = System.Drawing.Color.White;
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
@@ -165,7 +165,7 @@
             this.btn_registrar.Location = new System.Drawing.Point(41, 519);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(575, 40);
-            this.btn_registrar.TabIndex = 86;
+            this.btn_registrar.TabIndex = 2;
             this.btn_registrar.Text = "Registrar tutor";
             this.btn_registrar.TextColor = System.Drawing.Color.White;
             this.btn_registrar.UseVisualStyleBackColor = false;
@@ -185,7 +185,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(41, 565);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 40);
-            this.btn_cancelar.TabIndex = 85;
+            this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.TextColor = System.Drawing.Color.White;
             this.btn_cancelar.UseVisualStyleBackColor = false;

@@ -103,7 +103,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(42, 580);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 40);
-            this.btn_cancelar.TabIndex = 101;
+            this.btn_cancelar.TabIndex = 14;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.TextColor = System.Drawing.Color.White;
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -123,7 +123,7 @@
             this.btn_modificar.Location = new System.Drawing.Point(42, 535);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(575, 40);
-            this.btn_modificar.TabIndex = 100;
+            this.btn_modificar.TabIndex = 13;
             this.btn_modificar.Text = "Modificar empleado";
             this.btn_modificar.TextColor = System.Drawing.Color.White;
             this.btn_modificar.UseVisualStyleBackColor = false;
@@ -143,7 +143,7 @@
             this.btn_capturar_foto.Location = new System.Drawing.Point(42, 452);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 40);
-            this.btn_capturar_foto.TabIndex = 99;
+            this.btn_capturar_foto.TabIndex = 12;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.TextColor = System.Drawing.Color.White;
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
@@ -170,7 +170,7 @@
             this.Toggle_encender_camara.OnBackColor = System.Drawing.Color.Lime;
             this.Toggle_encender_camara.OnToggleColor = System.Drawing.Color.WhiteSmoke;
             this.Toggle_encender_camara.Size = new System.Drawing.Size(45, 22);
-            this.Toggle_encender_camara.TabIndex = 96;
+            this.Toggle_encender_camara.TabIndex = 11;
             this.Toggle_encender_camara.UseVisualStyleBackColor = true;
             this.Toggle_encender_camara.CheckedChanged += new System.EventHandler(this.Toggle_encender_camara_CheckedChanged);
             // 
@@ -181,7 +181,7 @@
             this.rdb_conservar.Location = new System.Drawing.Point(233, 29);
             this.rdb_conservar.Name = "rdb_conservar";
             this.rdb_conservar.Size = new System.Drawing.Size(166, 24);
-            this.rdb_conservar.TabIndex = 86;
+            this.rdb_conservar.TabIndex = 9;
             this.rdb_conservar.TabStop = true;
             this.rdb_conservar.Text = "Conservar imagen";
             this.rdb_conservar.UseVisualStyleBackColor = true;
@@ -193,7 +193,7 @@
             this.rdb_cambiar.Location = new System.Drawing.Point(42, 29);
             this.rdb_cambiar.Name = "rdb_cambiar";
             this.rdb_cambiar.Size = new System.Drawing.Size(152, 24);
-            this.rdb_cambiar.TabIndex = 85;
+            this.rdb_cambiar.TabIndex = 8;
             this.rdb_cambiar.Text = "Cambiar imagen";
             this.rdb_cambiar.UseVisualStyleBackColor = true;
             this.rdb_cambiar.Click += new System.EventHandler(this.rdb_cambiar_Click);
@@ -227,7 +227,7 @@
             this.combo_dispositivos.Location = new System.Drawing.Point(42, 94);
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 0;
+            this.combo_dispositivos.TabIndex = 10;
             this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
@@ -311,6 +311,7 @@
             // 
             // txt_nombres
             // 
+            this.txt_nombres.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_nombres.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_nombres.BorderColor = System.Drawing.Color.DimGray;
             this.txt_nombres.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -326,13 +327,14 @@
             this.txt_nombres.PasswordChar = false;
             this.txt_nombres.PlaceholderColor = System.Drawing.Color.Black;
             this.txt_nombres.PlaceholderText = "";
-            this.txt_nombres.Size = new System.Drawing.Size(263, 36);
-            this.txt_nombres.TabIndex = 99;
+            this.txt_nombres.Size = new System.Drawing.Size(273, 36);
+            this.txt_nombres.TabIndex = 0;
             this.txt_nombres.Texts = "";
             this.txt_nombres.UnderlinedStyle = false;
             // 
             // txt_apellidos
             // 
+            this.txt_apellidos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_apellidos.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_apellidos.BorderColor = System.Drawing.Color.DimGray;
             this.txt_apellidos.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -348,13 +350,14 @@
             this.txt_apellidos.PasswordChar = false;
             this.txt_apellidos.PlaceholderColor = System.Drawing.Color.Black;
             this.txt_apellidos.PlaceholderText = "";
-            this.txt_apellidos.Size = new System.Drawing.Size(263, 36);
-            this.txt_apellidos.TabIndex = 100;
+            this.txt_apellidos.Size = new System.Drawing.Size(273, 36);
+            this.txt_apellidos.TabIndex = 1;
             this.txt_apellidos.Texts = "";
             this.txt_apellidos.UnderlinedStyle = false;
             // 
             // txt_direccion
             // 
+            this.txt_direccion.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_direccion.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_direccion.BorderColor = System.Drawing.Color.DimGray;
             this.txt_direccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -370,13 +373,14 @@
             this.txt_direccion.PasswordChar = false;
             this.txt_direccion.PlaceholderColor = System.Drawing.Color.Black;
             this.txt_direccion.PlaceholderText = "";
-            this.txt_direccion.Size = new System.Drawing.Size(263, 36);
-            this.txt_direccion.TabIndex = 101;
+            this.txt_direccion.Size = new System.Drawing.Size(273, 36);
+            this.txt_direccion.TabIndex = 2;
             this.txt_direccion.Texts = "";
             this.txt_direccion.UnderlinedStyle = false;
             // 
             // txt_telefono
             // 
+            this.txt_telefono.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_telefono.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_telefono.BorderColor = System.Drawing.Color.DimGray;
             this.txt_telefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -392,13 +396,14 @@
             this.txt_telefono.PasswordChar = false;
             this.txt_telefono.PlaceholderColor = System.Drawing.Color.Black;
             this.txt_telefono.PlaceholderText = "";
-            this.txt_telefono.Size = new System.Drawing.Size(263, 36);
-            this.txt_telefono.TabIndex = 103;
+            this.txt_telefono.Size = new System.Drawing.Size(273, 36);
+            this.txt_telefono.TabIndex = 3;
             this.txt_telefono.Texts = "";
             this.txt_telefono.UnderlinedStyle = false;
             // 
             // txt_correo
             // 
+            this.txt_correo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txt_correo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.txt_correo.BorderColor = System.Drawing.Color.DimGray;
             this.txt_correo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -414,8 +419,8 @@
             this.txt_correo.PasswordChar = false;
             this.txt_correo.PlaceholderColor = System.Drawing.Color.Black;
             this.txt_correo.PlaceholderText = "";
-            this.txt_correo.Size = new System.Drawing.Size(263, 36);
-            this.txt_correo.TabIndex = 102;
+            this.txt_correo.Size = new System.Drawing.Size(273, 36);
+            this.txt_correo.TabIndex = 4;
             this.txt_correo.Texts = "";
             this.txt_correo.UnderlinedStyle = false;
             // 
@@ -433,8 +438,7 @@
             // 
             // combo_estatus
             // 
-            this.combo_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.combo_estatus.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.combo_estatus.BackColor = System.Drawing.Color.White;
             this.combo_estatus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_estatus.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -443,10 +447,10 @@
             this.combo_estatus.Items.AddRange(new object[] {
             "Activo",
             "Inactivo"});
-            this.combo_estatus.Location = new System.Drawing.Point(3, 598);
+            this.combo_estatus.Location = new System.Drawing.Point(3, 593);
             this.combo_estatus.Name = "combo_estatus";
             this.combo_estatus.Size = new System.Drawing.Size(275, 31);
-            this.combo_estatus.TabIndex = 101;
+            this.combo_estatus.TabIndex = 7;
             this.combo_estatus.Text = "Activo";
             this.combo_estatus.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_estatus_KeyPress);
             // 
@@ -488,8 +492,7 @@
             // 
             // combo_parentesco
             // 
-            this.combo_parentesco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.combo_parentesco.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.combo_parentesco.BackColor = System.Drawing.Color.White;
             this.combo_parentesco.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.combo_parentesco.Font = new System.Drawing.Font("Century Gothic", 12F);
@@ -498,10 +501,10 @@
             this.combo_parentesco.Items.AddRange(new object[] {
             "Administrador",
             "Basico"});
-            this.combo_parentesco.Location = new System.Drawing.Point(3, 512);
+            this.combo_parentesco.Location = new System.Drawing.Point(3, 511);
             this.combo_parentesco.Name = "combo_parentesco";
             this.combo_parentesco.Size = new System.Drawing.Size(275, 31);
-            this.combo_parentesco.TabIndex = 7;
+            this.combo_parentesco.TabIndex = 6;
             this.combo_parentesco.Text = "Basico";
             this.combo_parentesco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             // 
@@ -531,14 +534,13 @@
             // 
             // dtp_fecha_nacimiento
             // 
-            this.dtp_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtp_fecha_nacimiento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.dtp_fecha_nacimiento.Font = new System.Drawing.Font("Century Gothic", 12F);
             this.dtp_fecha_nacimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(3, 433);
+            this.dtp_fecha_nacimiento.Location = new System.Drawing.Point(3, 432);
             this.dtp_fecha_nacimiento.Name = "dtp_fecha_nacimiento";
             this.dtp_fecha_nacimiento.Size = new System.Drawing.Size(275, 32);
-            this.dtp_fecha_nacimiento.TabIndex = 6;
+            this.dtp_fecha_nacimiento.TabIndex = 5;
             this.dtp_fecha_nacimiento.Value = new System.DateTime(2021, 12, 28, 0, 0, 0, 0);
             // 
             // lbl_correo
