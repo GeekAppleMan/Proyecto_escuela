@@ -29,9 +29,11 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
+            this.btn_registrar_tutor = new Proyecto_escuela.Boton.RJButton();
+            this.txttutor = new Proyecto_escuela.Textbox.Rjtextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_tutor = new System.Windows.Forms.Label();
             this.panel_grid = new System.Windows.Forms.Panel();
@@ -49,8 +51,6 @@ namespace Proyecto_escuela
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btn_registrar_tutor = new Proyecto_escuela.Boton.RJButton();
-            this.txttutor = new Proyecto_escuela.Textbox.Rjtextbox();
             this.panel_busqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel_grid.SuspendLayout();
@@ -69,6 +69,52 @@ namespace Proyecto_escuela
             this.panel_busqueda.Name = "panel_busqueda";
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 5;
+            // 
+            // btn_registrar_tutor
+            // 
+            this.btn_registrar_tutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_registrar_tutor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_registrar_tutor.BorderColor = System.Drawing.Color.HotPink;
+            this.btn_registrar_tutor.BorderRadius = 15;
+            this.btn_registrar_tutor.BorderSize = 0;
+            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
+            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registrar_tutor.ForeColor = System.Drawing.Color.Black;
+            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registrar_tutor.Location = new System.Drawing.Point(12, 4);
+            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
+            this.btn_registrar_tutor.Size = new System.Drawing.Size(234, 40);
+            this.btn_registrar_tutor.TabIndex = 22;
+            this.btn_registrar_tutor.Text = "Registrar tutor";
+            this.btn_registrar_tutor.TextColor = System.Drawing.Color.Black;
+            this.btn_registrar_tutor.UseVisualStyleBackColor = false;
+            this.btn_registrar_tutor.Click += new System.EventHandler(this.btn_registrar_tutor_Click);
+            // 
+            // txttutor
+            // 
+            this.txttutor.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txttutor.BackColor = System.Drawing.SystemColors.Window;
+            this.txttutor.BorderColor = System.Drawing.Color.DimGray;
+            this.txttutor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.txttutor.BorderRadius = 10;
+            this.txttutor.BorderSize = 2;
+            this.txttutor.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            this.txttutor.ForeColor = System.Drawing.Color.Black;
+            this.txttutor.Location = new System.Drawing.Point(464, 8);
+            this.txttutor.Margin = new System.Windows.Forms.Padding(4);
+            this.txttutor.Multiline = false;
+            this.txttutor.Name = "txttutor";
+            this.txttutor.Padding = new System.Windows.Forms.Padding(7);
+            this.txttutor.PasswordChar = false;
+            this.txttutor.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txttutor.PlaceholderText = "Ej. Jaime Sanchez";
+            this.txttutor.Size = new System.Drawing.Size(326, 36);
+            this.txttutor.TabIndex = 20;
+            this.txttutor.Texts = "";
+            this.txttutor.UnderlinedStyle = false;
+            this.txttutor._TextChanged += new System.EventHandler(this.txttutor__TextChanged);
             // 
             // pictureBox1
             // 
@@ -112,14 +158,14 @@ namespace Proyecto_escuela
             this.dgv_tutor.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.dgv_tutor.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_tutor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_tutor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_tutor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_tutor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombres,
@@ -133,14 +179,14 @@ namespace Proyecto_escuela
             this.id_tutor,
             this.imagen,
             this.codigo});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.WhiteSmoke;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_tutor.DefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_tutor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgv_tutor.EnableHeadersVisualStyles = false;
             this.dgv_tutor.GridColor = System.Drawing.Color.LightGray;
@@ -247,52 +293,6 @@ namespace Proyecto_escuela
             this.dataGridViewImageColumn2.MinimumWidth = 6;
             this.dataGridViewImageColumn2.Name = "dataGridViewImageColumn2";
             this.dataGridViewImageColumn2.Width = 131;
-            // 
-            // btn_registrar_tutor
-            // 
-            this.btn_registrar_tutor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_registrar_tutor.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_registrar_tutor.BorderColor = System.Drawing.Color.HotPink;
-            this.btn_registrar_tutor.BorderRadius = 15;
-            this.btn_registrar_tutor.BorderSize = 0;
-            this.btn_registrar_tutor.FlatAppearance.BorderSize = 0;
-            this.btn_registrar_tutor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registrar_tutor.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registrar_tutor.ForeColor = System.Drawing.Color.Black;
-            this.btn_registrar_tutor.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registrar_tutor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registrar_tutor.Location = new System.Drawing.Point(12, 4);
-            this.btn_registrar_tutor.Name = "btn_registrar_tutor";
-            this.btn_registrar_tutor.Size = new System.Drawing.Size(226, 40);
-            this.btn_registrar_tutor.TabIndex = 22;
-            this.btn_registrar_tutor.Text = "Registrar tutor";
-            this.btn_registrar_tutor.TextColor = System.Drawing.Color.Black;
-            this.btn_registrar_tutor.UseVisualStyleBackColor = false;
-            this.btn_registrar_tutor.Click += new System.EventHandler(this.btn_registrar_tutor_Click);
-            // 
-            // txttutor
-            // 
-            this.txttutor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txttutor.BackColor = System.Drawing.SystemColors.Window;
-            this.txttutor.BorderColor = System.Drawing.Color.DimGray;
-            this.txttutor.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.txttutor.BorderRadius = 10;
-            this.txttutor.BorderSize = 2;
-            this.txttutor.Font = new System.Drawing.Font("Century Gothic", 9.5F);
-            this.txttutor.ForeColor = System.Drawing.Color.Black;
-            this.txttutor.Location = new System.Drawing.Point(464, 8);
-            this.txttutor.Margin = new System.Windows.Forms.Padding(4);
-            this.txttutor.Multiline = false;
-            this.txttutor.Name = "txttutor";
-            this.txttutor.Padding = new System.Windows.Forms.Padding(7);
-            this.txttutor.PasswordChar = false;
-            this.txttutor.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txttutor.PlaceholderText = "Ej. Jaime Sanchez";
-            this.txttutor.Size = new System.Drawing.Size(326, 36);
-            this.txttutor.TabIndex = 20;
-            this.txttutor.Texts = "";
-            this.txttutor.UnderlinedStyle = false;
-            this.txttutor._TextChanged += new System.EventHandler(this.txttutor__TextChanged);
             // 
             // Frm_tutores
             // 

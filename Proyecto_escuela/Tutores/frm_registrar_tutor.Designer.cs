@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.combo_dispositivos = new System.Windows.Forms.ComboBox();
             this.lbltoggle = new System.Windows.Forms.Label();
             this.Toggle_encender_camara = new Proyecto_escuela.RJToggleButton.RJToggleButton();
@@ -55,7 +56,6 @@
             this.lbl_apellidos = new System.Windows.Forms.Label();
             this.txt_nombres = new Proyecto_escuela.Textbox.Rjtextbox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_captura)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picture_tiempo_real)).BeginInit();
@@ -83,6 +83,15 @@
             this.gb_foto_perfil.TabIndex = 87;
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(42, 90);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 1);
+            this.panel7.TabIndex = 93;
             // 
             // combo_dispositivos
             // 
@@ -504,15 +513,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(238, 1);
             this.panel8.TabIndex = 103;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gray;
-            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel7.Location = new System.Drawing.Point(42, 90);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(278, 1);
-            this.panel7.TabIndex = 93;
             // 
             // frm_registrar_tutor
             // 
