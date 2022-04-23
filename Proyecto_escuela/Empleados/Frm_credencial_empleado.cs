@@ -48,11 +48,11 @@ namespace Proyecto_escuela
             Frm_Modificar_empleado obj_modificar = new Frm_Modificar_empleado();
             try
             {
-                obj_modificar.txt_nombres.Text =  dgv[2, rowindex].Value.ToString();
-                obj_modificar.txt_apellidos.Text =  dgv[3, rowindex].Value.ToString();
-                obj_modificar.txt_direccion.Text = dgv[5, rowindex].Value.ToString();
-                obj_modificar.txt_telefono.Text =  dgv[7, rowindex].Value.ToString();
-                obj_modificar.txt_correo.Text =  dgv[6, rowindex].Value.ToString();
+                obj_modificar.txt_nombres.Texts =  dgv[2, rowindex].Value.ToString();
+                obj_modificar.txt_apellidos.Texts =  dgv[3, rowindex].Value.ToString();
+                obj_modificar.txt_direccion.Texts = dgv[5, rowindex].Value.ToString();
+                obj_modificar.txt_telefono.Texts =  dgv[7, rowindex].Value.ToString();
+                obj_modificar.txt_correo.Texts =  dgv[6, rowindex].Value.ToString();
                 obj_modificar.dtp_fecha_nacimiento.Value = Convert.ToDateTime( dgv[4,rowindex].Value.ToString());
                 obj_modificar.combo_parentesco.Text =  dgv[8, rowindex].Value.ToString();
                 obj_modificar.combo_estatus.Text = dgv[9,rowindex].Value.ToString();

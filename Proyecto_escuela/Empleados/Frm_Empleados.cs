@@ -26,7 +26,7 @@ namespace Proyecto_escuela.Empleados
         Cls_empleados objusuario = new Cls_empleados();
         private void cargar_empleado()
         {
-            objusuario.cargar_empleados(txt_empleado.Text, dgv_empleado);
+            objusuario.cargar_empleados(txt_empleado.Texts, dgv_empleado);
         }
 
         private void txt_empleado_TextChanged(object sender, EventArgs e)

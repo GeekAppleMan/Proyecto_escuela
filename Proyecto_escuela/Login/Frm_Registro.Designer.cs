@@ -32,7 +32,6 @@ namespace Proyecto_escuela.Login
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.txt_matricula = new System.Windows.Forms.TextBox();
-            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtcorreo = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -47,6 +46,7 @@ namespace Proyecto_escuela.Login
             this.lbltitulo = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
+            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
@@ -56,9 +56,9 @@ namespace Proyecto_escuela.Login
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.btniniciarsesion);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.txt_matricula);
-            this.panel1.Controls.Add(this.btniniciarsesion);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.txtcorreo);
             this.panel1.Controls.Add(this.panel3);
@@ -103,23 +103,6 @@ namespace Proyecto_escuela.Login
             this.txt_matricula.Text = "Matricula";
             this.txt_matricula.Enter += new System.EventHandler(this.txt_matricula_Enter);
             this.txt_matricula.Leave += new System.EventHandler(this.txt_matricula_Leave);
-            // 
-            // btniniciarsesion
-            // 
-            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(283, 287);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
-            this.btniniciarsesion.TabIndex = 6;
-            this.btniniciarsesion.Text = "Registrar";
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // panel4
             // 
@@ -298,6 +281,26 @@ namespace Proyecto_escuela.Login
             this.lbljane.TabIndex = 3;
             this.lbljane.Text = "JANE SOFTWARE";
             // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btniniciarsesion.BorderRadius = 20;
+            this.btniniciarsesion.BorderSize = 0;
+            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
+            this.btniniciarsesion.Location = new System.Drawing.Point(283, 286);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
+            this.btniniciarsesion.TabIndex = 69;
+            this.btniniciarsesion.Text = "Registrar";
+            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
+            // 
             // Frm_Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -337,8 +340,8 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.TextBox txt_confirmar_contraseña;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txtcorreo;
-        private System.Windows.Forms.Button btniniciarsesion;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.TextBox txt_matricula;
+        private Boton.RJButton btniniciarsesion;
     }
 }

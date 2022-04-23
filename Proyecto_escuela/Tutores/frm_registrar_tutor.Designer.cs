@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
+            this.panel7 = new System.Windows.Forms.Panel();
             this.combo_dispositivos = new System.Windows.Forms.ComboBox();
             this.lbltoggle = new System.Windows.Forms.Label();
             this.Toggle_encender_camara = new Proyecto_escuela.RJToggleButton.RJToggleButton();
@@ -64,6 +65,7 @@
             // 
             // gb_foto_perfil
             // 
+            this.gb_foto_perfil.Controls.Add(this.panel7);
             this.gb_foto_perfil.Controls.Add(this.combo_dispositivos);
             this.gb_foto_perfil.Controls.Add(this.lbltoggle);
             this.gb_foto_perfil.Controls.Add(this.Toggle_encender_camara);
@@ -82,6 +84,15 @@
             this.gb_foto_perfil.TabStop = false;
             this.gb_foto_perfil.Text = "Capturar foto de perfil";
             // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.Gray;
+            this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel7.Location = new System.Drawing.Point(42, 90);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(278, 1);
+            this.panel7.TabIndex = 93;
+            // 
             // combo_dispositivos
             // 
             this.combo_dispositivos.BackColor = System.Drawing.Color.White;
@@ -91,7 +102,7 @@
             this.combo_dispositivos.Location = new System.Drawing.Point(42, 56);
             this.combo_dispositivos.Name = "combo_dispositivos";
             this.combo_dispositivos.Size = new System.Drawing.Size(278, 28);
-            this.combo_dispositivos.TabIndex = 92;
+            this.combo_dispositivos.TabIndex = 0;
             this.combo_dispositivos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.combo_dispositivos_KeyPress);
             this.combo_dispositivos.MouseHover += new System.EventHandler(this.combo_dispositivos_MouseHover);
             // 
@@ -134,7 +145,7 @@
             this.btn_capturar_foto.Location = new System.Drawing.Point(42, 393);
             this.btn_capturar_foto.Name = "btn_capturar_foto";
             this.btn_capturar_foto.Size = new System.Drawing.Size(575, 40);
-            this.btn_capturar_foto.TabIndex = 87;
+            this.btn_capturar_foto.TabIndex = 1;
             this.btn_capturar_foto.Text = "Capturar foto de perfil";
             this.btn_capturar_foto.TextColor = System.Drawing.Color.White;
             this.btn_capturar_foto.UseVisualStyleBackColor = false;
@@ -154,7 +165,7 @@
             this.btn_registrar.Location = new System.Drawing.Point(41, 519);
             this.btn_registrar.Name = "btn_registrar";
             this.btn_registrar.Size = new System.Drawing.Size(575, 40);
-            this.btn_registrar.TabIndex = 86;
+            this.btn_registrar.TabIndex = 2;
             this.btn_registrar.Text = "Registrar tutor";
             this.btn_registrar.TextColor = System.Drawing.Color.White;
             this.btn_registrar.UseVisualStyleBackColor = false;
@@ -174,7 +185,7 @@
             this.btn_cancelar.Location = new System.Drawing.Point(41, 565);
             this.btn_cancelar.Name = "btn_cancelar";
             this.btn_cancelar.Size = new System.Drawing.Size(575, 40);
-            this.btn_cancelar.TabIndex = 85;
+            this.btn_cancelar.TabIndex = 3;
             this.btn_cancelar.Text = "Cancelar registro";
             this.btn_cancelar.TextColor = System.Drawing.Color.White;
             this.btn_cancelar.UseVisualStyleBackColor = false;
@@ -559,5 +570,6 @@
         private System.Windows.Forms.ComboBox combo_dispositivos;
         private System.Windows.Forms.ComboBox combo_parentesco;
         private Datetime.Rjdatetime rjdatetime1;
+        private System.Windows.Forms.Panel panel7;
     }
 }

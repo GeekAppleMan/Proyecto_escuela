@@ -36,7 +36,6 @@ namespace Proyecto_escuela
             this.txtusuario = new System.Windows.Forms.TextBox();
             this.linkLabelregistrar = new System.Windows.Forms.LinkLabel();
             this.linkLabelcontraseña = new System.Windows.Forms.LinkLabel();
-            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.lbltitulo = new System.Windows.Forms.Label();
             this.lblerror = new System.Windows.Forms.Label();
             this.piccerrar = new System.Windows.Forms.PictureBox();
@@ -44,6 +43,7 @@ namespace Proyecto_escuela
             this.lbljane = new System.Windows.Forms.Label();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.picture_logo = new System.Windows.Forms.PictureBox();
+            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
@@ -54,13 +54,13 @@ namespace Proyecto_escuela
             // panel_contenedor
             // 
             this.panel_contenedor.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel_contenedor.Controls.Add(this.btniniciarsesion);
             this.panel_contenedor.Controls.Add(this.line2);
             this.panel_contenedor.Controls.Add(this.line1);
             this.panel_contenedor.Controls.Add(this.txtcontraseña);
             this.panel_contenedor.Controls.Add(this.txtusuario);
             this.panel_contenedor.Controls.Add(this.linkLabelregistrar);
             this.panel_contenedor.Controls.Add(this.linkLabelcontraseña);
-            this.panel_contenedor.Controls.Add(this.btniniciarsesion);
             this.panel_contenedor.Controls.Add(this.lbltitulo);
             this.panel_contenedor.Controls.Add(this.lblerror);
             this.panel_contenedor.Controls.Add(this.piccerrar);
@@ -164,24 +164,6 @@ namespace Proyecto_escuela
             this.linkLabelcontraseña.Text = "¿Has olvidado la contraseña?";
             this.linkLabelcontraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelcontraseña_LinkClicked);
             // 
-            // btniniciarsesion
-            // 
-            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(76, 234);
-            this.btniniciarsesion.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 39);
-            this.btniniciarsesion.TabIndex = 4;
-            this.btniniciarsesion.Text = "Iniciar Sesion";
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
-            // 
             // lbltitulo
             // 
             this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -267,6 +249,26 @@ namespace Proyecto_escuela
             this.picture_logo.TabIndex = 4;
             this.picture_logo.TabStop = false;
             // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btniniciarsesion.BorderRadius = 20;
+            this.btniniciarsesion.BorderSize = 0;
+            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
+            this.btniniciarsesion.Location = new System.Drawing.Point(76, 231);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
+            this.btniniciarsesion.TabIndex = 58;
+            this.btniniciarsesion.Text = "Iniciar sesion";
+            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
+            // 
             // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -298,7 +300,6 @@ namespace Proyecto_escuela
         private System.Windows.Forms.TextBox txtcontraseña;
         private System.Windows.Forms.TextBox txtusuario;
         private System.Windows.Forms.LinkLabel linkLabelregistrar;
-        private System.Windows.Forms.Button btniniciarsesion;
         private System.Windows.Forms.Label lbltitulo;
         private System.Windows.Forms.Label lblerror;
         private System.Windows.Forms.PictureBox piccerrar;
@@ -307,6 +308,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Label lbljane;
         private System.Windows.Forms.Panel panel_logo;
         private System.Windows.Forms.PictureBox picture_logo;
+        private Boton.RJButton btniniciarsesion;
     }
 }
 

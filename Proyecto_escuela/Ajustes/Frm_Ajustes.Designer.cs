@@ -31,18 +31,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn_select_color_menu = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btn_select_color_letra = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.rdb_arriba = new System.Windows.Forms.RadioButton();
             this.rdb_izquierda = new System.Windows.Forms.RadioButton();
             this.colorDialog_menu = new System.Windows.Forms.ColorDialog();
             this.colorDialog_letras = new System.Windows.Forms.ColorDialog();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_select_color_menu = new Proyecto_escuela.Boton.RJButton();
+            this.btn_select_color_letra = new Proyecto_escuela.Boton.RJButton();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -80,21 +80,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             // 
-            // btn_select_color_menu
-            // 
-            this.btn_select_color_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_select_color_menu.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_select_color_menu.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_select_color_menu.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_select_color_menu.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_select_color_menu.Location = new System.Drawing.Point(6, 21);
-            this.btn_select_color_menu.Name = "btn_select_color_menu";
-            this.btn_select_color_menu.Size = new System.Drawing.Size(287, 41);
-            this.btn_select_color_menu.TabIndex = 0;
-            this.btn_select_color_menu.Text = "Seleccionar color";
-            this.btn_select_color_menu.UseVisualStyleBackColor = false;
-            this.btn_select_color_menu.Click += new System.EventHandler(this.btn_rojo_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -104,21 +89,6 @@
             this.groupBox2.Size = new System.Drawing.Size(720, 78);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
-            // 
-            // btn_select_color_letra
-            // 
-            this.btn_select_color_letra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_select_color_letra.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_select_color_letra.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_select_color_letra.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold);
-            this.btn_select_color_letra.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_select_color_letra.Location = new System.Drawing.Point(6, 21);
-            this.btn_select_color_letra.Name = "btn_select_color_letra";
-            this.btn_select_color_letra.Size = new System.Drawing.Size(287, 41);
-            this.btn_select_color_letra.TabIndex = 3;
-            this.btn_select_color_letra.Text = "Seleccionar color";
-            this.btn_select_color_letra.UseVisualStyleBackColor = false;
-            this.btn_select_color_letra.Click += new System.EventHandler(this.button1_Click);
             // 
             // label3
             // 
@@ -142,6 +112,28 @@
             this.groupBox3.Size = new System.Drawing.Size(720, 361);
             this.groupBox3.TabIndex = 10;
             this.groupBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Proyecto_escuela.Properties.Resources.Arriba;
+            this.pictureBox2.Location = new System.Drawing.Point(368, 64);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(352, 286);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.izquierda;
+            this.pictureBox1.Location = new System.Drawing.Point(0, 64);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(352, 286);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 8;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // rdb_arriba
             // 
@@ -169,27 +161,43 @@
             this.rdb_izquierda.UseVisualStyleBackColor = true;
             this.rdb_izquierda.CheckedChanged += new System.EventHandler(this.rdb_izquierda_CheckedChanged);
             // 
-            // pictureBox2
+            // btn_select_color_menu
             // 
-            this.pictureBox2.Image = global::Proyecto_escuela.Properties.Resources.Arriba;
-            this.pictureBox2.Location = new System.Drawing.Point(368, 64);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(352, 286);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.btn_select_color_menu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_select_color_menu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_select_color_menu.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_select_color_menu.BorderRadius = 20;
+            this.btn_select_color_menu.BorderSize = 0;
+            this.btn_select_color_menu.FlatAppearance.BorderSize = 0;
+            this.btn_select_color_menu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_select_color_menu.ForeColor = System.Drawing.Color.White;
+            this.btn_select_color_menu.Location = new System.Drawing.Point(6, 16);
+            this.btn_select_color_menu.Name = "btn_select_color_menu";
+            this.btn_select_color_menu.Size = new System.Drawing.Size(287, 51);
+            this.btn_select_color_menu.TabIndex = 1;
+            this.btn_select_color_menu.Text = "Seleccionar color";
+            this.btn_select_color_menu.TextColor = System.Drawing.Color.White;
+            this.btn_select_color_menu.UseVisualStyleBackColor = false;
+            this.btn_select_color_menu.Click += new System.EventHandler(this.btn_rojo_Click);
             // 
-            // pictureBox1
+            // btn_select_color_letra
             // 
-            this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.izquierda;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 64);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(352, 286);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.btn_select_color_letra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_select_color_letra.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_select_color_letra.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_select_color_letra.BorderRadius = 20;
+            this.btn_select_color_letra.BorderSize = 0;
+            this.btn_select_color_letra.FlatAppearance.BorderSize = 0;
+            this.btn_select_color_letra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_select_color_letra.ForeColor = System.Drawing.Color.White;
+            this.btn_select_color_letra.Location = new System.Drawing.Point(6, 16);
+            this.btn_select_color_letra.Name = "btn_select_color_letra";
+            this.btn_select_color_letra.Size = new System.Drawing.Size(287, 51);
+            this.btn_select_color_letra.TabIndex = 4;
+            this.btn_select_color_letra.Text = "Seleccionar color";
+            this.btn_select_color_letra.TextColor = System.Drawing.Color.White;
+            this.btn_select_color_letra.UseVisualStyleBackColor = false;
+            this.btn_select_color_letra.Click += new System.EventHandler(this.button1_Click);
             // 
             // Frm_Ajustes
             // 
@@ -226,7 +234,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn_select_color_menu;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label3;
@@ -235,8 +242,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RadioButton rdb_arriba;
         private System.Windows.Forms.RadioButton rdb_izquierda;
-        private System.Windows.Forms.Button btn_select_color_letra;
         private System.Windows.Forms.ColorDialog colorDialog_menu;
         private System.Windows.Forms.ColorDialog colorDialog_letras;
+        private Boton.RJButton btn_select_color_menu;
+        private Boton.RJButton btn_select_color_letra;
     }
 }

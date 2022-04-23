@@ -100,13 +100,13 @@ namespace Proyecto_escuela.Empleados
 
         private void btn_registrar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_matricula.Text) || string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(txt_Correo.Text) || string.IsNullOrEmpty(txt_telefono.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Text == "Matricula" || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion" || txt_Correo.Text == "Correo" || txt_telefono.Text == "Telefono" || string.IsNullOrEmpty(combo_rol.Text))
+            if (string.IsNullOrEmpty(txt_matricula.Texts) || string.IsNullOrEmpty(txt_nombres.Texts) || string.IsNullOrEmpty(txt_apellidos.Texts) || string.IsNullOrEmpty(txt_direccion.Texts) || string.IsNullOrEmpty(txt_Correo.Texts) || string.IsNullOrEmpty(txt_telefono.Texts) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Texts == "Matricula" || txt_nombres.Texts == "Nombres" || txt_apellidos.Texts == "Apellidos" || txt_direccion.Texts == "Direccion" || txt_Correo.Texts == "Correo" || txt_telefono.Texts == "Telefono" || string.IsNullOrEmpty(combo_rol.Text))
             {
                 MessageBox.Show("Complete todos los campos");
             }
             else
             {
-                obj_empleados.registrar_empleados(txt_matricula.Text, txt_nombres.Text, txt_apellidos.Text, dtp_fecha_nacimiento.Value.ToString("d"), txt_direccion.Text, txt_Correo.Text, txt_telefono.Text, combo_rol.Text, picture_captura, this);
+                obj_empleados.registrar_empleados(txt_matricula.Texts, txt_nombres.Texts, txt_apellidos.Texts, rjdatetime1.Value.ToString("d"), txt_direccion.Texts, txt_Correo.Texts, txt_telefono.Texts, combo_rol.Text, picture_captura, this);
             }
         }
 
@@ -261,6 +261,41 @@ namespace Proyecto_escuela.Empleados
         private void Frm_registrar_empleado_Load(object sender, EventArgs e)
         {
             cargar_dispositivo();
+        }
+
+        private void Toggle_encender_camara_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Toggle_encender_camara.Checked == false)
+            {
+                cerrar_webcam();
+                lbltoggle.Text = "Apagada";
+            }
+            else
+            {
+                if (miwebcam != null && miwebcam.IsRunning)
+                {
+
+                }
+                else
+                {
+                    try
+                    {
+                        int i = combo_dispositivos.SelectedIndex;
+                        string nombrevideo = misdispositivos[i].MonikerString;
+                        miwebcam = new VideoCaptureDevice(nombrevideo);
+                        miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                        miwebcam.Start();
+                        btn_capturar_foto.Enabled = true;
+                        lbltoggle.Text = "Encendida";
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                        Toggle_encender_camara.Checked = false;
+                        lbltoggle.Text = "Apagada";
+                    }
+                }
+            }
         }
     }
 }

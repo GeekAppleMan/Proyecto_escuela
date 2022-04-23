@@ -32,13 +32,13 @@ namespace Proyecto_escuela.Login
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btniniciarsesion = new System.Windows.Forms.Button();
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtcodigo = new System.Windows.Forms.TextBox();
-            this.lbltitulo = new System.Windows.Forms.Label();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
+            this.lbltitulo = new System.Windows.Forms.Label();
+            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -82,23 +82,6 @@ namespace Proyecto_escuela.Login
             this.panel2.Size = new System.Drawing.Size(576, 327);
             this.panel2.TabIndex = 2;
             // 
-            // btniniciarsesion
-            // 
-            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(65, 243);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
-            this.btniniciarsesion.TabIndex = 60;
-            this.btniniciarsesion.Text = "Verificar codigo";
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
-            // 
             // linkLabelRegresar
             // 
             this.linkLabelRegresar.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
@@ -141,18 +124,6 @@ namespace Proyecto_escuela.Login
             this.txtcodigo.Click += new System.EventHandler(this.txtusuario_Click);
             this.txtcodigo.Leave += new System.EventHandler(this.txtcodigo_Leave);
             // 
-            // lbltitulo
-            // 
-            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(162, 95);
-            this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(233, 23);
-            this.lbltitulo.TabIndex = 51;
-            this.lbltitulo.Text = "Codigo de verificación";
-            // 
             // piccerrar
             // 
             this.piccerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -176,6 +147,38 @@ namespace Proyecto_escuela.Login
             this.picmin.TabIndex = 52;
             this.picmin.TabStop = false;
             this.picmin.Click += new System.EventHandler(this.picmin_Click);
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.ForeColor = System.Drawing.Color.Black;
+            this.lbltitulo.Location = new System.Drawing.Point(162, 95);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(233, 23);
+            this.lbltitulo.TabIndex = 51;
+            this.lbltitulo.Text = "Codigo de verificación";
+            // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btniniciarsesion.BorderRadius = 20;
+            this.btniniciarsesion.BorderSize = 0;
+            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
+            this.btniniciarsesion.Location = new System.Drawing.Point(65, 221);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
+            this.btniniciarsesion.TabIndex = 61;
+            this.btniniciarsesion.Text = "Verificar codigo";
+            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // FrmLoginCodigo
             // 
@@ -204,12 +207,12 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbljane;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btniniciarsesion;
         private System.Windows.Forms.LinkLabel linkLabelRegresar;
         private System.Windows.Forms.Panel line1;
         private System.Windows.Forms.TextBox txtcodigo;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.PictureBox picmin;
         private System.Windows.Forms.Label lbltitulo;
+        private Boton.RJButton btniniciarsesion;
     }
 }
