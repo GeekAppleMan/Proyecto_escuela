@@ -29,7 +29,9 @@ namespace Proyecto_escuela
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_login));
             this.panel_contenedor = new System.Windows.Forms.Panel();
+            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.line2 = new System.Windows.Forms.Panel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txtcontraseña = new System.Windows.Forms.TextBox();
@@ -43,7 +45,6 @@ namespace Proyecto_escuela
             this.lbljane = new System.Windows.Forms.Label();
             this.panel_logo = new System.Windows.Forms.Panel();
             this.picture_logo = new System.Windows.Forms.PictureBox();
-            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.panel_contenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picmin)).BeginInit();
@@ -71,6 +72,26 @@ namespace Proyecto_escuela
             this.panel_contenedor.Name = "panel_contenedor";
             this.panel_contenedor.Size = new System.Drawing.Size(595, 374);
             this.panel_contenedor.TabIndex = 39;
+            // 
+            // btniniciarsesion
+            // 
+            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btniniciarsesion.BorderRadius = 20;
+            this.btniniciarsesion.BorderSize = 0;
+            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
+            this.btniniciarsesion.Location = new System.Drawing.Point(76, 231);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
+            this.btniniciarsesion.TabIndex = 58;
+            this.btniniciarsesion.Text = "Iniciar sesion";
+            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
             // line2
             // 
@@ -249,26 +270,6 @@ namespace Proyecto_escuela
             this.picture_logo.TabIndex = 4;
             this.picture_logo.TabStop = false;
             // 
-            // btniniciarsesion
-            // 
-            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btniniciarsesion.BorderRadius = 20;
-            this.btniniciarsesion.BorderSize = 0;
-            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
-            this.btniniciarsesion.Location = new System.Drawing.Point(76, 231);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
-            this.btniniciarsesion.TabIndex = 58;
-            this.btniniciarsesion.Text = "Iniciar sesion";
-            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
-            // 
             // Frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,6 +279,7 @@ namespace Proyecto_escuela
             this.Controls.Add(this.panel_contenedor);
             this.Controls.Add(this.panel_logo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -30,6 +30,7 @@ namespace Proyecto_escuela
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Frm_main));
             this.panel_contenedor = new System.Windows.Forms.Panel();
             this.panel_barra_titulo = new System.Windows.Forms.Panel();
             this.lbltitulo = new System.Windows.Forms.Label();
@@ -534,6 +535,7 @@ namespace Proyecto_escuela
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Frm_main";
