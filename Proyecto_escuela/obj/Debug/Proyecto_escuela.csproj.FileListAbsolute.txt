@@ -231,7 +231,6 @@ C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\MySql.Data.xml
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Buffers.xml
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Memory.xml
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csprojAssemblyReference.cache
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Ajustes.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_Alumnos.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Frm_crear_usuario_alumno.resources
@@ -283,3 +282,10 @@ C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proy
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_NuevaContraseña.resources
 C:\Users\Jaime\Desktop\Proyectos Jane Software\Git_hub_escuela\Proyecto_escuela\Proyecto_escuela\bin\Debug\WhatsAppApi.dll
 C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\WhatsAppApi.dll
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.manifest
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.application
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\bin\Debug\WhatsAppApi.dll
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csproj.AssemblyReference.cache
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_NuevaContraseña.resources
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe.manifest
+C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.application
