@@ -289,3 +289,7 @@ C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.csp
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.Login.Frm_NuevaContraseña.resources
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe.manifest
 C:\xampp\htdocs\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.application
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.exe.manifest
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\bin\Debug\Proyecto_escuela.application
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.exe.manifest
+C:\Users\rocky\Documents\GitHub\Proyecto_escuela\Proyecto_escuela\obj\Debug\Proyecto_escuela.application
