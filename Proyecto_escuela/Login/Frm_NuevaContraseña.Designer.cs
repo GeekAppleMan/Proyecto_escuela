@@ -1,7 +1,6 @@
-﻿
-namespace Proyecto_escuela.Login
+﻿namespace Proyecto_escuela.Login
 {
-    partial class Frm_NuevaContra
+    partial class Frm_NuevaContraseña
     {
         /// <summary>
         /// Required designer variable.
@@ -32,16 +31,16 @@ namespace Proyecto_escuela.Login
             this.panel1 = new System.Windows.Forms.Panel();
             this.lbljane = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btniniciarsesion = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txt2 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.linkLabelRegresar = new System.Windows.Forms.LinkLabel();
             this.line1 = new System.Windows.Forms.Panel();
             this.txt1 = new System.Windows.Forms.TextBox();
             this.piccerrar = new System.Windows.Forms.PictureBox();
             this.picmin = new System.Windows.Forms.PictureBox();
             this.lbltitulo = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.txt2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.btniniciarsesion = new Proyecto_escuela.Boton.RJButton();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.piccerrar)).BeginInit();
@@ -72,10 +71,10 @@ namespace Proyecto_escuela.Login
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.btniniciarsesion);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.txt2);
-            this.panel2.Controls.Add(this.btniniciarsesion);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.linkLabelRegresar);
             this.panel2.Controls.Add(this.line1);
             this.panel2.Controls.Add(this.txt1);
@@ -88,22 +87,40 @@ namespace Proyecto_escuela.Login
             this.panel2.Size = new System.Drawing.Size(576, 327);
             this.panel2.TabIndex = 3;
             // 
-            // btniniciarsesion
+            // panel3
             // 
-            this.btniniciarsesion.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btniniciarsesion.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btniniciarsesion.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btniniciarsesion.FlatAppearance.BorderColor = System.Drawing.Color.Gray;
-            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btniniciarsesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btniniciarsesion.ForeColor = System.Drawing.Color.Black;
-            this.btniniciarsesion.Location = new System.Drawing.Point(65, 241);
-            this.btniniciarsesion.Name = "btniniciarsesion";
-            this.btniniciarsesion.Size = new System.Drawing.Size(451, 40);
-            this.btniniciarsesion.TabIndex = 60;
-            this.btniniciarsesion.Text = "Nueva contraseña";
-            this.btniniciarsesion.UseVisualStyleBackColor = false;
-            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
+            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel3.BackColor = System.Drawing.Color.Gray;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Location = new System.Drawing.Point(65, 204);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(451, 1);
+            this.panel3.TabIndex = 63;
+            // 
+            // txt2
+            // 
+            this.txt2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt2.ForeColor = System.Drawing.Color.Gray;
+            this.txt2.Location = new System.Drawing.Point(65, 173);
+            this.txt2.Name = "txt2";
+            this.txt2.PasswordChar = '*';
+            this.txt2.Size = new System.Drawing.Size(451, 25);
+            this.txt2.TabIndex = 62;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(89, 138);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(385, 23);
+            this.label1.TabIndex = 61;
+            this.label1.Text = "Vuelva a introducir nueva contraseña";
             // 
             // linkLabelRegresar
             // 
@@ -120,13 +137,14 @@ namespace Proyecto_escuela.Login
             this.linkLabelRegresar.TabIndex = 59;
             this.linkLabelRegresar.TabStop = true;
             this.linkLabelRegresar.Text = "Regresar";
+            this.linkLabelRegresar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelRegresar_LinkClicked);
             // 
             // line1
             // 
             this.line1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.line1.BackColor = System.Drawing.Color.Gray;
             this.line1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.line1.Location = new System.Drawing.Point(65, 119);
+            this.line1.Location = new System.Drawing.Point(65, 115);
             this.line1.Name = "line1";
             this.line1.Size = new System.Drawing.Size(451, 1);
             this.line1.TabIndex = 58;
@@ -138,11 +156,11 @@ namespace Proyecto_escuela.Login
             this.txt1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt1.ForeColor = System.Drawing.Color.Gray;
-            this.txt1.Location = new System.Drawing.Point(65, 88);
+            this.txt1.Location = new System.Drawing.Point(65, 84);
             this.txt1.Name = "txt1";
+            this.txt1.PasswordChar = '*';
             this.txt1.Size = new System.Drawing.Size(451, 25);
             this.txt1.TabIndex = 57;
-            this.txt1.Text = "Codigo";
             // 
             // piccerrar
             // 
@@ -154,6 +172,7 @@ namespace Proyecto_escuela.Login
             this.piccerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.piccerrar.TabIndex = 53;
             this.piccerrar.TabStop = false;
+            this.piccerrar.Click += new System.EventHandler(this.piccerrar_Click);
             // 
             // picmin
             // 
@@ -165,6 +184,7 @@ namespace Proyecto_escuela.Login
             this.picmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picmin.TabIndex = 52;
             this.picmin.TabStop = false;
+            this.picmin.Click += new System.EventHandler(this.picmin_Click);
             // 
             // lbltitulo
             // 
@@ -172,48 +192,33 @@ namespace Proyecto_escuela.Login
             this.lbltitulo.AutoSize = true;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbltitulo.ForeColor = System.Drawing.Color.Black;
-            this.lbltitulo.Location = new System.Drawing.Point(152, 62);
+            this.lbltitulo.Location = new System.Drawing.Point(138, 47);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(289, 23);
+            this.lbltitulo.Size = new System.Drawing.Size(303, 23);
             this.lbltitulo.TabIndex = 51;
-            this.lbltitulo.Text = "Introducir nueva contraseña";
+            this.lbltitulo.Text = "Introduzca nueva contraseña";
             // 
-            // panel3
+            // btniniciarsesion
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.Gray;
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Location = new System.Drawing.Point(65, 211);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(451, 1);
-            this.panel3.TabIndex = 62;
+            this.btniniciarsesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btniniciarsesion.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btniniciarsesion.BorderRadius = 20;
+            this.btniniciarsesion.BorderSize = 0;
+            this.btniniciarsesion.FlatAppearance.BorderSize = 0;
+            this.btniniciarsesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btniniciarsesion.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btniniciarsesion.ForeColor = System.Drawing.Color.White;
+            this.btniniciarsesion.Location = new System.Drawing.Point(65, 230);
+            this.btniniciarsesion.Name = "btniniciarsesion";
+            this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
+            this.btniniciarsesion.TabIndex = 64;
+            this.btniniciarsesion.Text = "Verificar codigo";
+            this.btniniciarsesion.TextColor = System.Drawing.Color.White;
+            this.btniniciarsesion.UseVisualStyleBackColor = false;
+            this.btniniciarsesion.Click += new System.EventHandler(this.btniniciarsesion_Click);
             // 
-            // txt2
-            // 
-            this.txt2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt2.ForeColor = System.Drawing.Color.Gray;
-            this.txt2.Location = new System.Drawing.Point(65, 180);
-            this.txt2.Name = "txt2";
-            this.txt2.Size = new System.Drawing.Size(451, 25);
-            this.txt2.TabIndex = 61;
-            this.txt2.Text = "Codigo";
-            // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(121, 145);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(360, 23);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Introduzca la contraseña de nuevo";
-            // 
-            // Frm_NuevaContra
+            // Frm_NuevaContraseña
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,9 +226,8 @@ namespace Proyecto_escuela.Login
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_NuevaContra";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_NuevaContra";
+            this.Name = "Frm_NuevaContraseña";
+            this.Text = "Frm_NuevaContraseña";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -239,15 +243,15 @@ namespace Proyecto_escuela.Login
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label lbljane;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txt2;
-        private System.Windows.Forms.Button btniniciarsesion;
         private System.Windows.Forms.LinkLabel linkLabelRegresar;
         private System.Windows.Forms.Panel line1;
         private System.Windows.Forms.TextBox txt1;
         private System.Windows.Forms.PictureBox piccerrar;
         private System.Windows.Forms.PictureBox picmin;
         private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.TextBox txt2;
+        private System.Windows.Forms.Label label1;
+        private Boton.RJButton btniniciarsesion;
     }
 }

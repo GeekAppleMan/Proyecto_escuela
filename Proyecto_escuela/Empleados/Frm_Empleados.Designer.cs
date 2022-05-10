@@ -32,10 +32,9 @@ namespace Proyecto_escuela.Empleados
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel_busqueda = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.btn_registar_empleado = new Proyecto_escuela.Boton.RJButton();
+            this.txt_empleado = new Proyecto_escuela.Textbox.Rjtextbox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_registar_empleado = new System.Windows.Forms.Button();
-            this.txt_empleado = new System.Windows.Forms.TextBox();
             this.lbl_matricula_empleado = new System.Windows.Forms.Label();
             this.dgv_empleado = new System.Windows.Forms.DataGridView();
             this.id_alumno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -58,10 +57,9 @@ namespace Proyecto_escuela.Empleados
             // panel_busqueda
             // 
             this.panel_busqueda.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel_busqueda.Controls.Add(this.panel3);
-            this.panel_busqueda.Controls.Add(this.pictureBox1);
             this.panel_busqueda.Controls.Add(this.btn_registar_empleado);
             this.panel_busqueda.Controls.Add(this.txt_empleado);
+            this.panel_busqueda.Controls.Add(this.pictureBox1);
             this.panel_busqueda.Controls.Add(this.lbl_matricula_empleado);
             this.panel_busqueda.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel_busqueda.Location = new System.Drawing.Point(0, 0);
@@ -69,14 +67,51 @@ namespace Proyecto_escuela.Empleados
             this.panel_busqueda.Size = new System.Drawing.Size(1178, 50);
             this.panel_busqueda.TabIndex = 10;
             // 
-            // panel3
+            // btn_registar_empleado
             // 
-            this.panel3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.panel3.Location = new System.Drawing.Point(253, 44);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(589, 3);
-            this.panel3.TabIndex = 24;
+            this.btn_registar_empleado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_registar_empleado.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_registar_empleado.BorderColor = System.Drawing.Color.HotPink;
+            this.btn_registar_empleado.BorderRadius = 15;
+            this.btn_registar_empleado.BorderSize = 0;
+            this.btn_registar_empleado.FlatAppearance.BorderSize = 0;
+            this.btn_registar_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_registar_empleado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_registar_empleado.ForeColor = System.Drawing.Color.Black;
+            this.btn_registar_empleado.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
+            this.btn_registar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_registar_empleado.Location = new System.Drawing.Point(12, 7);
+            this.btn_registar_empleado.Name = "btn_registar_empleado";
+            this.btn_registar_empleado.Size = new System.Drawing.Size(248, 40);
+            this.btn_registar_empleado.TabIndex = 26;
+            this.btn_registar_empleado.Text = "Registrar empleado";
+            this.btn_registar_empleado.TextColor = System.Drawing.Color.Black;
+            this.btn_registar_empleado.UseVisualStyleBackColor = false;
+            this.btn_registar_empleado.Click += new System.EventHandler(this.btn_registar_empleado_Click);
+            // 
+            // txt_empleado
+            // 
+            this.txt_empleado.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txt_empleado.BackColor = System.Drawing.SystemColors.Window;
+            this.txt_empleado.BorderColor = System.Drawing.Color.DimGray;
+            this.txt_empleado.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.txt_empleado.BorderRadius = 10;
+            this.txt_empleado.BorderSize = 2;
+            this.txt_empleado.Font = new System.Drawing.Font("Century Gothic", 9.5F);
+            this.txt_empleado.ForeColor = System.Drawing.Color.Black;
+            this.txt_empleado.Location = new System.Drawing.Point(514, 7);
+            this.txt_empleado.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_empleado.Multiline = false;
+            this.txt_empleado.Name = "txt_empleado";
+            this.txt_empleado.Padding = new System.Windows.Forms.Padding(7);
+            this.txt_empleado.PasswordChar = false;
+            this.txt_empleado.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txt_empleado.PlaceholderText = "Ej. 17340347";
+            this.txt_empleado.Size = new System.Drawing.Size(326, 36);
+            this.txt_empleado.TabIndex = 25;
+            this.txt_empleado.Texts = "";
+            this.txt_empleado.UnderlinedStyle = false;
+            this.txt_empleado._TextChanged += new System.EventHandler(this.txt_empleado_TextChanged);
             // 
             // pictureBox1
             // 
@@ -89,38 +124,6 @@ namespace Proyecto_escuela.Empleados
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
-            // 
-            // btn_registar_empleado
-            // 
-            this.btn_registar_empleado.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_registar_empleado.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_registar_empleado.FlatAppearance.BorderSize = 0;
-            this.btn_registar_empleado.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_registar_empleado.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_registar_empleado.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_registar_empleado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_registar_empleado.Image = global::Proyecto_escuela.Properties.Resources.usuario__2_;
-            this.btn_registar_empleado.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_registar_empleado.Location = new System.Drawing.Point(3, 3);
-            this.btn_registar_empleado.Name = "btn_registar_empleado";
-            this.btn_registar_empleado.Size = new System.Drawing.Size(250, 41);
-            this.btn_registar_empleado.TabIndex = 18;
-            this.btn_registar_empleado.Text = "Registrar empleado";
-            this.btn_registar_empleado.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_registar_empleado.UseVisualStyleBackColor = true;
-            this.btn_registar_empleado.Click += new System.EventHandler(this.btn_registar_empleado_Click);
-            // 
-            // txt_empleado
-            // 
-            this.txt_empleado.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_empleado.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txt_empleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_empleado.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_empleado.Location = new System.Drawing.Point(519, 18);
-            this.txt_empleado.Name = "txt_empleado";
-            this.txt_empleado.Size = new System.Drawing.Size(318, 21);
-            this.txt_empleado.TabIndex = 0;
-            this.txt_empleado.TextChanged += new System.EventHandler(this.txt_empleado_TextChanged);
             // 
             // lbl_matricula_empleado
             // 
@@ -282,11 +285,8 @@ namespace Proyecto_escuela.Empleados
         #endregion
 
         private System.Windows.Forms.Panel panel_busqueda;
-        private System.Windows.Forms.Button btn_registar_empleado;
-        private System.Windows.Forms.TextBox txt_empleado;
         private System.Windows.Forms.Label lbl_matricula_empleado;
         public System.Windows.Forms.DataGridView dgv_empleado;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn id_alumno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
@@ -300,5 +300,7 @@ namespace Proyecto_escuela.Empleados
         private System.Windows.Forms.DataGridViewTextBoxColumn Estatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn Imagen;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
+        private Textbox.Rjtextbox txt_empleado;
+        private Boton.RJButton btn_registar_empleado;
     }
 }

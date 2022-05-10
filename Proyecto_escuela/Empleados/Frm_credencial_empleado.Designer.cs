@@ -29,30 +29,30 @@
         private void InitializeComponent()
         {
             this.gb_datos_tutor = new System.Windows.Forms.GroupBox();
-            this.lbl_estatus_empleado = new System.Windows.Forms.Label();
-            this.lbl_rol_empleado = new System.Windows.Forms.Label();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_matricula_empleado = new System.Windows.Forms.Label();
+            this.lbl_estatus_empleado = new System.Windows.Forms.Label();
+            this.lbl_nombres_empleado = new System.Windows.Forms.Label();
+            this.lbl_rol_empleado = new System.Windows.Forms.Label();
+            this.lbl_apellidos_empleado = new System.Windows.Forms.Label();
             this.lbl_telefono_empleado = new System.Windows.Forms.Label();
+            this.lbl_fecha_empleado = new System.Windows.Forms.Label();
             this.lbl_correo_empleado = new System.Windows.Forms.Label();
             this.lbl_direccion_empleado = new System.Windows.Forms.Label();
-            this.lbl_fecha_empleado = new System.Windows.Forms.Label();
-            this.lbl_apellidos_empleado = new System.Windows.Forms.Label();
-            this.lbl_nombres_empleado = new System.Windows.Forms.Label();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_baja = new System.Windows.Forms.Button();
-            this.btn_modificar = new System.Windows.Forms.Button();
+            this.btn_baja = new Proyecto_escuela.Boton.RJButton();
+            this.btn_modificar = new Proyecto_escuela.Boton.RJButton();
             this.grbopciones = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.gb_datos_tutor.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.gb_foto_perfil.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.grbopciones.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // gb_datos_tutor
@@ -67,27 +67,34 @@
             this.gb_datos_tutor.TabStop = false;
             this.gb_datos_tutor.Text = "Datos del empleado";
             // 
-            // lbl_estatus_empleado
+            // tableLayoutPanel3
             // 
-            this.lbl_estatus_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_estatus_empleado.AutoSize = true;
-            this.lbl_estatus_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_estatus_empleado.Location = new System.Drawing.Point(3, 443);
-            this.lbl_estatus_empleado.Name = "lbl_estatus_empleado";
-            this.lbl_estatus_empleado.Size = new System.Drawing.Size(568, 23);
-            this.lbl_estatus_empleado.TabIndex = 122;
-            this.lbl_estatus_empleado.Text = "Estatus:";
-            // 
-            // lbl_rol_empleado
-            // 
-            this.lbl_rol_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_rol_empleado.AutoSize = true;
-            this.lbl_rol_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_rol_empleado.Location = new System.Drawing.Point(3, 386);
-            this.lbl_rol_empleado.Name = "lbl_rol_empleado";
-            this.lbl_rol_empleado.Size = new System.Drawing.Size(568, 23);
-            this.lbl_rol_empleado.TabIndex = 120;
-            this.lbl_rol_empleado.Text = "Rol:";
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.lbl_matricula_empleado, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_estatus_empleado, 0, 8);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_nombres_empleado, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_rol_empleado, 0, 7);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_apellidos_empleado, 0, 2);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_telefono_empleado, 0, 6);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_fecha_empleado, 0, 3);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_correo_empleado, 0, 5);
+            this.tableLayoutPanel3.Controls.Add(this.lbl_direccion_empleado, 0, 4);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 19);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 9;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(574, 485);
+            this.tableLayoutPanel3.TabIndex = 123;
             // 
             // lbl_matricula_empleado
             // 
@@ -100,6 +107,50 @@
             this.lbl_matricula_empleado.TabIndex = 118;
             this.lbl_matricula_empleado.Text = "Matricula:";
             // 
+            // lbl_estatus_empleado
+            // 
+            this.lbl_estatus_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_estatus_empleado.AutoSize = true;
+            this.lbl_estatus_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_estatus_empleado.Location = new System.Drawing.Point(3, 443);
+            this.lbl_estatus_empleado.Name = "lbl_estatus_empleado";
+            this.lbl_estatus_empleado.Size = new System.Drawing.Size(568, 23);
+            this.lbl_estatus_empleado.TabIndex = 122;
+            this.lbl_estatus_empleado.Text = "Estatus:";
+            // 
+            // lbl_nombres_empleado
+            // 
+            this.lbl_nombres_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_nombres_empleado.AutoSize = true;
+            this.lbl_nombres_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombres_empleado.Location = new System.Drawing.Point(3, 68);
+            this.lbl_nombres_empleado.Name = "lbl_nombres_empleado";
+            this.lbl_nombres_empleado.Size = new System.Drawing.Size(568, 23);
+            this.lbl_nombres_empleado.TabIndex = 106;
+            this.lbl_nombres_empleado.Text = "Nombres:";
+            // 
+            // lbl_rol_empleado
+            // 
+            this.lbl_rol_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_rol_empleado.AutoSize = true;
+            this.lbl_rol_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rol_empleado.Location = new System.Drawing.Point(3, 386);
+            this.lbl_rol_empleado.Name = "lbl_rol_empleado";
+            this.lbl_rol_empleado.Size = new System.Drawing.Size(568, 23);
+            this.lbl_rol_empleado.TabIndex = 120;
+            this.lbl_rol_empleado.Text = "Rol:";
+            // 
+            // lbl_apellidos_empleado
+            // 
+            this.lbl_apellidos_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_apellidos_empleado.AutoSize = true;
+            this.lbl_apellidos_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_apellidos_empleado.Location = new System.Drawing.Point(3, 121);
+            this.lbl_apellidos_empleado.Name = "lbl_apellidos_empleado";
+            this.lbl_apellidos_empleado.Size = new System.Drawing.Size(568, 23);
+            this.lbl_apellidos_empleado.TabIndex = 107;
+            this.lbl_apellidos_empleado.Text = "Apellidos:";
+            // 
             // lbl_telefono_empleado
             // 
             this.lbl_telefono_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -110,6 +161,17 @@
             this.lbl_telefono_empleado.Size = new System.Drawing.Size(568, 23);
             this.lbl_telefono_empleado.TabIndex = 116;
             this.lbl_telefono_empleado.Text = "Telefono:";
+            // 
+            // lbl_fecha_empleado
+            // 
+            this.lbl_fecha_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_fecha_empleado.AutoSize = true;
+            this.lbl_fecha_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_fecha_empleado.Location = new System.Drawing.Point(3, 174);
+            this.lbl_fecha_empleado.Name = "lbl_fecha_empleado";
+            this.lbl_fecha_empleado.Size = new System.Drawing.Size(568, 23);
+            this.lbl_fecha_empleado.TabIndex = 108;
+            this.lbl_fecha_empleado.Text = "Fecha:";
             // 
             // lbl_correo_empleado
             // 
@@ -132,39 +194,6 @@
             this.lbl_direccion_empleado.Size = new System.Drawing.Size(568, 23);
             this.lbl_direccion_empleado.TabIndex = 109;
             this.lbl_direccion_empleado.Text = "Direccion:";
-            // 
-            // lbl_fecha_empleado
-            // 
-            this.lbl_fecha_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_fecha_empleado.AutoSize = true;
-            this.lbl_fecha_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_fecha_empleado.Location = new System.Drawing.Point(3, 174);
-            this.lbl_fecha_empleado.Name = "lbl_fecha_empleado";
-            this.lbl_fecha_empleado.Size = new System.Drawing.Size(568, 23);
-            this.lbl_fecha_empleado.TabIndex = 108;
-            this.lbl_fecha_empleado.Text = "Fecha:";
-            // 
-            // lbl_apellidos_empleado
-            // 
-            this.lbl_apellidos_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_apellidos_empleado.AutoSize = true;
-            this.lbl_apellidos_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_apellidos_empleado.Location = new System.Drawing.Point(3, 121);
-            this.lbl_apellidos_empleado.Name = "lbl_apellidos_empleado";
-            this.lbl_apellidos_empleado.Size = new System.Drawing.Size(568, 23);
-            this.lbl_apellidos_empleado.TabIndex = 107;
-            this.lbl_apellidos_empleado.Text = "Apellidos:";
-            // 
-            // lbl_nombres_empleado
-            // 
-            this.lbl_nombres_empleado.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbl_nombres_empleado.AutoSize = true;
-            this.lbl_nombres_empleado.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nombres_empleado.Location = new System.Drawing.Point(3, 68);
-            this.lbl_nombres_empleado.Name = "lbl_nombres_empleado";
-            this.lbl_nombres_empleado.Size = new System.Drawing.Size(568, 23);
-            this.lbl_nombres_empleado.TabIndex = 106;
-            this.lbl_nombres_empleado.Text = "Nombres:";
             // 
             // gb_foto_perfil
             // 
@@ -207,32 +236,42 @@
             // btn_baja
             // 
             this.btn_baja.BackColor = System.Drawing.Color.Red;
+            this.btn_baja.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_baja.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_baja.BorderRadius = 15;
+            this.btn_baja.BorderSize = 0;
             this.btn_baja.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_baja.FlatAppearance.BorderSize = 0;
-            this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_baja.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baja.ForeColor = System.Drawing.Color.White;
             this.btn_baja.Location = new System.Drawing.Point(586, 3);
             this.btn_baja.Name = "btn_baja";
             this.btn_baja.Size = new System.Drawing.Size(577, 63);
-            this.btn_baja.TabIndex = 3;
+            this.btn_baja.TabIndex = 102;
             this.btn_baja.Text = "Baja";
+            this.btn_baja.TextColor = System.Drawing.Color.White;
             this.btn_baja.UseVisualStyleBackColor = false;
             this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
             // 
             // btn_modificar
             // 
             this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_modificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_modificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_modificar.BorderRadius = 15;
+            this.btn_modificar.BorderSize = 0;
             this.btn_modificar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.btn_modificar.FlatAppearance.BorderSize = 0;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.ForeColor = System.Drawing.Color.White;
             this.btn_modificar.Location = new System.Drawing.Point(3, 3);
             this.btn_modificar.Name = "btn_modificar";
             this.btn_modificar.Size = new System.Drawing.Size(577, 63);
-            this.btn_modificar.TabIndex = 2;
+            this.btn_modificar.TabIndex = 101;
             this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.TextColor = System.Drawing.Color.White;
             this.btn_modificar.UseVisualStyleBackColor = false;
             this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
@@ -262,35 +301,6 @@
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1172, 513);
             this.tableLayoutPanel2.TabIndex = 9;
             // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.ColumnCount = 1;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.Controls.Add(this.lbl_matricula_empleado, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_estatus_empleado, 0, 8);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_nombres_empleado, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_rol_empleado, 0, 7);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_apellidos_empleado, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_telefono_empleado, 0, 6);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_fecha_empleado, 0, 3);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_correo_empleado, 0, 5);
-            this.tableLayoutPanel3.Controls.Add(this.lbl_direccion_empleado, 0, 4);
-            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 19);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 9;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(574, 485);
-            this.tableLayoutPanel3.TabIndex = 123;
-            // 
             // Frm_credencial_empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -304,13 +314,13 @@
             this.Text = "Credencial del empleado";
             this.Load += new System.EventHandler(this.Frm_credencial_empleado_Load);
             this.gb_datos_tutor.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.tableLayoutPanel3.PerformLayout();
             this.gb_foto_perfil.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picture_imagen_perfil)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.grbopciones.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
-            this.tableLayoutPanel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -328,12 +338,12 @@
         private System.Windows.Forms.GroupBox gb_foto_perfil;
         public System.Windows.Forms.PictureBox picture_imagen_perfil;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btn_baja;
-        private System.Windows.Forms.Button btn_modificar;
         public System.Windows.Forms.Label lbl_estatus_empleado;
         public System.Windows.Forms.Label lbl_rol_empleado;
         public System.Windows.Forms.GroupBox grbopciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
+        private Boton.RJButton btn_modificar;
+        private Boton.RJButton btn_baja;
     }
 }

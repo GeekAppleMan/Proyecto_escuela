@@ -50,7 +50,7 @@ namespace Proyecto_escuela.Clases
         public void CargarEnEspera(DataGridView grid)
         {
             grid.Rows.Clear();
-            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='2' LIMIT 3";
+            string query = "SELECT tb_alumnos.id_alumno, foto_perfil, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='2' LIMIT 3";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -62,7 +62,7 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                 }
             }
             databaseConnection.Close();
@@ -71,7 +71,7 @@ namespace Proyecto_escuela.Clases
         public void CargarSalida(DataGridView grid)
         {
             grid.Rows.Clear();
-            string query = "SELECT tb_alumnos.id_alumno, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='3' LIMIT 1";
+            string query = "SELECT tb_alumnos.id_alumno,foto_perfil matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='3' LIMIT 1";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -83,7 +83,7 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3));
+                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),reader.GetString(3));
                 }
             }
             databaseConnection.Close();

@@ -73,7 +73,7 @@ namespace Proyecto_escuela
                     miwebcam = new VideoCaptureDevice(nombrevideo);
                     miwebcam.NewFrame += new NewFrameEventHandler(capturando);
                     miwebcam.Start();
-                    btn_capturar_foto.Enabled = true;
+                    btn_capturar.Enabled = true;
                 }
                 catch (Exception)
                 {
@@ -87,7 +87,7 @@ namespace Proyecto_escuela
             if (miwebcam != null && miwebcam.IsRunning)
             {
                 picture_captura.Image = picture_tiempo_real.Image;
-                btn_registrar.Enabled = true;
+                btn_registrar_alumno.Enabled = true;
             }
         }
 
@@ -98,13 +98,13 @@ namespace Proyecto_escuela
 
         private void btn_registrar_Click_1(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txt_nombres.Text) || string.IsNullOrEmpty(txt_apellidos.Text) || string.IsNullOrEmpty(txt_direccion.Text) || string.IsNullOrEmpty(combo_grupo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Text == "Matricula" || txt_nombres.Text == "Nombres" || txt_apellidos.Text == "Apellidos" || txt_direccion.Text == "Direccion")
+            if ( string.IsNullOrEmpty(txt_matricula.Texts) || string.IsNullOrEmpty(txt_nombres.Texts) || string.IsNullOrEmpty(txt_apellidos.Texts) || string.IsNullOrEmpty(txt_direccion.Texts) || string.IsNullOrEmpty(combo_grupo.Text) || string.IsNullOrEmpty(combo_dispositivos.Text) || txt_matricula.Texts == "Matricula" || txt_nombres.Texts == "Nombres" || txt_apellidos.Texts == "Apellidos" || txt_direccion.Texts == "Direccion")
             {
                 MessageBox.Show("Complete todos los campos");
             }
             else
             {
-                obj_alumnos.registrar_alumnos(txt_matricula.Text,txt_nombres.Text, txt_apellidos.Text, txt_direccion.Text,dtp_fecha_nacimiento.Value.ToString("d"),combo_grupo.Text, picture_captura, this);
+                obj_alumnos.registrar_alumnos(txt_matricula.Texts,txt_nombres.Texts, txt_apellidos.Texts, txt_direccion.Texts,rjdatetime1.Value.ToString("d"),combo_grupo.Text, picture_captura, this);
             }
         }
 
@@ -212,6 +212,41 @@ namespace Proyecto_escuela
         private void gb_foto_perfil_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void Toggle_encender_camara_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Toggle_encender_camara.Checked == false)
+            {
+                cerrar_webcam();
+                lbltoggle.Text = "Apagada";
+            }
+            else
+            {
+                if (miwebcam != null && miwebcam.IsRunning)
+                {
+
+                }
+                else
+                {
+                    try
+                    {
+                        int i = combo_dispositivos.SelectedIndex;
+                        string nombrevideo = misdispositivos[i].MonikerString;
+                        miwebcam = new VideoCaptureDevice(nombrevideo);
+                        miwebcam.NewFrame += new NewFrameEventHandler(capturando);
+                        miwebcam.Start();
+                        btn_capturar.Enabled = true;
+                        lbltoggle.Text = "Encendida";
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Verifique que la camara este conectada y seleccionada");
+                        Toggle_encender_camara.Checked = false;
+                        lbltoggle.Text = "Apagada";
+                    }
+                }
+            }
         }
     }
 }

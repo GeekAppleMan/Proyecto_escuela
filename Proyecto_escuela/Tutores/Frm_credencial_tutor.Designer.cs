@@ -41,13 +41,13 @@ namespace Proyecto_escuela
             this.lbl_apellidos_tutor = new System.Windows.Forms.Label();
             this.grbopciones = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_modificar = new System.Windows.Forms.Button();
-            this.btn_baja = new System.Windows.Forms.Button();
-            this.btn_Asignar_alumno = new System.Windows.Forms.Button();
-            this.btn_alumnos = new System.Windows.Forms.Button();
             this.picture_imagen_perfil = new System.Windows.Forms.PictureBox();
             this.gb_foto_perfil = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.btn_Asignar_alumno = new Proyecto_escuela.Boton.RJButton();
+            this.btn_baja = new Proyecto_escuela.Boton.RJButton();
+            this.btn_alumnos = new Proyecto_escuela.Boton.RJButton();
+            this.btn_modificar = new Proyecto_escuela.Boton.RJButton();
             this.gb_datos_tutor.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
             this.grbopciones.SuspendLayout();
@@ -211,10 +211,10 @@ namespace Proyecto_escuela
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.Controls.Add(this.btn_modificar, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_baja, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.btn_Asignar_alumno, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.btn_alumnos, 0, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_alumnos, 1, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_modificar, 2, 0);
+            this.tableLayoutPanel2.Controls.Add(this.btn_baja, 3, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 18);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -222,70 +222,6 @@ namespace Proyecto_escuela
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(1166, 69);
             this.tableLayoutPanel2.TabIndex = 115;
-            // 
-            // btn_modificar
-            // 
-            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.btn_modificar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_modificar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_modificar.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_modificar.Location = new System.Drawing.Point(585, 3);
-            this.btn_modificar.Name = "btn_modificar";
-            this.btn_modificar.Size = new System.Drawing.Size(285, 63);
-            this.btn_modificar.TabIndex = 3;
-            this.btn_modificar.Text = "Modificar";
-            this.btn_modificar.UseVisualStyleBackColor = false;
-            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
-            // 
-            // btn_baja
-            // 
-            this.btn_baja.BackColor = System.Drawing.Color.Red;
-            this.btn_baja.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_baja.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_baja.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_baja.Location = new System.Drawing.Point(876, 3);
-            this.btn_baja.Name = "btn_baja";
-            this.btn_baja.Size = new System.Drawing.Size(287, 63);
-            this.btn_baja.TabIndex = 4;
-            this.btn_baja.Text = "Baja";
-            this.btn_baja.UseVisualStyleBackColor = false;
-            this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
-            // 
-            // btn_Asignar_alumno
-            // 
-            this.btn_Asignar_alumno.BackColor = System.Drawing.Color.Green;
-            this.btn_Asignar_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Asignar_alumno.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_Asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_Asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Asignar_alumno.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_Asignar_alumno.Location = new System.Drawing.Point(3, 3);
-            this.btn_Asignar_alumno.Name = "btn_Asignar_alumno";
-            this.btn_Asignar_alumno.Size = new System.Drawing.Size(285, 63);
-            this.btn_Asignar_alumno.TabIndex = 1;
-            this.btn_Asignar_alumno.Text = "Asignar alumno";
-            this.btn_Asignar_alumno.UseVisualStyleBackColor = false;
-            this.btn_Asignar_alumno.Click += new System.EventHandler(this.btn_Asignar_alumno_Click);
-            // 
-            // btn_alumnos
-            // 
-            this.btn_alumnos.BackColor = System.Drawing.Color.Orange;
-            this.btn_alumnos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_alumnos.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_alumnos.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_alumnos.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_alumnos.Location = new System.Drawing.Point(294, 3);
-            this.btn_alumnos.Name = "btn_alumnos";
-            this.btn_alumnos.Size = new System.Drawing.Size(285, 63);
-            this.btn_alumnos.TabIndex = 2;
-            this.btn_alumnos.Text = "Alumnos asignados";
-            this.btn_alumnos.UseVisualStyleBackColor = false;
-            this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
             // 
             // picture_imagen_perfil
             // 
@@ -323,6 +259,90 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1172, 513);
             this.tableLayoutPanel1.TabIndex = 7;
+            // 
+            // btn_Asignar_alumno
+            // 
+            this.btn_Asignar_alumno.BackColor = System.Drawing.Color.Green;
+            this.btn_Asignar_alumno.BackgroundColor = System.Drawing.Color.Green;
+            this.btn_Asignar_alumno.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_Asignar_alumno.BorderRadius = 15;
+            this.btn_Asignar_alumno.BorderSize = 0;
+            this.btn_Asignar_alumno.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Asignar_alumno.FlatAppearance.BorderSize = 0;
+            this.btn_Asignar_alumno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_Asignar_alumno.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Asignar_alumno.ForeColor = System.Drawing.Color.White;
+            this.btn_Asignar_alumno.Location = new System.Drawing.Point(3, 3);
+            this.btn_Asignar_alumno.Name = "btn_Asignar_alumno";
+            this.btn_Asignar_alumno.Size = new System.Drawing.Size(285, 63);
+            this.btn_Asignar_alumno.TabIndex = 88;
+            this.btn_Asignar_alumno.Text = "Asignar alumno";
+            this.btn_Asignar_alumno.TextColor = System.Drawing.Color.White;
+            this.btn_Asignar_alumno.UseVisualStyleBackColor = false;
+            this.btn_Asignar_alumno.Click += new System.EventHandler(this.btn_Asignar_alumno_Click);
+            // 
+            // btn_baja
+            // 
+            this.btn_baja.BackColor = System.Drawing.Color.Red;
+            this.btn_baja.BackgroundColor = System.Drawing.Color.Red;
+            this.btn_baja.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_baja.BorderRadius = 15;
+            this.btn_baja.BorderSize = 0;
+            this.btn_baja.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_baja.FlatAppearance.BorderSize = 0;
+            this.btn_baja.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_baja.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_baja.ForeColor = System.Drawing.Color.White;
+            this.btn_baja.Location = new System.Drawing.Point(876, 3);
+            this.btn_baja.Name = "btn_baja";
+            this.btn_baja.Size = new System.Drawing.Size(287, 63);
+            this.btn_baja.TabIndex = 88;
+            this.btn_baja.Text = "Baja";
+            this.btn_baja.TextColor = System.Drawing.Color.White;
+            this.btn_baja.UseVisualStyleBackColor = false;
+            this.btn_baja.Click += new System.EventHandler(this.btn_baja_Click);
+            // 
+            // btn_alumnos
+            // 
+            this.btn_alumnos.BackColor = System.Drawing.Color.Orange;
+            this.btn_alumnos.BackgroundColor = System.Drawing.Color.Orange;
+            this.btn_alumnos.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_alumnos.BorderRadius = 15;
+            this.btn_alumnos.BorderSize = 0;
+            this.btn_alumnos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_alumnos.FlatAppearance.BorderSize = 0;
+            this.btn_alumnos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_alumnos.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_alumnos.ForeColor = System.Drawing.Color.White;
+            this.btn_alumnos.Location = new System.Drawing.Point(294, 3);
+            this.btn_alumnos.Name = "btn_alumnos";
+            this.btn_alumnos.Size = new System.Drawing.Size(285, 63);
+            this.btn_alumnos.TabIndex = 89;
+            this.btn_alumnos.Text = "Alumnos asignados";
+            this.btn_alumnos.TextColor = System.Drawing.Color.White;
+            this.btn_alumnos.UseVisualStyleBackColor = false;
+            this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
+            // 
+            // btn_modificar
+            // 
+            this.btn_modificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_modificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btn_modificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btn_modificar.BorderRadius = 15;
+            this.btn_modificar.BorderSize = 0;
+            this.btn_modificar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_modificar.FlatAppearance.BorderSize = 0;
+            this.btn_modificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_modificar.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_modificar.ForeColor = System.Drawing.Color.White;
+            this.btn_modificar.Location = new System.Drawing.Point(585, 3);
+            this.btn_modificar.Name = "btn_modificar";
+            this.btn_modificar.Size = new System.Drawing.Size(285, 63);
+            this.btn_modificar.TabIndex = 90;
+            this.btn_modificar.Text = "Modificar";
+            this.btn_modificar.TextColor = System.Drawing.Color.White;
+            this.btn_modificar.UseVisualStyleBackColor = false;
+            this.btn_modificar.Click += new System.EventHandler(this.btn_modificar_Click);
             // 
             // Frm_credencial_tutor
             // 
@@ -363,13 +383,13 @@ namespace Proyecto_escuela
         public System.Windows.Forms.Label lbl_estatus_tutor;
         private System.Windows.Forms.GroupBox grbopciones;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Button btn_modificar;
-        private System.Windows.Forms.Button btn_baja;
-        private System.Windows.Forms.Button btn_Asignar_alumno;
-        private System.Windows.Forms.Button btn_alumnos;
         public System.Windows.Forms.PictureBox picture_imagen_perfil;
         private System.Windows.Forms.GroupBox gb_foto_perfil;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private Boton.RJButton btn_Asignar_alumno;
+        private Boton.RJButton btn_baja;
+        private Boton.RJButton btn_alumnos;
+        private Boton.RJButton btn_modificar;
     }
 }

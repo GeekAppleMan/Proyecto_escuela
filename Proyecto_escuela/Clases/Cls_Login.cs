@@ -16,6 +16,7 @@ namespace Proyecto_escuela.Clases
         public static string rol { get; set; }
 
         public int comparacion=0;
+        public int comparacioncontraseña = 0;
         public void comparar_login(string usuario, string telefono,string contraseña)
         {
             try
@@ -132,6 +133,36 @@ namespace Proyecto_escuela.Clases
             {
                 MessageBox.Show("Intoduzca un correo electronico registrado valido");
             }
+            databaseConnection.Close();
+        }
+
+        public void CambiarContra(string correo, string contraseña)
+        {
+            string query = "Update tb_registro SET contraseña = '" + contraseña +"' WHERE correo = '" + correo + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            databaseConnection.Close();
+        }
+
+        public void CompararContra(string contraseña)
+        {
+            string query = "SELECT * FROM tb_registro WHERE contraseña = '" + contraseña + "'";
+            MySqlConnection databaseConnection = new MySqlConnection(connectionString);
+            MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
+            commandDatabase.CommandTimeout = 60;
+            MySqlDataReader reader;
+            databaseConnection.Open();
+            reader = commandDatabase.ExecuteReader();
+            if (reader.Read())
+            {
+                comparacioncontraseña = 1;
+                MessageBox.Show("No puede poner esta contraseña porque esta es su contraseña actual");
+            }
+            databaseConnection.Close();
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Proyecto_escuela.Login
     {
         Frm_login log = new Frm_login();
         Frm_Reestablecercontraseña ree = new Frm_Reestablecercontraseña();
+        Frm_NuevaContraseña NC = new Frm_NuevaContraseña();
         public FrmLoginCodigo()
         {
             InitializeComponent();
@@ -49,19 +50,25 @@ namespace Proyecto_escuela.Login
 
         private void FrmLoginCodigo_Load(object sender, EventArgs e)
         {
-            MessageBox.Show(ree.getRandomCode());
+           
         }
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
             if (txtcodigo.Text == ree.getRandomCode())
             {
-                MessageBox.Show("Ci");
+                this.Close();
+                NC.Show();
             }
             else
             {
                 MessageBox.Show("Codigo incorrecto, intentelo de nuevo");
             }
+        }
+
+        private void picmin_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
         }
     }
 }
