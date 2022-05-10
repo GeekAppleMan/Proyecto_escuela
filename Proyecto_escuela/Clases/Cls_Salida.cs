@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -65,15 +64,17 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    string url = reader.GetString(1);
-                    WebClient wc = new WebClient();
-                    byte[] data = wc.DownloadData(url);
-
-                    MemoryStream ms = new MemoryStream(data);
-                    Image imagen = Image.FromStream(ms); 
-
-                    
+                    object imagen = reader.GetString(1);
+                    //var request = WebRequest.Create(reader.GetString(1));
+                    //using (var response = request.GetResponse())
+                    //using (var stream = response.GetResponseStream())
+                    //{
+                    //    System.Drawing.Image img = Bitmap.FromStream(stream);
+                    //    img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                       
+                    //}
                     grid.Rows.Add(imagen, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+
                 }
             }
             databaseConnection.Close();
@@ -82,7 +83,7 @@ namespace Proyecto_escuela.Clases
         public void CargarSalida(DataGridView grid)
         {
             grid.Rows.Clear();
-            string query = "SELECT tb_alumnos.id_alumno,foto_perfil matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='3' LIMIT 1";
+            string query = "SELECT tb_alumnos.id_alumno, foto_perfil, matricula, nombres, apellidos FROM tb_alumnos Inner JOIN tb_salida on tb_alumnos.id_alumno=tb_salida.id_alumno WHERE id_estatus_salida='3' LIMIT 1";
             MySqlConnection databaseConnection = new MySqlConnection(connectionString);
             MySqlCommand commandDatabase = new MySqlCommand(query, databaseConnection);
             commandDatabase.CommandTimeout = 60;
@@ -94,14 +95,15 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    string url = reader.GetString(1);
-                    WebClient wc = new WebClient();
-                    byte[] data = wc.DownloadData(url);
-
-                    MemoryStream ms = new MemoryStream(data);
-                    Image imagen = Image.FromStream(ms);
-
-
+                    object imagen = reader.GetString(1);
+                    //var request = WebRequest.Create(reader.GetString(1));
+                    //using (var response = request.GetResponse())
+                    //using (var stream = response.GetResponseStream())
+                    //{
+                    //    System.Drawing.Image img = Bitmap.FromStream(stream);
+                    //    //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        
+                    //}
                     grid.Rows.Add(imagen, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                 }
             }
