@@ -1,7 +1,9 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,7 +64,15 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    var request = WebRequest.Create(reader.GetString(1));
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        System.Drawing.Image img = Bitmap.FromStream(stream);
+                        //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        grid.Rows.Add(img, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    }
+                  
                 }
             }
             databaseConnection.Close();
@@ -83,7 +93,14 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),reader.GetString(3));
+                    var request = WebRequest.Create(reader.GetString(1));
+                    using (var response = request.GetResponse())
+                    using (var stream = response.GetResponseStream())
+                    {
+                        System.Drawing.Image img = Bitmap.FromStream(stream);
+                        //img.RotateFlip(RotateFlipType.Rotate90FlipNone);
+                        grid.Rows.Add(img, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    }
                 }
             }
             databaseConnection.Close();
