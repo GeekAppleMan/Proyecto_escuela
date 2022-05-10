@@ -1,7 +1,10 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -62,7 +65,15 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
+                    string url = reader.GetString(1);
+                    WebClient wc = new WebClient();
+                    byte[] data = wc.DownloadData(url);
+
+                    MemoryStream ms = new MemoryStream(data);
+                    Image imagen = Image.FromStream(ms); 
+
+                    
+                    grid.Rows.Add(imagen, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                 }
             }
             databaseConnection.Close();
@@ -83,7 +94,15 @@ namespace Proyecto_escuela.Clases
             {
                 while (reader.Read())
                 {
-                    grid.Rows.Add(reader.GetString(0), reader.GetString(1), reader.GetString(2), reader.GetString(3),reader.GetString(3));
+                    string url = reader.GetString(1);
+                    WebClient wc = new WebClient();
+                    byte[] data = wc.DownloadData(url);
+
+                    MemoryStream ms = new MemoryStream(data);
+                    Image imagen = Image.FromStream(ms);
+
+
+                    grid.Rows.Add(imagen, reader.GetString(1), reader.GetString(2), reader.GetString(3), reader.GetString(4));
                 }
             }
             databaseConnection.Close();
