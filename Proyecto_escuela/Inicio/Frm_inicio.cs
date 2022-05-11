@@ -27,6 +27,12 @@ namespace Proyecto_escuela
         private void Frm_inicio_Load(object sender, EventArgs e)
         {
             lbl_empleado = lbl_nombre_usuario;
+            picturebox1.LoadAsync(@"http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/19B15I0G6B12D13G.jpg");
+        }
+
+        private void picturebox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
