@@ -38,16 +38,16 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pic_hora = new System.Windows.Forms.PictureBox();
             this.pic_fecha = new System.Windows.Forms.PictureBox();
-            this.picturebox1 = new Proyecto_escuela.picturebox.picturebox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
             this.matricula = new System.Windows.Forms.Label();
+            this.picturebox1 = new Proyecto_escuela.picturebox.picturebox();
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_bienvenida
@@ -136,6 +136,50 @@
             this.pic_fecha.TabIndex = 18;
             this.pic_fecha.TabStop = false;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.Nombre);
+            this.panel1.Controls.Add(this.matricula);
+            this.panel1.Controls.Add(this.picturebox1);
+            this.panel1.Location = new System.Drawing.Point(155, 82);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(949, 312);
+            this.panel1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(310, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(302, 40);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "SALIENDO AHORA";
+            // 
+            // Nombre
+            // 
+            this.Nombre.AutoSize = true;
+            this.Nombre.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Nombre.Location = new System.Drawing.Point(310, 153);
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Size = new System.Drawing.Size(527, 40);
+            this.Nombre.TabIndex = 21;
+            this.Nombre.Text = "Jaime Alberto Sanchez Martinez";
+            // 
+            // matricula
+            // 
+            this.matricula.AutoSize = true;
+            this.matricula.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.matricula.Location = new System.Drawing.Point(310, 102);
+            this.matricula.Name = "matricula";
+            this.matricula.Size = new System.Drawing.Size(161, 40);
+            this.matricula.TabIndex = 20;
+            this.matricula.Text = "17340346";
+            // 
             // picturebox1
             // 
             this.picturebox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -151,51 +195,6 @@
             this.picturebox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picturebox1.TabIndex = 19;
             this.picturebox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.Nombre);
-            this.panel1.Controls.Add(this.matricula);
-            this.panel1.Controls.Add(this.picturebox1);
-            this.panel1.Location = new System.Drawing.Point(155, 82);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(949, 312);
-            this.panel1.TabIndex = 20;
-            this.panel1.Visible = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(310, 17);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(308, 40);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "SALIENDO AHORA";
-            // 
-            // Nombre
-            // 
-            this.Nombre.AutoSize = true;
-            this.Nombre.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(310, 153);
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Size = new System.Drawing.Size(540, 40);
-            this.Nombre.TabIndex = 21;
-            this.Nombre.Text = "Jaime Alberto Sanchez Martinez";
-            // 
-            // matricula
-            // 
-            this.matricula.AutoSize = true;
-            this.matricula.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.matricula.Location = new System.Drawing.Point(310, 102);
-            this.matricula.Name = "matricula";
-            this.matricula.Size = new System.Drawing.Size(169, 40);
-            this.matricula.TabIndex = 20;
-            this.matricula.Text = "17340346";
             // 
             // Frm_inicio
             // 
@@ -218,9 +217,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picture_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_hora)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_fecha)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picturebox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
