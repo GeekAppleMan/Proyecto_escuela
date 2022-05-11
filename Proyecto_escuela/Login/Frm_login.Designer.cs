@@ -87,7 +87,7 @@ namespace Proyecto_escuela
             this.btniniciarsesion.Location = new System.Drawing.Point(76, 231);
             this.btniniciarsesion.Name = "btniniciarsesion";
             this.btniniciarsesion.Size = new System.Drawing.Size(451, 47);
-            this.btniniciarsesion.TabIndex = 58;
+            this.btniniciarsesion.TabIndex = 3;
             this.btniniciarsesion.Text = "Iniciar sesion";
             this.btniniciarsesion.TextColor = System.Drawing.Color.White;
             this.btniniciarsesion.UseVisualStyleBackColor = false;
@@ -127,7 +127,7 @@ namespace Proyecto_escuela
             this.txtcontraseña.Name = "txtcontraseña";
             this.txtcontraseña.PasswordChar = '*';
             this.txtcontraseña.Size = new System.Drawing.Size(451, 25);
-            this.txtcontraseña.TabIndex = 3;
+            this.txtcontraseña.TabIndex = 2;
             this.txtcontraseña.Text = "Contraseña";
             this.txtcontraseña.Click += new System.EventHandler(this.txtcontraseña_Click);
             this.txtcontraseña.Enter += new System.EventHandler(this.txtcontraseña_Enter);
@@ -145,7 +145,7 @@ namespace Proyecto_escuela
             this.txtusuario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtusuario.Name = "txtusuario";
             this.txtusuario.Size = new System.Drawing.Size(451, 25);
-            this.txtusuario.TabIndex = 2;
+            this.txtusuario.TabIndex = 1;
             this.txtusuario.Text = "Correo";
             this.txtusuario.Click += new System.EventHandler(this.txtusuario_Click);
             this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
@@ -163,7 +163,7 @@ namespace Proyecto_escuela
             this.linkLabelregistrar.Location = new System.Drawing.Point(169, 292);
             this.linkLabelregistrar.Name = "linkLabelregistrar";
             this.linkLabelregistrar.Size = new System.Drawing.Size(260, 21);
-            this.linkLabelregistrar.TabIndex = 5;
+            this.linkLabelregistrar.TabIndex = 4;
             this.linkLabelregistrar.TabStop = true;
             this.linkLabelregistrar.Text = "¿No tienes usuario? Registrate";
             this.linkLabelregistrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelregistrar_LinkClicked);
@@ -180,7 +180,7 @@ namespace Proyecto_escuela
             this.linkLabelcontraseña.Location = new System.Drawing.Point(169, 322);
             this.linkLabelcontraseña.Name = "linkLabelcontraseña";
             this.linkLabelcontraseña.Size = new System.Drawing.Size(262, 21);
-            this.linkLabelcontraseña.TabIndex = 1;
+            this.linkLabelcontraseña.TabIndex = 0;
             this.linkLabelcontraseña.TabStop = true;
             this.linkLabelcontraseña.Text = "¿Has olvidado la contraseña?";
             this.linkLabelcontraseña.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabelcontraseña_LinkClicked);
