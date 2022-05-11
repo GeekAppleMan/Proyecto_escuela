@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 24-03-2022 a las 19:30:38
+-- Tiempo de generación: 11-05-2022 a las 20:42:23
 -- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Versión de PHP: 8.1.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -45,8 +45,8 @@ CREATE TABLE `tb_alumnos` (
 --
 
 INSERT INTO `tb_alumnos` (`id_alumno`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `grupo`, `estatus`, `foto_perfil`, `codigo_imagen`) VALUES
-(34, '17340346', 'Jaime alberto', 'Sanchez Martinez', '28/12/2021', 'Cuba 790', '1:A', 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/19H0B8G10G19D0A.jpg', '19H0B8G10G19D0A'),
-(35, '17340347', 'Diego', 'Macias', '28/12/2021', 'Nuevo nogales', '1:A', 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/15E14I12F19I18D1H.jpg', '15E14I12F19I18D1H');
+(36, '17340346', 'Jaime ', 'Sanchez', '11/05/2022', 'Cuba 790', '1:A', 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/10H13F15D1H10C15D.jpg', '10H13F15D1H10C15D'),
+(37, '17340347', 'Diego fernando', 'Macias diaz', '11/05/2022', 'nuevo nogales', '1:A', 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_alumnos/5I15F6H19E16A2D.jpg', '5I15F6H19E16A2D');
 
 -- --------------------------------------------------------
 
@@ -74,11 +74,9 @@ CREATE TABLE `tb_empleados` (
 --
 
 INSERT INTO `tb_empleados` (`id_empleado`, `matricula`, `nombres`, `apellidos`, `fecha_nacimiento`, `direccion`, `correo`, `telefono`, `foto_perfil`, `rol`, `estatus`, `codigo_imagen`) VALUES
-(2, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790', 'Jaime@gmail.com', '6311987311', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/1F15C2G4G18C17H.jpg', '1', '1', ''),
-(3, '17340347', 'Giovanny', 'Siqueiros', '05/09/2000', 'NA', 'Giovanny@gmail.com', '6311987211', 'C:/Users/Jaime/Desktop/Proyectos Jane Software/Git_hub_escuela/Proyecto_escuela/Imagenes/11G11G8I2H6A16I.jpg', '1', '1', ''),
-(7, '18340342', 'Uriel', 'Orozco', '08/02/2000', 'na', 'uriel@gmail.com', '6311987211', '', '1', '1', ''),
-(8, '17340322', 'Jaime Alberto', 'Sanchez Martinez', '28/12/2021', 'Cuba 790', 'Jaime13@gmail.com', '6311987311', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/10F8C8A7A4D12F.jpg', '1', '1', '10F8C8A7A4D12F'),
-(9, '17340348', 'Diego', 'Macias', '28/12/2021', 'Nuevo nogales', 'Diego@gmail.com', '6311987223', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/14H0C4G2I1I9G.jpg', '1', '1', '14H0C4G2I1I9G');
+(1, '17340346', 'Jaime Alberto', 'Sanchez Martinez', '08/04/2000', 'Cuba 790 col esperanza', 'Jaime@gmail.com', '6311987311', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/19B15I0G6B12D13G.jpg', '1', '1', '19B15I0G6B12D13G.jpg'),
+(11, '17340347', 'Uriel', 'orozco', '11/05/2022', 'virreyes', 'uriel@gmail.com', '6311987312', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/11H16F12G17D3H1D.jpg', '1', '1', '11H16F12G17D3H1D'),
+(12, '17340348', 'Giovanny', 'Siqueiros', '11/05/2022', 'Colosio', 'Giovanny@gmail.com', '6311987313', 'http://189.204.133.38:8081/imagenes_escuela/imagenes_empleados/11I15D13C2F16I8E.jpg', '1', '1', '11I15D13C2F16I8E');
 
 -- --------------------------------------------------------
 
@@ -96,10 +94,9 @@ CREATE TABLE `tb_empleados_usuarios` (
 --
 
 INSERT INTO `tb_empleados_usuarios` (`id_usuario`, `id_empleado`) VALUES
-(11, '2'),
-(12, '3'),
-(13, '7'),
-(14, '8');
+(1, '1'),
+(16, '11'),
+(17, '12');
 
 -- --------------------------------------------------------
 
@@ -147,8 +144,8 @@ CREATE TABLE `tb_padres` (
 --
 
 INSERT INTO `tb_padres` (`id_tutor`, `nombres`, `apellidos`, `direccion`, `telefono`, `correo`, `fecha_nacimiento`, `parentesco`, `estatus`, `foto_perfil`, `codigo_imagen`) VALUES
-(38, 'Jaime', 'Sanchez', 'Cuba 790', '6311987311', 'Jaime@gmail.com', '28/12/2021', 1, 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/2F15H9C10I2A7B.jpg', '2F15H9C10I2A7B'),
-(39, 'Diego ', 'Macias', 'Nuevo nogales', '6311987211', 'diego@gmail.com', '28/12/2021', 1, 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/5A12C12B13E3F14F.jpg', '5A12C12B13E3F14F');
+(40, 'Jaime alberto', 'Sanchez Martinez', 'cuba 790', '6311987311', 'Jaime13@gmail.com', '08/04/2000', 1, 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/5H18F13D1C12H16I.jpg', '5H18F13D1C12H16I'),
+(41, 'Gabriel', 'Garcia', 'Virelles', '6311982111', 'gabriel@gmail.com', '11/05/2022', 1, 1, 'http://189.204.133.38:8081/imagenes_escuela/imagenes_tutores/5F19D4E16I10D15F.jpg', '5F19D4E16I10D15F');
 
 -- --------------------------------------------------------
 
@@ -187,10 +184,9 @@ CREATE TABLE `tb_registro` (
 --
 
 INSERT INTO `tb_registro` (`id_usuario`, `correo`, `telefono`, `contraseña`) VALUES
-(11, 'Jaime@gmail.com', '6311987311', '123'),
-(12, 'Giovanny@gmail.com', '6311987211', '123'),
-(13, 'uriel@gmail.com', '6311987111', '123'),
-(14, 'Jaime13@gmail.com', '6311987311', '123');
+(1, 'Jaime@gmail.com', '6311987311', '123'),
+(16, 'Uriel@gmail.com', '6311987312', '123'),
+(17, 'Giovanny@gmail.com', '6311987313', '123');
 
 -- --------------------------------------------------------
 
@@ -209,12 +205,8 @@ CREATE TABLE `tb_relacion_alumno_usuario` (
 --
 
 INSERT INTO `tb_relacion_alumno_usuario` (`id_relacion`, `id_alumno`, `id_usuario_alumno`) VALUES
-(1, '8', '5'),
-(2, '9', '8'),
-(3, '11', '9'),
-(4, '12', '10'),
-(5, '23', '11'),
-(6, '35', '12');
+(7, '36', '13'),
+(8, '37', '14');
 
 -- --------------------------------------------------------
 
@@ -233,9 +225,8 @@ CREATE TABLE `tb_relacion_tutor_alumno` (
 --
 
 INSERT INTO `tb_relacion_tutor_alumno` (`id_relacion`, `Tutor`, `Alumno`) VALUES
-(11, '38', '34'),
-(12, '39', '34'),
-(13, '39', '35');
+(14, '40', '36'),
+(15, '41', '37');
 
 -- --------------------------------------------------------
 
@@ -251,6 +242,14 @@ CREATE TABLE `tb_salida` (
   `id_estatus_salida` int(40) NOT NULL,
   `fecha_salida` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tb_salida`
+--
+
+INSERT INTO `tb_salida` (`id_salida`, `id_tutor`, `id_alumno`, `fecha_peticion`, `id_estatus_salida`, `fecha_salida`) VALUES
+(1, 40, 36, '2022-05-11 11:27:00', 2, ''),
+(3, 41, 37, '2022-05-11 11:27:00', 3, '');
 
 -- --------------------------------------------------------
 
@@ -285,7 +284,8 @@ CREATE TABLE `tb_usuarios_alumnos` (
 --
 
 INSERT INTO `tb_usuarios_alumnos` (`id_usuario`, `matricula`, `correo`, `contraseña`) VALUES
-(12, '17340347', 'Jaime@gmail.com', '123');
+(13, '17340346', 'Jaimehbo13@gmail.com', '123'),
+(14, '17340347', 'diego@gmail.com', '123');
 
 --
 -- Índices para tablas volcadas
@@ -369,19 +369,19 @@ ALTER TABLE `tb_usuarios_alumnos`
 -- AUTO_INCREMENT de la tabla `tb_alumnos`
 --
 ALTER TABLE `tb_alumnos`
-  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id_alumno` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados`
 --
 ALTER TABLE `tb_empleados`
-  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_empleado` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_empleados_usuarios`
 --
 ALTER TABLE `tb_empleados_usuarios`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_estatus_salida`
@@ -393,31 +393,31 @@ ALTER TABLE `tb_estatus_salida`
 -- AUTO_INCREMENT de la tabla `tb_padres`
 --
 ALTER TABLE `tb_padres`
-  MODIFY `id_tutor` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id_tutor` int(25) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_registro`
 --
 ALTER TABLE `tb_registro`
-  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_usuario` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_relacion_alumno_usuario`
 --
 ALTER TABLE `tb_relacion_alumno_usuario`
-  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_relacion_tutor_alumno`
 --
 ALTER TABLE `tb_relacion_tutor_alumno`
-  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_relacion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_salida`
 --
 ALTER TABLE `tb_salida`
-  MODIFY `id_salida` int(40) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_salida` int(40) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `tb_salida_bitacora`
@@ -429,7 +429,7 @@ ALTER TABLE `tb_salida_bitacora`
 -- AUTO_INCREMENT de la tabla `tb_usuarios_alumnos`
 --
 ALTER TABLE `tb_usuarios_alumnos`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
