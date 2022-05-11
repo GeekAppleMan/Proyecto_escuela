@@ -10,8 +10,8 @@ namespace Proyecto_escuela
 {
     class Cls_conexion
     {
-        //public static string connectionString = "datasource=189.204.133.38;username=escuela_user_jane;password=escuelaPR0y3cto;database=bd_escuela;";
-        public static string connectionString = "datasource=127.0.0.1;port=3306;username=root;database=bd_escuela;";
+        public static string connectionString = "datasource=189.204.133.38;username=escuela_user_jane;password=escuelaPR0y3cto;database=bd_escuela;";
+        //public static string connectionString = "datasource=127.0.0.1;port=3306;username=root;database=bd_escuela;";
         public MySqlConnection databaseConnection = new MySqlConnection(connectionString);
     }
 }
