@@ -35,7 +35,6 @@ namespace Proyecto_escuela.Clases
                     if (buscar_nombre_empleado() == true)
                     {
                         Frm_login.frm_login.Hide();
-                        MessageBox.Show("Se inicio sesion correctamente");
                         new Frm_main().Show();
                         Frm_inicio.lbl_empleado.Text = nombre_empleado;
                     }
