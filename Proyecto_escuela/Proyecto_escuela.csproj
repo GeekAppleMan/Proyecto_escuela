@@ -24,7 +24,7 @@
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>http://189.204.133.38:8081/APLICACION/PROYECTO_ESCUELA/PUBLICACION/</InstallUrl>
-    <ApplicationRevision>8</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -224,6 +224,9 @@
     </Compile>
     <Compile Include="Login\Frm_NuevaContraseña.Designer.cs">
       <DependentUpon>Frm_NuevaContraseña.cs</DependentUpon>
+    </Compile>
+    <Compile Include="panel\panel.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="picturebox\picturebox.cs">
       <SubType>Component</SubType>

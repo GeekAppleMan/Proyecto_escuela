@@ -151,14 +151,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto_escuela.exe" size="2925544">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto_escuela.exe" size="2927080">
       <assemblyIdentity name="Proyecto_escuela" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>9Hcbh6X6r5EizOEW/J68HWV/ndKRhEkBb56Ogc/POGI=</dsig:DigestValue>
+        <dsig:DigestValue>Ffe5+TAMa5Lnd5xPmfB6YO0PPOdoaq9/simvH8jvLHI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
