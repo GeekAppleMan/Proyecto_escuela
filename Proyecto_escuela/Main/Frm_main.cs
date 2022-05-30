@@ -48,7 +48,7 @@ namespace Proyecto_escuela
                 btn_alumnos.Text = "";
                 btn_usuarios.Text = "";
                 btn_Empleados.Text = "";
-                btn_salidas.Text = "";
+                btn_salida.Text = "";
                 btn_cerrar_sesion.Text = "";
                 btn_ajustes.Text = "";
                 lbl_jane.Text = " JS";
@@ -61,7 +61,7 @@ namespace Proyecto_escuela
                 btn_alumnos.Text = "Alumnos";
                 btn_usuarios.Text = "Usuarios";
                 btn_Empleados.Text = "Empleados";
-                btn_salidas.Text = "Salidas";
+                btn_salida.Text = "Salidas";
                 btn_cerrar_sesion.Text = "Cerrar sesion";
                 lbl_jane.Text = "Jane Software";
                 btn_ajustes.Text = "Ajustes";
@@ -129,7 +129,7 @@ namespace Proyecto_escuela
             btn_alumno = btn_alumnos;
             btn_usuario = btn_usuarios;
             btn_empleados = btn_Empleados;
-            btn_salidas_menu = btn_salidas;
+            btn_salidas_menu = btn_salida;
             btn_cerrar = btn_cerrar_sesion;
             btn_ajustes_menu = btn_ajustes;
             btn_tutor_strip = tutoresToolStripMenuItem;
@@ -228,7 +228,7 @@ namespace Proyecto_escuela
             mostrar();
         }
 
-        private void btn_salidas_Click(object sender, EventArgs e)
+        private void btn_salida_Click(object sender, EventArgs e)
         {
             abrir_form(new Frm_salidas());
             lbltitulo.Text = "Salidas";

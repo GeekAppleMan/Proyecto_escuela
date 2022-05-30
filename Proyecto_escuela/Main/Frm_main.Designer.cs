@@ -41,17 +41,17 @@ namespace Proyecto_escuela
             this.panel_barra_izquierda = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.btn_ajustes = new System.Windows.Forms.Button();
-            this.btn_tutores = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.picture_logo = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pic_menu = new System.Windows.Forms.PictureBox();
             this.lbl_jane = new System.Windows.Forms.Label();
             this.btn_cerrar_sesion = new System.Windows.Forms.Button();
-            this.btn_salidas = new System.Windows.Forms.Button();
             this.btn_Empleados = new System.Windows.Forms.Button();
             this.btn_usuarios = new System.Windows.Forms.Button();
             this.btn_alumnos = new System.Windows.Forms.Button();
+            this.btn_tutores = new System.Windows.Forms.Button();
+            this.btn_salida = new System.Windows.Forms.Button();
             this.timer_fecha_hora = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tutoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -102,7 +102,7 @@ namespace Proyecto_escuela
             this.lbltitulo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbltitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbltitulo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(293, 7);
+            this.lbltitulo.Location = new System.Drawing.Point(291, 7);
             this.lbltitulo.Name = "lbltitulo";
             this.lbltitulo.Size = new System.Drawing.Size(532, 37);
             this.lbltitulo.TabIndex = 18;
@@ -115,7 +115,7 @@ namespace Proyecto_escuela
             this.pic_fecha.BackColor = System.Drawing.Color.Transparent;
             this.pic_fecha.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.pic_fecha.Image = global::Proyecto_escuela.Properties.Resources.calendario;
-            this.pic_fecha.Location = new System.Drawing.Point(931, 5);
+            this.pic_fecha.Location = new System.Drawing.Point(927, 5);
             this.pic_fecha.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pic_fecha.Name = "pic_fecha";
             this.pic_fecha.Size = new System.Drawing.Size(40, 39);
@@ -130,7 +130,7 @@ namespace Proyecto_escuela
             this.lbl_fecha.BackColor = System.Drawing.Color.Transparent;
             this.lbl_fecha.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_fecha.ForeColor = System.Drawing.Color.Black;
-            this.lbl_fecha.Location = new System.Drawing.Point(974, 15);
+            this.lbl_fecha.Location = new System.Drawing.Point(970, 15);
             this.lbl_fecha.Name = "lbl_fecha";
             this.lbl_fecha.Size = new System.Drawing.Size(62, 21);
             this.lbl_fecha.TabIndex = 16;
@@ -177,14 +177,14 @@ namespace Proyecto_escuela
             this.tableLayoutPanel1.ColumnCount = 1;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Controls.Add(this.btn_ajustes, 0, 8);
-            this.tableLayoutPanel1.Controls.Add(this.btn_tutores, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.btn_cerrar_sesion, 0, 7);
-            this.tableLayoutPanel1.Controls.Add(this.btn_salidas, 0, 6);
             this.tableLayoutPanel1.Controls.Add(this.btn_Empleados, 0, 5);
             this.tableLayoutPanel1.Controls.Add(this.btn_usuarios, 0, 4);
             this.tableLayoutPanel1.Controls.Add(this.btn_alumnos, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.btn_tutores, 0, 6);
+            this.tableLayoutPanel1.Controls.Add(this.btn_salida, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -226,29 +226,6 @@ namespace Proyecto_escuela
             this.btn_ajustes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_ajustes.UseVisualStyleBackColor = false;
             this.btn_ajustes.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btn_tutores
-            // 
-            this.btn_tutores.BackColor = System.Drawing.Color.Transparent;
-            this.btn_tutores.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_tutores.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_tutores.FlatAppearance.BorderSize = 0;
-            this.btn_tutores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_tutores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_tutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_tutores.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_tutores.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_tutores.Image = global::Proyecto_escuela.Properties.Resources.familia;
-            this.btn_tutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_tutores.Location = new System.Drawing.Point(4, 184);
-            this.btn_tutores.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btn_tutores.Name = "btn_tutores";
-            this.btn_tutores.Size = new System.Drawing.Size(231, 56);
-            this.btn_tutores.TabIndex = 2;
-            this.btn_tutores.Text = "Tutores";
-            this.btn_tutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_tutores.UseVisualStyleBackColor = false;
-            this.btn_tutores.Click += new System.EventHandler(this.btn_tutores_Click);
             // 
             // panel2
             // 
@@ -333,29 +310,6 @@ namespace Proyecto_escuela
             this.btn_cerrar_sesion.UseVisualStyleBackColor = false;
             this.btn_cerrar_sesion.Click += new System.EventHandler(this.btn_cerrar_sesion_Click);
             // 
-            // btn_salidas
-            // 
-            this.btn_salidas.BackColor = System.Drawing.Color.Transparent;
-            this.btn_salidas.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_salidas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_salidas.FlatAppearance.BorderSize = 0;
-            this.btn_salidas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
-            this.btn_salidas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
-            this.btn_salidas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_salidas.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_salidas.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btn_salidas.Image = global::Proyecto_escuela.Properties.Resources.puerta_de_salida;
-            this.btn_salidas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_salidas.Location = new System.Drawing.Point(4, 424);
-            this.btn_salidas.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.btn_salidas.Name = "btn_salidas";
-            this.btn_salidas.Size = new System.Drawing.Size(231, 56);
-            this.btn_salidas.TabIndex = 5;
-            this.btn_salidas.Text = "Salidas";
-            this.btn_salidas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_salidas.UseVisualStyleBackColor = false;
-            this.btn_salidas.Click += new System.EventHandler(this.btn_salidas_Click);
-            // 
             // btn_Empleados
             // 
             this.btn_Empleados.BackColor = System.Drawing.Color.Transparent;
@@ -424,6 +378,52 @@ namespace Proyecto_escuela
             this.btn_alumnos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_alumnos.UseVisualStyleBackColor = false;
             this.btn_alumnos.Click += new System.EventHandler(this.btn_alumnos_Click);
+            // 
+            // btn_tutores
+            // 
+            this.btn_tutores.BackColor = System.Drawing.Color.Transparent;
+            this.btn_tutores.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_tutores.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_tutores.FlatAppearance.BorderSize = 0;
+            this.btn_tutores.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_tutores.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_tutores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_tutores.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_tutores.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_tutores.Image = global::Proyecto_escuela.Properties.Resources.familia;
+            this.btn_tutores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_tutores.Location = new System.Drawing.Point(4, 424);
+            this.btn_tutores.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_tutores.Name = "btn_tutores";
+            this.btn_tutores.Size = new System.Drawing.Size(231, 56);
+            this.btn_tutores.TabIndex = 2;
+            this.btn_tutores.Text = "Tutores";
+            this.btn_tutores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_tutores.UseVisualStyleBackColor = false;
+            this.btn_tutores.Click += new System.EventHandler(this.btn_tutores_Click);
+            // 
+            // btn_salida
+            // 
+            this.btn_salida.BackColor = System.Drawing.Color.Transparent;
+            this.btn_salida.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_salida.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_salida.FlatAppearance.BorderSize = 0;
+            this.btn_salida.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_salida.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DodgerBlue;
+            this.btn_salida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_salida.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_salida.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btn_salida.Image = global::Proyecto_escuela.Properties.Resources.puerta_de_salida;
+            this.btn_salida.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_salida.Location = new System.Drawing.Point(4, 184);
+            this.btn_salida.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.btn_salida.Name = "btn_salida";
+            this.btn_salida.Size = new System.Drawing.Size(231, 56);
+            this.btn_salida.TabIndex = 5;
+            this.btn_salida.Text = "Salidas";
+            this.btn_salida.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_salida.UseVisualStyleBackColor = false;
+            this.btn_salida.Click += new System.EventHandler(this.btn_salida_Click);
             // 
             // timer_fecha_hora
             // 
@@ -574,7 +574,7 @@ namespace Proyecto_escuela
         private System.Windows.Forms.Button btn_usuarios;
         private System.Windows.Forms.Button btn_alumnos;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Button btn_salidas;
+        private System.Windows.Forms.Button btn_salida;
         private System.Windows.Forms.Button btn_Empleados;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pic_menu;
