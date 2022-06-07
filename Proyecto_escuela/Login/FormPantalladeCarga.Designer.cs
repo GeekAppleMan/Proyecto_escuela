@@ -35,10 +35,12 @@ namespace Proyecto_escuela.Login
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Enabled = false;
             this.pictureBox1.Image = global::Proyecto_escuela.Properties.Resources.Glowing_ring;
-            this.pictureBox1.Location = new System.Drawing.Point(341, 193);
+            this.pictureBox1.Location = new System.Drawing.Point(-1, -2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
+            this.pictureBox1.Size = new System.Drawing.Size(904, 615);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -47,7 +49,7 @@ namespace Proyecto_escuela.Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(746, 445);
+            this.ClientSize = new System.Drawing.Size(904, 612);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPantalladeCarga";

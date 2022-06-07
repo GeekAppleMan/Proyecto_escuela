@@ -151,14 +151,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto_escuela.exe" size="2959336">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Proyecto_escuela.exe" size="3263464">
       <assemblyIdentity name="Proyecto_escuela" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>mFY5HNMEH10RETYdjCmAE4Z3/w+yPeYF0hfat4hzNsc=</dsig:DigestValue>
+        <dsig:DigestValue>diwG9x0KTmPEZLj6loRAIEEk66gwhJlJk9uTkD9EOJA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -250,6 +250,15 @@
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
       <dsig:DigestValue>DU24pVgRXgLyrLf9ScfGv0SSfGXsbi+5u7oQAcTQjO8=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="Resources\Cargando.gif" size="303457">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>vNkFWY42bVGKGH58boX2IY8iRhgnPkybxOYXoVEenZw=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

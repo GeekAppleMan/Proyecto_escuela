@@ -604,6 +604,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="colegioalfa.ico" />
+    <Content Include="Resources\Cargando.gif" />
     <None Include="Resources\Glowing ring.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
