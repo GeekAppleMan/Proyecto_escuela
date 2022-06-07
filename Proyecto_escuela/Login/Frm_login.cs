@@ -24,6 +24,7 @@ namespace Proyecto_escuela
 
         private void btniniciarsesion_Click(object sender, EventArgs e)
         {
+            new FormPantalladeCarga().Show();
             iniciar_sesion();
         }
 
@@ -37,6 +38,7 @@ namespace Proyecto_escuela
             {
                 obj_Login.comparar_login(txtusuario.Text, txtusuario.Text, txtcontraseña.Text);
             }
+            
         }
         private void piccerrar_Click(object sender, EventArgs e)
         {
